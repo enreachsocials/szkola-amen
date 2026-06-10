@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Oferta, grafik zajęć i cennik Chrześcijańskiej Szkoły Tańca Amen! we Wrocławiu. Taniec użytkowy, towarzyski i pierwszy taniec." />
+  <title>Oferta, Grafik i Cennik – Amen! Szkoła Tańca Wrocław</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="tailwind.css">
+
+  <style>
+    /* ── Tabs ── */
+    .tab-btn {
+      position: relative;
+      padding: 0.65rem 1.4rem;
+      border-radius: 0.5rem 0.5rem 0 0;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #5a4e42;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      transition: color 180ms, background 180ms;
+      white-space: nowrap;
+    }
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: transparent;
+      border-radius: 2px 2px 0 0;
+      transition: background 180ms;
+    }
+    .tab-btn:hover { color: #1B2E4B; background: rgba(27,46,75,.05); }
+    .tab-btn[aria-selected="true"] {
+      color: #E8622A;
+      background: #FAF8F4;
+    }
+    .tab-btn[aria-selected="true"]::after { background: #E8622A; }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ── Schedule table row filter ── */
+    tr.row-hidden { display: none; }
+
+    /* ── Filter pills ── */
+    .filter-pill {
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border: 1.5px solid #d9d0c0;
+      background: transparent;
+      color: #5a4e42;
+      cursor: pointer;
+      transition: all 160ms;
+    }
+    .filter-pill:hover { border-color: #1B2E4B; color: #1B2E4B; }
+    .filter-pill.active {
+      background: #1B2E4B;
+      border-color: #1B2E4B;
+      color: #fff;
+    }
+
+    /* ── Pricing card ── */
+    .price-card {
+      background: #fff;
+      border: 1.5px solid #e2d9cc;
+      border-radius: 16px;
+      padding: 2rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: box-shadow 200ms, transform 200ms, border-color 200ms;
+    }
+    .price-card:hover {
+      box-shadow: 0 8px 32px rgba(27,46,75,.12);
+      transform: translateY(-3px);
+      border-color: #E8622A;
+    }
+    .price-card.featured {
+      border-color: #E8622A;
+      background: #fff8f5;
+    }
+    .price-badge {
+      display: inline-block;
+      padding: 0.15rem 0.75rem;
+      border-radius: 100px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ── Info box (odrabianie) ── */
+    .info-box {
+      background: linear-gradient(135deg, #1B2E4B 0%, #0F1C2E 100%);
+      border-radius: 16px;
+      padding: 2rem;
+      color: rgba(255,255,255,.85);
+    }
+
+    /* ── Accordion ── */
+    .accordion-item { border-bottom: 1px solid #e2d9cc; }
+    .accordion-trigger {
+      width: 100%;
+      text-align: left;
+      padding: 1.1rem 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1a1410;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      transition: color 160ms;
+    }
+    .accordion-trigger:hover { color: #E8622A; }
+    .accordion-trigger[aria-expanded="true"] { color: #E8622A; }
+    .accordion-trigger svg {
+      flex-shrink: 0;
+      transition: transform 200ms;
+    }
+    .accordion-trigger[aria-expanded="true"] svg { transform: rotate(180deg); }
+    .accordion-body {
+      display: none;
+      padding-bottom: 1rem;
+      color: #5a4e42;
+      font-size: 0.9375rem;
+      line-height: 1.7;
+    }
+    .accordion-body.open { display: block; }
+
+    /* ── Step badge ── */
+    .step-num {
+      width: 2rem; height: 2rem;
+      border-radius: 50%;
+      background: rgba(232,98,42,.15);
+      color: #E8622A;
+      font-weight: 700;
+      font-size: 0.875rem;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* ── CTA button — kolor #C7410A daje kontrast 4.97:1 z białym (WCAG AA) ── */
+    .btn-coral {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.75rem;
+      border-radius: 100px;
+      background: #C7410A;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(192,68,32,.4);
+      transition: background 180ms, transform 180ms, box-shadow 180ms;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-coral:hover {
+      background: #9E3618;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(192,68,32,.52);
+      color: #fff;
+    }
+
+    /* ── Table ── */
+    .schedule-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      font-size: 0.875rem;
+    }
+    .schedule-table thead th {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #8a7a6a;
+      background: #f5f0e8;
+      border-bottom: 1px solid #e2d9cc;
+    }
+    .schedule-table thead th:first-child { border-radius: 10px 0 0 0; }
+    .schedule-table thead th:last-child  { border-radius: 0 10px 0 0; }
+    .schedule-table tbody tr {
+      border-bottom: 1px solid #ede9e0;
+      transition: background 140ms;
+    }
+    .schedule-table tbody tr:hover { background: #faf8f4; }
+    .schedule-table tbody td {
+      padding: 0.875rem 1rem;
+      vertical-align: top;
+    }
+    .schedule-table tbody tr:last-child td { border-bottom: none; }
+
+    .level-badge {
+      display: inline-block;
+      padding: 0.15rem 0.6rem;
+      border-radius: 100px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+    .level-beg  { background: #e8f5e9; color: #2e7d32; }
+    .level-mid  { background: #fff3e0; color: #e65100; }
+    .level-adv  { background: #fce4ec; color: #c62828; }
+    .level-all  { background: #e3f2fd; color: #1565c0; }
+    .level-pair { background: #f3e5f5; color: #6a1b9a; }
+
+    /* ── Scroll tab overflow on mobile ── */
+    .tabs-scroll { overflow-x: auto; scrollbar-width: none; }
+    .tabs-scroll::-webkit-scrollbar { display: none; }
+
+    /* ── Hero section ── */
+    .page-hero {
+      background: linear-gradient(135deg, #1B2E4B 0%, #0F1C2E 100%);
+      padding: 4rem 0 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 70% at 70% 40%, rgba(232,98,42,.15) 0%, transparent 65%);
+    }
+  </style>
+</head>
+<body class="antialiased bg-sand-light text-ink">
+
+  <!-- ═══════════════════════════════════════════════
+       NAWIGACJA
+  ════════════════════════════════════════════════ -->
+  <header class="sticky top-0 z-50 bg-navy" role="banner" style="box-shadow:0 1px 0 rgba(255,255,255,.07)">
+    <nav class="w-full px-4 md:px-6" aria-label="Główna nawigacja">
+      <div class="flex items-center h-13 gap-2" style="height:52px">
+
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2 no-underline flex-shrink-0 mr-1" aria-label="Amen! – strona główna">
+          <span class="font-display font-bold text-base text-white leading-none tracking-tight">Amen!</span>
+          <span class="hidden sm:block text-xs font-normal text-white/35 leading-none">Szkoła Tańca</span>
+        </a>
+
+        <!-- Separator -->
+        <div class="w-px h-4 bg-white/15 flex-shrink-0" aria-hidden="true"></div>
+
+        <!-- Tab strip -->
+        <div class="nav-tabs-strip flex items-center gap-0.5 flex-1 overflow-x-auto" role="list">
+          <a class="nav-tab" href="index.html">Start</a>
+          <a class="nav-tab" href="oferta.html" aria-current="page">Oferta</a>
+          <a class="nav-tab" href="grafik.html">Grafik</a>
+          <a class="nav-tab" href="grafik.html#cennik">Cennik</a>
+          <a class="nav-tab" href="o-nas.html">O nas</a>
+          <a class="nav-tab" href="kontakt.html">Kontakt</a>
+          <a class="nav-tab nav-tab-newsletter" href="#newsletter">NEWSLETTER</a>
+        </div>
+
+        <!-- CTA -->
+        <a href="parafia.html" class="nav-cta" aria-label="Zgłoś swoją parafię do programu">
+          <span aria-hidden="true">✦</span>
+          <span class="hidden sm:inline">Zgłoś swoją parafię!</span>
+          <span class="sm:hidden">Parafia</span>
+        </a>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════
+       PAGE HERO
+  ════════════════════════════════════════════════ -->
+  <section class="page-hero" aria-labelledby="page-title">
+    <div class="container relative z-10 text-center">
+      <p class="inline-flex items-center gap-2 text-xs font-bold tracking-[0.15em] uppercase text-coral mb-5">
+        <span class="w-1.5 h-1.5 rounded-full bg-coral" aria-hidden="true"></span>
+        Wrocław · sezon 2025/2026
+      </p>
+      <h1 id="page-title" class="font-display font-bold text-4xl md:text-5xl text-white mb-4 leading-tight">
+        Oferta, Grafik i Cennik
+      </h1>
+      <p class="text-white/55 text-lg max-w-xl mx-auto">
+        Wybierz styl tańca, sprawdź godziny zajęć w Twojej parafii i wybierz plan dopasowany do Ciebie.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       GŁÓWNA ZAWARTOŚĆ
+  ════════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ── SEKCJA 1: TABS – OFERTA ─────────────────── -->
+    <section class="py-16 bg-sand-light" aria-labelledby="oferta-heading">
+      <div class="container">
+
+        <div class="text-center mb-10">
+          <p class="text-xs font-bold tracking-[0.15em] uppercase text-coral mb-2">Co oferujemy</p>
+          <h2 id="oferta-heading" class="font-display font-bold text-3xl md:text-4xl text-navy mb-3">Nasze style tańca</h2>
+          <p class="text-ink/55 max-w-lg mx-auto">Zajęcia prowadzone z radością, w duchu wiary i wspólnoty — dla każdego.</p>
+        </div>
+
+        <!-- Tabs container -->
+        <div class="bg-white border border-sand-dark rounded-2xl shadow-card overflow-hidden">
+
+          <!-- Tab list -->
+          <div class="border-b border-sand-dark bg-sand px-2 pt-2" role="tablist" aria-label="Style tańca">
+            <div class="tabs-scroll flex gap-1">
+              <button
+                class="tab-btn"
+                role="tab"
+                aria-selected="true"
+                aria-controls="panel-uzytkowy"
+                id="tab-uzytkowy"
+              >
+                <span class="mr-1.5" aria-hidden="true">🕺</span> Taniec Użytkowy
+              </button>
+              <button
+                class="tab-btn"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-towarzyski"
+                id="tab-towarzyski"
+              >
+                <span class="mr-1.5" aria-hidden="true">💃</span> Taniec Towarzyski
+              </button>
+              <button
+                class="tab-btn"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-pierwszy"
+                id="tab-pierwszy"
+              >
+                <span class="mr-1.5" aria-hidden="true">💍</span> Pierwszy Taniec
+              </button>
+            </div>
+          </div>
+
+          <!-- Tab panels -->
+          <div class="p-6 md:p-8">
+
+            <!-- Panel: Taniec Użytkowy -->
+            <div
+              id="panel-uzytkowy"
+              role="tabpanel"
+              aria-labelledby="tab-uzytkowy"
+              class="tab-panel active"
+            >
+              <div class="grid md:grid-cols-2 gap-8 items-start">
+                <div>
+                  <h3 class="font-display font-bold text-2xl text-navy mb-3">Taniec Użytkowy</h3>
+                  <p class="text-ink/65 leading-relaxed mb-4">
+                    Praktyczne podstawy ruchu i rytmu, dostępne dla każdego — niezależnie od wieku czy doświadczenia. Uczymy popularnych kroków społecznych, improwizacji i pewności siebie na parkiecie.
+                  </p>
+                  <ul class="space-y-2.5 mb-6">
+                    <li class="flex items-start gap-3">
+                      <span class="w-5 h-5 rounded-full bg-coral/15 text-coral flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5" aria-hidden="true">✓</span>
+                      <span class="text-sm text-ink/70">Grupy dla dzieci (7–12 lat), młodzieży i dorosłych</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="w-5 h-5 rounded-full bg-coral/15 text-coral flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5" aria-hidden="true">✓</span>
+                      <span class="text-sm text-ink/70">Hip-hop, taniec nowoczesny, funky, podstawy salsы</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="w-5 h-5 rounded-full bg-coral/15 text-coral flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5" aria-hidden="true">✓</span>
+                      <span class="text-sm text-ink/70">Zajęcia pokazowe na zakończenie semestru</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="w-5 h-5 rounded-full bg-coral/15 text-coral flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5" aria-hidden="true">✓</span>
+                      <span class="text-sm text-ink/70">Atmosfera wspólnoty, brak oceniania</span>
+                    </li>
+                  </ul>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="level-badge level-beg">Poziom: początkujący</span>
+                    <span class="level-badge level-mid">Poziom: średnio-zaawansowany</span>
+                  </div>
+                </div>
+                <div class="bg-sand rounded-xl p-6 space-y-4">
+                  <p class="text-xs font-bold tracking-wider uppercase text-gold">Szczegóły kursu</p>
+                  <div class="grid grid-cols-2 gap-4">
+                    <div>
+                      <p class="text-xs text-ink/45 mb-1">Czas trwania</p>
+                      <p class="font-semibold text-sm text-navy">60 min / zajęcia</p>
+                    </div>
+                    <div>
+                      <p class="text-xs text-ink/45 mb-1">Częstotliwość</p>
+                      <p class="font-semibold text-sm text-navy">1× w tygodniu</p>
+                    </div>
+                    <div>
+                      <p class="text-xs text-ink/45 mb-1">Semestr</p>
+                      <p class="font-semibold text-sm text-navy">ok. 20 zajęć</p>
+                    </div>
+                    <div>
+                      <p class="text-xs text-ink/45 mb-1">Min. wiek</p>
+                      <p class="font-semibold text-sm text-navy">7 lat</p>
+                    </div>
+                  </div>
+                  <hr class="border-sand-dark">
+                  <p class="text-xs text-ink/50 italic">„Nie musisz umieć tańczyć — wystarczy, że chcesz."</p>
+                  <a href="#zapisy" class="btn-coral w-full text-center">Zapisz się na kurs</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel: Taniec Towarzyski -->
+            <div
+              id="panel-towarzyski"
+              role="tabpanel"
+              aria-labelledby="tab-towarzyski"
+              class="tab-panel"
+            >
+              <div class="grid md:grid-cols-2 gap-8 items-start">
+                <div>
+                  <h3 class="font-display font-bold text-2xl text-navy mb-3">Taniec Towarzyski</h3>
+                  <p class="text-ink/65 leading-relaxed mb-4">
+                    Klasyка tańców standardowych i latynoamerykańskich w formie dostępnej dla par i singli. Walc, tango, cha-cha, jive — z naciskiem na komunikację i wzajemne zaufanie.
+                  </p>
+                  <ul class="space-y-2.5 mb-6">
+                    <li class="flex items-start gap-3">
+                      <span class="w-5 h-5 rounded-full bg-coral/15 text-coral flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5" aria-hidden="true">✓</span>
+                      <span class="text-sm text-ink/70">Walc wiedeński, walc angielski, tango</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="w-5 h-5 rounded-full bg-coral/15 text-coral flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5" aria-hidden="true">✓</span>
+                      <span class="text-sm text-ink/70">Cha-cha, jive, samba — styl latynoamerykański</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="w-5 h-5 rounded-full bg-coral/15 text-coral flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5" aria-hidden="true">✓</span>
+                      <span class="text-sm text-ink/70">Grupy dla singli — rotujemy partnerów podczas zajęć</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="w-5 h-5 rounded-full bg-coral/15 text-coral flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5" aria-hidden="true">✓</span>
+                      <span class="text-sm text-ink/70">Wieczorki taneczne dla uczestników kursu</span>
+                    </li>
+                  </ul>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="level-badge level-beg">Poziom: początkujący</span>
+                    <span class="level-badge level-pair">Dla par i singli</span>
+                  </div>
+                </div>
+                <div class="bg-sand rounded-xl p-6 space-y-4">
+                  <p class="text-xs font-bold tracking-wider uppercase text-gold">Szczegóły kursu</p>
+                  <div class="grid grid-cols-2 gap-4">
+                    <div>
+                      <p class="text-xs text-ink/45 mb-1">Czas trwania</p>
+                      <p class="font-semibold text-sm text-navy">90 min / zajęcia</p>
+                    </div>
+                    <div>
+                      <p class="text-xs text-ink/45 mb-1">Częstotliwość</p>
+                      <p class="font-semibold text-sm text-navy">1× w tygodniu</p>
+                    </div>
+                    <div>
+                      <p class="text-xs text-ink/45 mb-1">Semestr</p>
+                      <p class="font-semibold text-sm text-navy">ok. 16 zajęć</p>
+                    </div>
+                    <div>
+                      <p class="text-xs text-ink/45 mb-1">Min. wiek</p>
+                      <p class="font-semibold text-sm text-navy">16 lat</p>
+                    </div>
+                  </div>
+                  <hr class="border-sand-dark">
+                  <p class="text-xs text-ink/50 italic">„Taniec towarzyski to rozmowa bez słów."</p>
+                  <a href="#zapisy" class="btn-coral w-full text-center">Zapisz się na kurs</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel: Pierwszy Taniec -->
+            <div
+              id="panel-pierwszy"
+              role="tabpanel"
+              aria-labelledby="tab-pierwszy"
+              class="tab-panel"
+            >
+              <div class="grid md:grid-cols-2 gap-8 items-start">
+                <div>
+                  <h3 class="font-display font-bold text-2xl text-navy mb-3">Pierwszy Taniec</h3>
+                  <p class="text-ink/65 leading-relaxed mb-4">
+                    Przygotujemy Was do wyjątkowego momentu na Waszym weselu. Indywidualne zajęcia dopasowane do wybranej piosenki, Waszego stylu i poziomu. Możemy dodać niespodziankę dla gości!
+                  </p>
+                  <ul class="space-y-2.5 mb-6">
+                    <li class="flex items-start gap-3">
+                      <span class="w-5 h-5 rounded-full bg-coral/15 text-coral flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5" aria-hidden="true">✓</span>
+                      <span class="text-sm text-ink/70">Pakiet od 4 do 12 lekcji indywidualnych</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="w-5 h-5 rounded-full bg-coral/15 text-coral flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5" aria-hidden="true">✓</span>
+                      <span class="text-sm text-ink/70">Choreografia do dowolnej piosenki</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="w-5 h-5 rounded-full bg-coral/15 text-coral flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5" aria-hidden="true">✓</span>
+                      <span class="text-sm text-ink/70">Opcja nagrania próbnego do pokazania rodzinie</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="w-5 h-5 rounded-full bg-coral/15 text-coral flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5" aria-hidden="true">✓</span>
+                      <span class="text-sm text-ink/70">Termin gwarantowany dla Waszej daty ślubu</span>
+                    </li>
+                  </ul>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="level-badge level-all">Dla każdego poziomu</span>
+                    <span class="level-badge level-pair">Tylko dla par</span>
+                  </div>
+                </div>
+                <div class="bg-sand rounded-xl p-6 space-y-4">
+                  <p class="text-xs font-bold tracking-wider uppercase text-gold">Szczegóły pakietu</p>
+                  <div class="grid grid-cols-2 gap-4">
+                    <div>
+                      <p class="text-xs text-ink/45 mb-1">Czas lekcji</p>
+                      <p class="font-semibold text-sm text-navy">60 min / lekcja</p>
+                    </div>
+                    <div>
+                      <p class="text-xs text-ink/45 mb-1">Forma</p>
+                      <p class="font-semibold text-sm text-navy">Indywidualna</p>
+                    </div>
+                    <div>
+                      <p class="text-xs text-ink/45 mb-1">Min. pakiet</p>
+                      <p class="font-semibold text-sm text-navy">4 lekcje</p>
+                    </div>
+                    <div>
+                      <p class="text-xs text-ink/45 mb-1">Rezerwacja</p>
+                      <p class="font-semibold text-sm text-navy">Min. 8 tyg. wcześniej</p>
+                    </div>
+                  </div>
+                  <hr class="border-sand-dark">
+                  <p class="text-xs text-ink/50 italic">„Wasz wyjątkowy moment — zrobimy to razem."</p>
+                  <a href="kontakt.html" class="btn-coral w-full text-center">Zapytaj o termin</a>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /tab panels -->
+        </div><!-- /tabs container -->
+
+      </div>
+    </section>
+
+    <!-- ── SEKCJA 2: GRAFIK ZAJĘĆ ──────────────────── -->
+    <section class="py-16 bg-sand" aria-labelledby="grafik-heading">
+      <div class="container">
+
+        <div class="text-center mb-10">
+          <p class="text-xs font-bold tracking-[0.15em] uppercase text-coral mb-2">Plan tygodniowy</p>
+          <h2 id="grafik-heading" class="font-display font-bold text-3xl md:text-4xl text-navy mb-3">Grafik zajęć</h2>
+          <p class="text-ink/55 max-w-lg mx-auto">Aktualny harmonogram na semestr zimowy 2025/2026. Wybierz lokalizację lub przeglądaj wszystkie.</p>
+        </div>
+
+        <!-- Filtry lokalizacji -->
+        <div class="flex flex-wrap items-center gap-2.5 mb-6" role="group" aria-label="Filtruj według lokalizacji">
+          <span class="text-xs font-semibold text-ink/45 uppercase tracking-wider mr-1">Lokalizacja:</span>
+          <button class="filter-pill active" data-filter="all" aria-pressed="true">Wszystkie</button>
+          <button class="filter-pill" data-filter="sw-ducha" aria-pressed="false">Parafia św. Ducha</button>
+          <button class="filter-pill" data-filter="sw-karola" aria-pressed="false">Parafia św. Karola</button>
+          <button class="filter-pill" data-filter="sw-jadwigi" aria-pressed="false">Parafia św. Jadwigi</button>
+          <button class="filter-pill" data-filter="sw-elzbiety" aria-pressed="false">Parafia św. Elżbiety</button>
+        </div>
+
+        <!-- Tabela -->
+        <div class="bg-white border border-sand-dark rounded-2xl shadow-card overflow-hidden overflow-x-auto">
+          <table class="schedule-table" aria-label="Grafik zajęć tanecznych">
+            <thead>
+              <tr>
+                <th scope="col">Dzień</th>
+                <th scope="col">Godzina</th>
+                <th scope="col">Kurs</th>
+                <th scope="col">Poziom</th>
+                <th scope="col">Lokalizacja</th>
+                <th scope="col">Sala</th>
+                <th scope="col">Wolne miejsca</th>
+              </tr>
+            </thead>
+            <tbody id="schedule-body">
+
+              <!-- Poniedziałek -->
+              <tr data-location="sw-ducha">
+                <td class="font-semibold text-navy whitespace-nowrap">Poniedziałek</td>
+                <td class="text-ink/70 whitespace-nowrap">16:30 – 17:30</td>
+                <td class="font-medium">Taniec Użytkowy – dzieci</td>
+                <td><span class="level-badge level-beg">Początkujący</span></td>
+                <td class="text-ink/70 text-sm">Parafia św. Ducha</td>
+                <td class="text-ink/55 text-sm">Sala parafialna A</td>
+                <td>
+                  <span class="inline-flex items-center gap-1.5 text-sm">
+                    <span class="w-2 h-2 rounded-full bg-green-400" aria-hidden="true"></span>
+                    <span class="text-green-700 font-semibold">4 miejsca</span>
+                  </span>
+                </td>
+              </tr>
+
+              <tr data-location="sw-ducha">
+                <td class="font-semibold text-navy whitespace-nowrap">Poniedziałek</td>
+                <td class="text-ink/70 whitespace-nowrap">18:00 – 19:30</td>
+                <td class="font-medium">Taniec Towarzyski</td>
+                <td><span class="level-badge level-beg">Początkujący</span></td>
+                <td class="text-ink/70 text-sm">Parafia św. Ducha</td>
+                <td class="text-ink/55 text-sm">Sala parafialna A</td>
+                <td>
+                  <span class="inline-flex items-center gap-1.5 text-sm">
+                    <span class="w-2 h-2 rounded-full bg-yellow-400" aria-hidden="true"></span>
+                    <span class="text-yellow-700 font-semibold">2 miejsca</span>
+                  </span>
+                </td>
+              </tr>
+
+              <!-- Wtorek -->
+              <tr data-location="sw-karola">
+                <td class="font-semibold text-navy whitespace-nowrap">Wtorek</td>
+                <td class="text-ink/70 whitespace-nowrap">15:00 – 16:00</td>
+                <td class="font-medium">Taniec Użytkowy – dzieci</td>
+                <td><span class="level-badge level-beg">Początkujący</span></td>
+                <td class="text-ink/70 text-sm">Parafia św. Karola</td>
+                <td class="text-ink/55 text-sm">Sala św. Józefa</td>
+                <td>
+                  <span class="inline-flex items-center gap-1.5 text-sm">
+                    <span class="w-2 h-2 rounded-full bg-green-400" aria-hidden="true"></span>
+                    <span class="text-green-700 font-semibold">6 miejsc</span>
+                  </span>
+                </td>
+              </tr>
+
+              <tr data-location="sw-karola">
+                <td class="font-semibold text-navy whitespace-nowrap">Wtorek</td>
+                <td class="text-ink/70 whitespace-nowrap">17:00 – 18:00</td>
+                <td class="font-medium">Taniec Użytkowy – młodzież</td>
+                <td><span class="level-badge level-mid">Śr.-zaawanso&shy;wany</span></td>
+                <td class="text-ink/70 text-sm">Parafia św. Karola</td>
+                <td class="text-ink/55 text-sm">Sala św. Józefa</td>
+                <td>
+                  <span class="inline-flex items-center gap-1.5 text-sm">
+                    <span class="w-2 h-2 rounded-full bg-red-400" aria-hidden="true"></span>
+                    <span class="text-red-700 font-semibold">Brak miejsc</span>
+                  </span>
+                </td>
+              </tr>
+
+              <!-- Środa -->
+              <tr data-location="sw-jadwigi">
+                <td class="font-semibold text-navy whitespace-nowrap">Środa</td>
+                <td class="text-ink/70 whitespace-nowrap">16:00 – 17:00</td>
+                <td class="font-medium">Taniec Użytkowy – dzieci</td>
+                <td><span class="level-badge level-beg">Początkujący</span></td>
+                <td class="text-ink/70 text-sm">Parafia św. Jadwigi</td>
+                <td class="text-ink/55 text-sm">Sala dolna</td>
+                <td>
+                  <span class="inline-flex items-center gap-1.5 text-sm">
+                    <span class="w-2 h-2 rounded-full bg-green-400" aria-hidden="true"></span>
+                    <span class="text-green-700 font-semibold">5 miejsc</span>
+                  </span>
+                </td>
+              </tr>
+
+              <tr data-location="sw-jadwigi">
+                <td class="font-semibold text-navy whitespace-nowrap">Środa</td>
+                <td class="text-ink/70 whitespace-nowrap">19:00 – 20:30</td>
+                <td class="font-medium">Taniec Towarzyski</td>
+                <td><span class="level-badge level-mid">Śr.-zaawanso&shy;wany</span></td>
+                <td class="text-ink/70 text-sm">Parafia św. Jadwigi</td>
+                <td class="text-ink/55 text-sm">Sala dolna</td>
+                <td>
+                  <span class="inline-flex items-center gap-1.5 text-sm">
+                    <span class="w-2 h-2 rounded-full bg-yellow-400" aria-hidden="true"></span>
+                    <span class="text-yellow-700 font-semibold">1 miejsce</span>
+                  </span>
+                </td>
+              </tr>
+
+              <!-- Czwartek -->
+              <tr data-location="sw-ducha">
+                <td class="font-semibold text-navy whitespace-nowrap">Czwartek</td>
+                <td class="text-ink/70 whitespace-nowrap">17:00 – 18:00</td>
+                <td class="font-medium">Taniec Użytkowy – dorośli</td>
+                <td><span class="level-badge level-beg">Początkujący</span></td>
+                <td class="text-ink/70 text-sm">Parafia św. Ducha</td>
+                <td class="text-ink/55 text-sm">Sala parafialna B</td>
+                <td>
+                  <span class="inline-flex items-center gap-1.5 text-sm">
+                    <span class="w-2 h-2 rounded-full bg-green-400" aria-hidden="true"></span>
+                    <span class="text-green-700 font-semibold">8 miejsc</span>
+                  </span>
+                </td>
+              </tr>
+
+              <tr data-location="sw-karola">
+                <td class="font-semibold text-navy whitespace-nowrap">Czwartek</td>
+                <td class="text-ink/70 whitespace-nowrap">19:00 – 20:30</td>
+                <td class="font-medium">Taniec Towarzyski</td>
+                <td><span class="level-badge level-beg">Początkujący</span></td>
+                <td class="text-ink/70 text-sm">Parafia św. Karola</td>
+                <td class="text-ink/55 text-sm">Sala główna</td>
+                <td>
+                  <span class="inline-flex items-center gap-1.5 text-sm">
+                    <span class="w-2 h-2 rounded-full bg-green-400" aria-hidden="true"></span>
+                    <span class="text-green-700 font-semibold">3 miejsca</span>
+                  </span>
+                </td>
+              </tr>
+
+              <!-- Piątek -->
+              <tr data-location="sw-elzbiety">
+                <td class="font-semibold text-navy whitespace-nowrap">Piątek</td>
+                <td class="text-ink/70 whitespace-nowrap">16:00 – 17:00</td>
+                <td class="font-medium">Taniec Użytkowy – dzieci</td>
+                <td><span class="level-badge level-beg">Początkujący</span></td>
+                <td class="text-ink/70 text-sm">Parafia św. Elżbiety</td>
+                <td class="text-ink/55 text-sm">Sala wspólnoty</td>
+                <td>
+                  <span class="inline-flex items-center gap-1.5 text-sm">
+                    <span class="w-2 h-2 rounded-full bg-green-400" aria-hidden="true"></span>
+                    <span class="text-green-700 font-semibold">7 miejsc</span>
+                  </span>
+                </td>
+              </tr>
+
+              <tr data-location="sw-elzbiety">
+                <td class="font-semibold text-navy whitespace-nowrap">Piątek</td>
+                <td class="text-ink/70 whitespace-nowrap">18:00 – 19:00</td>
+                <td class="font-medium">Taniec Użytkowy – dorośli</td>
+                <td><span class="level-badge level-adv">Zaawansowany</span></td>
+                <td class="text-ink/70 text-sm">Parafia św. Elżbiety</td>
+                <td class="text-ink/55 text-sm">Sala wspólnoty</td>
+                <td>
+                  <span class="inline-flex items-center gap-1.5 text-sm">
+                    <span class="w-2 h-2 rounded-full bg-yellow-400" aria-hidden="true"></span>
+                    <span class="text-yellow-700 font-semibold">2 miejsca</span>
+                  </span>
+                </td>
+              </tr>
+
+              <!-- Sobota -->
+              <tr data-location="sw-ducha">
+                <td class="font-semibold text-navy whitespace-nowrap">Sobota</td>
+                <td class="text-ink/70 whitespace-nowrap">10:00 – 11:30</td>
+                <td class="font-medium">Taniec Towarzyski – pary</td>
+                <td><span class="level-badge level-all">Każdy poziom</span></td>
+                <td class="text-ink/70 text-sm">Parafia św. Ducha</td>
+                <td class="text-ink/55 text-sm">Sala parafialna A</td>
+                <td>
+                  <span class="inline-flex items-center gap-1.5 text-sm">
+                    <span class="w-2 h-2 rounded-full bg-green-400" aria-hidden="true"></span>
+                    <span class="text-green-700 font-semibold">4 miejsca</span>
+                  </span>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+          <!-- No results message -->
+          <div id="no-results" class="hidden text-center py-12 text-ink/45">
+            <p class="text-4xl mb-3" aria-hidden="true">🔍</p>
+            <p class="font-semibold">Brak zajęć dla wybranej lokalizacji.</p>
+            <p class="text-sm mt-1">Sprawdź inne parafie lub <a href="kontakt.html" class="text-coral underline">skontaktuj się z nami</a>.</p>
+          </div>
+
+        </div><!-- /table wrapper -->
+
+        <p class="text-xs text-ink/40 mt-4 text-center">
+          Grafik obowiązuje od 1 października 2025. W przypadku zmian informujemy uczestników z wyprzedzeniem.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ── SEKCJA 3: CENNIK + ODRABIANIE ──────────── -->
+    <section class="py-16 bg-sand-light" id="cennik" aria-labelledby="cennik-heading">
+      <div class="container">
+
+        <div class="text-center mb-10">
+          <p class="text-xs font-bold tracking-[0.15em] uppercase text-coral mb-2">Transparent i bez niespodzianek</p>
+          <h2 id="cennik-heading" class="font-display font-bold text-3xl md:text-4xl text-navy mb-3">Cennik</h2>
+          <p class="text-ink/55 max-w-lg mx-auto">Wybierz opcję dopasowaną do siebie. Wszystkie ceny zawierają ubezpieczenie NNW.</p>
+        </div>
+
+        <!-- Pricing + Info grid -->
+        <div class="grid lg:grid-cols-[1fr_360px] gap-8 items-start">
+
+          <!-- Lewa kolumna: 3 karty cenowe -->
+          <div>
+            <div class="grid sm:grid-cols-3 gap-5">
+
+              <!-- Karta 1: Wejście jednorazowe -->
+              <div class="price-card">
+                <div>
+                  <span class="price-badge" style="background:#e3f2fd;color:#1565c0;">Elastyczny</span>
+                </div>
+                <div>
+                  <h3 class="font-display font-bold text-xl text-navy mb-1">Wejście</h3>
+                  <p class="text-ink/55 text-sm leading-relaxed">Idealne na próbne zajęcia lub jednorazową wizytę.</p>
+                </div>
+                <div class="flex items-end gap-1 mt-auto">
+                  <span class="font-display font-bold text-4xl text-navy leading-none">35</span>
+                  <span class="text-ink/55 text-sm mb-1">zł / zajęcia</span>
+                </div>
+                <ul class="space-y-2 text-sm text-ink/65">
+                  <li class="flex items-center gap-2"><span class="text-coral" aria-hidden="true">✓</span> Bez zobowiązań</li>
+                  <li class="flex items-center gap-2"><span class="text-coral" aria-hidden="true">✓</span> Dowolna grupa</li>
+                  <li class="flex items-center gap-2 text-ink/35"><span aria-hidden="true">–</span> Bez odrabiania</li>
+                </ul>
+                <a href="#zapisy" class="btn-coral text-center mt-2">Wchodzę na zajęcia</a>
+              </div>
+
+              <!-- Karta 2: Karnet (POLECANY) -->
+              <div class="price-card featured">
+                <div class="flex items-center justify-between">
+                  <span class="price-badge bg-coral text-white">Najpopularniejszy</span>
+                </div>
+                <div>
+                  <h3 class="font-display font-bold text-xl text-navy mb-1">Karnet</h3>
+                  <p class="text-ink/55 text-sm leading-relaxed">Miesięczny dostęp do wybranej grupy — najlepsza relacja ceny do wartości.</p>
+                </div>
+                <div class="flex items-end gap-1 mt-auto">
+                  <span class="font-display font-bold text-4xl text-navy leading-none">120</span>
+                  <span class="text-ink/55 text-sm mb-1">zł / miesiąc</span>
+                </div>
+                <ul class="space-y-2 text-sm text-ink/65">
+                  <li class="flex items-center gap-2"><span class="text-coral" aria-hidden="true">✓</span> ~4 zajęcia w miesiącu</li>
+                  <li class="flex items-center gap-2"><span class="text-coral" aria-hidden="true">✓</span> Możliwość odrabiania</li>
+                  <li class="flex items-center gap-2"><span class="text-coral" aria-hidden="true">✓</span> Zniżka 10% za 3 miesiące z góry</li>
+                </ul>
+                <a href="#zapisy" class="btn-coral text-center mt-2">Wybieram karnet</a>
+              </div>
+
+              <!-- Karta 3: Dla par -->
+              <div class="price-card">
+                <div>
+                  <span class="price-badge" style="background:#f3e5f5;color:#6a1b9a;">Dla par</span>
+                </div>
+                <div>
+                  <h3 class="font-display font-bold text-xl text-navy mb-1">Dla par</h3>
+                  <p class="text-ink/55 text-sm leading-relaxed">Karnet dla dwóch osób — wy tańczycie, my liczymy razem z Wami.</p>
+                </div>
+                <div class="flex items-end gap-1 mt-auto">
+                  <span class="font-display font-bold text-4xl text-navy leading-none">210</span>
+                  <span class="text-ink/55 text-sm mb-1">zł / miesiąc</span>
+                </div>
+                <ul class="space-y-2 text-sm text-ink/65">
+                  <li class="flex items-center gap-2"><span class="text-coral" aria-hidden="true">✓</span> 2 osoby, 1 cena</li>
+                  <li class="flex items-center gap-2"><span class="text-coral" aria-hidden="true">✓</span> Taniec towarzyski i użytkowy</li>
+                  <li class="flex items-center gap-2"><span class="text-coral" aria-hidden="true">✓</span> Możliwość odrabiania dla obojga</li>
+                </ul>
+                <a href="#zapisy" class="btn-coral text-center mt-2">Idziemy razem!</a>
+              </div>
+
+            </div>
+
+            <!-- Accordion FAQ cennik -->
+            <div class="mt-8 bg-white border border-sand-dark rounded-xl p-6" aria-label="Często zadawane pytania o cennik">
+              <h3 class="font-display font-bold text-lg text-navy mb-4">Najczęstsze pytania</h3>
+
+              <div class="accordion-item">
+                <button class="accordion-trigger" aria-expanded="false">
+                  Czy jest zniżka dla rodzin z wieloma dziećmi?
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="accordion-body">
+                  Tak! Przy zapisie dwójki lub więcej dzieci z tej samej rodziny oferujemy 15% zniżki na karnety od drugiego dziecka. Wystarczy wspomnieć o tym podczas zapisów.
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button class="accordion-trigger" aria-expanded="false">
+                  Kiedy i jak można płacić?
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="accordion-body">
+                  Karnety opłacamy do 5. dnia każdego miesiąca — przelewem, BLIK-iem lub gotówką u instruktora. Wejście jednorazowe płatne przy wejściu na salę.
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button class="accordion-trigger" aria-expanded="false">
+                  Czy mogę zawiesić karnet na czas choroby?
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="accordion-body">
+                  W przypadku dłuższej nieobecności (powyżej 2 tygodni) spowodowanej chorobą istnieje możliwość zawieszenia karnetu. Prosimy o kontakt mailowy lub telefoniczny.
+                </div>
+              </div>
+
+            </div>
+
+          </div><!-- /lewa kolumna -->
+
+          <!-- Prawa kolumna: Info box "Odrabianie zajęć" -->
+          <div class="space-y-5">
+
+            <div class="info-box" aria-labelledby="odrabianie-heading">
+              <div class="flex items-center gap-3 mb-5">
+                <span class="text-2xl" aria-hidden="true">🔄</span>
+                <h3 id="odrabianie-heading" class="font-display font-bold text-xl text-white">Odrabianie zajęć</h3>
+              </div>
+              <p class="text-white/60 text-sm mb-6 leading-relaxed">
+                Opuściłeś zajęcia? Bez stresu! Posiadacze karnetu mogą odrobić każdą nieobecność w dowolnej innej grupie — w ciągu 30 dni.
+              </p>
+
+              <!-- 3 kroki -->
+              <ol class="space-y-5" role="list">
+                <li class="flex items-start gap-4">
+                  <span class="step-num" aria-hidden="true">1</span>
+                  <div>
+                    <p class="font-semibold text-white text-sm mb-0.5">Zgłoś nieobecność</p>
+                    <p class="text-white/50 text-xs leading-relaxed">Napisz SMS lub wiadomość na Messenger — minimum dzień wcześniej.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-4">
+                  <span class="step-num" aria-hidden="true">2</span>
+                  <div>
+                    <p class="font-semibold text-white text-sm mb-0.5">Wybierz zastępczą grupę</p>
+                    <p class="text-white/50 text-xs leading-relaxed">Sprawdź grafik powyżej i wybierz dowolne zajęcia z wolnym miejscem.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-4">
+                  <span class="step-num" aria-hidden="true">3</span>
+                  <div>
+                    <p class="font-semibold text-white text-sm mb-0.5">Przyjdź i tańcz!</p>
+                    <p class="text-white/50 text-xs leading-relaxed">Powiedz instruktorowi, że odzrabiasz — i gotowe. Żadnych dodatkowych opłat.</p>
+                  </div>
+                </li>
+              </ol>
+
+              <div class="mt-6 pt-5 border-t border-white/10">
+                <p class="text-xs text-white/35 leading-relaxed">
+                  Odrabianie dotyczy wyłącznie posiadaczy karnetów miesięcznych i semestralnych. Jedno odrabianie per nieobecność, ważne 30 dni.
+                </p>
+              </div>
+            </div>
+
+            <!-- Kontakt box -->
+            <div class="bg-white border border-sand-dark rounded-xl p-6">
+              <p class="text-xs font-bold tracking-wider uppercase text-coral mb-3">Masz pytania?</p>
+              <p class="text-sm text-ink/65 mb-4 leading-relaxed">Chętnie pomożemy wybrać odpowiedni kurs i termin. Napisz lub zadzwoń — odpiszemy tego samego dnia.</p>
+              <div class="flex flex-col gap-2">
+                <a href="tel:+48123456789" class="inline-flex items-center gap-2 text-sm text-navy font-semibold hover:text-coral transition-colors no-underline">
+                  <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.47 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  +48 123 456 789
+                </a>
+                <a href="mailto:kontakt.amen@gmail.com" class="inline-flex items-center gap-2 text-sm text-navy font-semibold hover:text-coral transition-colors no-underline">
+                  <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  kontakt.amen@gmail.com
+                </a>
+              </div>
+            </div>
+
+          </div><!-- /prawa kolumna -->
+
+        </div><!-- /pricing grid -->
+
+      </div>
+    </section>
+
+    <!-- ── SEKCJA 4: ZAPISY CTA ────────────────────── -->
+    <section class="py-16 bg-navy" id="zapisy" aria-labelledby="zapisy-heading">
+      <div class="container text-center">
+        <p class="text-xs font-bold tracking-[0.15em] uppercase text-coral mb-4">Gotowy na pierwszy krok?</p>
+        <h2 id="zapisy-heading" class="font-display font-bold text-3xl md:text-4xl text-white mb-4">Dołącz do nas już dziś</h2>
+        <p class="text-white/55 text-lg max-w-xl mx-auto mb-10">
+          Wypełnij formularz lub zadzwoń — powiemy Ci, która grupa najbardziej pasuje do Twojego harmonogramu.
+        </p>
+
+        <form class="max-w-lg mx-auto bg-white/[.06] border border-white/10 rounded-2xl p-8 text-left" novalidate aria-label="Formularz zapisów">
+          <div class="grid sm:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label for="zapis-imie" class="block text-xs font-semibold text-white/50 uppercase tracking-wider mb-1.5">Imię i nazwisko</label>
+              <input
+                type="text"
+                id="zapis-imie"
+                name="name"
+                autocomplete="name"
+                placeholder="Jan Kowalski"
+                class="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/15 text-white text-sm placeholder-white/25 focus:outline-none focus:border-coral focus:ring-2 focus:ring-coral/30 transition-colors"
+              >
+            </div>
+            <div>
+              <label for="zapis-tel" class="block text-xs font-semibold text-white/50 uppercase tracking-wider mb-1.5">Telefon</label>
+              <input
+                type="tel"
+                id="zapis-tel"
+                name="phone"
+                autocomplete="tel"
+                placeholder="+48 500 000 000"
+                class="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/15 text-white text-sm placeholder-white/25 focus:outline-none focus:border-coral focus:ring-2 focus:ring-coral/30 transition-colors"
+              >
+            </div>
+          </div>
+          <div class="mb-4">
+            <label for="zapis-kurs" class="block text-xs font-semibold text-white/50 uppercase tracking-wider mb-1.5">Interesujący kurs</label>
+            <select
+              id="zapis-kurs"
+              name="course"
+              class="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/15 text-white text-sm focus:outline-none focus:border-coral focus:ring-2 focus:ring-coral/30 transition-colors appearance-none"
+              style="color:rgba(255,255,255,.85)"
+            >
+              <option value="" style="color:#1a1410">Wybierz kurs…</option>
+              <option value="uzytkowy-dzieci" style="color:#1a1410">Taniec Użytkowy – dzieci</option>
+              <option value="uzytkowy-mlodzież" style="color:#1a1410">Taniec Użytkowy – młodzież</option>
+              <option value="uzytkowy-dorosli" style="color:#1a1410">Taniec Użytkowy – dorośli</option>
+              <option value="towarzyski" style="color:#1a1410">Taniec Towarzyski</option>
+              <option value="pierwszy-taniec" style="color:#1a1410">Pierwszy Taniec (ślubny)</option>
+            </select>
+          </div>
+          <div class="mb-6">
+            <label for="zapis-wiadomosc" class="block text-xs font-semibold text-white/50 uppercase tracking-wider mb-1.5">Wiadomość (opcjonalnie)</label>
+            <textarea
+              id="zapis-wiadomosc"
+              name="message"
+              rows="3"
+              placeholder="Np. preferowany termin, wiek dziecka, pytania…"
+              class="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/15 text-white text-sm placeholder-white/25 focus:outline-none focus:border-coral focus:ring-2 focus:ring-coral/30 transition-colors resize-none"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn-coral w-full justify-center text-base py-3">
+            Wyślij zgłoszenie
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <p class="text-xs text-white/25 text-center mt-3">Dane przetwarzamy zgodnie z <a href="polityka-prywatnosci.html" class="underline underline-offset-2 hover:text-white/40 transition-colors">Polityką prywatności</a>.</p>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════
+       STOPKA
+  ════════════════════════════════════════════════ -->
+  <footer class="bg-navy-dark text-white/60 pt-16 pb-8" role="contentinfo">
+    <div class="container">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_2fr] gap-10 mb-14">
+
+        <div>
+          <p class="font-display font-bold text-xl text-white mb-2">
+            <span class="text-gold" aria-hidden="true">✝</span>&nbsp;Amen! Szkoła Tańca
+          </p>
+          <p class="text-sm text-white/35">Wrocław · Taniec zakorzeniony w wierze</p>
+        </div>
+
+        <nav aria-label="Nawigacja prawna">
+          <h3 class="text-[10px] font-bold tracking-[0.15em] uppercase text-coral mb-4">Dokumenty</h3>
+          <ul class="flex flex-col gap-2.5 list-none" role="list">
+            <li><a class="text-sm text-white/55 hover:text-white no-underline transition-colors" href="regulamin.html">Regulamin zajęć</a></li>
+            <li><a class="text-sm text-white/55 hover:text-white no-underline transition-colors" href="regulamin-online.html">Regulamin serwisu</a></li>
+            <li><a class="text-sm text-white/55 hover:text-white no-underline transition-colors" href="polityka-prywatnosci.html">Polityka prywatności</a></li>
+            <li><a class="text-sm text-white/55 hover:text-white no-underline transition-colors" href="rodo.html">RODO</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-label="Social media">
+          <h3 class="text-[10px] font-bold tracking-[0.15em] uppercase text-coral mb-4">Znajdź nas</h3>
+          <ul class="flex flex-col gap-3 list-none" role="list">
+            <li>
+              <a class="inline-flex items-center gap-2.5 text-sm text-white/55 hover:text-white no-underline transition-colors" href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a class="inline-flex items-center gap-2.5 text-sm text-white/55 hover:text-white no-underline transition-colors" href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a class="inline-flex items-center gap-2.5 text-sm text-white/55 hover:text-white no-underline transition-colors" href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+                <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+                YouTube
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div>
+          <h3 class="text-[10px] font-bold tracking-[0.15em] uppercase text-coral mb-4">Newsletter</h3>
+          <p class="text-sm text-white/35 mb-4 leading-relaxed">Nowe terminy, relacje z wydarzeń i inspiracje — prosto na Twoją skrzynkę.</p>
+          <form action="#" method="post" novalidate>
+            <div class="flex gap-2 mb-2.5 flex-wrap">
+              <label class="sr-only" for="newsletter-email">Adres e-mail</label>
+              <input
+                class="flex-1 min-w-[160px] px-4 py-2.5 rounded-full bg-white/10 border border-white/15 text-white text-sm placeholder-white/25 focus:outline-none focus:border-coral focus:ring-2 focus:ring-coral/30 transition-colors"
+                type="email"
+                id="newsletter-email"
+                name="email"
+                placeholder="Twój adres e-mail"
+                autocomplete="email"
+                required
+              />
+              <button
+                class="inline-flex items-center px-5 py-2.5 rounded-full bg-coral text-white text-sm font-semibold whitespace-nowrap shadow-coral hover:bg-coral-dark transition-all duration-200"
+                type="submit"
+              >
+                Zapisuję się
+              </button>
+            </div>
+            <p class="text-xs text-white/25">
+              Zapisując się, akceptujesz naszą
+              <a class="underline underline-offset-2 hover:text-white/50 transition-colors" href="polityka-prywatnosci.html">Politykę prywatności</a>.
+            </p>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/[.08] pt-6">
+        <p class="text-xs text-white/20 text-center">
+          &copy; <span id="footer-year">2025</span> Chrześcijańska Szkoła Tańca „Amen!" Wrocław. Wszelkie prawa zastrzeżone.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════
+       SKRYPTY
+  ════════════════════════════════════════════════ -->
+  <script>
+
+
+    /* ── Footer year ── */
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    /* ── Tabs ── */
+    const tabBtns   = document.querySelectorAll('[role="tab"]');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.setAttribute('aria-selected', 'false'));
+        tabPanels.forEach(p => p.classList.remove('active'));
+
+        btn.setAttribute('aria-selected', 'true');
+        const target = document.getElementById(btn.getAttribute('aria-controls'));
+        if (target) target.classList.add('active');
+      });
+
+      btn.addEventListener('keydown', e => {
+        const tabs = [...tabBtns];
+        const idx  = tabs.indexOf(btn);
+        if (e.key === 'ArrowRight') { e.preventDefault(); tabs[(idx + 1) % tabs.length].focus(); tabs[(idx + 1) % tabs.length].click(); }
+        if (e.key === 'ArrowLeft')  { e.preventDefault(); tabs[(idx - 1 + tabs.length) % tabs.length].focus(); tabs[(idx - 1 + tabs.length) % tabs.length].click(); }
+      });
+    });
+
+    /* ── Schedule filter ── */
+    const filterPills = document.querySelectorAll('.filter-pill');
+    const scheduleRows = document.querySelectorAll('#schedule-body tr');
+    const noResults    = document.getElementById('no-results');
+
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        const filter = pill.dataset.filter;
+
+        filterPills.forEach(p => { p.classList.remove('active'); p.setAttribute('aria-pressed', 'false'); });
+        pill.classList.add('active');
+        pill.setAttribute('aria-pressed', 'true');
+
+        let visible = 0;
+        scheduleRows.forEach(row => {
+          if (filter === 'all' || row.dataset.location === filter) {
+            row.classList.remove('row-hidden');
+            visible++;
+          } else {
+            row.classList.add('row-hidden');
+          }
+        });
+
+        noResults.classList.toggle('hidden', visible > 0);
+      });
+    });
+
+    /* ── Accordion ── */
+    document.querySelectorAll('.accordion-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const expanded = trigger.getAttribute('aria-expanded') === 'true';
+        const body = trigger.nextElementSibling;
+
+        trigger.setAttribute('aria-expanded', String(!expanded));
+        body.classList.toggle('open', !expanded);
+      });
+    });
+  </script>
+
+</body>
+</html>

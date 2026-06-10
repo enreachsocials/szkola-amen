@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Roztańczona Parafia – program taneczny Amen! dla wrocławskich wspólnot parafialnych. Sprawdź, jak wzbogacić życie swojej parafii przez taniec." />
+  <title>Roztańczona Parafia – Amen! Szkoła Tańca Wrocław</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="tailwind.css">
+
+  <style>
+    /* ── Input / Select / Textarea base ── */
+    .field-wrap { display: flex; flex-direction: column; gap: 0.375rem; }
+
+    .field-label {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: #4a3f35;
+      letter-spacing: 0.01em;
+    }
+    .field-label .required {
+      color: #E8622A;
+      margin-left: 2px;
+    }
+
+    .field-input,
+    .field-select,
+    .field-textarea {
+      width: 100%;
+      padding: 0.6875rem 0.875rem;
+      border: 1.5px solid #d9d0c0;
+      border-radius: 10px;
+      background: #ffffff;
+      font-size: 0.9375rem;
+      color: #1a1410;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 160ms, box-shadow 160ms, background 160ms;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    .field-input::placeholder,
+    .field-textarea::placeholder { color: #b0a090; }
+
+    .field-input:hover,
+    .field-select:hover,
+    .field-textarea:hover {
+      border-color: #b8912a;
+    }
+
+    .field-input:focus,
+    .field-select:focus,
+    .field-textarea:focus {
+      border-color: #1B2E4B;
+      box-shadow: 0 0 0 3px rgba(27,46,75,.12);
+      background: #fdfcfa;
+    }
+
+    /* Valid state */
+    .field-input.is-valid,
+    .field-select.is-valid,
+    .field-textarea.is-valid {
+      border-color: #2e7d32;
+      box-shadow: 0 0 0 3px rgba(46,125,50,.1);
+    }
+
+    /* Error state */
+    .field-input.is-error,
+    .field-select.is-error,
+    .field-textarea.is-error {
+      border-color: #c62828;
+      box-shadow: 0 0 0 3px rgba(198,40,40,.1);
+      background: #fff8f8;
+    }
+
+    .field-hint {
+      font-size: 0.75rem;
+      color: #8a7a6a;
+      line-height: 1.4;
+    }
+    .field-error-msg {
+      font-size: 0.75rem;
+      color: #c62828;
+      display: none;
+      align-items: center;
+      gap: 4px;
+    }
+    .field-error-msg.visible { display: flex; }
+    .field-error-msg svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+    /* Select arrow */
+    .select-wrap { position: relative; }
+    .select-wrap::after {
+      content: '';
+      position: absolute;
+      right: 0.875rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid #8a7a6a;
+      pointer-events: none;
+    }
+
+    /* Checkbox custom */
+    .checkbox-wrap {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      cursor: pointer;
+    }
+    .checkbox-input {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .checkbox-box {
+      width: 1.125rem;
+      height: 1.125rem;
+      border: 1.5px solid #d9d0c0;
+      border-radius: 4px;
+      background: #fff;
+      flex-shrink: 0;
+      margin-top: 1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 150ms, background 150ms, box-shadow 150ms;
+    }
+    .checkbox-box svg { display: none; }
+    .checkbox-input:checked + .checkbox-box {
+      background: #1B2E4B;
+      border-color: #1B2E4B;
+    }
+    .checkbox-input:checked + .checkbox-box svg { display: block; }
+    .checkbox-input:focus-visible + .checkbox-box {
+      box-shadow: 0 0 0 3px rgba(27,46,75,.2);
+    }
+    .checkbox-input.is-error + .checkbox-box {
+      border-color: #c62828;
+      box-shadow: 0 0 0 3px rgba(198,40,40,.1);
+    }
+    .checkbox-label {
+      font-size: 0.875rem;
+      color: #5a4e42;
+      line-height: 1.55;
+    }
+
+    /* Submit button */
+    .btn-submit {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 100%;
+      padding: 0.875rem 2rem;
+      border-radius: 10px;
+      background: #C7410A; /* WCAG AA: kontrast 4.97:1 z białym */
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: inherit;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(192,68,32,.4);
+      transition: background 170ms, transform 170ms, box-shadow 170ms;
+      letter-spacing: 0.01em;
+    }
+    .btn-submit:hover {
+      background: #9E3618;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(192,68,32,.52);
+    }
+    .btn-submit:active { transform: translateY(0); }
+    .btn-submit:disabled {
+      background: #c9b8a8;
+      box-shadow: none;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Success state */
+    .form-success {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1rem;
+      padding: 2rem 1rem;
+    }
+    .form-success.visible { display: flex; }
+
+    /* ── Timeline ── */
+    .timeline { position: relative; }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 2rem;
+      top: 2.5rem;
+      bottom: 2.5rem;
+      width: 2px;
+      background: linear-gradient(180deg, #E8622A 0%, #1B2E4B 100%);
+      border-radius: 2px;
+    }
+    @media (min-width: 768px) {
+      .timeline::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    .timeline-step {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      padding-left: 4.5rem;
+      margin-bottom: 3rem;
+    }
+    .timeline-step:last-child { margin-bottom: 0; }
+
+    @media (min-width: 768px) {
+      .timeline-step {
+        padding-left: 0;
+        width: 45%;
+        margin-bottom: 2.5rem;
+      }
+      .timeline-step:nth-child(odd) {
+        margin-left: 0;
+        padding-right: 3.5rem;
+        text-align: right;
+        flex-direction: row-reverse;
+      }
+      .timeline-step:nth-child(even) {
+        margin-left: 55%;
+        padding-left: 3.5rem;
+      }
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 1.125rem;
+      top: 0.25rem;
+      width: 1.75rem;
+      height: 1.75rem;
+      border-radius: 50%;
+      background: #E8622A;
+      border: 3px solid #faf8f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #fff;
+      z-index: 1;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(232,98,42,.35);
+    }
+    @media (min-width: 768px) {
+      .timeline-dot {
+        left: auto;
+        position: absolute;
+      }
+      .timeline-step:nth-child(odd) .timeline-dot {
+        right: -1.375rem;
+        left: auto;
+      }
+      .timeline-step:nth-child(even) .timeline-dot {
+        left: -1.375rem;
+      }
+    }
+
+    /* ── Benefit card ── */
+    .benefit-card {
+      background: #fff;
+      border: 1.5px solid #e2d9cc;
+      border-radius: 16px;
+      padding: 1.75rem;
+      transition: box-shadow 200ms, transform 200ms, border-color 200ms;
+    }
+    .benefit-card:hover {
+      box-shadow: 0 8px 32px rgba(27,46,75,.1);
+      transform: translateY(-3px);
+      border-color: #b8912a;
+    }
+    .benefit-icon {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* ── Quote ── */
+    .pull-quote {
+      border-left: 3px solid #E8622A;
+      padding-left: 1.25rem;
+      font-style: italic;
+      color: #5a4e42;
+    }
+
+    /* ── Stat pill ── */
+    .stat-pill {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.25rem 1.75rem;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 14px;
+      backdrop-filter: blur(4px);
+    }
+
+    /* ── Hero gradient ── */
+    .parish-hero {
+      background: linear-gradient(140deg, #0F1C2E 0%, #1B2E4B 50%, #2A4370 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .parish-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 55% 65% at 80% 30%, rgba(232,98,42,.18) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 50% at 15% 80%, rgba(184,145,42,.1) 0%, transparent 55%);
+    }
+
+    /* ── Form card ── */
+    .form-card {
+      background: #fff;
+      border: 1.5px solid #e2d9cc;
+      border-radius: 20px;
+      box-shadow: 0 4px 40px rgba(27,46,75,.1);
+      overflow: hidden;
+    }
+
+    /* Loading spinner */
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .spinner {
+      width: 1.1rem; height: 1.1rem;
+      border: 2px solid rgba(255,255,255,.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin .6s linear infinite;
+      display: none;
+    }
+    .btn-submit.loading .spinner { display: block; }
+    .btn-submit.loading .btn-text { display: none; }
+  </style>
+</head>
+<body class="antialiased bg-sand-light text-ink">
+
+  <!-- ═══════════════════════════════════════════════
+       NAWIGACJA
+  ════════════════════════════════════════════════ -->
+  <header class="sticky top-0 z-50 bg-navy" role="banner" style="box-shadow:0 1px 0 rgba(255,255,255,.07)">
+    <nav class="w-full px-4 md:px-6" aria-label="Główna nawigacja">
+      <div class="flex items-center h-13 gap-2" style="height:52px">
+
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2 no-underline flex-shrink-0 mr-1" aria-label="Amen! – strona główna">
+          <span class="font-display font-bold text-base text-white leading-none tracking-tight">Amen!</span>
+          <span class="hidden sm:block text-xs font-normal text-white/35 leading-none">Szkoła Tańca</span>
+        </a>
+
+        <!-- Separator -->
+        <div class="w-px h-4 bg-white/15 flex-shrink-0" aria-hidden="true"></div>
+
+        <!-- Tab strip -->
+        <div class="nav-tabs-strip flex items-center gap-0.5 flex-1 overflow-x-auto" role="list">
+          <a class="nav-tab" href="index.html">Start</a>
+          <a class="nav-tab" href="oferta.html">Oferta</a>
+          <a class="nav-tab" href="grafik.html">Grafik</a>
+          <a class="nav-tab" href="grafik.html#cennik">Cennik</a>
+          <a class="nav-tab" href="o-nas.html">O nas</a>
+          <a class="nav-tab" href="kontakt.html">Kontakt</a>
+          <a class="nav-tab nav-tab-newsletter" href="#newsletter">NEWSLETTER</a>
+        </div>
+
+        <!-- CTA — active on this page -->
+        <a href="#formularz" class="nav-cta" aria-label="Zgłoś swoją parafię do programu">
+          <span aria-hidden="true">✦</span>
+          <span class="hidden sm:inline">Zgłoś swoją parafię!</span>
+          <span class="sm:hidden">Parafia</span>
+        </a>
+
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ═══════════════════════════════════════════════
+         HERO
+    ════════════════════════════════════════════════ -->
+    <section class="parish-hero py-28 md:py-36" aria-labelledby="hero-heading">
+      <div class="container relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+
+          <!-- Eyebrow -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/[.07] border border-white/[.12] text-xs font-bold tracking-[0.14em] uppercase text-gold mb-8">
+            <span class="w-1.5 h-1.5 rounded-full bg-coral" aria-hidden="true"></span>
+            Program dla parafii · Wrocław 2025/2026
+          </div>
+
+          <h1 id="hero-heading" class="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-[1.1]">
+            Roztańczona<br />
+            <span class="text-coral">Parafia</span>
+          </h1>
+
+          <p class="text-white/60 text-xl md:text-2xl leading-relaxed mb-10 max-w-2xl mx-auto">
+            Wnosimy taniec do życia parafialnego — zajęcia dla dzieci, dorosłych i rodzin, prowadzone w salach Waszej wspólnoty.
+          </p>
+
+          <!-- CTA buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="#formularz" class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-coral text-white font-bold text-base no-underline shadow-coral hover:bg-coral-dark transition-all duration-200 hover:-translate-y-0.5">
+              Zgłoś swoją parafię
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="#jak-dziala" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-white/20 text-white/80 font-semibold text-base no-underline hover:bg-white/[.07] transition-all duration-200">
+              Jak to działa?
+            </a>
+          </div>
+
+          <!-- Statystyki -->
+          <div class="flex flex-wrap justify-center gap-4 mt-14">
+            <div class="stat-pill">
+              <span class="font-display font-bold text-3xl text-white leading-none">12+</span>
+              <span class="text-white/45 text-xs tracking-wider uppercase mt-1">Parafii</span>
+            </div>
+            <div class="stat-pill">
+              <span class="font-display font-bold text-3xl text-white leading-none">400+</span>
+              <span class="text-white/45 text-xs tracking-wider uppercase mt-1">Uczestników</span>
+            </div>
+            <div class="stat-pill">
+              <span class="font-display font-bold text-3xl text-white leading-none">10 lat</span>
+              <span class="text-white/45 text-xs tracking-wider uppercase mt-1">Doświadczenia</span>
+            </div>
+            <div class="stat-pill">
+              <span class="font-display font-bold text-3xl text-white leading-none">100%</span>
+              <span class="text-white/45 text-xs tracking-wider uppercase mt-1">Zaangażowania</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         KORZYŚCI DLA PARAFII
+    ════════════════════════════════════════════════ -->
+    <section class="py-20 bg-sand-light" aria-labelledby="korzysci-heading">
+      <div class="container">
+
+        <div class="text-center mb-14">
+          <p class="text-xs font-bold tracking-[0.15em] uppercase text-coral mb-3">Dlaczego warto?</p>
+          <h2 id="korzysci-heading" class="font-display font-bold text-3xl md:text-4xl text-navy mb-4">Co zyskuje Wasza parafia?</h2>
+          <p class="text-ink/55 text-lg max-w-xl mx-auto leading-relaxed">
+            Taniec to nie tylko ruch — to sposób na budowanie relacji, integrację pokoleń i ożywienie wspólnoty.
+          </p>
+        </div>
+
+        <!-- Benefits grid -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+
+          <div class="benefit-card">
+            <div class="benefit-icon bg-blue-50">🏛️</div>
+            <h3 class="font-display font-bold text-lg text-navy mb-2">Sala parafialna w ruchu</h3>
+            <p class="text-ink/60 text-sm leading-relaxed">Wasze przestrzenie służą wspólnocie przez cały tydzień — nie tylko w niedzielę. Zajęcia odbywają się w Waszej sali, bez konieczności wynajmu.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon bg-orange-50">👨‍👩‍👧‍👦</div>
+            <h3 class="font-display font-bold text-lg text-navy mb-2">Integracja pokoleń</h3>
+            <p class="text-ink/60 text-sm leading-relaxed">Dzieci, rodzice i seniorzy uczą się razem. Taniec przełamuje bariery wiekowe i staje się wspólnym językiem dla całej parafii.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon bg-yellow-50">✝️</div>
+            <h3 class="font-display font-bold text-lg text-navy mb-2">Zakorzenione w wierze</h3>
+            <p class="text-ink/60 text-sm leading-relaxed">Program tworzony z poszanowaniem wartości chrześcijańskich. Repertuar i forma zajęć są zawsze konsultowane z duszpasterzem wspólnoty.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon bg-green-50">📋</div>
+            <h3 class="font-display font-bold text-lg text-navy mb-2">Zero formalności</h3>
+            <p class="text-ink/60 text-sm leading-relaxed">My zajmujemy się wszystkim — rekrutacją uczestników, ubezpieczeniem, materiałami i rozliczeniami. Parafia udostępnia tylko salę.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon bg-purple-50">🎭</div>
+            <h3 class="font-display font-bold text-lg text-navy mb-2">Pokazy i wydarzenia</h3>
+            <p class="text-ink/60 text-sm leading-relaxed">Na koniec semestru organizujemy otwarty pokaz dla całej parafii. Radość rodziców i dumna twarz dziecka — bezcenne.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon bg-red-50">❤️</div>
+            <h3 class="font-display font-bold text-lg text-navy mb-2">Wsparcie dla rodzin</h3>
+            <p class="text-ink/60 text-sm leading-relaxed">Przystępne ceny kursów i elastyczne karnety. Oferujemy zniżki dla rodzin wielodzietnych i uczestników z tej samej parafii.</p>
+          </div>
+
+        </div>
+
+        <!-- Pull quote -->
+        <div class="max-w-3xl mx-auto bg-white border border-sand-dark rounded-2xl p-8 md:p-10 shadow-card">
+          <div class="pull-quote mb-6">
+            <p class="font-display text-xl md:text-2xl leading-relaxed">
+              „Byłem sceptyczny, czy sala parafialna nadaje się na zajęcia taneczne. Po pierwszym semestrze muszę przyznać — Konrad i jego zespół zrobili z tego miejsca centrum życia naszej wspólnoty. Rodzice zostają po zajęciach na kawę, dzieci zaprzyjaźniają się w grupach mieszanych wiekowo. To daje mi więcej radości niż niejedna inicjatywa duszpasterska."
+            </p>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-navy/10 border-2 border-navy/20 flex items-center justify-center font-display font-bold text-navy text-sm flex-shrink-0" aria-hidden="true">KW</div>
+            <div>
+              <p class="font-semibold text-navy">ks. Krzysztof W.</p>
+              <p class="text-sm text-ink/45">Proboszcz, Parafia św. Karola Boromeusza, Wrocław</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         TIMELINE: JAK TO DZIAŁA?
+    ════════════════════════════════════════════════ -->
+    <section class="py-20 bg-sand" id="jak-dziala" aria-labelledby="timeline-heading">
+      <div class="container">
+
+        <div class="text-center mb-16">
+          <p class="text-xs font-bold tracking-[0.15em] uppercase text-coral mb-3">Prosto i bez komplikacji</p>
+          <h2 id="timeline-heading" class="font-display font-bold text-3xl md:text-4xl text-navy mb-4">Jak to działa?</h2>
+          <p class="text-ink/55 max-w-lg mx-auto">Od pierwszego kontaktu do pierwszych zajęć — zajmiemy się wszystkim.</p>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline max-w-3xl mx-auto px-4" role="list" aria-label="Kroki dołączenia do programu">
+
+          <!-- Krok 1 -->
+          <div class="timeline-step" role="listitem">
+            <div class="timeline-dot" aria-hidden="true">1</div>
+            <div class="bg-white border border-sand-dark rounded-xl p-6 shadow-card flex-1">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="text-2xl" aria-hidden="true">📝</span>
+                <h3 class="font-display font-bold text-xl text-navy">Zgłaszasz parafię</h3>
+              </div>
+              <p class="text-ink/60 text-sm leading-relaxed mb-4">
+                Wypełniasz formularz poniżej lub dzwonisz do nas bezpośrednio. Opowiadasz nam o swojej wspólnocie — ile ma sal, ile uczestników się spodziewacie, jakie grupy wiekowe.
+              </p>
+              <div class="inline-flex items-center gap-2 text-xs font-semibold text-coral bg-coral/10 px-3 py-1.5 rounded-full">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Czas: 5 minut
+              </div>
+            </div>
+          </div>
+
+          <!-- Krok 2 -->
+          <div class="timeline-step" role="listitem">
+            <div class="timeline-dot" aria-hidden="true">2</div>
+            <div class="bg-white border border-sand-dark rounded-xl p-6 shadow-card flex-1">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="text-2xl" aria-hidden="true">🤝</span>
+                <h3 class="font-display font-bold text-xl text-navy">Spotkanie i ustalenia</h3>
+              </div>
+              <p class="text-ink/60 text-sm leading-relaxed mb-4">
+                W ciągu 48 godzin kontaktujemy się z Wami i umawiamy na krótkie spotkanie (stacjonarne lub online). Ustalamy harmonogram, grupy, ceny i zasady współpracy.
+              </p>
+              <div class="inline-flex items-center gap-2 text-xs font-semibold text-coral bg-coral/10 px-3 py-1.5 rounded-full">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Czas: do 48 h od zgłoszenia
+              </div>
+            </div>
+          </div>
+
+          <!-- Krok 3 -->
+          <div class="timeline-step" role="listitem">
+            <div class="timeline-dot" aria-hidden="true">3</div>
+            <div class="bg-white border border-sand-dark rounded-xl p-6 shadow-card flex-1">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="text-2xl" aria-hidden="true">🎉</span>
+                <h3 class="font-display font-bold text-xl text-navy">Startujemy!</h3>
+              </div>
+              <p class="text-ink/60 text-sm leading-relaxed mb-4">
+                Ogłaszamy zapisy w Waszej parafii, zbieramy grupy i ruszamy z pierwszymi zajęciami. Zajmujemy się każdym szczegółem — Wy cieszycie się efektami.
+              </p>
+              <div class="inline-flex items-center gap-2 text-xs font-semibold text-gold bg-gold/10 px-3 py-1.5 rounded-full">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Start w ciągu 2–4 tygodni
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA pod timeline -->
+        <div class="text-center mt-14">
+          <a href="#formularz" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-navy text-white font-bold text-base no-underline hover:bg-navy-light transition-all duration-200 hover:-translate-y-0.5 shadow-navy">
+            Chcę zgłosić parafię
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         FORMULARZ ZGŁOSZENIOWY
+    ════════════════════════════════════════════════ -->
+    <section class="py-20 bg-sand-light" id="formularz" aria-labelledby="form-heading">
+      <div class="container">
+
+        <div class="max-w-2xl mx-auto">
+
+          <!-- Section header -->
+          <div class="text-center mb-10">
+            <p class="text-xs font-bold tracking-[0.15em] uppercase text-coral mb-3">Dołącz do programu</p>
+            <h2 id="form-heading" class="font-display font-bold text-3xl md:text-4xl text-navy mb-4">Zgłoś swoją parafię</h2>
+            <p class="text-ink/55 max-w-md mx-auto">
+              Wypełnij formularz, a skontaktujemy się z Tobą w ciągu 48 godzin, by omówić szczegóły współpracy.
+            </p>
+          </div>
+
+          <!-- Form card -->
+          <div class="form-card">
+
+            <!-- Card header strip -->
+            <div class="bg-navy px-8 py-5 flex items-center gap-4">
+              <div class="w-10 h-10 rounded-full bg-coral/20 border border-coral/30 flex items-center justify-center flex-shrink-0" aria-hidden="true">
+                <svg class="w-5 h-5 text-coral" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:#E8622A">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-white text-sm">Formularz zgłoszeniowy</p>
+                <p class="text-white/40 text-xs">Program „Roztańczona Parafia" · sezon 2025/2026</p>
+              </div>
+            </div>
+
+            <!-- Form body -->
+            <div class="px-8 py-8">
+
+              <form id="parish-form" novalidate aria-label="Formularz zgłoszenia parafii do programu Roztańczona Parafia">
+
+                <!-- Row 1: Imię i Nazwisko + Rola -->
+                <div class="grid sm:grid-cols-2 gap-5 mb-5">
+
+                  <!-- Imię i Nazwisko -->
+                  <div class="field-wrap">
+                    <label for="f-name" class="field-label">
+                      Imię i Nazwisko <span class="required" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="f-name"
+                      name="name"
+                      class="field-input"
+                      placeholder="Jan Kowalski"
+                      autocomplete="name"
+                      aria-required="true"
+                      aria-describedby="f-name-err"
+                    >
+                    <span id="f-name-err" class="field-error-msg" role="alert">
+                      <svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                      Podaj imię i nazwisko.
+                    </span>
+                  </div>
+
+                  <!-- Rola -->
+                  <div class="field-wrap">
+                    <label for="f-role" class="field-label">
+                      Rola w parafii <span class="required" aria-hidden="true">*</span>
+                    </label>
+                    <div class="select-wrap">
+                      <select
+                        id="f-role"
+                        name="role"
+                        class="field-select"
+                        aria-required="true"
+                        aria-describedby="f-role-err"
+                      >
+                        <option value="">Wybierz rolę…</option>
+                        <option value="parafianin">Parafianin</option>
+                        <option value="ksiadz">Ksiądz / Duszpasterz</option>
+                        <option value="lider">Lider wspólnoty</option>
+                        <option value="katecheta">Katecheta</option>
+                        <option value="inne">Inne</option>
+                      </select>
+                    </div>
+                    <span id="f-role-err" class="field-error-msg" role="alert">
+                      <svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                      Wybierz swoją rolę.
+                    </span>
+                  </div>
+
+                </div>
+
+                <!-- Row 2: Nazwa parafii + Miasto -->
+                <div class="grid sm:grid-cols-[1fr_auto] gap-5 mb-5">
+
+                  <!-- Nazwa parafii -->
+                  <div class="field-wrap">
+                    <label for="f-parish" class="field-label">
+                      Nazwa parafii <span class="required" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="f-parish"
+                      name="parish"
+                      class="field-input"
+                      placeholder="np. Parafia św. Karola Boromeusza"
+                      aria-required="true"
+                      aria-describedby="f-parish-err"
+                    >
+                    <span id="f-parish-err" class="field-error-msg" role="alert">
+                      <svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                      Podaj nazwę parafii.
+                    </span>
+                  </div>
+
+                  <!-- Miasto -->
+                  <div class="field-wrap" style="min-width:140px">
+                    <label for="f-city" class="field-label">
+                      Miasto <span class="required" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="f-city"
+                      name="city"
+                      class="field-input"
+                      placeholder="Wrocław"
+                      autocomplete="address-level2"
+                      aria-required="true"
+                      aria-describedby="f-city-err"
+                    >
+                    <span id="f-city-err" class="field-error-msg" role="alert">
+                      <svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                      Podaj miasto.
+                    </span>
+                  </div>
+
+                </div>
+
+                <!-- Row 3: Telefon + E-mail -->
+                <div class="grid sm:grid-cols-2 gap-5 mb-5">
+
+                  <!-- Telefon -->
+                  <div class="field-wrap">
+                    <label for="f-phone" class="field-label">
+                      Telefon <span class="required" aria-hidden="true">*</span>
+                    </label>
+                    <div class="relative">
+                      <span class="absolute left-3.5 top-1/2 -translate-y-1/2 text-ink/35 text-sm select-none pointer-events-none" aria-hidden="true">🇵🇱</span>
+                      <input
+                        type="tel"
+                        id="f-phone"
+                        name="phone"
+                        class="field-input"
+                        style="padding-left:2.5rem"
+                        placeholder="+48 500 000 000"
+                        autocomplete="tel"
+                        aria-required="true"
+                        aria-describedby="f-phone-hint f-phone-err"
+                      >
+                    </div>
+                    <span id="f-phone-hint" class="field-hint">Format: +48 lub 9 cyfr</span>
+                    <span id="f-phone-err" class="field-error-msg" role="alert">
+                      <svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                      Podaj prawidłowy numer telefonu.
+                    </span>
+                  </div>
+
+                  <!-- E-mail -->
+                  <div class="field-wrap">
+                    <label for="f-email" class="field-label">
+                      Adres e-mail <span class="required" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      id="f-email"
+                      name="email"
+                      class="field-input"
+                      placeholder="jan@parafia.pl"
+                      autocomplete="email"
+                      inputmode="email"
+                      aria-required="true"
+                      aria-describedby="f-email-err"
+                    >
+                    <span id="f-email-err" class="field-error-msg" role="alert">
+                      <svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                      Podaj prawidłowy adres e-mail.
+                    </span>
+                  </div>
+
+                </div>
+
+                <!-- Row 4: Wiadomość (opcjonalnie) -->
+                <div class="field-wrap mb-6">
+                  <label for="f-message" class="field-label">
+                    Dodatkowe informacje
+                    <span class="text-ink/35 font-normal ml-1">(opcjonalnie)</span>
+                  </label>
+                  <textarea
+                    id="f-message"
+                    name="message"
+                    class="field-textarea"
+                    rows="3"
+                    placeholder="Np. wielkość sali, szacowana liczba uczestników, preferowane dni tygodnia, grupy wiekowe…"
+                    style="resize:vertical;min-height:80px"
+                  ></textarea>
+                  <span class="field-hint">Maksymalnie 500 znaków</span>
+                </div>
+
+                <!-- Divider -->
+                <div class="flex items-center gap-3 mb-6">
+                  <div class="flex-1 h-px bg-sand-dark"></div>
+                  <span class="text-xs text-ink/35 font-semibold uppercase tracking-wider">Zgody</span>
+                  <div class="flex-1 h-px bg-sand-dark"></div>
+                </div>
+
+                <!-- Checkbox: zgoda RODO -->
+                <div class="mb-4">
+                  <label class="checkbox-wrap" for="f-rodo">
+                    <input
+                      type="checkbox"
+                      id="f-rodo"
+                      name="rodo"
+                      class="checkbox-input"
+                      aria-required="true"
+                      aria-describedby="f-rodo-err"
+                    >
+                    <span class="checkbox-box" aria-hidden="true">
+                      <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true">
+                        <path d="M1 4L3.5 6.5L9 1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                    <span class="checkbox-label">
+                      Wyrażam zgodę na przetwarzanie moich danych osobowych przez Szkołę Tańca Amen! w celu obsługi zgłoszenia, zgodnie z
+                      <a href="polityka-prywatnosci.html" class="text-navy underline underline-offset-2 hover:text-coral transition-colors">Polityką prywatności</a>
+                      i przepisami RODO. <span class="text-coral font-semibold">*</span>
+                    </span>
+                  </label>
+                  <span id="f-rodo-err" class="field-error-msg mt-1.5 ml-[1.875rem]" role="alert">
+                    <svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    Zgoda jest wymagana.
+                  </span>
+                </div>
+
+                <!-- Checkbox: zgoda marketingowa -->
+                <div class="mb-8">
+                  <label class="checkbox-wrap" for="f-marketing">
+                    <input
+                      type="checkbox"
+                      id="f-marketing"
+                      name="marketing"
+                      class="checkbox-input"
+                    >
+                    <span class="checkbox-box" aria-hidden="true">
+                      <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true">
+                        <path d="M1 4L3.5 6.5L9 1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                    <span class="checkbox-label">
+                      Chcę otrzymywać informacje o nowych programach, nowościach i wydarzeniach Szkoły Tańca Amen! drogą elektroniczną.
+                      <span class="text-ink/40">(opcjonalnie)</span>
+                    </span>
+                  </label>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" id="submit-btn" class="btn-submit" aria-live="polite">
+                  <span class="spinner" aria-hidden="true"></span>
+                  <span class="btn-text inline-flex items-center gap-2">
+                    Wyślij zgłoszenie
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                  </span>
+                </button>
+
+                <p class="text-xs text-ink/35 text-center mt-4 leading-relaxed">
+                  Pola oznaczone <span class="text-coral font-semibold">*</span> są wymagane. Twoje dane są bezpieczne i nie będą udostępniane osobom trzecim.
+                </p>
+
+              </form>
+
+              <!-- Success message -->
+              <div id="form-success" class="form-success" aria-live="polite" aria-atomic="true">
+                <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center text-3xl mb-2" aria-hidden="true">✅</div>
+                <h3 class="font-display font-bold text-2xl text-navy">Zgłoszenie wysłane!</h3>
+                <p class="text-ink/60 max-w-sm text-center leading-relaxed">
+                  Dziękujemy! Skontaktujemy się z Tobą w ciągu 48 godzin, by omówić szczegóły. Do zobaczenia na parkiecie!
+                </p>
+                <a href="index.html" class="inline-flex items-center gap-2 mt-4 px-6 py-2.5 rounded-xl bg-navy text-white font-semibold text-sm no-underline hover:bg-navy-light transition-colors">
+                  Wróć na stronę główną
+                </a>
+              </div>
+
+            </div><!-- /form body -->
+          </div><!-- /form card -->
+
+          <!-- Trust badges -->
+          <div class="flex flex-wrap justify-center gap-6 mt-8 text-xs text-ink/40">
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Dane szyfrowane (SSL)
+            </span>
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              Zgodne z RODO
+            </span>
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-coral" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="color:#E8622A"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Odpowiadamy w 48 h
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         MINI CTA BOTTOM
+    ════════════════════════════════════════════════ -->
+    <section class="py-14 bg-navy" aria-label="Dodatkowy kontakt">
+      <div class="container text-center">
+        <p class="text-white/50 text-sm mb-2">Wolisz porozmawiać? Zadzwoń do nas:</p>
+        <a href="tel:+48123456789" class="font-display font-bold text-3xl text-white hover:text-coral transition-colors no-underline">
+          +48 123 456 789
+        </a>
+        <p class="text-white/30 text-xs mt-2">pon.–pt. 9:00–18:00</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════
+       STOPKA
+  ════════════════════════════════════════════════ -->
+  <footer class="bg-navy-dark text-white/60 pt-16 pb-8" role="contentinfo">
+    <div class="container">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_2fr] gap-10 mb-14">
+
+        <div>
+          <p class="font-display font-bold text-xl text-white mb-2">
+            <span class="text-gold" aria-hidden="true">✝</span>&nbsp;Amen! Szkoła Tańca
+          </p>
+          <p class="text-sm text-white/35">Wrocław · Taniec zakorzeniony w wierze</p>
+        </div>
+
+        <nav aria-label="Nawigacja prawna">
+          <h3 class="text-[10px] font-bold tracking-[0.15em] uppercase text-coral mb-4">Dokumenty</h3>
+          <ul class="flex flex-col gap-2.5 list-none" role="list">
+            <li><a class="text-sm text-white/55 hover:text-white no-underline transition-colors" href="regulamin.html">Regulamin zajęć</a></li>
+            <li><a class="text-sm text-white/55 hover:text-white no-underline transition-colors" href="regulamin-online.html">Regulamin serwisu</a></li>
+            <li><a class="text-sm text-white/55 hover:text-white no-underline transition-colors" href="polityka-prywatnosci.html">Polityka prywatności</a></li>
+            <li><a class="text-sm text-white/55 hover:text-white no-underline transition-colors" href="rodo.html">RODO</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-label="Social media">
+          <h3 class="text-[10px] font-bold tracking-[0.15em] uppercase text-coral mb-4">Znajdź nas</h3>
+          <ul class="flex flex-col gap-3 list-none" role="list">
+            <li>
+              <a class="inline-flex items-center gap-2.5 text-sm text-white/55 hover:text-white no-underline transition-colors" href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a class="inline-flex items-center gap-2.5 text-sm text-white/55 hover:text-white no-underline transition-colors" href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                Instagram
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div>
+          <h3 class="text-[10px] font-bold tracking-[0.15em] uppercase text-coral mb-4">Newsletter</h3>
+          <p class="text-sm text-white/35 mb-4 leading-relaxed">Nowe terminy, relacje z wydarzeń i inspiracje — prosto na Twoją skrzynkę.</p>
+          <form action="#" method="post" novalidate>
+            <div class="flex gap-2 mb-2.5 flex-wrap">
+              <label class="sr-only" for="newsletter-email-footer">Adres e-mail</label>
+              <input
+                class="flex-1 min-w-[160px] px-4 py-2.5 rounded-full bg-white/10 border border-white/15 text-white text-sm placeholder-white/25 focus:outline-none focus:border-coral focus:ring-2 focus:ring-coral/30 transition-colors"
+                type="email"
+                id="newsletter-email-footer"
+                name="email"
+                placeholder="Twój adres e-mail"
+                autocomplete="email"
+              />
+              <button class="inline-flex items-center px-5 py-2.5 rounded-full bg-coral text-white text-sm font-semibold whitespace-nowrap shadow-coral hover:bg-coral-dark transition-all duration-200" type="submit">
+                Zapisuję się
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+      <div class="border-t border-white/[.08] pt-6">
+        <p class="text-xs text-white/20 text-center">
+          &copy; <span id="footer-year">2025</span> Chrześcijańska Szkoła Tańca „Amen!" Wrocław. Wszelkie prawa zastrzeżone.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════
+       SKRYPTY
+  ════════════════════════════════════════════════ -->
+  <script>
+
+    /* ── Footer year ── */
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    /* ══════════════════════════════════════════════
+       FORM VALIDATION
+    ══════════════════════════════════════════════ */
+    const form = document.getElementById('parish-form');
+
+    /* Helper: mark field state */
+    function setValid(input, errEl) {
+      input.classList.remove('is-error');
+      input.classList.add('is-valid');
+      errEl.classList.remove('visible');
+    }
+    function setError(input, errEl) {
+      input.classList.remove('is-valid');
+      input.classList.add('is-error');
+      errEl.classList.add('visible');
+    }
+    function clearState(input, errEl) {
+      input.classList.remove('is-error', 'is-valid');
+      errEl.classList.remove('visible');
+    }
+
+    /* Validators */
+    const validators = {
+      'f-name':   v => v.trim().length >= 2,
+      'f-role':   v => v !== '',
+      'f-parish': v => v.trim().length >= 2,
+      'f-city':   v => v.trim().length >= 2,
+      'f-phone':  v => /^(\+?48)?[\s-]?\d{3}[\s-]?\d{3}[\s-]?\d{3}$/.test(v.replace(/\s/g, '')),
+      'f-email':  v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
+    };
+
+    /* Live validation on blur */
+    Object.keys(validators).forEach(id => {
+      const input = document.getElementById(id);
+      const errEl = document.getElementById(id + '-err');
+      if (!input || !errEl) return;
+
+      input.addEventListener('blur', () => {
+        if (input.value === '' && id !== 'f-role') { clearState(input, errEl); return; }
+        validators[id](input.value) ? setValid(input, errEl) : setError(input, errEl);
+      });
+
+      input.addEventListener('input', () => {
+        if (input.classList.contains('is-error') && validators[id](input.value)) {
+          setValid(input, errEl);
+        }
+      });
+    });
+
+    /* Textarea: live char count */
+    const textarea = document.getElementById('f-message');
+    const hint = textarea.nextElementSibling;
+    textarea.addEventListener('input', () => {
+      const len = textarea.value.length;
+      if (len > 500) textarea.value = textarea.value.slice(0, 500);
+      hint.textContent = `${textarea.value.length} / 500 znaków`;
+    });
+
+    /* RODO checkbox live */
+    const rodoInput = document.getElementById('f-rodo');
+    const rodoErr   = document.getElementById('f-rodo-err');
+    rodoInput.addEventListener('change', () => {
+      if (rodoInput.checked) {
+        rodoInput.classList.remove('is-error');
+        rodoErr.classList.remove('visible');
+      }
+    });
+
+    /* Submit */
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      let valid = true;
+
+      /* Validate all fields */
+      Object.keys(validators).forEach(id => {
+        const input = document.getElementById(id);
+        const errEl = document.getElementById(id + '-err');
+        if (!validators[id](input.value)) { setError(input, errEl); valid = false; }
+        else setValid(input, errEl);
+      });
+
+      /* RODO checkbox */
+      if (!rodoInput.checked) {
+        rodoInput.classList.add('is-error');
+        rodoErr.classList.add('visible');
+        valid = false;
+      }
+
+      if (!valid) {
+        /* Focus first error field */
+        const firstErr = form.querySelector('.is-error');
+        if (firstErr) firstErr.focus();
+        return;
+      }
+
+      /* Simulate submission */
+      const btn = document.getElementById('submit-btn');
+      btn.disabled = true;
+      btn.classList.add('loading');
+
+      await new Promise(r => setTimeout(r, 1500));
+
+      /* Show success */
+      form.style.display = 'none';
+      document.getElementById('form-success').classList.add('visible');
+      document.getElementById('form-success').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  </script>
+
+</body>
+</html>

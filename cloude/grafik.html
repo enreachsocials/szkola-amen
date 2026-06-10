@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Grafik zajęć, cennik i zasady – Chrześcijańska Szkoła Tańca Amen! Wrocław. Kursy w 7 parafiach, sezon 2025/2026." />
+  <title>Grafik – Amen! Szkoła Tańca Wrocław</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tailwind.css">
+
+  <style>
+    /* ── Sub-nav ── */
+    .sub-nav-tab {
+      flex-shrink: 0; padding: .45rem 1rem;
+      font-size: .8125rem; font-weight: 600;
+      color: rgba(255,255,255,.42); white-space: nowrap;
+      text-decoration: none; border-bottom: 2px solid transparent;
+      transition: color .15s, border-color .15s;
+    }
+    .sub-nav-tab:hover { color: rgba(255,255,255,.8); }
+    .sub-nav-tab.active { color: #fff; border-bottom-color: #FF5A00; }
+
+    /* ── Level pill colours ── */
+    .lvl-p { background: rgba(96,165,250,.12); color: #93c5fd; border: 1px solid rgba(96,165,250,.22); }
+    .lvl-s { background: rgba(249,115,22,.12); color: #fb923c; border: 1px solid rgba(249,115,22,.22); }
+    .lvl-z { background: rgba(167,139,250,.12); color: #c4b5fd; border: 1px solid rgba(167,139,250,.22); }
+    .lvl-special { background: rgba(251,191,36,.12); color: #fcd34d; border: 1px solid rgba(251,191,36,.22); }
+    .lvl-open    { background: rgba(52,211,153,.12);  color: #34d399; border: 1px solid rgba(52,211,153,.22); }
+
+    /* ── Filter buttons ── */
+    .type-btn {
+      padding: .5rem 1.1rem; border-radius: 100px;
+      border: 1px solid #E2D9CC; font-size: .8125rem; font-weight: 600;
+      color: rgba(26,20,16,.5); background: #fff;
+      transition: background .15s, color .15s, border-color .15s; cursor: pointer;
+    }
+    .type-btn.active { background: rgba(255,90,0,.1); border-color: #FF5A00; color: #C7410A; }
+    .parish-btn {
+      padding: .35rem .85rem; border-radius: 100px;
+      border: 1px solid #E2D9CC; font-size: .75rem; font-weight: 600;
+      color: rgba(26,20,16,.5); background: #fff; white-space: nowrap;
+      transition: background .15s, color .15s, border-color .15s; cursor: pointer;
+    }
+    .parish-btn.active { background: #141210; border-color: #141210; color: #fff; }
+
+    /* ── Parish card ── */
+    .parish-card { transition: transform .2s, box-shadow .2s; }
+    .parish-card:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,.1); }
+
+    /* ── Course pill ── */
+    .course-pill {
+      display: inline-flex; align-items: center; padding: .25rem .65rem;
+      border-radius: .5rem; font-size: .7rem; font-weight: 700;
+      text-decoration: none; transition: opacity .15s; letter-spacing: .01em;
+    }
+    .course-pill:hover { opacity: .75; }
+
+    /* ── Scrollbar hide ── */
+    .scrollbar-none { scrollbar-width: none; }
+    .scrollbar-none::-webkit-scrollbar { display: none; }
+
+    /* ── FAQ ── */
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
+    .faq-answer.open { max-height: 300px; }
+    .faq-chevron { display: inline-block; transition: transform .25s; }
+    .faq-btn[aria-expanded="true"] .faq-chevron { transform: rotate(180deg); }
+
+    /* ── Odrabianie steps ── */
+    .steps-connector {
+      display: flex; align-items: center; padding: 0 6px;
+      color: rgba(26,20,16,.25); font-size: 1.1rem; flex-shrink: 0;
+    }
+
+    /* ── Section scroll offset ── */
+    .section-anchor { scroll-margin-top: 100px; }
+
+    /* ── Benefit card dark bg ── */
+    .benefit-card {
+      background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.09);
+      border-radius: .75rem; padding: 1.25rem;
+    }
+
+    /* ── Price table ── */
+    .price-row:nth-child(even) { background: rgba(255,255,255,.025); }
+  </style>
+</head>
+<body class="antialiased">
+
+<!-- ═══════════════════════════════════════════════
+     NAWIGACJA
+════════════════════════════════════════════════ -->
+<header class="sticky top-0 z-50 bg-navy" role="banner" style="box-shadow:0 1px 0 rgba(255,255,255,.07)">
+  <nav class="w-full px-4 md:px-6" aria-label="Główna nawigacja">
+    <div class="flex items-center gap-2" style="height:52px">
+      <a href="index.html" class="flex items-center gap-2 no-underline flex-shrink-0 mr-1" aria-label="Amen! – strona główna">
+        <span class="font-display font-bold text-base text-white leading-none tracking-tight">Amen!</span>
+        <span class="hidden sm:block text-xs font-normal text-white/35 leading-none">Szkoła Tańca</span>
+      </a>
+      <div class="w-px h-4 bg-white/15 flex-shrink-0" aria-hidden="true"></div>
+      <div class="nav-tabs-strip flex items-center gap-0.5 flex-1 overflow-x-auto" role="list">
+        <a class="nav-tab" href="index.html">Start</a>
+        <a class="nav-tab" href="oferta.html">Oferta</a>
+        <a class="nav-tab" href="grafik.html" aria-current="page">Grafik</a>
+        <a class="nav-tab" href="grafik.html#cennik">Cennik</a>
+        <a class="nav-tab" href="o-nas.html">O nas</a>
+        <a class="nav-tab" href="kontakt.html">Kontakt</a>
+        <a class="nav-tab nav-tab-newsletter" href="#newsletter">NEWSLETTER</a>
+      </div>
+      <a href="parafia.html" class="nav-cta" aria-label="Zgłoś swoją parafię do programu">
+        <span aria-hidden="true">✦</span>
+        <span class="hidden sm:inline">Zgłoś swoją parafię!</span>
+        <span class="sm:hidden">Parafia</span>
+      </a>
+    </div>
+  </nav>
+</header>
+
+<!-- SUB-NAV sticky -->
+<div id="sub-nav" class="sticky z-40 bg-navy/95 backdrop-blur-sm" style="top:52px;border-bottom:1px solid rgba(255,255,255,.06)">
+  <div class="w-full px-4 md:px-6">
+    <div class="flex items-stretch gap-0 overflow-x-auto scrollbar-none" style="height:44px">
+      <a href="#grafik"     class="sub-nav-tab active" data-section="grafik">Grafik</a>
+      <a href="#cennik"     class="sub-nav-tab" data-section="cennik">Cennik</a>
+      <a href="#poziomy"    class="sub-nav-tab" data-section="poziomy">Poziomy</a>
+      <a href="#odrabianie" class="sub-nav-tab" data-section="odrabianie">Odrabianie</a>
+      <a href="#faq"        class="sub-nav-tab" data-section="faq">FAQ</a>
+    </div>
+  </div>
+</div>
+
+<main id="main-content">
+
+<!-- ══════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════ -->
+<section class="bg-sand-light py-12 md:py-16 text-center" aria-labelledby="hero-heading">
+  <div class="container">
+    <p class="inline-flex items-center gap-2 text-xs font-bold tracking-[.15em] uppercase text-coral mb-6">
+      <span class="w-2 h-2 rounded-full bg-coral pulse" aria-hidden="true"></span>
+      Sezon 2025/2026 · Wrocław
+    </p>
+    <h1 id="hero-heading" class="text-4xl md:text-5xl font-bold text-navy mb-3">Grafik & Oferta</h1>
+    <p class="text-ink/55 max-w-lg mx-auto text-base mb-10">Kursy w 7 wrocławskich parafiach — sprawdź terminy, ceny i zasady działania szkoły.</p>
+    <div class="inline-flex items-center divide-x divide-sand-dark rounded-xl overflow-hidden border border-sand-dark bg-white">
+      <div class="px-6 py-3 text-center">
+        <div class="text-2xl font-extrabold text-navy">7</div>
+        <div class="text-[10px] font-bold uppercase tracking-wider text-ink/35 mt-0.5">Parafii</div>
+      </div>
+      <div class="px-6 py-3 text-center">
+        <div class="text-2xl font-extrabold text-navy">14+</div>
+        <div class="text-[10px] font-bold uppercase tracking-wider text-ink/35 mt-0.5">Kursów</div>
+      </div>
+      <div class="px-6 py-3 text-center">
+        <div class="text-2xl font-extrabold text-navy">8</div>
+        <div class="text-[10px] font-bold uppercase tracking-wider text-ink/35 mt-0.5">Poziomów</div>
+      </div>
+      <div class="px-6 py-3 text-center">
+        <div class="text-2xl font-extrabold text-coral">35 zł</div>
+        <div class="text-[10px] font-bold uppercase tracking-wider text-ink/35 mt-0.5">Wejście</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SEKCJA 1: GRAFIK
+══════════════════════════════════════════════ -->
+<section id="grafik" class="section-anchor py-16 bg-white" aria-labelledby="grafik-heading">
+  <div class="container">
+
+    <div class="mb-8">
+      <p class="eyebrow">Harmonogram</p>
+      <h2 id="grafik-heading" class="text-3xl font-bold text-navy mb-2">Grafik zajęć</h2>
+      <p class="text-ink/55 max-w-xl">Wybierz typ zajęć, opcjonalnie zawęź do konkretnej parafii. Kliknij kurs, by zapisać się bezpośrednio.</p>
+    </div>
+
+    <!-- Typ zajęć -->
+    <div class="flex gap-2 flex-wrap mb-4" role="group" aria-label="Typ zajęć">
+      <button class="type-btn active" data-type="trwajace">● Trwające kursy</button>
+      <button class="type-btn" data-type="wakacyjne">Kursy wakacyjne</button>
+      <button class="type-btn" data-type="nowe">Nowe grupy</button>
+    </div>
+
+    <!-- Parish chips -->
+    <div id="parish-filter" class="flex gap-2 mb-8 scrollbar-none overflow-x-auto pb-1" role="group" aria-label="Filtruj po parafii">
+      <button class="parish-btn active" data-parish="all">Wszystkie</button>
+      <button class="parish-btn" data-parish="chrystusa-krola">Chrystusa Króla</button>
+      <button class="parish-btn" data-parish="sw-antoniego">Św. Antoniego</button>
+      <button class="parish-btn" data-parish="sw-alberta">Św. Alberta Wlk.</button>
+      <button class="parish-btn" data-parish="nmp-bolesnej">NMP Bolesnej</button>
+      <button class="parish-btn" data-parish="nmp-milosierdzia">NMP Miłosierdzia</button>
+      <button class="parish-btn" data-parish="opieki-sw-jozefa">Opieki Św. Józefa</button>
+      <button class="parish-btn" data-parish="sw-anny">Św. Anny</button>
+    </div>
+
+    <!-- ── TRWAJĄCE ── -->
+    <div data-grid="trwajace" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+      <!-- Chrystusa Króla -->
+      <div class="parish-card bg-white border border-sand-dark rounded-xl p-5" data-parish="chrystusa-krola">
+        <h3 class="font-bold text-navy text-base mb-1">Parafia Chrystusa Króla</h3>
+        <p class="text-xs text-ink/40 mb-4 flex items-center gap-1.5">
+          <svg class="w-3 h-3 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          ul. Młodych Techników 17
+        </p>
+        <div class="flex flex-wrap gap-1.5 mb-5">
+          <a href="kontakt.html#zapisy" class="course-pill lvl-s">Użytkowy S1 · Pon 20:20</a>
+          <a href="kontakt.html#zapisy" class="course-pill lvl-p">Bachata P2 · Wt 18:10</a>
+          <a href="kontakt.html#zapisy" class="course-pill lvl-p">Użytkowy P2 · Wt 19:20</a>
+          <a href="kontakt.html#zapisy" class="course-pill lvl-p">Salsa P1 · Wt 20:30</a>
+          <a href="kontakt.html#zapisy" class="course-pill lvl-p">Użytkowy P1 · Czw 18:10</a>
+        </div>
+        <a href="kontakt.html#zapisy" class="btn-coral text-xs w-full text-center">Zapisz się →</a>
+      </div>
+
+      <!-- NMP Bolesnej -->
+      <div class="parish-card bg-white border border-sand-dark rounded-xl p-5" data-parish="nmp-bolesnej">
+        <h3 class="font-bold text-navy text-base mb-1">Parafia NMP Bolesnej</h3>
+        <p class="text-xs text-ink/40 mb-4 flex items-center gap-1.5">
+          <svg class="w-3 h-3 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          ul. Tatarakowa 1
+        </p>
+        <div class="flex flex-wrap gap-1.5 mb-5">
+          <a href="kontakt.html#zapisy" class="course-pill lvl-p">Użytkowy P0 · Śr 19:00</a>
+          <a href="kontakt.html#zapisy" class="course-pill lvl-p">Użytkowy P2 · Śr 20:15</a>
+        </div>
+        <a href="kontakt.html#zapisy" class="btn-coral text-xs w-full text-center">Zapisz się →</a>
+      </div>
+
+      <!-- NMP Matki Miłosierdzia -->
+      <div class="parish-card bg-white border border-sand-dark rounded-xl p-5" data-parish="nmp-milosierdzia">
+        <h3 class="font-bold text-navy text-base mb-1">Parafia NMP Matki Miłosierdzia</h3>
+        <p class="text-xs text-ink/40 mb-4 flex items-center gap-1.5">
+          <svg class="w-3 h-3 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          ul. Brucknera 20
+        </p>
+        <div class="flex flex-wrap gap-1.5 mb-5">
+          <a href="kontakt.html#zapisy" class="course-pill lvl-p">Użytkowy P1 · Wt 20:15</a>
+        </div>
+        <a href="kontakt.html#zapisy" class="btn-coral text-xs w-full text-center">Zapisz się →</a>
+      </div>
+
+      <!-- Opieki Św. Józefa -->
+      <div class="parish-card bg-white border border-sand-dark rounded-xl p-5" data-parish="opieki-sw-jozefa">
+        <h3 class="font-bold text-navy text-base mb-1">Parafia Opieki Św. Józefa</h3>
+        <p class="text-xs text-ink/40 mb-4 flex items-center gap-1.5">
+          <svg class="w-3 h-3 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          ul. Ołbińska 1
+        </p>
+        <div class="flex flex-wrap gap-1.5 mb-5">
+          <a href="kontakt.html#zapisy" class="course-pill lvl-p">Użytkowy P0 · Śr 20:30</a>
+        </div>
+        <a href="kontakt.html#zapisy" class="btn-coral text-xs w-full text-center">Zapisz się →</a>
+      </div>
+
+      <!-- Św. Alberta Wielkiego -->
+      <div class="parish-card bg-white border border-sand-dark rounded-xl p-5" data-parish="sw-alberta">
+        <h3 class="font-bold text-navy text-base mb-1">Parafia Św. Alberta Wielkiego</h3>
+        <p class="text-xs text-ink/40 mb-4 flex items-center gap-1.5">
+          <svg class="w-3 h-3 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          ul. Redycka 10
+        </p>
+        <div class="flex flex-wrap gap-1.5 mb-5">
+          <a href="kontakt.html#zapisy" class="course-pill lvl-p">Użytkowy P2 · Pon 19:00</a>
+        </div>
+        <a href="kontakt.html#zapisy" class="btn-coral text-xs w-full text-center">Zapisz się →</a>
+      </div>
+
+      <!-- Św. Antoniego -->
+      <div class="parish-card bg-white border border-sand-dark rounded-xl p-5" data-parish="sw-antoniego">
+        <h3 class="font-bold text-navy text-base mb-1">Parafia Św. Antoniego</h3>
+        <p class="text-xs text-ink/40 mb-4 flex items-center gap-1.5">
+          <svg class="w-3 h-3 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          al. Kasprowicza 26
+        </p>
+        <div class="flex flex-wrap gap-1.5 mb-5">
+          <a href="kontakt.html#zapisy" class="course-pill lvl-p">Bachata Solo P1 · Pon 19:15</a>
+          <a href="kontakt.html#zapisy" class="course-pill lvl-p">Latino Solo P1 · Pon 20:30</a>
+          <a href="kontakt.html#zapisy" class="course-pill lvl-p">Użytkowy P2 · Śr 19:10</a>
+          <a href="kontakt.html#zapisy" class="course-pill lvl-p">Użytkowy P2 · Śr 20:15</a>
+          <a href="kontakt.html#zapisy" class="course-pill lvl-p">Użytkowy P1 · Śr 19:15</a>
+          <a href="kontakt.html#zapisy" class="course-pill lvl-p">Użytkowy P1 · Śr 20:30</a>
+          <a href="kontakt.html#zapisy" class="course-pill lvl-p">Użytkowy P0 · Czw 20:15</a>
+          <a href="kontakt.html#zapisy" class="course-pill lvl-p">Użytkowy P1 · Śr 21:20</a>
+          <a href="kontakt.html#zapisy" class="course-pill lvl-p">Użytkowy P1 · Czw 20:15</a>
+        </div>
+        <a href="kontakt.html#zapisy" class="btn-coral text-xs w-full text-center">Zapisz się →</a>
+      </div>
+
+      <!-- Św. Anny -->
+      <div class="parish-card bg-white border border-sand-dark rounded-xl p-5" data-parish="sw-anny">
+        <h3 class="font-bold text-navy text-base mb-1">Parafia Św. Anny</h3>
+        <p class="text-xs text-ink/40 mb-4 flex items-center gap-1.5">
+          <svg class="w-3 h-3 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          ul. Sobótki 42
+        </p>
+        <div class="flex flex-wrap gap-1.5 mb-5">
+          <a href="kontakt.html#zapisy" class="course-pill lvl-p">Użytkowy P1 · Pon 19:00</a>
+        </div>
+        <a href="kontakt.html#zapisy" class="btn-coral text-xs w-full text-center">Zapisz się →</a>
+      </div>
+
+    </div><!-- /trwajace -->
+
+    <!-- ── WAKACYJNE ── -->
+    <div data-grid="wakacyjne" style="display:none" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+      <div class="parish-card bg-white border border-sand-dark rounded-xl p-5" data-parish="chrystusa-krola">
+        <h3 class="font-bold text-navy text-base mb-1">Parafia Chrystusa Króla</h3>
+        <p class="text-xs text-ink/40 mb-4 flex items-center gap-1.5">
+          <svg class="w-3 h-3 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          ul. Młodych Techników 17
+        </p>
+        <div class="flex flex-wrap gap-1.5 mb-5">
+          <a href="kontakt.html#zapisy" class="course-pill lvl-special">Bachata vs Salsa P0 · Pon 19:30</a>
+          <a href="kontakt.html#zapisy" class="course-pill lvl-special">Akrobacje/Triki · Czw 20:30</a>
+        </div>
+        <a href="kontakt.html#zapisy" class="btn-coral text-xs w-full text-center">Zapisz się →</a>
+      </div>
+
+      <div class="parish-card bg-white border border-sand-dark rounded-xl p-5" data-parish="nmp-bolesnej">
+        <h3 class="font-bold text-navy text-base mb-1">Parafia NMP Bolesnej</h3>
+        <p class="text-xs text-ink/40 mb-4 flex items-center gap-1.5">
+          <svg class="w-3 h-3 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          ul. Tatarakowa 1
+        </p>
+        <div class="flex flex-wrap gap-1.5 mb-5">
+          <a href="kontakt.html#zapisy" class="course-pill lvl-p">Użytkowy P0 · Śr 19:00</a>
+        </div>
+        <a href="kontakt.html#zapisy" class="btn-coral text-xs w-full text-center">Zapisz się →</a>
+      </div>
+
+      <div class="parish-card bg-white border border-sand-dark rounded-xl p-5" data-parish="opieki-sw-jozefa">
+        <h3 class="font-bold text-navy text-base mb-1">Parafia Opieki Św. Józefa</h3>
+        <p class="text-xs text-ink/40 mb-4 flex items-center gap-1.5">
+          <svg class="w-3 h-3 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          ul. Ołbińska 1
+        </p>
+        <div class="flex flex-wrap gap-1.5 mb-5">
+          <a href="kontakt.html#zapisy" class="course-pill lvl-p">Użytkowy P0 · Śr 19:20</a>
+        </div>
+        <a href="kontakt.html#zapisy" class="btn-coral text-xs w-full text-center">Zapisz się →</a>
+      </div>
+
+      <div class="parish-card bg-white border border-sand-dark rounded-xl p-5" data-parish="sw-antoniego">
+        <h3 class="font-bold text-navy text-base mb-1">Parafia Św. Antoniego</h3>
+        <p class="text-xs text-ink/40 mb-4 flex items-center gap-1.5">
+          <svg class="w-3 h-3 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          al. Kasprowicza 26
+        </p>
+        <div class="flex flex-wrap gap-1.5 mb-5">
+          <a href="kontakt.html#zapisy" class="course-pill lvl-p">Latino Solo P0 · Pon 19:15</a>
+          <a href="kontakt.html#zapisy" class="course-pill lvl-p">Użytkowy Przysp. P0 · Czw 19:15</a>
+        </div>
+        <a href="kontakt.html#zapisy" class="btn-coral text-xs w-full text-center">Zapisz się →</a>
+      </div>
+
+    </div><!-- /wakacyjne -->
+
+    <!-- ── NOWE GRUPY ── -->
+    <div data-grid="nowe" style="display:none">
+      <div class="border-2 border-dashed border-sand-dark rounded-2xl p-10 md:p-16 text-center">
+        <div class="text-4xl mb-4" aria-hidden="true">🎵</div>
+        <h3 class="font-bold text-navy text-xl mb-2">Brak nowych grup w tej chwili</h3>
+        <p class="text-ink/50 max-w-md mx-auto text-sm mb-6 leading-relaxed">Zostaw e-mail — powiadomimy Cię, gdy w Twojej parafii zbierze się nowa grupa. Możesz też sprawdzić trwające kursy.</p>
+        <div class="flex flex-wrap gap-3 justify-center">
+          <a href="kontakt.html" class="btn-coral">Zapisz się na listę oczekujących →</a>
+          <button class="btn-outline-navy" onclick="document.querySelector('[data-type=trwajace]').click()">Zobacz trwające kursy</button>
+        </div>
+      </div>
+    </div><!-- /nowe -->
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SEKCJA 2: CENNIK
+══════════════════════════════════════════════ -->
+<section id="cennik" class="section-anchor py-16 bg-navy" aria-labelledby="cennik-heading">
+  <div class="container">
+
+    <div class="mb-10">
+      <p class="eyebrow">Opłaty</p>
+      <h2 id="cennik-heading" class="text-3xl font-bold text-white mb-2">Cennik</h2>
+      <p class="text-white/50 max-w-xl">Karnet miesięczny — płacisz raz w miesiącu, uczęszczasz na wszystkie zajęcia swojego kursu.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-10">
+
+      <!-- Tabela poziomów -->
+      <div>
+        <div class="rounded-xl overflow-hidden border border-white/[.08]">
+          <div class="grid grid-cols-4 px-4 py-3 bg-white/[.06] border-b border-white/[.08]">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-white/35">Poziom</span>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-white/35">Opis</span>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-white/35 text-right">Karnet/mies.</span>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-white/35 text-right">Nauka</span>
+          </div>
+          <div class="price-row grid grid-cols-4 px-4 py-3 border-b border-white/[.05] items-center">
+            <span class="inline-flex"><span class="lvl-p text-[10px] font-bold px-2 py-0.5 rounded-md">P0</span></span>
+            <span class="text-sm text-white/60">Absolutny początek</span>
+            <span class="text-sm font-bold text-white text-right">60 zł</span>
+            <span class="text-xs text-white/40 text-right">2 mies.</span>
+          </div>
+          <div class="price-row grid grid-cols-4 px-4 py-3 border-b border-white/[.05] items-center">
+            <span class="inline-flex"><span class="lvl-p text-[10px] font-bold px-2 py-0.5 rounded-md">P1</span></span>
+            <span class="text-sm text-white/60">Pierwsze figury</span>
+            <span class="text-sm font-bold text-white text-right">80 zł</span>
+            <span class="text-xs text-white/40 text-right">4 mies.</span>
+          </div>
+          <div class="price-row grid grid-cols-4 px-4 py-3 border-b border-white/[.05] items-center">
+            <span class="inline-flex"><span class="lvl-p text-[10px] font-bold px-2 py-0.5 rounded-md">P2</span></span>
+            <span class="text-sm text-white/60">Rozwinięcie podstaw</span>
+            <span class="text-sm font-bold text-white text-right">100 zł</span>
+            <span class="text-xs text-white/40 text-right">3 mies.</span>
+          </div>
+          <div class="price-row grid grid-cols-4 px-4 py-3 border-b border-white/[.05] items-center">
+            <span class="inline-flex"><span class="lvl-p text-[10px] font-bold px-2 py-0.5 rounded-md">P3</span></span>
+            <span class="text-sm text-white/60">Solidne podstawy</span>
+            <span class="text-sm font-bold text-white text-right">120 zł</span>
+            <span class="text-xs text-white/40 text-right">3 mies.</span>
+          </div>
+          <div class="price-row grid grid-cols-4 px-4 py-3 border-b border-white/[.05] items-center">
+            <span class="inline-flex"><span class="lvl-s text-[10px] font-bold px-2 py-0.5 rounded-md">S1</span></span>
+            <span class="text-sm text-white/60">Średniozaawansowany</span>
+            <span class="text-sm font-bold text-white text-right">140 zł</span>
+            <span class="text-xs text-white/40 text-right">1 rok</span>
+          </div>
+          <div class="price-row grid grid-cols-4 px-4 py-3 border-b border-white/[.05] items-center">
+            <span class="inline-flex"><span class="lvl-s text-[10px] font-bold px-2 py-0.5 rounded-md">S2</span></span>
+            <span class="text-sm text-white/60">Swobodna technika</span>
+            <span class="text-sm font-bold text-white text-right">160 zł</span>
+            <span class="text-xs text-white/40 text-right">1 rok</span>
+          </div>
+          <div class="price-row grid grid-cols-4 px-4 py-3 border-b border-white/[.05] items-center">
+            <span class="inline-flex"><span class="lvl-z text-[10px] font-bold px-2 py-0.5 rounded-md">Z1</span></span>
+            <span class="text-sm text-white/60">Zaawansowany</span>
+            <span class="text-sm font-bold text-white text-right">180 zł</span>
+            <span class="text-xs text-white/40 text-right">2 lata</span>
+          </div>
+          <div class="price-row grid grid-cols-4 px-4 py-3 items-center">
+            <span class="inline-flex"><span class="lvl-z text-[10px] font-bold px-2 py-0.5 rounded-md">Z2</span></span>
+            <span class="text-sm text-white/60">Wysoki poziom</span>
+            <span class="text-sm font-bold text-white text-right">200 zł</span>
+            <span class="text-xs text-white/40 text-right">2 lata</span>
+          </div>
+        </div>
+
+        <!-- Callout: opłata klubowa -->
+        <div class="mt-4 flex items-start gap-3 bg-white/[.05] border border-white/[.08] rounded-xl px-4 py-3">
+          <span class="text-coral text-base flex-shrink-0 mt-0.5" aria-hidden="true">⚠</span>
+          <p class="text-sm text-white/60 leading-relaxed">
+            Od poziomu <strong class="text-white">P2</strong> obowiązuje dodatkowa opłata klubowa:
+            <strong class="text-coral">50 zł / miesiąc</strong>.
+            Dotyczy kart Multisport i Medicover Sport.
+          </p>
+        </div>
+      </div>
+
+      <!-- Benefit cards -->
+      <div class="flex flex-col gap-4">
+        <h3 class="text-sm font-bold uppercase tracking-wider text-white/35">Akceptowane karty sportowe</h3>
+
+        <div class="benefit-card">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-sm font-extrabold text-white">M</div>
+            <span class="font-bold text-white text-sm">Multisport</span>
+          </div>
+          <p class="text-xs text-white/50 mb-2 leading-relaxed">Plus · Light · Senior · Student</p>
+          <p class="text-xs text-white/40 mb-3">Dostępne w 2 parafiach: Chrystusa Króla i Św. Antoniego</p>
+          <div class="flex gap-1 flex-wrap">
+            <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/[.07] text-white/50">Limit: 1× dziennie</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/[.07] text-white/50">Op. klubowa od P2</span>
+          </div>
+        </div>
+
+        <div class="benefit-card">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center text-sm font-extrabold text-blue-300">MC</div>
+            <span class="font-bold text-white text-sm">Medicover Sport</span>
+          </div>
+          <p class="text-xs text-white/50 mb-2 leading-relaxed">Karta granatowa i niebieska</p>
+          <p class="text-xs text-white/40 mb-3">Dostępne we wszystkich parafiach</p>
+          <div class="flex gap-1 flex-wrap">
+            <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/[.07] text-white/50">Kaucja 40 zł</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/[.07] text-white/50">Op. klubowa od P2</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/[.07] text-white/50">Limit: 1× dziennie</span>
+          </div>
+        </div>
+
+        <div class="benefit-card">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-8 h-8 rounded-lg bg-green-500/20 flex items-center justify-center text-sm font-extrabold text-green-300">FP</div>
+            <span class="font-bold text-white text-sm">FitProfit</span>
+          </div>
+          <p class="text-xs text-white/50 mb-3 leading-relaxed">Dostępna w wybranych parafiach</p>
+          <a href="kontakt.html" class="text-xs text-coral/80 hover:text-coral no-underline transition-colors">Sprawdź dostępność →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SEKCJA 3: POZIOMY
+══════════════════════════════════════════════ -->
+<section id="poziomy" class="section-anchor py-16 bg-sand-light" aria-labelledby="poziomy-heading">
+  <div class="container">
+    <div class="mb-10">
+      <p class="eyebrow">Legenda</p>
+      <h2 id="poziomy-heading" class="text-3xl font-bold text-navy mb-2">Oznaczenia poziomów</h2>
+      <p class="text-ink/55 max-w-xl">Każdy kurs jest przypisany do poziomu. Jeśli dopiero zaczynasz — wybierz P0. Nie wiesz jaki poziom? <a href="kontakt.html" class="text-coral no-underline hover:underline font-semibold">Napisz do nas</a>.</p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-3">
+      <div class="bg-white border border-sand-dark rounded-xl p-4">
+        <span class="lvl-p inline-block text-xs font-bold px-2 py-0.5 rounded-md mb-2">P0</span>
+        <p class="font-semibold text-navy text-sm mb-1">Absolutny początek</p>
+        <p class="text-xs text-ink/50 leading-relaxed">Pierwsze kroki, rytm, podstawowe figury. Brak doświadczenia = mile widziany.</p>
+      </div>
+      <div class="bg-white border border-sand-dark rounded-xl p-4">
+        <span class="lvl-p inline-block text-xs font-bold px-2 py-0.5 rounded-md mb-2">P1</span>
+        <p class="font-semibold text-navy text-sm mb-1">Podstawy</p>
+        <p class="text-xs text-ink/50 leading-relaxed">Proste figury, podstawy prowadzenia i podążania.</p>
+      </div>
+      <div class="bg-white border border-sand-dark rounded-xl p-4">
+        <span class="lvl-p inline-block text-xs font-bold px-2 py-0.5 rounded-md mb-2">P2</span>
+        <p class="font-semibold text-navy text-sm mb-1">Rozwinięcie</p>
+        <p class="text-xs text-ink/50 leading-relaxed">Złożone figury, czucie muzyki, swobodny ruch.</p>
+      </div>
+      <div class="bg-white border border-sand-dark rounded-xl p-4">
+        <span class="lvl-p inline-block text-xs font-bold px-2 py-0.5 rounded-md mb-2">P3</span>
+        <p class="font-semibold text-navy text-sm mb-1">Solidne podstawy</p>
+        <p class="text-xs text-ink/50 leading-relaxed">Swobodne poruszanie, przygotowanie do średniozaawansowanych.</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+      <div class="bg-white border border-sand-dark rounded-xl p-4">
+        <span class="lvl-s inline-block text-xs font-bold px-2 py-0.5 rounded-md mb-2">S1</span>
+        <p class="font-semibold text-navy text-sm mb-1">Średniozaawansowany</p>
+        <p class="text-xs text-ink/50 leading-relaxed">Techniczne detale, improwizacja, styl.</p>
+      </div>
+      <div class="bg-white border border-sand-dark rounded-xl p-4">
+        <span class="lvl-s inline-block text-xs font-bold px-2 py-0.5 rounded-md mb-2">S2</span>
+        <p class="font-semibold text-navy text-sm mb-1">Swobodna technika</p>
+        <p class="text-xs text-ink/50 leading-relaxed">Zaawansowana improwizacja i muzyczność.</p>
+      </div>
+      <div class="bg-white border border-sand-dark rounded-xl p-4">
+        <span class="lvl-z inline-block text-xs font-bold px-2 py-0.5 rounded-md mb-2">Z1</span>
+        <p class="font-semibold text-navy text-sm mb-1">Zaawansowany</p>
+        <p class="text-xs text-ink/50 leading-relaxed">Złożona choreografia, wysokie wymagania techniczne.</p>
+      </div>
+      <div class="bg-white border border-sand-dark rounded-xl p-4">
+        <span class="lvl-z inline-block text-xs font-bold px-2 py-0.5 rounded-md mb-2">Z2</span>
+        <p class="font-semibold text-navy text-sm mb-1">Wysoki poziom</p>
+        <p class="text-xs text-ink/50 leading-relaxed">Zaawansowana improwizacja, artyzm, autorski styl.</p>
+      </div>
+    </div>
+
+    <!-- OPEN — osobna karta na pełną szerokość -->
+    <div class="mt-3">
+      <div class="bg-white border border-sand-dark rounded-xl p-4 flex items-start gap-4">
+        <span class="lvl-open inline-block text-xs font-bold px-2 py-0.5 rounded-md flex-shrink-0 mt-0.5">OPEN</span>
+        <div>
+          <p class="font-semibold text-navy text-sm mb-1">Zajęcia otwarte</p>
+          <p class="text-xs text-ink/50 leading-relaxed">Niezależne od poziomu — każdy może przyjść. Bez wcześniejszego zapisu i doświadczenia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SEKCJA 4: ODRABIANIE ZAJĘĆ
+══════════════════════════════════════════════ -->
+<section id="odrabianie" class="section-anchor py-16 bg-white" aria-labelledby="odrabianie-heading">
+  <div class="container">
+
+    <div class="mb-10">
+      <p class="eyebrow">Zasady</p>
+      <h2 id="odrabianie-heading" class="text-3xl font-bold text-navy mb-2">Odrabianie zajęć</h2>
+    </div>
+
+    <!-- Alert: kiedy i jak zgłosić -->
+    <div class="flex items-start gap-4 bg-coral/[.07] border border-coral/20 rounded-xl px-5 py-4 mb-8" role="alert">
+      <span class="text-xl flex-shrink-0 mt-0.5" aria-hidden="true">⏱</span>
+      <div>
+        <p class="font-bold text-navy text-sm mb-1">Zgłoś nieobecność najpóźniej 5 minut przed zajęciami</p>
+        <p class="text-sm text-ink/60 mb-3">Tylko zgłoszone nieobecności można odrobić. Niezgłoszona — przepada bezpowrotnie.</p>
+        <div class="flex gap-2 flex-wrap">
+          <a href="mailto:kontakt.amen@gmail.com" class="inline-flex items-center gap-1.5 text-xs font-semibold bg-white border border-sand-dark rounded-full px-3 py-1.5 text-ink/60 no-underline hover:text-navy transition-colors">
+            <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            kontakt.amen@gmail.com
+          </a>
+          <span class="inline-flex items-center gap-1.5 text-xs font-semibold bg-white border border-sand-dark rounded-full px-3 py-1.5 text-ink/60">
+            <svg class="w-3 h-3" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            Grupa FB Twojego kursu
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 kroki -->
+    <div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr] gap-0 mb-10 items-stretch">
+      <div class="bg-sand-light border border-sand-dark rounded-xl p-5">
+        <div class="w-7 h-7 rounded-full bg-coral/10 border border-coral/30 text-coral text-xs font-extrabold flex items-center justify-center mb-3">1</div>
+        <p class="font-bold text-navy text-sm mb-2">Napisz na maila</p>
+        <p class="text-xs text-ink/55 leading-relaxed">Dołącz screenshot zgłoszenia nieobecności oraz zdjęcie swojego karnetu.</p>
+      </div>
+      <div class="steps-connector">→</div>
+      <div class="bg-sand-light border border-sand-dark rounded-xl p-5">
+        <div class="w-7 h-7 rounded-full bg-coral/10 border border-coral/30 text-coral text-xs font-extrabold flex items-center justify-center mb-3">2</div>
+        <p class="font-bold text-navy text-sm mb-2">Poczekaj na potwierdzenie</p>
+        <p class="text-xs text-ink/55 leading-relaxed">Niektóre kursy wymagają określonych umiejętności — instruktor potwierdza konkretny termin.</p>
+      </div>
+      <div class="steps-connector">→</div>
+      <div class="bg-sand-light border border-sand-dark rounded-xl p-5">
+        <div class="w-7 h-7 rounded-full bg-green-500/15 border border-green-500/30 text-green-600 text-xs font-extrabold flex items-center justify-center mb-3">✓</div>
+        <p class="font-bold text-navy text-sm mb-2">Pojaw się na zajęciach</p>
+        <p class="text-xs text-ink/55 leading-relaxed">Nie możesz odrabiać na kursach, w których normalnie uczestniczysz.</p>
+      </div>
+    </div>
+
+    <!-- 2 scenariusze -->
+    <p class="text-xs font-bold uppercase tracking-wider text-ink/35 text-center mb-5">Ile razy byłem/am nieobecny w tym miesiącu?</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
+
+      <div class="rounded-xl p-5 border" style="background:rgba(34,197,94,.06);border-color:rgba(34,197,94,.2)">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="w-2.5 h-2.5 rounded-full bg-green-500 flex-shrink-0"></span>
+          <span class="font-extrabold text-navy">1 – 2 nieobecności</span>
+          <span class="text-xs text-ink/40">/ miesiąc</span>
+        </div>
+        <p class="text-[10px] font-bold uppercase tracking-wider text-ink/35 mb-3">Wybierz opcję</p>
+        <div class="flex flex-col gap-3">
+          <div class="flex items-start gap-3">
+            <span class="w-5 h-5 rounded-md bg-green-500/15 text-green-600 text-[10px] font-extrabold flex items-center justify-center flex-shrink-0 mt-0.5">A</span>
+            <p class="text-sm text-ink/70 leading-relaxed">Zapłać za cały miesiąc i odrobi w ciągu <strong class="text-navy">2 tygodni</strong> — bez dopłat</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="w-5 h-5 rounded-md bg-green-500/15 text-green-600 text-[10px] font-extrabold flex items-center justify-center flex-shrink-0 mt-0.5">B</span>
+            <p class="text-sm text-ink/70 leading-relaxed">Jednorazowe wejście bez nadganiania materiału — <span class="font-bold text-coral">35 zł</span></p>
+          </div>
+        </div>
+        <p class="text-xs text-ink/35 mt-4 pt-3 border-t border-green-500/10 leading-relaxed">Zgłoś plan <strong>przed</strong> miesiącem rozliczeniowym na mailu i grupie FB.</p>
+      </div>
+
+      <div class="rounded-xl p-5 border" style="background:rgba(251,191,36,.06);border-color:rgba(251,191,36,.2)">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="w-2.5 h-2.5 rounded-full bg-yellow-400 flex-shrink-0"></span>
+          <span class="font-extrabold text-navy">3+ nieobecności</span>
+          <span class="text-xs text-ink/40">/ miesiąc</span>
+        </div>
+        <p class="text-[10px] font-bold uppercase tracking-wider text-ink/35 mb-3">Instruktor ocenia — 3 ścieżki</p>
+        <div class="flex flex-col gap-3">
+          <div class="flex items-start gap-3">
+            <span class="w-5 h-5 rounded-md bg-yellow-400/15 text-yellow-600 text-[10px] font-extrabold flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
+            <p class="text-sm text-ink/70 leading-relaxed">Zajęcia indywidualne z prowadzącym</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="w-5 h-5 rounded-md bg-yellow-400/15 text-yellow-600 text-[10px] font-extrabold flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
+            <p class="text-sm text-ink/70 leading-relaxed">Odrobienie na innej grupie w 2 tygodnie — płatność za cały miesiąc</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="w-5 h-5 rounded-md bg-yellow-400/15 text-yellow-600 text-[10px] font-extrabold flex items-center justify-center flex-shrink-0 mt-0.5">3</span>
+            <p class="text-sm text-ink/70 leading-relaxed">Pojedyncze wejścia — <span class="font-bold text-coral">35 zł</span> za zajęcia</p>
+          </div>
+        </div>
+        <p class="text-xs text-ink/35 mt-4 pt-3 border-t border-yellow-400/10 leading-relaxed">Zgłoś przed miesiącem rozliczeniowym — instruktor dobiera odpowiednią ścieżkę.</p>
+      </div>
+
+    </div>
+
+    <!-- Uwagi -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div class="flex items-start gap-3 bg-sand-light border border-sand-dark rounded-xl px-4 py-3">
+        <span class="text-sm flex-shrink-0 mt-0.5" aria-hidden="true">⚠️</span>
+        <p class="text-xs text-ink/60 leading-relaxed">Tylko <strong class="text-navy">zgłoszone</strong> nieobecności podlegają odrabianiu.</p>
+      </div>
+      <div class="flex items-start gap-3 bg-sand-light border border-sand-dark rounded-xl px-4 py-3">
+        <span class="text-sm flex-shrink-0 mt-0.5" aria-hidden="true">🔒</span>
+        <p class="text-xs text-ink/60 leading-relaxed">Nieobecności w <strong class="text-navy">rozliczonym już miesiącu</strong> — wyłącznie odrobienie, bez zwrotu pieniędzy.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     STYLE TAŃCA
+══════════════════════════════════════════════ -->
+<section class="py-12 bg-sand-light border-t border-sand-dark" aria-label="Style tańca">
+  <div class="container">
+    <p class="eyebrow mb-4">Poznaj style</p>
+    <div class="flex gap-3 overflow-x-auto scrollbar-none pb-1">
+      <a href="oferta.html#uzytk" class="flex-shrink-0 inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-sand-dark rounded-xl text-sm font-semibold text-navy no-underline hover:border-coral hover:text-coral transition-colors">💃 Taniec Użytkowy</a>
+      <a href="oferta.html#bachata" class="flex-shrink-0 inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-sand-dark rounded-xl text-sm font-semibold text-navy no-underline hover:border-coral hover:text-coral transition-colors">🌶 Bachata</a>
+      <a href="oferta.html#salsa" class="flex-shrink-0 inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-sand-dark rounded-xl text-sm font-semibold text-navy no-underline hover:border-coral hover:text-coral transition-colors">🎺 Salsa</a>
+      <a href="oferta.html#latino" class="flex-shrink-0 inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-sand-dark rounded-xl text-sm font-semibold text-navy no-underline hover:border-coral hover:text-coral transition-colors">🕺 Latino Solo</a>
+      <a href="oferta.html#akro" class="flex-shrink-0 inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-sand-dark rounded-xl text-sm font-semibold text-navy no-underline hover:border-coral hover:text-coral transition-colors">🤸 Akrobacje</a>
+      <a href="oferta.html#pierwszy" class="flex-shrink-0 inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-sand-dark rounded-xl text-sm font-semibold text-navy no-underline hover:border-coral hover:text-coral transition-colors">💒 Pierwszy Taniec</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SEKCJA 5: FAQ
+══════════════════════════════════════════════ -->
+<section id="faq" class="section-anchor py-16 bg-white" aria-labelledby="faq-heading">
+  <div class="container max-w-2xl">
+    <div class="mb-10">
+      <p class="eyebrow">Najczęstsze pytania</p>
+      <h2 id="faq-heading" class="text-3xl font-bold text-navy">FAQ</h2>
+    </div>
+
+    <div class="flex flex-col gap-2" role="list">
+
+      <div class="border border-sand-dark rounded-xl overflow-hidden" role="listitem">
+        <button class="faq-btn w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-white hover:bg-sand-light transition-colors" aria-expanded="false">
+          <span class="font-semibold text-navy text-sm">Czy mogę się zapisać solo?</span>
+          <svg class="faq-chevron w-4 h-4 flex-shrink-0 text-ink/35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer bg-sand-light px-5">
+          <p class="py-4 text-sm text-ink/65 leading-relaxed">Tak, można. Stosujemy system rotacji — zmiana partnera wspomaga poznanie grupy i uczy lepszego „czytania" różnych partnerów tanecznych.</p>
+        </div>
+      </div>
+
+      <div class="border border-sand-dark rounded-xl overflow-hidden" role="listitem">
+        <button class="faq-btn w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-white hover:bg-sand-light transition-colors" aria-expanded="false">
+          <span class="font-semibold text-navy text-sm">Czy zapis daje gwarancję miejsca?</span>
+          <svg class="faq-chevron w-4 h-4 flex-shrink-0 text-ink/35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer bg-sand-light px-5">
+          <p class="py-4 text-sm text-ink/65 leading-relaxed">Nie. Kurs startuje po zebraniu minimalnej liczby uczestników i zachowaniu odpowiedniej równowagi płci między mężczyznami a kobietami.</p>
+        </div>
+      </div>
+
+      <div class="border border-sand-dark rounded-xl overflow-hidden" role="listitem">
+        <button class="faq-btn w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-white hover:bg-sand-light transition-colors" aria-expanded="false">
+          <span class="font-semibold text-navy text-sm">Czy zapis w parze daje większą szansę?</span>
+          <svg class="faq-chevron w-4 h-4 flex-shrink-0 text-ink/35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer bg-sand-light px-5">
+          <p class="py-4 text-sm text-ink/65 leading-relaxed">Tak. Pary mają pierwszeństwo, jeśli zbierze się wymagana liczba osób. Zapis w parze zwiększa szansę na uruchomienie kursu.</p>
+        </div>
+      </div>
+
+      <div class="border border-sand-dark rounded-xl overflow-hidden" role="listitem">
+        <button class="faq-btn w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-white hover:bg-sand-light transition-colors" aria-expanded="false">
+          <span class="font-semibold text-navy text-sm">Czy zapisując się w parze nie mogę się rotować?</span>
+          <svg class="faq-chevron w-4 h-4 flex-shrink-0 text-ink/35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer bg-sand-light px-5">
+          <p class="py-4 text-sm text-ink/65 leading-relaxed">Rotacja jest opcjonalna — każdorazowo decydujecie razem, czy chcecie zamieniać partnera podczas zajęć.</p>
+        </div>
+      </div>
+
+      <div class="border border-sand-dark rounded-xl overflow-hidden" role="listitem">
+        <button class="faq-btn w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-white hover:bg-sand-light transition-colors" aria-expanded="false">
+          <span class="font-semibold text-navy text-sm">Co jeśli nie mogę się pojawić na zajęciach?</span>
+          <svg class="faq-chevron w-4 h-4 flex-shrink-0 text-ink/35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer bg-sand-light px-5">
+          <p class="py-4 text-sm text-ink/65 leading-relaxed">Zgłoś nieobecność najpóźniej 5 minut przed zajęciami (na maila lub grupę FB kursu) — wtedy możesz ją odrobić. Szczegóły w sekcji „Odrabianie zajęć" powyżej.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     NEWSLETTER
+══════════════════════════════════════════════ -->
+<section id="newsletter" class="py-16 bg-navy" aria-labelledby="newsletter-heading">
+  <div class="container max-w-xl text-center">
+    <p class="eyebrow mb-4">Newsletter</p>
+    <h2 id="newsletter-heading" class="text-2xl md:text-3xl font-bold text-white mb-3">Bądź na bieżąco</h2>
+    <p class="text-white/50 text-sm mb-8 leading-relaxed">Nowe terminy, relacje z wydarzeń i inspiracje — prosto na Twoją skrzynkę. Zero spamu.</p>
+    <form action="#" method="post" novalidate class="flex gap-2 flex-wrap justify-center">
+      <label class="sr-only" for="nl-email">Adres e-mail</label>
+      <input
+        id="nl-email" type="email" name="email"
+        placeholder="Twój adres e-mail" autocomplete="email" required
+        class="flex-1 min-w-[200px] px-5 py-3 rounded-full bg-white/10 border border-white/15 text-white text-sm placeholder-white/25 focus:outline-none focus:border-coral focus:ring-2 transition-colors"
+        style="--tw-ring-color:rgba(199,65,10,.3)"
+      />
+      <button type="submit" class="btn-coral whitespace-nowrap">Zapisuję się</button>
+    </form>
+    <p class="text-xs text-white/20 mt-4">
+      Zapisując się, akceptujesz <a href="polityka-prywatnosci.html" class="underline underline-offset-2 hover:text-white/40 transition-colors">Politykę prywatności</a>.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════════════════════════════════
+     STOPKA
+══════════════════════════════════════════════ -->
+<footer class="bg-navy-dark text-white/60 pt-16 pb-8" role="contentinfo">
+  <div class="container">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_2fr] gap-10 mb-14">
+
+      <div>
+        <p class="font-display font-bold text-xl text-white mb-2">Amen! Szkoła Tańca</p>
+        <p class="text-sm text-white/35">Wrocław · Taniec zakorzeniony w wierze</p>
+      </div>
+
+      <nav aria-label="Nawigacja prawna">
+        <h3 class="text-[10px] font-bold tracking-[0.15em] uppercase text-coral mb-4">Dokumenty</h3>
+        <ul class="flex flex-col gap-2.5 list-none" role="list">
+          <li><a class="text-sm text-white/55 hover:text-white no-underline transition-colors" href="regulamin.html">Regulamin zajęć</a></li>
+          <li><a class="text-sm text-white/55 hover:text-white no-underline transition-colors" href="regulamin-online.html">Regulamin serwisu</a></li>
+          <li><a class="text-sm text-white/55 hover:text-white no-underline transition-colors" href="polityka-prywatnosci.html">Polityka prywatności</a></li>
+          <li><a class="text-sm text-white/55 hover:text-white no-underline transition-colors" href="rodo.html">RODO</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Social media">
+        <h3 class="text-[10px] font-bold tracking-[0.15em] uppercase text-coral mb-4">Znajdź nas</h3>
+        <ul class="flex flex-col gap-3 list-none" role="list">
+          <li>
+            <a class="inline-flex items-center gap-2.5 text-sm text-white/55 hover:text-white no-underline transition-colors" href="https://facebook.com/szkolaamen" target="_blank" rel="noopener noreferrer">
+              <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a class="inline-flex items-center gap-2.5 text-sm text-white/55 hover:text-white no-underline transition-colors" href="https://instagram.com/szkolaamen" target="_blank" rel="noopener noreferrer">
+              <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a class="inline-flex items-center gap-2.5 text-sm text-white/55 hover:text-white no-underline transition-colors" href="https://youtube.com/@szkolaamen" target="_blank" rel="noopener noreferrer">
+              <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+              YouTube
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div>
+        <h3 class="text-[10px] font-bold tracking-[0.15em] uppercase text-coral mb-4">Kontakt</h3>
+        <p class="text-sm text-white/35 mb-2">📍 Wrocław</p>
+        <a href="tel:513580512" class="block text-sm text-white/55 hover:text-white no-underline transition-colors mb-1">📞 513-580-512</a>
+        <a href="mailto:kontakt.amen@gmail.com" class="block text-sm text-white/55 hover:text-white no-underline transition-colors">✉ kontakt.amen@gmail.com</a>
+      </div>
+
+    </div>
+
+    <div class="border-t border-white/[.08] pt-6">
+      <p class="text-xs text-white/20 text-center">
+        &copy; <span id="footer-year">2025</span> Chrześcijańska Szkoła Tańca „Amen!" Wrocław. Wszelkie prawa zastrzeżone.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════════
+     SKRYPTY
+══════════════════════════════════════════════ -->
+<script>
+  /* ── Type filter ── */
+  const typeButtons  = document.querySelectorAll('.type-btn');
+  const parishFilter = document.getElementById('parish-filter');
+  const grids        = document.querySelectorAll('[data-grid]');
+
+  typeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      typeButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const type = btn.dataset.type;
+
+      grids.forEach(g => {
+        g.style.display = g.dataset.grid === type
+          ? (type === 'nowe' ? 'block' : 'grid')
+          : 'none';
+      });
+
+      /* hide parish chips for 'nowe' */
+      parishFilter.style.display = type === 'nowe' ? 'none' : 'flex';
+
+      /* reset parish */
+      document.querySelectorAll('.parish-btn').forEach(b => b.classList.remove('active'));
+      const allBtn = document.querySelector('.parish-btn[data-parish="all"]');
+      if (allBtn) allBtn.classList.add('active');
+      getCurrentCards().forEach(c => c.style.display = '');
+    });
+  });
+
+  /* ── Parish filter ── */
+  function getCurrentCards() {
+    const active = document.querySelector('.type-btn.active');
+    if (!active) return [];
+    const grid = document.querySelector(`[data-grid="${active.dataset.type}"]`);
+    return grid ? Array.from(grid.querySelectorAll('[data-parish]')) : [];
+  }
+
+  document.querySelectorAll('.parish-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.parish-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const parish = btn.dataset.parish;
+      getCurrentCards().forEach(card => {
+        card.style.display = (parish === 'all' || card.dataset.parish === parish) ? '' : 'none';
+      });
+    });
+  });
+
+  /* ── Sub-nav active on scroll ── */
+  const subLinks = document.querySelectorAll('.sub-nav-tab[data-section]');
+  const sectionIds = ['grafik','cennik','poziomy','odrabianie','faq'];
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        subLinks.forEach(l => l.classList.toggle('active', l.dataset.section === id));
+      }
+    });
+  }, { rootMargin: '-100px 0px -65% 0px', threshold: 0 });
+
+  sectionIds.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) io.observe(el);
+  });
+
+  /* ── FAQ accordion ── */
+  document.querySelectorAll('.faq-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-btn').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.classList.remove('open');
+      });
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.nextElementSibling.classList.add('open');
+      }
+    });
+  });
+
+  /* ── Footer year ── */
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
