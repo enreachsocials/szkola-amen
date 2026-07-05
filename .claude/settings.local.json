@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"C:\\\\Users\\\\ewago\\\\OneDrive\\\\Pulpit\\\\PROJEKTY WEB\\\\SZKOŁA AMEN\\\\.claude\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npx --yes tailwindcss@latest --input - --content index.html --output tailwind.css --minify)",
+      "Bash(npm install *)",
+      "mcp__visualize__read_me",
+      "mcp__visualize__show_widget",
+      "Bash(python -c ' *)",
+      "Bash(pip install *)",
+      "Bash(python -c \"import sys; sys.stdout.buffer.write\\(sys.stdin.buffer.read\\(\\)\\)\")",
+      "Bash(npx tailwindcss *)",
+      "WebFetch(domain:chrzescijanskaszkolatanca.pl)"
+    ]
+  }
+}

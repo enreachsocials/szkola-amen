@@ -1,0 +1,2377 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Szkoła Tańca Amen! — Wrocław</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── RESET ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    /* ─── TOKENS ─────────────────────────────────────────── */
+    :root {
+      --orange:   #FF5A00;
+      --orange-d: #C7410A;
+      --orange-m: #FF8A47;
+      --orange-l: #FFE2D1;
+      --orange-xl:#FFF1E8;
+      --black:    #141210;
+      --white:    #FFFFFF;
+      --grey:     #F5F4F3;
+      --text:     #2A2826;
+      --muted:    #7A7572;
+
+      --font-head: 'Bricolage Grotesque', sans-serif;
+      --font-body: 'Archivo', sans-serif;
+
+      --r: 8px;
+      --r-lg: 16px;
+      --max: 1200px;
+      --nav-h: 68px;
+    }
+
+    /* ─── BASE ───────────────────────────────────────────── */
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    h1,h2,h3,h4 { font-family: var(--font-head); line-height: 1.15; }
+
+    a { color: inherit; text-decoration: none; }
+
+    img { display: block; max-width: 100%; }
+
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    .section { padding: 80px 0; }
+    .section--grey { background: var(--grey); }
+    .section--black { background: var(--black); color: var(--white); }
+    .section--orange { background: var(--orange); color: var(--white); }
+
+    .label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 12px;
+      display: block;
+    }
+    .section--black .label,
+    .section--orange .label { color: rgba(255,255,255,.7); }
+
+    .section-title {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .section-lead {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 600px;
+      margin-bottom: 48px;
+    }
+    .section--black .section-lead { color: rgba(255,255,255,.65); }
+
+    /* ─── BUTTONS ────────────────────────────────────────── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: var(--r);
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .18s ease;
+      border: 2px solid transparent;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--orange);
+      color: var(--white);
+    }
+    .btn-primary:hover { background: var(--orange-d); }
+
+    .btn-outline {
+      background: transparent;
+      border-color: var(--black);
+      color: var(--black);
+    }
+    .btn-outline:hover { background: var(--black); color: var(--white); }
+
+    .btn-outline-white {
+      background: transparent;
+      border-color: rgba(255,255,255,.5);
+      color: var(--white);
+    }
+    .btn-outline-white:hover { background: rgba(255,255,255,.15); border-color: var(--white); }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--black);
+    }
+    .btn-white:hover { background: var(--orange-xl); }
+
+    /* ─── NAV ────────────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: var(--white);
+      border-bottom: 1px solid rgba(0,0,0,.08);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+    }
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .nav__logo {
+      font-family: var(--font-head);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--black);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .nav__logo span { color: var(--orange); }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      list-style: none;
+    }
+    .nav__links a {
+      padding: 8px 12px;
+      border-radius: var(--r);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      transition: background .15s;
+    }
+    .nav__links a:hover,
+    .nav__links a.active { background: var(--orange-xl); color: var(--orange); }
+
+    .nav__cta { margin-left: 12px; padding: 10px 20px; font-size: 14px; }
+
+    .nav__hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav__hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--black);
+      border-radius: 2px;
+      transition: all .2s;
+    }
+
+    /* mobile nav */
+    .nav__mobile {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: var(--white);
+      border-bottom: 1px solid rgba(0,0,0,.08);
+      padding: 16px 24px 24px;
+      z-index: 99;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .nav__mobile.open { display: flex; }
+    .nav__mobile a {
+      padding: 12px 16px;
+      border-radius: var(--r);
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text);
+      display: block;
+    }
+    .nav__mobile a:hover { background: var(--orange-xl); }
+    .nav__mobile .btn-primary { margin-top: 8px; text-align: center; justify-content: center; }
+
+    /* ─── PAGE WRAPPER ───────────────────────────────────── */
+    .page { display: none; }
+    .page.active { display: block; }
+    .page-offset { padding-top: var(--nav-h); }
+
+    /* ─── HERO ───────────────────────────────────────────── */
+    .hero {
+      min-height: calc(100vh - var(--nav-h));
+      background: var(--black);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -80px;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,90,0,.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; left: -60px;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,90,0,.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero__inner {
+      position: relative;
+      z-index: 1;
+      max-width: 780px;
+    }
+    .hero__eyebrow {
+      display: inline-block;
+      background: rgba(255,90,0,.15);
+      color: var(--orange);
+      border: 1px solid rgba(255,90,0,.3);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .hero__title {
+      font-size: clamp(42px, 7vw, 86px);
+      font-weight: 800;
+      line-height: 1.05;
+      margin-bottom: 24px;
+    }
+    .hero__title em { color: var(--orange); font-style: normal; }
+    .hero__sub {
+      font-size: clamp(16px, 2.2vw, 20px);
+      color: rgba(255,255,255,.7);
+      max-width: 560px;
+      margin-bottom: 40px;
+      line-height: 1.65;
+    }
+    .hero__actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .hero__scroll {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255,255,255,.4);
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .hero__scroll::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 40px;
+      background: rgba(255,255,255,.2);
+      animation: scrollLine 2s ease-in-out infinite;
+    }
+    @keyframes scrollLine {
+      0%,100% { opacity: .2; }
+      50% { opacity: .8; }
+    }
+
+    /* ─── OFFER CARDS ────────────────────────────────────── */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: var(--r-lg);
+      padding: 28px;
+      transition: all .2s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      border-color: var(--orange);
+      box-shadow: 0 8px 32px rgba(255,90,0,.12);
+      transform: translateY(-2px);
+    }
+    .card__icon {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+    .card__title {
+      font-family: var(--font-head);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .card__desc {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .card__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 16px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--orange);
+    }
+    .card__link::after { content: '→'; }
+
+    /* ─── SCHEDULE PREVIEW ───────────────────────────────── */
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .schedule-card {
+      background: var(--white);
+      border-radius: var(--r-lg);
+      padding: 24px;
+      border: 1px solid rgba(0,0,0,.08);
+    }
+    .schedule-card__name {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+    .schedule-card__addr {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .schedule-card__items { display: flex; flex-direction: column; gap: 6px; }
+    .schedule-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+    }
+    .schedule-item__day {
+      font-weight: 600;
+      color: var(--orange);
+      min-width: 32px;
+    }
+    .schedule-item__name { flex: 1; }
+    .schedule-item__time {
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 700;
+      background: var(--orange-xl);
+      color: var(--orange-d);
+    }
+
+    /* ─── PRICING TABLE ──────────────────────────────────── */
+    .pricing-note {
+      background: var(--orange-xl);
+      border-left: 3px solid var(--orange);
+      padding: 16px 20px;
+      border-radius: 0 var(--r) var(--r) 0;
+      margin-bottom: 32px;
+      font-size: 14px;
+    }
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .pricing-table th {
+      text-align: left;
+      padding: 10px 16px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 2px solid rgba(0,0,0,.08);
+    }
+    .pricing-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(0,0,0,.06);
+      vertical-align: middle;
+    }
+    .pricing-table tr:last-child td { border-bottom: none; }
+    .pricing-table tr:hover td { background: var(--orange-xl); }
+    .price-val {
+      font-family: var(--font-head);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--orange);
+    }
+    .level-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 700;
+      background: var(--black);
+      color: var(--white);
+    }
+    .level-badge.beginner { background: var(--orange-l); color: var(--orange-d); }
+    .level-badge.inter { background: var(--orange-m); color: var(--white); }
+    .level-badge.adv { background: var(--orange); color: var(--white); }
+    .level-badge.expert { background: var(--orange-d); color: var(--white); }
+
+    .benefit-logos {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+    .benefit-logo {
+      padding: 10px 16px;
+      border: 1px solid rgba(0,0,0,.1);
+      border-radius: var(--r);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* ─── TESTIMONIALS ───────────────────────────────────── */
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .testimonial {
+      background: var(--white);
+      border-radius: var(--r-lg);
+      padding: 28px;
+      border: 1px solid rgba(0,0,0,.08);
+      position: relative;
+    }
+    .testimonial::before {
+      content: '"';
+      font-family: var(--font-head);
+      font-size: 64px;
+      color: var(--orange-l);
+      line-height: 1;
+      position: absolute;
+      top: 16px; left: 24px;
+    }
+    .testimonial__text {
+      padding-top: 24px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+    .testimonial__author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .testimonial__avatar {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+    .testimonial__name {
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .testimonial__meta {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ─── PARISH PROJECT ─────────────────────────────────── */
+    .parish-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .parish-split__visual {
+      aspect-ratio: 4/3;
+      background: rgba(255,90,0,.12);
+      border-radius: var(--r-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+      border: 1px solid rgba(255,255,255,.1);
+    }
+
+    /* ─── NEWSLETTER ─────────────────────────────────────── */
+    .newsletter-box {
+      max-width: 560px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .newsletter-form {
+      display: flex;
+      gap: 12px;
+      margin-top: 32px;
+    }
+    .newsletter-form input {
+      flex: 1;
+      padding: 14px 18px;
+      border-radius: var(--r);
+      border: 2px solid rgba(255,255,255,.2);
+      background: rgba(255,255,255,.1);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 15px;
+      outline: none;
+      transition: border-color .15s;
+    }
+    .newsletter-form input::placeholder { color: rgba(255,255,255,.4); }
+    .newsletter-form input:focus { border-color: rgba(255,255,255,.5); }
+
+    /* ─── CONTACT BLOCK ──────────────────────────────────── */
+    .contact-row {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .contact-item__icon {
+      width: 44px; height: 44px;
+      background: var(--orange-xl);
+      border-radius: var(--r);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .contact-item__label {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .contact-item__val {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .social-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 32px;
+    }
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: var(--r);
+      border: 1px solid rgba(0,0,0,.1);
+      font-size: 13px;
+      font-weight: 600;
+      transition: all .15s;
+    }
+    .social-btn:hover { background: var(--orange-xl); border-color: var(--orange); }
+
+    /* ─── FOOTER ─────────────────────────────────────────── */
+    footer {
+      background: var(--black);
+      color: var(--white);
+      padding: 48px 0 32px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand__logo {
+      font-family: var(--font-head);
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .footer-brand__logo span { color: var(--orange); }
+    .footer-brand__desc {
+      font-size: 14px;
+      color: rgba(255,255,255,.5);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+    .footer-col__title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.4);
+      margin-bottom: 16px;
+    }
+    .footer-col__links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col__links a {
+      font-size: 14px;
+      color: rgba(255,255,255,.65);
+      transition: color .15s;
+    }
+    .footer-col__links a:hover { color: var(--orange); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      color: rgba(255,255,255,.35);
+    }
+    .footer-social {
+      display: flex;
+      gap: 8px;
+    }
+    .footer-social a {
+      width: 32px; height: 32px;
+      border-radius: var(--r);
+      border: 1px solid rgba(255,255,255,.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: rgba(255,255,255,.5);
+      transition: all .15s;
+    }
+    .footer-social a:hover { border-color: var(--orange); color: var(--orange); }
+
+    /* ─── SUBPAGE HERO ───────────────────────────────────── */
+    .page-hero {
+      background: var(--black);
+      color: var(--white);
+      padding: 80px 0 64px;
+    }
+    .page-hero .label { color: rgba(255,255,255,.5); }
+    .page-hero h1 {
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .page-hero p {
+      font-size: 18px;
+      color: rgba(255,255,255,.65);
+      max-width: 560px;
+    }
+
+    /* ─── OFFER PAGE ─────────────────────────────────────── */
+    .offer-list { display: flex; flex-direction: column; gap: 0; }
+    .offer-item {
+      display: grid;
+      grid-template-columns: 80px 1fr auto;
+      gap: 24px;
+      align-items: center;
+      padding: 32px 0;
+      border-bottom: 1px solid rgba(0,0,0,.08);
+    }
+    .offer-item:last-child { border-bottom: none; }
+    .offer-item__num {
+      font-family: var(--font-head);
+      font-size: 48px;
+      font-weight: 800;
+      color: var(--orange-l);
+      line-height: 1;
+    }
+    .offer-item__icon { font-size: 32px; }
+    .offer-item__title {
+      font-family: var(--font-head);
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .offer-item__desc {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 520px;
+      line-height: 1.65;
+    }
+
+    /* ─── GRAFIK PAGE ────────────────────────────────────── */
+    .levels-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .level-pill {
+      padding: 8px 16px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .level-pill.p { background: var(--orange-xl); color: var(--orange-d); }
+    .level-pill.s { background: var(--orange-l); color: var(--orange-d); }
+    .level-pill.z { background: var(--orange); color: var(--white); }
+    .level-pill__code { font-size: 11px; opacity: .6; }
+
+    .parish-block { margin-bottom: 32px; }
+    .parish-block__header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .parish-block__name {
+      font-family: var(--font-head);
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .parish-block__addr { font-size: 13px; color: var(--muted); }
+
+    .class-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      background: var(--grey);
+      border-radius: var(--r);
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+    .class-row__day {
+      font-weight: 700;
+      color: var(--orange);
+      min-width: 36px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .class-row__name { flex: 1; font-weight: 500; }
+    .class-row__time { color: var(--muted); font-size: 13px; }
+
+    /* ─── KONTAKT PAGE ───────────────────────────────────── */
+    .contact-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+    .contact-form { display: flex; flex-direction: column; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      padding: 12px 16px;
+      border-radius: var(--r);
+      border: 1.5px solid rgba(0,0,0,.12);
+      font-family: var(--font-body);
+      font-size: 15px;
+      outline: none;
+      transition: border-color .15s;
+      background: var(--white);
+    }
+    .form-group input:focus,
+    .form-group textarea:focus { border-color: var(--orange); }
+    .form-group textarea { min-height: 120px; resize: vertical; }
+
+    .location-list { display: flex; flex-direction: column; gap: 16px; }
+    .location-item {
+      display: flex;
+      gap: 16px;
+      padding: 20px;
+      background: var(--grey);
+      border-radius: var(--r-lg);
+    }
+    .location-item__icon {
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+    .location-item__name {
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: 2px;
+    }
+    .location-item__addr { font-size: 13px; color: var(--muted); }
+
+    /* ─── FAQ PAGE ───────────────────────────────────────── */
+    .faq-list { display: flex; flex-direction: column; gap: 12px; max-width: 720px; }
+    .faq-item {
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+    }
+    .faq-q {
+      padding: 20px 24px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      user-select: none;
+      transition: background .15s;
+    }
+    .faq-q:hover { background: var(--orange-xl); }
+    .faq-q.open { background: var(--orange-xl); color: var(--orange-d); }
+    .faq-q__arrow { transition: transform .2s; font-size: 12px; color: var(--muted); flex-shrink: 0; }
+    .faq-q.open .faq-q__arrow { transform: rotate(180deg); color: var(--orange); }
+    .faq-a {
+      display: none;
+      padding: 0 24px 20px;
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .faq-a.open { display: block; }
+
+    /* ─── O NAS PAGE ─────────────────────────────────────── */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .team-card {
+      text-align: center;
+    }
+    .team-card__avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange) 0%, var(--orange-d) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--white);
+      margin: 0 auto 16px;
+    }
+    .team-card__name {
+      font-family: var(--font-head);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .team-card__role { font-size: 14px; color: var(--orange); font-weight: 600; margin-bottom: 10px; }
+    .team-card__bio { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .value-card {
+      padding: 32px 24px;
+      background: var(--grey);
+      border-radius: var(--r-lg);
+      text-align: center;
+    }
+    .value-card__icon { font-size: 40px; margin-bottom: 16px; }
+    .value-card__title {
+      font-family: var(--font-head);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .value-card__desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    /* ─── DLA PARAFII PAGE ───────────────────────────────── */
+    .steps { display: flex; flex-direction: column; gap: 0; max-width: 640px; }
+    .step {
+      display: flex;
+      gap: 24px;
+      padding: 28px 0;
+      border-bottom: 1px solid rgba(0,0,0,.07);
+    }
+    .step:last-child { border-bottom: none; }
+    .step__num {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: var(--orange);
+      color: var(--white);
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .step__title { font-weight: 700; font-size: 17px; margin-bottom: 6px; }
+    .step__desc { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+    /* ─── SKLEP PLACEHOLDER ──────────────────────────────── */
+    .coming-soon {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 16px;
+      padding: 80px 24px;
+    }
+    .coming-soon__icon { font-size: 64px; }
+    .coming-soon h2 { font-size: 36px; font-weight: 800; }
+    .coming-soon p { color: var(--muted); max-width: 400px; font-size: 16px; }
+    .coming-badge {
+      display: inline-block;
+      background: var(--orange-xl);
+      color: var(--orange-d);
+      border: 1px solid var(--orange-l);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    /* ─── DIVIDER ────────────────────────────────────────── */
+    .divider { height: 1px; background: rgba(0,0,0,.07); }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 960px) {
+      .cards { grid-template-columns: repeat(2, 1fr); }
+      .schedule-grid { grid-template-columns: 1fr; }
+      .testimonials { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .parish-split { grid-template-columns: 1fr; gap: 40px; }
+      .contact-cols { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      :root { --nav-h: 60px; }
+      .section { padding: 56px 0; }
+      .cards { grid-template-columns: 1fr; }
+      .nav__links { display: none; }
+      .nav__hamburger { display: flex; }
+      .hero__title { font-size: 36px; }
+      .hero__actions { flex-direction: column; }
+      .newsletter-form { flex-direction: column; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .offer-item { grid-template-columns: 1fr; }
+      .offer-item__num { font-size: 32px; }
+      .team-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+      .contact-row { flex-direction: column; gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══════════════════════════════════════════════ -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="#" onclick="showPage('home')">
+      amen<span>!</span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="#" onclick="showPage('home')" id="nav-home">Start</a></li>
+      <li><a href="#" onclick="showPage('oferta')" id="nav-oferta">Oferta</a></li>
+      <li><a href="#" onclick="showPage('grafik')" id="nav-grafik">Grafik</a></li>
+      <li><a href="#" onclick="showPage('cennik')" id="nav-cennik">Cennik</a></li>
+      <li><a href="#" onclick="showPage('onas')" id="nav-onas">O nas</a></li>
+      <li><a href="#" onclick="showPage('kontakt')" id="nav-kontakt">Kontakt</a></li>
+      <li><a href="#" onclick="showPage('faq')" id="nav-faq">FAQ</a></li>
+    </ul>
+    <div style="display:flex; gap:8px; align-items:center; margin-left:12px;">
+      <a class="btn btn-outline nav__cta" href="#" onclick="showPage('parafia')" id="nav-parafia" style="padding:10px 16px; font-size:13px;">⛪ Dla parafii</a>
+      <a class="btn btn-primary nav__cta" href="#" onclick="showPage('sklep')">Kup karnet →</a>
+    </div>
+    <div class="nav__hamburger" onclick="toggleMobile()" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- mobile menu -->
+<div class="nav__mobile" id="mobileMenu">
+  <a href="#" onclick="showPage('home');closeMobile()">Start</a>
+  <a href="#" onclick="showPage('oferta');closeMobile()">Oferta</a>
+  <a href="#" onclick="showPage('grafik');closeMobile()">Grafik</a>
+  <a href="#" onclick="showPage('cennik');closeMobile()">Cennik</a>
+  <a href="#" onclick="showPage('onas');closeMobile()">O nas</a>
+  <a href="#" onclick="showPage('kontakt');closeMobile()">Kontakt</a>
+  <a href="#" onclick="showPage('faq');closeMobile()">FAQ</a>
+  <a href="#" onclick="showPage('parafia');closeMobile()" style="color:var(--orange); font-weight:600;">Dla parafii</a>
+  <a class="btn btn-primary" href="#" onclick="showPage('sklep');closeMobile()">Kup karnet →</a>
+</div>
+
+
+<!-- ═══ PAGE: HOME ═════════════════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__inner">
+        <span class="hero__eyebrow">Wrocław · Est. 2022</span>
+        <h1 class="hero__title">
+          Tańczymy,<br>bo wierzymy<br>w <em>radość.</em>
+        </h1>
+        <p class="hero__sub">
+          Chrześcijańska szkoła tańca we Wrocławiu. Kursy, warsztaty i potańcówki
+          w parafiach — blisko, tanio i dla każdego.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn-primary" href="#" onclick="showPage('oferta')">Sprawdź ofertę →</a>
+          <a class="btn btn-outline-white" href="#" onclick="showPage('grafik')">Zobacz grafik</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll">Przewiń</div>
+  </section>
+
+  <!-- OFERTA OVERVIEW -->
+  <section class="section">
+    <div class="container">
+      <span class="label">Co robimy</span>
+      <h2 class="section-title">Znajdź coś dla siebie</h2>
+      <p class="section-lead">Od zupełnych początków po zaawansowane techniki — mamy kurs dla każdego, niezależnie od wieku i doświadczenia.</p>
+      <div class="cards">
+        <div class="card" onclick="showPage('oferta')">
+          <div class="card__icon">💃</div>
+          <div class="card__title">Kursy Tańca</div>
+          <div class="card__desc">Regularne zajęcia w 7 parafiach Wrocławia. Style użytkowy, bachata, latino solo — w parach i solo. Raz w tygodniu.</div>
+          <span class="card__link">Dowiedz się więcej</span>
+        </div>
+        <div class="card" onclick="showPage('oferta')">
+          <div class="card__icon">🎉</div>
+          <div class="card__title">Warsztaty Weekendowe</div>
+          <div class="card__desc">Intensywne sesje w weekendy. Idealny sposób na szybki postęp lub wypróbowanie tańca bez zobowiązań.</div>
+          <span class="card__link">Dowiedz się więcej</span>
+        </div>
+        <div class="card" onclick="showPage('oferta')">
+          <div class="card__icon">🎶</div>
+          <div class="card__title">Imprezy taneczne</div>
+          <div class="card__desc">Potańcówki, wieczory tematyczne i wyjątkowe wydarzenia — taniec w radosnej, rodzinnej atmosferze.</div>
+          <span class="card__link">Dowiedz się więcej</span>
+        </div>
+        <div class="card" onclick="showPage('oferta')">
+          <div class="card__icon">🌙</div>
+          <div class="card__title">Piątki z Amen!</div>
+          <div class="card__desc">Cotygodniowe piątkowe spotkania taneczne. Dobra muzyka, dobrzy ludzie, żaden poziom nie jest wymagany.</div>
+          <span class="card__link">Dowiedz się więcej</span>
+        </div>
+        <div class="card" onclick="showPage('oferta')">
+          <div class="card__icon">💍</div>
+          <div class="card__title">Pierwszy Taniec</div>
+          <div class="card__desc">Indywidualne lekcje dla par przed ślubem. Choreografia dopasowana do Waszej piosenki i możliwości.</div>
+          <span class="card__link">Dowiedz się więcej</span>
+        </div>
+        <div class="card" onclick="showPage('oferta')">
+          <div class="card__icon">🎯</div>
+          <div class="card__title">Zajęcia Indywidualne</div>
+          <div class="card__desc">Prywatne lekcje z instruktorem. Maksymalny postęp w Twoim tempie, skupione na Twoich celach.</div>
+          <span class="card__link">Dowiedz się więcej</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAKACYJNY BANER -->
+  <section style="background:var(--orange); padding:40px 0;">
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">
+      <div>
+        <div style="font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.7); margin-bottom:8px;">☀️ Lato 2026 — zapisy otwarte</div>
+        <div style="font-family:var(--font-head); font-size:26px; font-weight:800; color:var(--white); line-height:1.2;">Kursy wakacyjne już dostępne!</div>
+        <div style="font-size:15px; color:rgba(255,255,255,.85); margin-top:6px;">Bachata, Salsa, Akrobacje — starty w lipcu w 3 parafiach Wrocławia.</div>
+      </div>
+      <a class="btn btn-white" href="#" onclick="showPage('grafik')" style="flex-shrink:0;">Zobacz kursy wakacyjne →</a>
+    </div>
+  </section>
+
+  <!-- GRAFIK PREVIEW -->
+  <section class="section section--grey">
+    <div class="container">
+      <span class="label">Gdzie i kiedy</span>
+      <h2 class="section-title">Zajęcia blisko Ciebie</h2>
+      <p class="section-lead">Prowadzimy zajęcia w 7 parafiach na terenie Wrocławia — znajdź grupę w swojej okolicy.</p>
+      <div style="display:flex; flex-direction:column; gap:0; border:1px solid rgba(0,0,0,.08); border-radius:var(--r-lg); overflow:hidden; background:var(--white);">
+        <div style="display:grid; grid-template-columns:1fr 1fr auto; align-items:center; padding:16px 24px; border-bottom:1px solid rgba(0,0,0,.06); gap:12px;">
+          <div><div style="font-weight:700; font-size:15px;">Parafia Chrystusa Króla</div><div style="font-size:13px; color:var(--muted);">ul. Młodych Techników 17</div></div>
+          <div style="font-size:13px; color:var(--muted);">PN, WT</div>
+          <a href="#" onclick="showPage('grafik')" style="font-size:13px; font-weight:600; color:var(--orange); white-space:nowrap;">Zobacz →</a>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr auto; align-items:center; padding:16px 24px; border-bottom:1px solid rgba(0,0,0,.06); gap:12px; background:var(--orange-xl);">
+          <div><div style="font-weight:700; font-size:15px;">Parafia NMP Bolesnej</div><div style="font-size:13px; color:var(--muted);">ul. Tatarakowa 1</div></div>
+          <div style="font-size:13px; color:var(--muted);">ŚR</div>
+          <a href="#" onclick="showPage('grafik')" style="font-size:13px; font-weight:600; color:var(--orange); white-space:nowrap;">Zobacz →</a>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr auto; align-items:center; padding:16px 24px; border-bottom:1px solid rgba(0,0,0,.06); gap:12px;">
+          <div><div style="font-weight:700; font-size:15px;">Parafia NMP Matki Miłosierdzia</div><div style="font-size:13px; color:var(--muted);">ul. Brucknera 20</div></div>
+          <div style="font-size:13px; color:var(--muted);">WT</div>
+          <a href="#" onclick="showPage('grafik')" style="font-size:13px; font-weight:600; color:var(--orange); white-space:nowrap;">Zobacz →</a>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr auto; align-items:center; padding:16px 24px; border-bottom:1px solid rgba(0,0,0,.06); gap:12px; background:var(--orange-xl);">
+          <div><div style="font-weight:700; font-size:15px;">Parafia Opieki Św. Józefa</div><div style="font-size:13px; color:var(--muted);">ul. Ołbińska 1</div></div>
+          <div style="font-size:13px; color:var(--muted);">ŚR</div>
+          <a href="#" onclick="showPage('grafik')" style="font-size:13px; font-weight:600; color:var(--orange); white-space:nowrap;">Zobacz →</a>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr auto; align-items:center; padding:16px 24px; border-bottom:1px solid rgba(0,0,0,.06); gap:12px;">
+          <div><div style="font-weight:700; font-size:15px;">Parafia Św. Alberta Wielkiego</div><div style="font-size:13px; color:var(--muted);">ul. Redycka 10</div></div>
+          <div style="font-size:13px; color:var(--muted);">PN</div>
+          <a href="#" onclick="showPage('grafik')" style="font-size:13px; font-weight:600; color:var(--orange); white-space:nowrap;">Zobacz →</a>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr auto; align-items:center; padding:16px 24px; border-bottom:1px solid rgba(0,0,0,.06); gap:12px; background:var(--orange-xl);">
+          <div><div style="font-weight:700; font-size:15px;">Parafia Św. Antoniego</div><div style="font-size:13px; color:var(--muted);">al. Kasprowicza 26</div></div>
+          <div style="font-size:13px; color:var(--muted);">PN, ŚR, CZW</div>
+          <a href="#" onclick="showPage('grafik')" style="font-size:13px; font-weight:600; color:var(--orange); white-space:nowrap;">Zobacz →</a>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr auto; align-items:center; padding:16px 24px; gap:12px;">
+          <div><div style="font-weight:700; font-size:15px;">Parafia Św. Anny</div><div style="font-size:13px; color:var(--muted);">ul. Sobótki 42</div></div>
+          <div style="font-size:13px; color:var(--muted);">PN</div>
+          <a href="#" onclick="showPage('grafik')" style="font-size:13px; font-weight:600; color:var(--orange); white-space:nowrap;">Zobacz →</a>
+        </div>
+      </div>
+      <div style="margin-top:24px;">
+        <a class="btn btn-outline" href="#" onclick="showPage('grafik')">Pełny grafik z godzinami →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CENNIK PREVIEW -->
+  <section class="section">
+    <div class="container">
+      <span class="label">Cennik</span>
+      <h2 class="section-title">Blisko i tanio</h2>
+      <p class="section-lead">Karnet miesięczny = 4 zajęcia (raz w tygodniu). Cena rośnie wraz z poziomem zaawansowania.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:32px;">
+        <div style="border:2px solid var(--orange-l); border-radius:var(--r-lg); padding:28px 24px; background:var(--orange-xl);">
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--orange-d); margin-bottom:8px;">Początkujący · P0</div>
+          <div style="font-family:var(--font-head); font-size:36px; font-weight:800; color:var(--black);">60 zł<span style="font-size:16px; font-weight:400; color:var(--muted);">/mies.</span></div>
+          <p style="font-size:14px; color:var(--muted); margin-top:12px; line-height:1.6;">Zupełny start — pierwsze 2 miesiące. Brak doświadczenia mile widziany.</p>
+        </div>
+        <div style="border:2px solid rgba(0,0,0,.1); border-radius:var(--r-lg); padding:28px 24px; background:var(--white);">
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:8px;">Podstawowy–Średni · P1–S2</div>
+          <div style="font-family:var(--font-head); font-size:36px; font-weight:800; color:var(--black);">80–160 zł<span style="font-size:16px; font-weight:400; color:var(--muted);">/mies.</span></div>
+          <p style="font-size:14px; color:var(--muted); margin-top:12px; line-height:1.6;">Kolejne lata nauki. Cena rośnie z poziomem — szczegóły w pełnym cenniku.</p>
+        </div>
+        <div style="border:2px solid rgba(0,0,0,.1); border-radius:var(--r-lg); padding:28px 24px; background:var(--white);">
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:8px;">Zaawansowany · Z1–Z2</div>
+          <div style="font-family:var(--font-head); font-size:36px; font-weight:800; color:var(--black);">180–200 zł<span style="font-size:16px; font-weight:400; color:var(--muted);">/mies.</span></div>
+          <p style="font-size:14px; color:var(--muted); margin-top:12px; line-height:1.6;">Najwyższe poziomy. Akceptujemy Multisport, Medicover Sport i FitProfit.</p>
+        </div>
+      </div>
+      <div style="margin-top:28px; display:flex; gap:16px; flex-wrap:wrap;">
+        <a class="btn btn-outline" href="#" onclick="showPage('cennik')">Pełny cennik z poziomami →</a>
+        <a class="btn btn-primary" href="#" onclick="showPage('sklep')">Kup karnet online →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPINIE -->
+  <section class="section section--grey">
+    <div class="container">
+      <span class="label">Opinie</span>
+      <h2 class="section-title">Co mówią uczestnicy</h2>
+      <div class="testimonials">
+        <div class="testimonial">
+          <p class="testimonial__text">Atmosfera jest niesamowita — rodzinna, ciepła, bez oceniania. Przyszłam sama i od razu poczułam się jak wśród znajomych. Polecam każdemu!</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">J</div>
+            <div>
+              <div class="testimonial__name">Justyna</div>
+              <div class="testimonial__meta">Kurs Użytkowy · od 8 miesięcy</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial__text">Instruktorzy poświęcają czas każdemu z osobna. Nawet jeśli masz dwie lewe nogi — tu nikt się nie śmieje, wszyscy pomagają. Chodzę już rok.</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">K</div>
+            <div>
+              <div class="testimonial__name">Kamil</div>
+              <div class="testimonial__meta">Bachata · od roku</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial__text">Nigdy nie myślałem, że będę tańczyć. Kolega namówił na próbne zajęcia i zostałem na dobre. Cena świetna, lokalizacja blisko domu.</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">D</div>
+            <div>
+              <div class="testimonial__name">Dawid</div>
+              <div class="testimonial__meta">Użytkowy P1 · od 6 miesięcy</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial__text">Poza tańcem zyskałem prawdziwą grupę przyjaciół. Tu czuć, że chodzi nie tylko o kroki, ale o wspólnotę. To coś wyjątkowego.</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">K</div>
+            <div>
+              <div class="testimonial__name">Konrad</div>
+              <div class="testimonial__meta">Latino Solo · od roku</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CYTAT -->
+  <section style="background:var(--black); padding:72px 0; text-align:center;">
+    <div class="container" style="max-width:700px; margin:0 auto;">
+      <div style="font-size:clamp(22px,3.5vw,36px); font-family:var(--font-head); font-weight:700; color:var(--white); line-height:1.4; margin-bottom:20px;">
+        „Ucz się tańczyć, bo inaczej aniołowie nie będą wiedzieć, co z Tobą począć."
+      </div>
+      <div style="font-size:14px; color:rgba(255,255,255,.4); letter-spacing:.08em; text-transform:uppercase;">— przypisywane Św. Augustynowi</div>
+    </div>
+  </section>
+
+  <!-- ROZTAŃCZONA PARAFIA -->
+  <section class="section section--black">
+    <div class="container">
+      <div class="parish-split">
+        <div>
+          <span class="label">Projekt parafialny</span>
+          <h2 class="section-title">Roztańczona Parafia</h2>
+          <p style="color:rgba(255,255,255,.65); font-size:16px; line-height:1.7; margin-bottom:24px;">
+            Wierzymy, że Kościół może i powinien być centrum spotkania, radości i prawdziwych więzi. Dlatego przychodzimy do parafii — z kursami, warsztatami i potańcówkami dla całej wspólnoty.
+          </p>
+          <p style="color:rgba(255,255,255,.5); font-size:14px; margin-bottom:32px;">
+            Jesteś duszpasterzem, animatorem lub liderem wspólnoty? Porozmawiajmy o tym, jak możemy razem roztańczyć Twoją parafię.
+          </p>
+          <a class="btn btn-primary" href="#" onclick="showPage('parafia')">Dowiedz się więcej →</a>
+        </div>
+        <div class="parish-split__visual">⛪</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="section section--orange">
+    <div class="container">
+      <div class="newsletter-box">
+        <span class="label">Newsletter</span>
+        <h2 class="section-title" style="color:var(--white)">Bądź na bieżąco</h2>
+        <p style="color:rgba(255,255,255,.8); font-size:16px; line-height:1.65;">
+          Nowe grupy, zapisy na warsztaty, imprezy i promocje — prosto na Twoją skrzynkę. Bez spamu.
+        </p>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="Twój adres e-mail" />
+          <button class="btn btn-white" type="submit">Zapisz się</button>
+        </form>
+        <label style="display:flex; align-items:flex-start; gap:10px; margin-top:16px; cursor:pointer; text-align:left; max-width:520px;">
+          <input type="checkbox" required style="margin-top:3px; accent-color:var(--orange); flex-shrink:0;" />
+          <span style="font-size:12px; color:rgba(255,255,255,.65); line-height:1.6;">Wyrażam zgodę na przetwarzanie moich danych osobowych (adresu e-mail) w celu otrzymywania newslettera Szkoły Tańca Amen! Zgodę mogę wycofać w każdej chwili. Więcej informacji w <a href="#" style="color:rgba(255,255,255,.85); text-decoration:underline;">Polityce prywatności</a>.</span>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT BLOCK -->
+  <section class="section">
+    <div class="container">
+      <span class="label">Kontakt</span>
+      <h2 class="section-title" style="margin-bottom:40px">Masz pytania?</h2>
+      <div class="contact-row">
+        <div class="contact-item">
+          <div class="contact-item__icon">📞</div>
+          <div>
+            <div class="contact-item__label">Telefon</div>
+            <div class="contact-item__val">513 580 512</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item__icon">✉️</div>
+          <div>
+            <div class="contact-item__label">E-mail</div>
+            <div class="contact-item__val">kontakt.amen@gmail.com</div>
+          </div>
+        </div>
+      </div>
+      <div class="social-row">
+        <a class="social-btn" href="#">f Facebook</a>
+        <a class="social-btn" href="#">📸 Instagram</a>
+        <a class="social-btn" href="#">▶ YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand__logo">amen<span>!</span></div>
+          <p class="footer-brand__desc">Chrześcijańska szkoła tańca z Wrocławia. Tańczymy, bo wierzymy w radość.</p>
+          <div class="footer-social">
+            <a href="#">f</a>
+            <a href="#">📸</a>
+            <a href="#">▶</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col__title">Oferta</div>
+          <ul class="footer-col__links">
+            <li><a href="#" onclick="showPage('oferta')">Kursy Tańca</a></li>
+            <li><a href="#" onclick="showPage('oferta')">Warsztaty</a></li>
+            <li><a href="#" onclick="showPage('oferta')">Imprezy</a></li>
+            <li><a href="#" onclick="showPage('oferta')">Piątki z Amen!</a></li>
+            <li><a href="#" onclick="showPage('oferta')">Pierwszy Taniec</a></li>
+            <li><a href="#" onclick="showPage('oferta')">Zajęcia Indywidualne</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col__title">Informacje</div>
+          <ul class="footer-col__links">
+            <li><a href="#" onclick="showPage('grafik')">Grafik zajęć</a></li>
+            <li><a href="#" onclick="showPage('cennik')">Cennik</a></li>
+            <li><a href="#" onclick="showPage('faq')">FAQ</a></li>
+            <li><a href="#" onclick="showPage('parafia')">Roztańczona Parafia</a></li>
+            <li><a href="#" style="color:rgba(255,255,255,.35);">Regulamin</a></li>
+            <li><a href="#" style="color:rgba(255,255,255,.35);">Polityka prywatności (RODO)</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col__title">Szkoła</div>
+          <ul class="footer-col__links">
+            <li><a href="#" onclick="showPage('onas')">O nas</a></li>
+            <li><a href="#" onclick="showPage('kontakt')">Kontakt</a></li>
+            <li><a href="#" onclick="showPage('sklep')">Sklep</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Szkoła Tańca Amen! Wrocław</span>
+        <span>kontakt.amen@gmail.com · 513 580 512</span>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /page-home -->
+
+
+<!-- ═══ PAGE: OFERTA ═══════════════════════════════════════ -->
+<div class="page" id="page-oferta">
+  <div class="page-offset">
+    <div class="page-hero">
+      <div class="container">
+        <span class="label">Co oferujemy</span>
+        <h1>Oferta</h1>
+        <p>Bogaty wybór usług tanecznych — niezależnie od poziomu, wieku i celu.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container">
+        <div class="offer-list">
+          <div class="offer-item">
+            <div class="offer-item__num">01</div>
+            <div>
+              <div class="offer-item__icon">💃</div>
+              <div class="offer-item__title">Kursy Tańca</div>
+              <p class="offer-item__desc">Regularne zajęcia raz w tygodniu w 7 parafiach Wrocławia. Prowadzimy Użytkowy (taniec towarzyski), Bachatę i Latino Solo — dla par i osób solo, na wszystkich poziomach od P0 do Z2. Dołączasz do grupy, rozwijasz się w swoim tempie.</p>
+            </div>
+            <a class="btn btn-outline" href="#" onclick="showPage('grafik')">Zobacz grafik</a>
+          </div>
+          <div class="offer-item">
+            <div class="offer-item__num">02</div>
+            <div>
+              <div class="offer-item__icon">🎉</div>
+              <div class="offer-item__title">Warsztaty Weekendowe</div>
+              <p class="offer-item__desc">Intensywne sesje taneczne w weekendy — idealne na szybki postęp lub żeby sprawdzić, czy taniec jest dla Ciebie, zanim zdecydujesz się na kurs. Różnorodne style i tematy — sprawdź aktualne terminy.</p>
+            </div>
+            <a class="btn btn-outline" href="#" onclick="showPage('kontakt')">Zapytaj o termin</a>
+          </div>
+          <div class="offer-item">
+            <div class="offer-item__num">03</div>
+            <div>
+              <div class="offer-item__icon">🎶</div>
+              <div class="offer-item__title">Imprezy Taneczne</div>
+              <p class="offer-item__desc">Potańcówki, wieczory tematyczne i wyjątkowe wydarzenia — taniec w radosnej, rodzinnej atmosferze. Otwarte dla wszystkich, bez względu na poziom. Dobre miejsce żeby poznać nowych ludzi i po prostu się pobawić.</p>
+            </div>
+            <a class="btn btn-outline" href="#" onclick="showPage('kontakt')">Zapytaj o termin</a>
+          </div>
+          <div class="offer-item">
+            <div class="offer-item__num">04</div>
+            <div>
+              <div class="offer-item__icon">🌙</div>
+              <div class="offer-item__title">Piątki z Amen!</div>
+              <p class="offer-item__desc">Cotygodniowe piątkowe wieczory taneczne — otwarte dla wszystkich uczestników kursów oraz zaproszonych gości. Dobra muzyka, luźna atmosfera, rotacja partnerów. To czas na praktykę i zabawę poza regularnymi zajęciami. Żaden poziom nie jest wymagany. Aktualne terminy i lokalizacje — na naszym Facebooku i w newsletterze.</p>
+            </div>
+            <a class="btn btn-outline" href="#" onclick="showPage('kontakt')">Zapytaj o najbliższy termin</a>
+          </div>
+          <div class="offer-item">
+            <div class="offer-item__num">05</div>
+            <div>
+              <div class="offer-item__icon">💍</div>
+              <div class="offer-item__title">Pierwszy Taniec</div>
+              <p class="offer-item__desc">Indywidualne lekcje dla par szykujących się do ślubu. Tworzymy choreografię dopasowaną do Waszej piosenki i możliwości — tak żebyście czuli się pewnie i mogli cieszyć się tym momentem. Zaczynamy nawet kilka tygodni przed ceremonią.</p>
+            </div>
+            <a class="btn btn-primary" href="#" onclick="showPage('kontakt')">Umów się</a>
+          </div>
+          <div class="offer-item">
+            <div class="offer-item__num">06</div>
+            <div>
+              <div class="offer-item__icon">🎯</div>
+              <div class="offer-item__title">Zajęcia Indywidualne</div>
+              <p class="offer-item__desc">Prywatna lekcja jeden na jeden z instruktorem. Maksymalny postęp w Twoim tempie — skupiamy się wyłącznie na Twoich celach i stylu. Idealne przy konkretnym wydarzeniu lub gdy chcesz szybko nadrobić zaległości.</p>
+            </div>
+            <a class="btn btn-primary" href="#" onclick="showPage('kontakt')">Umów się</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section--orange">
+      <div class="container" style="text-align:center">
+        <h2 style="color:var(--white); font-size:32px; margin-bottom:16px;">Nie wiesz od czego zacząć?</h2>
+        <p style="color:rgba(255,255,255,.8); margin-bottom:32px; max-width:480px; margin-left:auto; margin-right:auto;">Napisz do nas — pomożemy wybrać odpowiedni kurs i poziom.</p>
+        <a class="btn btn-white" href="#" onclick="showPage('kontakt')">Napisz do nas →</a>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<!-- ═══ PAGE: GRAFIK ═══════════════════════════════════════ -->
+<div class="page" id="page-grafik">
+  <div class="page-offset">
+    <div class="page-hero">
+      <div class="container">
+        <span class="label">Terminarz</span>
+        <h1>Grafik zajęć</h1>
+        <p>Znajdź grupę blisko siebie. Dołączenie możliwe przy wolnych miejscach.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container">
+        <span class="label">Legenda poziomów</span>
+        <h2 class="section-title" style="margin-bottom:24px">Poziomy zaawansowania</h2>
+        <div class="levels-row">
+          <div class="level-pill p"><strong>P0</strong> <span class="level-pill__code">Pierwsze 2 mies.</span> Zupełny początek</div>
+          <div class="level-pill p"><strong>P1–P3</strong> <span class="level-pill__code">do ~9 mies.</span> Podstawowy</div>
+          <div class="level-pill s"><strong>S1–S2</strong> <span class="level-pill__code">~2 lata</span> Średniozaawansowany</div>
+          <div class="level-pill z"><strong>Z1–Z2</strong> <span class="level-pill__code">3+ lata</span> Zaawansowany</div>
+          <div class="level-pill" style="background:var(--black); color:var(--white);"><strong>OPEN</strong> <span style="font-size:11px; opacity:.6;">wszystkie poziomy</span></div>
+        </div>
+
+        <div class="divider" style="margin-bottom:48px"></div>
+
+        <span class="label">Wakacje 2026</span>
+        <h2 class="section-title" style="margin-bottom:16px">Kursy wakacyjne</h2>
+        <p style="color:var(--muted); font-size:16px; margin-bottom:28px;">Intensywne kursy w skróconym formacie — idealne jeśli chcesz zacząć latem lub nadrobić zaległości. Zajęcia odbywają się częściej niż w roku szkolnym.</p>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:16px; margin-bottom:48px;">
+          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r-lg); padding:24px;">
+            <div style="font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--orange-d); margin-bottom:12px;">Parafia NMP Bolesnej · ul. Tatarakowa</div>
+            <div style="font-family:var(--font-head); font-weight:700; font-size:17px; margin-bottom:6px;">Bachata vs Salsa</div>
+            <div style="font-size:13px; color:var(--muted); margin-bottom:10px;">Poziom startowy P0 — zupełny początek</div>
+            <span class="badge">P0</span>
+          </div>
+          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r-lg); padding:24px;">
+            <div style="font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--orange-d); margin-bottom:12px;">Parafia Św. Antoniego · al. Kasprowicza</div>
+            <div style="font-family:var(--font-head); font-weight:700; font-size:17px; margin-bottom:6px;">Akrobacje / Triki Taneczne</div>
+            <div style="font-size:13px; color:var(--muted); margin-bottom:10px;">Poziom startowy P0</div>
+            <span class="badge">P0</span>
+          </div>
+          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r-lg); padding:24px;">
+            <div style="font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--orange-d); margin-bottom:12px;">Parafia Chrystusa Króla · ul. Młodych Techników</div>
+            <div style="font-family:var(--font-head); font-weight:700; font-size:17px; margin-bottom:6px;">Użytkowy — kurs letni</div>
+            <div style="font-size:13px; color:var(--muted); margin-bottom:10px;">Poziom startowy P0</div>
+            <span class="badge">P0</span>
+          </div>
+        </div>
+        <a class="btn btn-primary" href="#" onclick="showPage('kontakt')" style="margin-bottom:48px;">Zapisz się na kurs wakacyjny →</a>
+
+        <div class="divider" style="margin-bottom:48px"></div>
+
+        <span class="label">Trwające kursy</span>
+        <h2 class="section-title" style="margin-bottom:32px">Aktywne grupy</h2>
+
+        <div class="parish-block">
+          <div class="parish-block__header">
+            <div class="parish-block__name">Parafia Chrystusa Króla</div>
+            <div class="parish-block__addr">ul. Młodych Techników 17</div>
+          </div>
+          <div class="class-row"><span class="class-row__day">PN</span><span class="class-row__name">Użytkowy</span><span class="badge">S1</span><span class="class-row__time">20:20</span><a href="#" onclick="showPage('kontakt')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapytaj o dostępność</a></div>
+          <div class="class-row"><span class="class-row__day">WT</span><span class="class-row__name">Bachata</span><span class="badge">P2</span><span class="class-row__time">18:10</span><a href="#" onclick="showPage('kontakt')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapytaj o dostępność</a></div>
+          <div class="class-row"><span class="class-row__day">WT</span><span class="class-row__name">Użytkowy</span><span class="badge">P2</span><span class="class-row__time">19:20</span><a href="#" onclick="showPage('kontakt')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapytaj o dostępność</a></div>
+        </div>
+
+        <div class="parish-block">
+          <div class="parish-block__header">
+            <div class="parish-block__name">Parafia NMP Bolesnej</div>
+            <div class="parish-block__addr">ul. Tatarakowa 1</div>
+          </div>
+          <div class="class-row"><span class="class-row__day">ŚR</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">19:00</span><a href="#" onclick="showPage('kontakt')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapytaj o dostępność</a></div>
+          <div class="class-row"><span class="class-row__day">ŚR</span><span class="class-row__name">Użytkowy</span><span class="badge">P2</span><span class="class-row__time">20:15</span><a href="#" onclick="showPage('kontakt')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapytaj o dostępność</a></div>
+        </div>
+
+        <div class="parish-block">
+          <div class="parish-block__header">
+            <div class="parish-block__name">Parafia NMP Matki Miłosierdzia</div>
+            <div class="parish-block__addr">ul. Brucknera 20</div>
+          </div>
+          <div class="class-row"><span class="class-row__day">WT</span><span class="class-row__name">Użytkowy</span><span class="badge">P1</span><span class="class-row__time">20:15</span><a href="#" onclick="showPage('kontakt')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapytaj o dostępność</a></div>
+        </div>
+
+        <div class="parish-block">
+          <div class="parish-block__header">
+            <div class="parish-block__name">Parafia Opieki Św. Józefa</div>
+            <div class="parish-block__addr">ul. Ołbińska 1</div>
+          </div>
+          <div class="class-row"><span class="class-row__day">ŚR</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">20:30</span><a href="#" onclick="showPage('kontakt')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapytaj o dostępność</a></div>
+        </div>
+
+        <div class="parish-block">
+          <div class="parish-block__header">
+            <div class="parish-block__name">Parafia Św. Alberta Wielkiego</div>
+            <div class="parish-block__addr">ul. Redycka 10</div>
+          </div>
+          <div class="class-row"><span class="class-row__day">PN</span><span class="class-row__name">Użytkowy</span><span class="badge">P2</span><span class="class-row__time">19:00</span><a href="#" onclick="showPage('kontakt')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapytaj o dostępność</a></div>
+        </div>
+
+        <div class="parish-block">
+          <div class="parish-block__header">
+            <div class="parish-block__name">Parafia Św. Antoniego</div>
+            <div class="parish-block__addr">al. Kasprowicza 26</div>
+          </div>
+          <div class="class-row"><span class="class-row__day">PN</span><span class="class-row__name">Latino Solo</span><span class="badge">P1</span><span class="class-row__time">20:30</span><a href="#" onclick="showPage('kontakt')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapytaj o dostępność</a></div>
+          <div class="class-row"><span class="class-row__day">ŚR</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">18:30</span><a href="#" onclick="showPage('kontakt')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapytaj o dostępność</a></div>
+          <div class="class-row"><span class="class-row__day">ŚR</span><span class="class-row__name">Użytkowy</span><span class="badge">P1</span><span class="class-row__time">19:30</span><a href="#" onclick="showPage('kontakt')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapytaj o dostępność</a></div>
+          <div class="class-row"><span class="class-row__day">CZW</span><span class="class-row__name">Użytkowy</span><span class="badge">P2</span><span class="class-row__time">19:00</span><a href="#" onclick="showPage('kontakt')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapytaj o dostępność</a></div>
+        </div>
+
+        <div class="parish-block">
+          <div class="parish-block__header">
+            <div class="parish-block__name">Parafia Św. Anny</div>
+            <div class="parish-block__addr">ul. Sobótki 42</div>
+          </div>
+          <div class="class-row"><span class="class-row__day">PN</span><span class="class-row__name">Użytkowy</span><span class="badge">P1</span><span class="class-row__time">19:00</span><a href="#" onclick="showPage('kontakt')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapytaj o dostępność</a></div>
+        </div>
+
+        <div class="divider" style="margin: 48px 0"></div>
+
+        <div class="divider" style="margin:48px 0"></div>
+
+        <span class="label">Zasady uczestnictwa</span>
+        <h2 class="section-title" style="margin-bottom:16px; font-size:28px">Odrabianie zajęć</h2>
+        <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:24px; max-width:680px;">Jeśli nie możesz przyjść na zajęcia, możesz je odrobić na innej grupie — pod warunkiem że powiadomisz nas wcześniej.</p>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin-bottom:48px;">
+          <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+            <div style="font-weight:700; font-size:15px; margin-bottom:10px;">📲 Krok 1 — Powiadom nas</div>
+            <p style="font-size:14px; color:var(--muted); line-height:1.65;">Napisz na e-mail lub przez Facebooka <strong>najpóźniej 5 minut przed zajęciami</strong>. Bez zgłoszenia nieobecność przepada.</p>
+          </div>
+          <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+            <div style="font-weight:700; font-size:15px; margin-bottom:10px;">🗓️ Krok 2 — Wybierz termin</div>
+            <p style="font-size:14px; color:var(--muted); line-height:1.65;">Wybierz inną grupę na tym samym lub sąsiednim poziomie. Odrabiać możesz w dowolnej z naszych lokalizacji.</p>
+          </div>
+          <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+            <div style="font-weight:700; font-size:15px; margin-bottom:10px;">✅ Krok 3 — Przyjdź</div>
+            <p style="font-size:14px; color:var(--muted); line-height:1.65;">Poinformuj instruktora na początku zajęć, że odrabiasz. Masz prawo do odrobienia każdej zgłoszonej wcześniej nieobecności.</p>
+          </div>
+        </div>
+
+        <div style="background:var(--orange-xl); border-radius:var(--r-lg); padding:28px; display:flex; align-items:flex-start; gap:20px;">
+          <div style="font-size:28px">📋</div>
+          <div>
+            <div style="font-weight:700; font-size:17px; margin-bottom:6px">Nowe grupy</div>
+            <p style="font-size:14px; color:var(--muted); line-height:1.65; margin-bottom:16px">Aktualnie nie ma otwartych nowych grup od podstaw. Jeśli interesuje Cię dołączenie do którejś z istniejących grup lub chcesz być powiadomiony o nowych zapisach — zostaw swój e-mail.</p>
+            <a class="btn btn-primary" href="#" onclick="showPage('kontakt')">Napisz do nas →</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<!-- ═══ PAGE: CENNIK ═══════════════════════════════════════ -->
+<div class="page" id="page-cennik">
+  <div class="page-offset">
+    <div class="page-hero">
+      <div class="container">
+        <span class="label">Cennik</span>
+        <h1>Ile to kosztuje?</h1>
+        <p>Przejrzyste ceny — bez ukrytych opłat. Karnet miesięczny = 4 zajęcia, raz w tygodniu.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container" style="max-width:800px">
+
+        <span class="label">Karnety miesięczne</span>
+        <h2 class="section-title" style="margin-bottom:16px">Ceny kursów</h2>
+        <div class="pricing-note" style="margin-bottom:32px">
+          Karnet jest ważny 4 tygodnie i obejmuje 4 zajęcia (jedno w tygodniu). Płatność przelewem — brak możliwości płatności gotówką na miejscu.
+        </div>
+
+        <table class="pricing-table" style="margin-bottom:48px">
+          <thead>
+            <tr>
+              <th>Poziom</th>
+              <th>Kiedy</th>
+              <th>Cena / mies.</th>
+              <th>Opłata klubowa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="level-badge beginner">P0</span></td>
+              <td>Pierwsze 2 miesiące (zupełny start)</td>
+              <td><span class="price-val">60 zł</span></td>
+              <td style="color:var(--muted)">—</td>
+            </tr>
+            <tr>
+              <td><span class="level-badge beginner">P1</span></td>
+              <td>Kolejne 4 miesiące</td>
+              <td><span class="price-val">80 zł</span></td>
+              <td style="color:var(--muted)">—</td>
+            </tr>
+            <tr>
+              <td><span class="level-badge inter">P2</span></td>
+              <td>Kolejne 3 miesiące</td>
+              <td><span class="price-val">100 zł</span></td>
+              <td><span style="font-weight:600">+50 zł</span></td>
+            </tr>
+            <tr>
+              <td><span class="level-badge inter">P3</span></td>
+              <td>Kolejne 3 miesiące</td>
+              <td><span class="price-val">120 zł</span></td>
+              <td><span style="font-weight:600">+50 zł</span></td>
+            </tr>
+            <tr>
+              <td><span class="level-badge adv">S1</span></td>
+              <td>Kolejny rok</td>
+              <td><span class="price-val">140 zł</span></td>
+              <td><span style="font-weight:600">+50 zł</span></td>
+            </tr>
+            <tr>
+              <td><span class="level-badge adv">S2</span></td>
+              <td>Kolejny rok</td>
+              <td><span class="price-val">160 zł</span></td>
+              <td><span style="font-weight:600">+50 zł</span></td>
+            </tr>
+            <tr>
+              <td><span class="level-badge expert">Z1</span></td>
+              <td>Kolejne 2 lata</td>
+              <td><span class="price-val">180 zł</span></td>
+              <td><span style="font-weight:600">+50 zł</span></td>
+            </tr>
+            <tr>
+              <td><span class="level-badge expert">Z2</span></td>
+              <td>Kolejne 2 lata</td>
+              <td><span class="price-val">200 zł</span></td>
+              <td><span style="font-weight:600">+50 zł</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:48px; flex-wrap:wrap;">
+          <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+            <div style="font-weight:700; margin-bottom:8px">❓ Co to jest opłata klubowa?</div>
+            <p style="font-size:14px; color:var(--muted); line-height:1.65">Od poziomu P2 każdy uczestnik opłaca dodatkowe 50 zł miesięcznie tytułem składki klubowej. Opłata pokrywa koszty organizacyjne szkoły i utrzymanie infrastruktury zajęć.</p>
+          </div>
+          <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+            <div style="font-weight:700; margin-bottom:8px">📅 Kiedy płacić?</div>
+            <p style="font-size:14px; color:var(--muted); line-height:1.65">Rozliczenie za każdy karnet następuje <strong>po czwartych (ostatnich) zajęciach</strong> danego okresu. Opłata wyłącznie przelewem — brak możliwości płatności gotówką.</p>
+          </div>
+        </div>
+
+        <div class="divider" style="margin-bottom:48px"></div>
+
+        <span class="label">Płatność</span>
+        <h2 class="section-title" style="margin-bottom:16px; font-size:28px">Jak opłacić karnet?</h2>
+        <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:28px">Płatność odbywa się wyłącznie przelewem bankowym, po zakończeniu każdego cyklu 4 zajęć. W tytule przelewu podaj imię, nazwisko i miesiąc, za który płacisz.</p>
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:28px; margin-bottom:16px;">
+          <div style="font-size:13px; color:var(--muted); margin-bottom:12px; text-transform:uppercase; font-weight:700; letter-spacing:.06em;">Dane do przelewu — Santander Polska</div>
+          <div style="font-size:18px; font-weight:700; margin-bottom:4px;">Mateusz Zapart</div>
+          <div style="font-family:monospace; font-size:15px; color:var(--text); background:var(--white); padding:10px 14px; border-radius:6px; display:inline-block; margin-bottom:12px; letter-spacing:.04em;">IBAN: PL XX XXXX XXXX XXXX XXXX XXXX XXXX</div>
+          <div style="font-size:13px; color:var(--muted); line-height:1.65;">W tytule przelewu wpisz: <strong>Imię Nazwisko — [miesiąc] karnet</strong><br>np. „Jan Kowalski — sierpień karnet"</div>
+        </div>
+        <div style="background:var(--orange-xl); border-radius:var(--r-lg); padding:20px 24px; font-size:14px; color:var(--text); line-height:1.65; margin-bottom:48px;">
+          💳 <strong>Masz kartę Multisport, Medicover Sport lub FitProfit?</strong> Napisz do nas — rozliczamy też karty benefit. Szczegóły poniżej.
+        </div>
+
+        <span class="label">Karty sportowe</span>
+        <h2 class="section-title" style="margin-bottom:16px; font-size:28px">Akceptowane karty benefit</h2>
+        <p style="color:var(--muted); margin-bottom:24px; font-size:15px">Możesz opłacić zajęcia kartą sportową. Skontaktuj się z nami, żeby dowiedzieć się jak to działa.</p>
+        <div class="benefit-logos">
+          <div class="benefit-logo">Multisport</div>
+          <div class="benefit-logo">Multisport Light</div>
+          <div class="benefit-logo">Medicover Sport</div>
+          <div class="benefit-logo">FitProfit</div>
+        </div>
+
+        <div class="divider" style="margin:48px 0"></div>
+
+        <span class="label">Vouchery</span>
+        <h2 class="section-title" style="margin-bottom:16px; font-size:28px">Prezent, który angażuje</h2>
+        <p style="color:var(--muted); margin-bottom:24px; font-size:15px">Vouchery dostępne na: kurs miesięczny, warsztat, imprezę lub prywatną lekcję. Wartości od 30 do 100 zł. Personalizacja (imienna karta) +40 zł.</p>
+        <a class="btn btn-primary" href="#" onclick="showPage('sklep')">Kup voucher online →</a>
+
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<!-- ═══ PAGE: O NAS ════════════════════════════════════════ -->
+<div class="page" id="page-onas">
+  <div class="page-offset">
+    <div class="page-hero">
+      <div class="container">
+        <span class="label">O szkole</span>
+        <h1>O nas</h1>
+        <p>Chrześcijańska wspólnota z Wrocławia, która kocha taniec, dobrą zabawę i Boga.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container" style="max-width:800px">
+        <span class="label">Nasza historia</span>
+        <h2 class="section-title" style="margin-bottom:20px">Od 2022 roku roztańczamy Wrocław</h2>
+        <p style="font-size:17px; line-height:1.75; color:var(--muted); margin-bottom:16px">Jesteśmy chrześcijańską wspólnotą z Wrocławia, która kocha taniec, dobrą zabawę i Boga. Zaczęliśmy w 2022 roku od jednej grupy w jednej parafii — dziś prowadzimy zajęcia w 7 lokalizacjach i gromadzimy setki tancerzy co tydzień.</p>
+        <p style="font-size:17px; line-height:1.75; color:var(--muted); margin-bottom:32px">Wierzymy, że Kościół może i powinien być centrum spotkania, radości i prawdziwych więzi. Każda obecność ma znaczenie.</p>
+        <div style="display:flex; gap:40px; flex-wrap:wrap;">
+          <div style="text-align:center;">
+            <div style="font-family:var(--font-head); font-size:48px; font-weight:800; color:var(--orange);">7</div>
+            <div style="font-size:14px; color:var(--muted);">parafii</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-family:var(--font-head); font-size:48px; font-weight:800; color:var(--orange);">2022</div>
+            <div style="font-size:14px; color:var(--muted);">rok założenia</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-family:var(--font-head); font-size:48px; font-weight:800; color:var(--orange);">∞</div>
+            <div style="font-size:14px; color:var(--muted);">radości w ruchu</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--grey">
+      <div class="container">
+        <span class="label">Galeria</span>
+        <h2 class="section-title" style="margin-bottom:24px;">Zajęcia w parafiach</h2>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px;">
+          <div style="aspect-ratio:4/3; background:var(--orange-l); border-radius:var(--r-lg); display:flex; align-items:center; justify-content:center; font-size:40px; color:var(--orange);">📷</div>
+          <div style="aspect-ratio:4/3; background:var(--orange-xl); border-radius:var(--r-lg); display:flex; align-items:center; justify-content:center; font-size:40px; color:var(--orange);">📷</div>
+          <div style="aspect-ratio:4/3; background:var(--orange-l); border-radius:var(--r-lg); display:flex; align-items:center; justify-content:center; font-size:40px; color:var(--orange);">📷</div>
+          <div style="aspect-ratio:4/3; background:var(--orange-xl); border-radius:var(--r-lg); display:flex; align-items:center; justify-content:center; font-size:40px; color:var(--orange);">📷</div>
+          <div style="aspect-ratio:4/3; background:var(--orange-l); border-radius:var(--r-lg); display:flex; align-items:center; justify-content:center; font-size:40px; color:var(--orange);">📷</div>
+          <div style="aspect-ratio:4/3; background:var(--orange-xl); border-radius:var(--r-lg); display:flex; align-items:center; justify-content:center; font-size:40px; color:var(--orange);">📷</div>
+        </div>
+        <p style="font-size:13px; color:var(--muted); margin-top:16px; text-align:center;">Zdjęcia do uzupełnienia przez klienta</p>
+      </div>
+    </section>
+
+    <section class="section section--grey">
+      <div class="container">
+        <span class="label">Wartości</span>
+        <h2 class="section-title" style="margin-bottom:40px">Co nas napędza</h2>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-card__icon">🕺</div>
+            <div class="value-card__title">Radość w ruchu</div>
+            <p class="value-card__desc">Taniec to dla nas język wdzięczności. Energia, uśmiech i luz są w samym centrum tego, kim jesteśmy.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-card__icon">🤝</div>
+            <div class="value-card__title">Wspólnota</div>
+            <p class="value-card__desc">Budujemy relacje, nie tylko choreografie. Tworzymy miejsce, w którym łatwo poczuć więź i przynależność.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-card__icon">✝️</div>
+            <div class="value-card__title">Wiara na luzie</div>
+            <p class="value-card__desc">Mówimy o Bogu naturalnie i z radością. Bez sztywności — z otwartymi ramionami i otwartym sercem.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <span class="label">Zespół</span>
+        <h2 class="section-title" style="margin-bottom:40px">Instruktorzy</h2>
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-card__avatar">MZ</div>
+            <div class="team-card__name">Mateusz Zapart</div>
+            <div class="team-card__role">Założyciel & Instruktor</div>
+            <p class="team-card__bio">Pasjonat tańca i wspólnoty. Prowadzi szkołę od 2022 roku, specjalizuje się w tańcu użytkowym i bachacie.</p>
+          </div>
+          <div class="team-card">
+            <div class="team-card__avatar">?</div>
+            <div class="team-card__name">Instruktor</div>
+            <div class="team-card__role">Taniec Użytkowy</div>
+            <p class="team-card__bio">Treść do uzupełnienia.</p>
+          </div>
+          <div class="team-card">
+            <div class="team-card__avatar">?</div>
+            <div class="team-card__name">Instruktor</div>
+            <div class="team-card__role">Latino Solo</div>
+            <p class="team-card__bio">Treść do uzupełnienia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<!-- ═══ PAGE: KONTAKT ══════════════════════════════════════ -->
+<div class="page" id="page-kontakt">
+  <div class="page-offset">
+    <div class="page-hero">
+      <div class="container">
+        <span class="label">Napisz do nas</span>
+        <h1>Kontakt</h1>
+        <p>Odpowiadamy szybko — zwykle tego samego dnia.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container">
+        <div class="contact-cols">
+          <div>
+            <span class="label">Napisz do nas</span>
+            <h2 class="section-title" style="margin-bottom:32px; font-size:28px">Formularz kontaktowy</h2>
+            <form class="contact-form" onsubmit="return false;">
+              <div class="form-group">
+                <label>Imię i nazwisko</label>
+                <input type="text" placeholder="Jan Kowalski" />
+              </div>
+              <div class="form-group">
+                <label>E-mail</label>
+                <input type="email" placeholder="jan@email.pl" />
+              </div>
+              <div class="form-group">
+                <label>Temat</label>
+                <select>
+                  <option>Chcę się zapisać na kurs</option>
+                  <option>Pytanie o grafik</option>
+                  <option>Pytanie o cennik</option>
+                  <option>Pierwszy Taniec (ślub)</option>
+                  <option>Zajęcia indywidualne</option>
+                  <option>Roztańczona Parafia</option>
+                  <option>Inne</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Wiadomość</label>
+                <textarea placeholder="Napisz co Cię interesuje..."></textarea>
+              </div>
+              <button class="btn btn-primary" type="submit">Wyślij wiadomość →</button>
+            </form>
+          </div>
+          <div>
+            <span class="label">Dane kontaktowe</span>
+            <h2 class="section-title" style="margin-bottom:32px; font-size:28px">Bezpośredni kontakt</h2>
+            <div class="contact-row" style="flex-direction:column; gap:24px; margin-bottom:32px">
+              <div class="contact-item">
+                <div class="contact-item__icon">📞</div>
+                <div>
+                  <div class="contact-item__label">Telefon</div>
+                  <div class="contact-item__val">513 580 512</div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item__icon">✉️</div>
+                <div>
+                  <div class="contact-item__label">E-mail</div>
+                  <div class="contact-item__val">kontakt.amen@gmail.com</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="divider" style="margin-bottom:32px"></div>
+
+            <span class="label">Lokalizacje</span>
+            <div class="location-list">
+              <div class="location-item">
+                <div class="location-item__icon">📍</div>
+                <div>
+                  <div class="location-item__name">Parafia Chrystusa Króla</div>
+                  <div class="location-item__addr">ul. Młodych Techników 17</div>
+                  <a href="https://maps.google.com/?q=ul.+Młodych+Techników+17,+Wrocław" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600;">Otwórz w Mapach →</a>
+                </div>
+              </div>
+              <div class="location-item">
+                <div class="location-item__icon">📍</div>
+                <div>
+                  <div class="location-item__name">Parafia NMP Bolesnej</div>
+                  <div class="location-item__addr">ul. Tatarakowa 1</div>
+                  <a href="https://maps.google.com/?q=ul.+Tatarakowa+1,+Wrocław" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600;">Otwórz w Mapach →</a>
+                </div>
+              </div>
+              <div class="location-item">
+                <div class="location-item__icon">📍</div>
+                <div>
+                  <div class="location-item__name">Parafia NMP Matki Miłosierdzia</div>
+                  <div class="location-item__addr">ul. Brucknera 20</div>
+                  <a href="https://maps.google.com/?q=ul.+Brucknera+20,+Wrocław" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600;">Otwórz w Mapach →</a>
+                </div>
+              </div>
+              <div class="location-item">
+                <div class="location-item__icon">📍</div>
+                <div>
+                  <div class="location-item__name">Parafia Opieki Św. Józefa</div>
+                  <div class="location-item__addr">ul. Ołbińska 1</div>
+                  <a href="https://maps.google.com/?q=ul.+Ołbińska+1,+Wrocław" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600;">Otwórz w Mapach →</a>
+                </div>
+              </div>
+              <div class="location-item">
+                <div class="location-item__icon">📍</div>
+                <div>
+                  <div class="location-item__name">Parafia Św. Alberta Wielkiego</div>
+                  <div class="location-item__addr">ul. Redycka 10</div>
+                  <a href="https://maps.google.com/?q=ul.+Redycka+10,+Wrocław" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600;">Otwórz w Mapach →</a>
+                </div>
+              </div>
+              <div class="location-item">
+                <div class="location-item__icon">📍</div>
+                <div>
+                  <div class="location-item__name">Parafia Św. Antoniego</div>
+                  <div class="location-item__addr">al. Kasprowicza 26</div>
+                  <a href="https://maps.google.com/?q=al.+Kasprowicza+26,+Wrocław" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600;">Otwórz w Mapach →</a>
+                </div>
+              </div>
+              <div class="location-item">
+                <div class="location-item__icon">📍</div>
+                <div>
+                  <div class="location-item__name">Parafia Św. Anny</div>
+                  <div class="location-item__addr">ul. Sobótki 42</div>
+                  <a href="https://maps.google.com/?q=ul.+Sobótki+42,+Wrocław" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600;">Otwórz w Mapach →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<!-- ═══ PAGE: FAQ ══════════════════════════════════════════ -->
+<div class="page" id="page-faq">
+  <div class="page-offset">
+    <div class="page-hero">
+      <div class="container">
+        <span class="label">Pomoc</span>
+        <h1>FAQ</h1>
+        <p>Najczęściej zadawane pytania. Nie znajdziesz odpowiedzi? Napisz do nas.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container">
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Czy mogę zapisać się solo, bez partnera? <span class="faq-q__arrow">▼</span></div>
+            <div class="faq-a">Tak! Przyjmujemy zarówno pary, jak i osoby solo. Nie gwarantujemy jednak stałego partnera — na zajęciach robimy rotację, żeby każdy miał szansę tańczyć z różnymi osobami.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Czy jest gwarancja miejsca przy zapisie solo? <span class="faq-q__arrow">▼</span></div>
+            <div class="faq-a">Nie. Pary mają pierwszeństwo przy zapisie. Jeśli zapisy będą nierówne (np. za dużo kobiet lub mężczyzn), może dojść do kolejkowania. O aktualnej dostępności informujemy mailowo.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Co się dzieje jeśli nie przyjdę na zajęcia? <span class="faq-q__arrow">▼</span></div>
+            <div class="faq-a">Powiadom nas o nieobecności najpóźniej 5 minut przed zajęciami — mailowo lub przez Facebooka. Nieobecność możesz odrobić na innej grupie na tym samym lub sąsiednim poziomie. Szczegółowe zasady odrabiania przekazujemy na pierwszych zajęciach.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Jak działa rotacja partnerów? <span class="faq-q__arrow">▼</span></div>
+            <div class="faq-a">Na zajęciach regularnie zamieniamy partnerów — dzięki temu szybciej się uczysz i budujesz pewność siebie z różnymi osobami. Nie musisz mieć stałego partnera.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Od jakiego poziomu zaczynam? <span class="faq-q__arrow">▼</span></div>
+            <div class="faq-a">Jeśli nigdy nie tańczyłeś — startujemy razem od P0. To poziom dla zupełnych początków, pierwsze 2 miesiące. Nie martw się, każdy kiedyś był na P0.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Co to jest "Użytkowy"? <span class="faq-q__arrow">▼</span></div>
+            <div class="faq-a">Taniec użytkowy to popularnie zwany „taniec towarzyski" — tańce, które możesz używać na parkiecie: walc angielski, tango, quickstep, foxtrot, cha-cha, samba, rumba i inne. Świetny na start, bo uczy ogólnej techniki i orientacji na parkiecie.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Jak płacić za zajęcia? <span class="faq-q__arrow">▼</span></div>
+            <div class="faq-a">Wyłącznie przelewem na konto (Santander Polska, właściciel Mateusz Zapart). Płatność gotówkowa nie jest możliwa. Karnet opłacasz po czwartych zajęciach danego okresu. Możesz też płacić kartą Multisport, Medicover Sport lub FitProfit.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Skąd wiem, że kurs jest dla mnie? <span class="faq-q__arrow">▼</span></div>
+            <div class="faq-a">Najłatwiej sprawdzić to na miejscu — napisz do nas, a pomożemy wybrać odpowiedni kurs i poziom. Możesz też przyjść na pierwsze zajęcia próbnie i zobaczyć sam.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Czym są Piątki z Amen! i czy mogę przyjść? <span class="faq-q__arrow">▼</span></div>
+            <div class="faq-a">Piątki z Amen! to cotygodniowe nieformalne wieczory taneczne — otwarte dla uczestników naszych kursów i zaproszonych gości. Dobra muzyka, rotacja partnerów, zero presji. Aktualny termin i lokalizację zawsze znajdziesz na naszym Facebooku lub w newsletterze.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Jak działają vouchery? Jak mogę je kupić? <span class="faq-q__arrow">▼</span></div>
+            <div class="faq-a">Vouchery dostępne są na: kurs miesięczny, warsztat weekendowy, imprezę lub prywatną lekcję. Wartości od 30 do 100 zł. Opcjonalnie można zamówić personalizowaną kartę (+40 zł). Vouchery kupujesz przez nasz sklep online (wkrótce) lub kontaktując się z nami bezpośrednio. Obdarowany realizuje voucher przez podanie kodu przy pierwszych zajęciach.</div>
+          </div>
+
+        </div>
+
+        <div style="margin-top:48px; text-align:center">
+          <p style="color:var(--muted); margin-bottom:20px">Nie znalazłeś odpowiedzi?</p>
+          <a class="btn btn-primary" href="#" onclick="showPage('kontakt')">Napisz do nas →</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<!-- ═══ PAGE: DLA PARAFII ══════════════════════════════════ -->
+<div class="page" id="page-parafia">
+  <div class="page-offset">
+
+    <!-- HERO -->
+    <div class="page-hero">
+      <div class="container">
+        <span class="label">Projekt parafialny</span>
+        <h1>Roztańczona Parafia</h1>
+        <p>Gotowe narzędzie, które pomaga parafiom budować wspólnotę — przez regularne kursy tańca, bez kosztów i bez obciążenia proboszcza.</p>
+        <div style="margin-top:32px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn btn-white" href="#parafia-formularz" onclick="document.getElementById('parafia-formularz').scrollIntoView({behavior:'smooth'}); return false;">Zgłoś parafię →</a>
+          <a class="btn btn-outline" href="#parafia-jak" onclick="document.getElementById('parafia-jak').scrollIntoView({behavior:'smooth'}); return false;" style="border-color:rgba(255,255,255,.4); color:var(--white);">Jak to działa</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SKĄD POMYSŁ -->
+    <section class="section">
+      <div class="container" style="max-width:800px">
+        <span class="label">Skąd się wzięło</span>
+        <h2 class="section-title" style="margin-bottom:20px">Zaczęło się od obserwacji</h2>
+        <p style="font-size:17px; line-height:1.8; color:var(--muted); margin-bottom:16px">Jesteśmy małżeństwem — Monika i Mateusz Zapart. Od lat prowadzimy kursy tańca we Wrocławiu i obserwujemy jedno: ludziom brakuje prostych, zorganizowanych przestrzeni do spotkania. Szczególnie dorosłym, małżeństwom i seniorom.</p>
+        <p style="font-size:17px; line-height:1.8; color:var(--muted);">Parafie mają sale, mają zasięg i mają zaufanie lokalnej społeczności. My mamy instruktorów, doświadczenie i gotowy model. W 2022 roku połączyliśmy to razem — i tak powstała <strong style="color:var(--text);">Roztańczona Parafia</strong>.</p>
+      </div>
+    </section>
+
+    <!-- PROBLEM → ROZWIĄZANIE -->
+    <section class="section section--grey">
+      <div class="container" style="max-width:860px">
+        <span class="label">Dlaczego to działa</span>
+        <h2 class="section-title" style="margin-bottom:36px">Trzy realne problemy. Jedno rozwiązanie.</h2>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px;">
+          <div style="background:var(--white); border-radius:var(--r-lg); padding:28px 24px; border-top:3px solid var(--orange);">
+            <div style="font-size:13px; color:var(--muted); text-transform:uppercase; font-weight:700; letter-spacing:.06em; margin-bottom:16px;">Problem</div>
+            <div style="font-weight:700; font-size:17px; margin-bottom:8px; color:var(--text);">Samotność i izolacja</div>
+            <p style="font-size:14px; color:var(--muted); line-height:1.65; margin-bottom:20px;">Coraz więcej osób — szczególnie singli i seniorów — nie ma gdzie się regularnie spotykać z sąsiadami.</p>
+            <div style="border-top:1px solid rgba(0,0,0,.07); padding-top:16px; font-weight:700; font-size:14px; color:var(--orange);">→ Przyparafialne życie towarzyskie</div>
+          </div>
+          <div style="background:var(--white); border-radius:var(--r-lg); padding:28px 24px; border-top:3px solid var(--orange);">
+            <div style="font-size:13px; color:var(--muted); text-transform:uppercase; font-weight:700; letter-spacing:.06em; margin-bottom:16px;">Problem</div>
+            <div style="font-weight:700; font-size:17px; margin-bottom:8px; color:var(--text);">Brak wspólnoty</div>
+            <p style="font-size:14px; color:var(--muted); line-height:1.65; margin-bottom:20px;">Ludzie chodzą na mszę, ale nie znają się nawzajem. Parafia jako miejsce relacji — nie tylko rytuału — zanika.</p>
+            <div style="border-top:1px solid rgba(0,0,0,.07); padding-top:16px; font-weight:700; font-size:14px; color:var(--orange);">→ Stały krąg parafialnych znajomych</div>
+          </div>
+          <div style="background:var(--white); border-radius:var(--r-lg); padding:28px 24px; border-top:3px solid var(--orange);">
+            <div style="font-size:13px; color:var(--muted); text-transform:uppercase; font-weight:700; letter-spacing:.06em; margin-bottom:16px;">Problem</div>
+            <div style="font-weight:700; font-size:17px; margin-bottom:8px; color:var(--text);">Brak angażujących inicjatyw</div>
+            <p style="font-size:14px; color:var(--muted); line-height:1.65; margin-bottom:20px;">Parafie chcą robić coś dla lokalnej społeczności, ale brakuje im gotowego, sprawdzonego pomysłu.</p>
+            <div style="border-top:1px solid rgba(0,0,0,.07); padding-top:16px; font-weight:700; font-size:14px; color:var(--orange);">→ Gotowy projekt pod klucz</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WYNIKI -->
+    <section class="section">
+      <div class="container" style="max-width:800px">
+        <span class="label">Efekty pierwszej edycji</span>
+        <h2 class="section-title" style="margin-bottom:12px">W rok — 7 parafii, ponad 300 osób</h2>
+        <p style="color:var(--muted); font-size:16px; line-height:1.7; margin-bottom:40px">Pierwsza edycja projektu w Archidiecezji Wrocławskiej pokazała, że model działa. Parafie nie rezygnują — wracają na kolejny rok.</p>
+        <div style="display:flex; gap:0; border:1px solid rgba(0,0,0,.08); border-radius:var(--r-lg); overflow:hidden;">
+          <div style="flex:1; padding:32px 24px; text-align:center; border-right:1px solid rgba(0,0,0,.08);">
+            <div style="font-family:var(--font-head); font-size:52px; font-weight:800; color:var(--orange); line-height:1;">7</div>
+            <div style="font-size:14px; color:var(--muted); margin-top:6px;">parafii w projekcie</div>
+          </div>
+          <div style="flex:1; padding:32px 24px; text-align:center; border-right:1px solid rgba(0,0,0,.08);">
+            <div style="font-family:var(--font-head); font-size:52px; font-weight:800; color:var(--orange); line-height:1;">15</div>
+            <div style="font-size:14px; color:var(--muted); margin-top:6px;">kursów równolegle</div>
+          </div>
+          <div style="flex:1; padding:32px 24px; text-align:center;">
+            <div style="font-family:var(--font-head); font-size:52px; font-weight:800; color:var(--orange); line-height:1;">313</div>
+            <div style="font-size:14px; color:var(--muted); margin-top:6px;">aktywnych uczestników</div>
+          </div>
+        </div>
+        <div style="margin-top:16px; padding:16px 20px; background:var(--orange-xl); border-radius:var(--r-lg); font-size:14px; color:var(--text); line-height:1.65;">
+          Uczestnicy to przede wszystkim: <strong>single 30+</strong>, <strong>małżeństwa</strong> i <strong>seniorzy</strong> — grupy, do których parafia rzadko trafia z inną ofertą.
+        </div>
+      </div>
+    </section>
+
+    <!-- JAK TO DZIAŁA -->
+    <section class="section section--grey" id="parafia-jak">
+      <div class="container" style="max-width:800px">
+        <span class="label">Jak to działa</span>
+        <h2 class="section-title" style="margin-bottom:12px">Całość organizacji jest po naszej stronie</h2>
+        <p style="color:var(--muted); font-size:16px; line-height:1.7; margin-bottom:40px">Projekt nie obciąża proboszcza. Wdrożenie trwa około 6 miesięcy, potem współpraca jest długoterminowa.</p>
+
+        <div class="steps" style="margin-bottom:48px">
+          <div class="step">
+            <div class="step__num">1</div>
+            <div>
+              <div class="step__title">Materiały promocyjne</div>
+              <p class="step__desc">Dostarczamy gotowe plakaty, ulotki i treści ogłoszeń. Prosimy o cztery ogłoszenia z ambony i możliwość rozdania ulotek — według naszego harmonogramu.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__num">2</div>
+            <div>
+              <div class="step__title">Szkolenie instruktora parafialnego</div>
+              <p class="step__desc">Kluczowy element projektu: szkolimy osobę z samej parafii na instruktora — bezpłatnie. To ona prowadzi zajęcia na miejscu i buduje relację ze wspólnotą. Jeśli nikt się nie zgłosi, angażujemy instruktora z parafii okolicznych.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__num">3</div>
+            <div>
+              <div class="step__title">Koordynacja zapisów i kursów</div>
+              <p class="step__desc">Prowadzimy zapisy, komunikację z uczestnikami i bieżącą koordynację. Proboszcz dostaje gotową, działającą inicjatywę.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__num">4</div>
+            <div>
+              <div class="step__title">Regularne kursy i potańcówki</div>
+              <p class="step__desc">Zajęcia raz w tygodniu przez cały rok (z wyłączeniem Triduum, Środy Popielcowej i dni wolnych). Życie wspólnoty nabiera stałego rytmu.</p>
+            </div>
+          </div>
+        </div>
+
+        <span class="label">Co potrzebuje parafia</span>
+        <h3 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin:16px 0 24px;">Trzy zgody proboszcza — to wystarczy</h3>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px;">
+          <div style="background:var(--white); border-radius:var(--r); padding:20px 18px; border:1px solid rgba(0,0,0,.08);">
+            <div style="font-size:24px; margin-bottom:10px;">🏛️</div>
+            <div style="font-weight:700; font-size:15px; margin-bottom:6px;">Salka parafialna</div>
+            <p style="font-size:13px; color:var(--muted); line-height:1.6;">Minimum raz w tygodniu, około 3 godziny. Jeśli sala wymaga ustaleń — rozwiążemy to razem.</p>
+          </div>
+          <div style="background:var(--white); border-radius:var(--r); padding:20px 18px; border:1px solid rgba(0,0,0,.08);">
+            <div style="font-size:24px; margin-bottom:10px;">📢</div>
+            <div style="font-weight:700; font-size:15px; margin-bottom:6px;">Ogłaszanie w parafii</div>
+            <p style="font-size:13px; color:var(--muted); line-height:1.6;">Plakaty, ambona, social media — materiały i gotowe treści przygotowujemy my.</p>
+          </div>
+          <div style="background:var(--white); border-radius:var(--r); padding:20px 18px; border:1px solid rgba(0,0,0,.08);">
+            <div style="font-size:24px; margin-bottom:10px;">💛</div>
+            <div style="font-weight:700; font-size:15px; margin-bottom:6px;">Darowizna 100 zł / kurs / mies.</div>
+            <p style="font-size:13px; color:var(--muted); line-height:1.6;">Wpłacana na konto parafii — pokrywa koszty użytkowania sali. Bez innych opłat po stronie parafii.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARAFIE -->
+    <section class="section">
+      <div class="container" style="max-width:800px">
+        <span class="label">Pierwsze 7 parafii</span>
+        <h2 class="section-title" style="margin-bottom:8px">Parafie, które już są z nami</h2>
+        <p style="color:var(--muted); font-size:15px; margin-bottom:28px;">Kolejne 13 parafii dołącza od września 2026.</p>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; margin-bottom:16px;">
+          <div style="background:var(--grey); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia Chrystusa Króla</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Stare Miasto</div>
+          </div>
+          <div style="background:var(--grey); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia NMP Bolesnej</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Strachocin</div>
+          </div>
+          <div style="background:var(--grey); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia NMP Matki Miłosierdzia</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Kowale</div>
+          </div>
+          <div style="background:var(--grey); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia Opieki Św. Józefa</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Ołbin</div>
+          </div>
+          <div style="background:var(--grey); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia Św. Alberta Wielkiego</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Sołtysowice</div>
+          </div>
+          <div style="background:var(--grey); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia Św. Antoniego</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Karłowice</div>
+          </div>
+          <div style="background:var(--grey); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia Św. Anny</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Oporów</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULARZ -->
+    <section class="section section--grey" id="parafia-formularz">
+      <div class="container" style="max-width:640px">
+        <span class="label">Dołącz do projektu</span>
+        <h2 class="section-title" style="margin-bottom:8px">Zgłoś swoją parafię</h2>
+        <p style="color:var(--muted); font-size:16px; line-height:1.7; margin-bottom:32px">Formularz wypełnia proboszcz lub osoba przez niego upoważniona. Po otrzymaniu zgłoszenia skontaktujemy się w ciągu tygodnia.</p>
+        <form class="contact-form" onsubmit="return false;">
+          <div class="form-group">
+            <label>Nazwa parafii i miejscowość <span style="color:var(--orange);">*</span></label>
+            <input type="text" placeholder="np. Parafia pw. Św. Jana · Wrocław-Krzyki" required />
+          </div>
+          <div class="form-group">
+            <label>Imię i nazwisko księdza proboszcza <span style="color:var(--orange);">*</span></label>
+            <input type="text" placeholder="ks. Jan Kowalski" required />
+          </div>
+          <div class="form-group">
+            <label>Bezpośredni numer telefonu do proboszcza <span style="color:var(--orange);">*</span></label>
+            <input type="tel" placeholder="600 000 000" required />
+          </div>
+          <div class="form-group">
+            <label>Adres e-mail proboszcza <span style="color:var(--orange);">*</span></label>
+            <input type="email" placeholder="proboszcz@parafia.pl" required />
+          </div>
+          <div class="form-group">
+            <label>Czy parafia dysponuje salą do tańca?</label>
+            <select>
+              <option>Tak, mamy odpowiednie miejsce</option>
+              <option>Tak, ale wymaga to ustaleń</option>
+              <option>Nie — potrzebujemy wsparcia</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Dodatkowe uwagi lub pytania</label>
+            <textarea placeholder="Opcjonalnie — napisz cokolwiek, co pomoże nam lepiej przygotować się do rozmowy."></textarea>
+          </div>
+          <label style="display:flex; align-items:flex-start; gap:10px; margin-bottom:24px; cursor:pointer;">
+            <input type="checkbox" required style="margin-top:3px; accent-color:var(--orange); flex-shrink:0;" />
+            <span style="font-size:13px; color:var(--muted); line-height:1.6;">Jako proboszcz zapoznałem się z ideą projektu i wyrażam chęć jego realizacji w mojej parafii. Wyrażam zgodę na przetwarzanie danych osobowych przez Szkołę Tańca Amen! (Mateusz Zapart, Wrocław) w celu organizacji projektu Roztańczona Parafia.</span>
+          </label>
+          <button class="btn btn-primary" type="submit" style="font-size:16px; padding:16px 32px; width:100%;">Wyślij zgłoszenie →</button>
+        </form>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+
+<!-- ═══ PAGE: SKLEP ════════════════════════════════════════ -->
+<div class="page" id="page-sklep">
+  <div class="page-offset">
+    <div class="page-hero">
+      <div class="container">
+        <span class="label">Sklep</span>
+        <h1>Kup karnet online</h1>
+        <p>Opłać zajęcia bez wychodzenia z domu.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container">
+        <div class="coming-soon">
+          <div class="coming-soon__icon">🛒</div>
+          <span class="coming-badge">Wkrótce</span>
+          <h2>Sklep w przygotowaniu</h2>
+          <p>Pracujemy nad możliwością zakupu karnetów i voucherów online. Na razie skontaktuj się z nami bezpośrednio.</p>
+          <div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-top:8px">
+            <a class="btn btn-primary" href="#" onclick="showPage('kontakt')">Skontaktuj się →</a>
+            <a class="btn btn-outline" href="#" onclick="showPage('cennik')">Zobacz cennik</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<!-- ═══ SCRIPTS ════════════════════════════════════════════ -->
+<script>
+  const pages = ['home','oferta','grafik','cennik','onas','kontakt','faq','parafia','sklep'];
+
+  function showPage(id) {
+    pages.forEach(p => {
+      const el = document.getElementById('page-' + p);
+      if (el) el.classList.remove('active');
+    });
+    const target = document.getElementById('page-' + id);
+    if (target) {
+      target.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    // update active nav
+    document.querySelectorAll('.nav__links a').forEach(a => a.classList.remove('active'));
+    const navEl = document.getElementById('nav-' + id);
+    if (navEl) navEl.classList.add('active');
+    return false;
+  }
+
+  function toggleMobile() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function closeMobile() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+
+  function toggleFaq(el) {
+    const isOpen = el.classList.contains('open');
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.classList.remove('open');
+      q.nextElementSibling.classList.remove('open');
+    });
+    if (!isOpen) {
+      el.classList.add('open');
+      el.nextElementSibling.classList.add('open');
+    }
+  }
+
+  // set home as active on load
+  document.getElementById('nav-home').classList.add('active');
+</script>
+
+</body>
+</html>
