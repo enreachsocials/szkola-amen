@@ -1,20 +1,16 @@
 'use client'
 
-import { useEffect } from 'react'
+import Script from 'next/script'
 import { htmlContent } from './_html_content'
 import { jsContent } from './_js_content'
 
 export default function Page() {
-  useEffect(() => {
-    const script = document.createElement('script')
-    script.textContent = jsContent
-    document.body.appendChild(script)
-    return () => {
-      document.body.removeChild(script)
-    }
-  }, [])
-
   return (
-    <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
+    <>
+      <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
+      <Script id="amen-main" strategy="afterInteractive">
+        {jsContent}
+      </Script>
+    </>
   )
 }
