@@ -1,2 +1,2711 @@
 // Auto-generated from index.html
-export const htmlContent = '\n\n<!-- ═══ NAV ═══════════════════════════════════════════════ -->\n<nav class="nav">\n  <div class="nav__inner">\n    <a class="nav__logo" href="#" onclick="showPage(\'home\')">\n      amen<span>!</span>\n    </a>\n    <ul class="nav__links">\n      <li><a href="#" onclick="showPage(\'home\')" id="nav-home">Start</a></li>\n      <li><a href="#" onclick="showPage(\'oferta\')" id="nav-oferta">Oferta</a></li>\n      <li><a href="#" onclick="showPage(\'grafik\')" id="nav-grafik">Grafik</a></li>\n      <li><a href="#" onclick="showPage(\'cennik\')" id="nav-cennik">Cennik</a></li>\n      <li><a href="#" onclick="showPage(\'instruktor\')" id="nav-instruktor">Zostań instruktorem</a></li>\n      <li><a href="#" onclick="showPage(\'onas\')" id="nav-onas">O Amen!</a></li>\n      <li><a href="#" onclick="showPage(\'kontakt\')" id="nav-kontakt">Kontakt</a></li>\n    </ul>\n    <div style="display:flex; gap:8px; align-items:center; margin-left:12px;">\n      <a class="btn btn-outline nav__cta" href="#" onclick="showPage(\'instruktor\')" style="padding:10px 16px; font-size:13px;">🎓 Zostań instruktorem</a>\n      <a class="btn btn-outline nav__cta" href="#" onclick="showPage(\'parafia\')" id="nav-parafia" style="padding:10px 16px; font-size:13px;">⛪ Dla parafii</a>\n      <a class="btn btn-primary nav__cta" href="#" onclick="showPage(\'sklep\')">Kup karnet →</a>\n    </div>\n    <div class="nav__hamburger" onclick="toggleMobile()" id="hamburger">\n      <span></span><span></span><span></span>\n    </div>\n  </div>\n</nav>\n\n<!-- mobile menu -->\n<div class="nav__mobile" id="mobileMenu">\n  <a href="#" onclick="showPage(\'home\');closeMobile()">Start</a>\n  <a href="#" onclick="showPage(\'oferta\');closeMobile()">Oferta</a>\n  <a href="#" onclick="showPage(\'grafik\');closeMobile()">Grafik</a>\n  <a href="#" onclick="showPage(\'cennik\');closeMobile()">Cennik</a>\n  <a href="#" onclick="showPage(\'instruktor\');closeMobile()">Zostań instruktorem</a>\n  <a href="#" onclick="showPage(\'onas\');closeMobile()">O Amen!</a>\n  <a href="#" onclick="showPage(\'kontakt\');closeMobile()">Kontakt</a>\n  <a href="#" onclick="showPage(\'parafia\');closeMobile()" style="color:var(--orange); font-weight:600;">Dla parafii</a>\n  <a class="btn btn-primary" href="#" onclick="showPage(\'sklep\');closeMobile()">Kup karnet →</a>\n</div>\n\n\n<!-- ═══ PAGE: HOME ═════════════════════════════════════════ -->\n<div class="page active" id="page-home">\n\n  <!-- HERO -->\n  <section class="hero">\n    <div class="container">\n      <div class="hero__inner">\n        <span class="hero__eyebrow">Wrocław · Est. 2022</span>\n        <h1 class="hero__title">\n          Roztańczamy<br><em>Parafie</em><br>w Polsce.\n        </h1>\n        <p class="hero__sub">\n          Uczymy tańca, ale Amen! to coś więcej niż kroki na parkiecie. Taniec jest dla nas narzędziem — celem są relacje. Tworzymy w Kościele lokalne miejsca, w których ludzie mogą regularnie się spotykać, poznawać i budować więzi. Dołącz do społeczności, która łączy radość, ruch i chrześcijańskie wartości. Zaczynamy od Wrocławia i kończymy na Polsce!<br><br>\n          Zaczynamy od Wrocławia — i idziemy w całą Polskę.\n        </p>\n        <div class="hero__actions">\n          <a class="btn btn-primary" href="#" onclick="showPage(\'oferta\')">Sprawdź ofertę →</a>\n          <a class="btn btn-outline-white" href="#" onclick="showPage(\'grafik\')">Zobacz grafik</a>\n          <a class="btn btn-outline-white" href="#" onclick="showPage(\'onas\')">O projekcie</a>\n        </div>\n      </div>\n    </div>\n    <div class="hero__scroll">Przewiń</div>\n  </section>\n\n  <!-- NAWIGACJA OD POTRZEB -->\n  <section class="section section--grey">\n    <div class="container">\n      <span class="label">Dla Ciebie</span>\n      <h2 class="section-title">Od czego chcesz zacząć?</h2>\n      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; margin-top:32px;">\n        <a href="#" onclick="showPage(\'grafik\')" style="text-decoration:none; background:var(--white); border:1.5px solid rgba(0,0,0,.08); border-radius:var(--r-lg); padding:24px 20px; display:flex; flex-direction:column; gap:10px; transition:box-shadow .2s, border-color .2s;" onmouseover="this.style.borderColor=\'var(--orange)\';this.style.boxShadow=\'0 4px 16px rgba(0,0,0,.08)\'" onmouseout="this.style.borderColor=\'rgba(0,0,0,.08)\';this.style.boxShadow=\'none\'">\n          <div style="font-size:28px;">💃</div>\n          <div style="font-weight:700; font-size:15px; color:var(--text);">Chcę nauczyć się tańczyć</div>\n          <div style="font-size:13px; color:var(--muted); line-height:1.55;">Kursy tańca od zupełnych podstaw. Znajdź grupę blisko domu.</div>\n          <div style="font-size:13px; font-weight:600; color:var(--orange); margin-top:auto;">Kursy regularne →</div>\n        </a>\n        <a href="#" onclick="showPage(\'imprezy\')" style="text-decoration:none; background:var(--white); border:1.5px solid rgba(0,0,0,.08); border-radius:var(--r-lg); padding:24px 20px; display:flex; flex-direction:column; gap:10px; transition:box-shadow .2s, border-color .2s;" onmouseover="this.style.borderColor=\'var(--orange)\';this.style.boxShadow=\'0 4px 16px rgba(0,0,0,.08)\'" onmouseout="this.style.borderColor=\'rgba(0,0,0,.08)\';this.style.boxShadow=\'none\'">\n          <div style="font-size:28px;">🎉</div>\n          <div style="font-weight:700; font-size:15px; color:var(--text);">Chcę wyjść do ludzi</div>\n          <div style="font-size:13px; color:var(--muted); line-height:1.55;">Imprezy z Amen! – potańcówki, rozmowy, integracja i nowi znajomi.</div>\n          <div style="font-size:13px; font-weight:600; color:var(--orange); margin-top:auto;">Imprezy z Amen! →</div>\n        </a>\n        <a href="#" onclick="showPage(\'instruktor\')" style="text-decoration:none; background:var(--white); border:1.5px solid rgba(0,0,0,.08); border-radius:var(--r-lg); padding:24px 20px; display:flex; flex-direction:column; gap:10px; transition:box-shadow .2s, border-color .2s;" onmouseover="this.style.borderColor=\'var(--orange)\';this.style.boxShadow=\'0 4px 16px rgba(0,0,0,.08)\'" onmouseout="this.style.borderColor=\'rgba(0,0,0,.08)\';this.style.boxShadow=\'none\'">\n          <div style="font-size:28px;">🎯</div>\n          <div style="font-weight:700; font-size:15px; color:var(--text);">Chcę zostać instruktorem</div>\n          <div style="font-size:13px; color:var(--muted); line-height:1.55;">Szkolenie Instruktorskie – zdobądź nowe umiejętności i poprowadź grupę.</div>\n          <div style="font-size:13px; font-weight:600; color:var(--orange); margin-top:auto;">Szkolenie instruktorskie →</div>\n        </a>\n        <a href="#" onclick="showPage(\'oferta\')" style="text-decoration:none; background:var(--white); border:1.5px solid rgba(0,0,0,.08); border-radius:var(--r-lg); padding:24px 20px; display:flex; flex-direction:column; gap:10px; transition:box-shadow .2s, border-color .2s;" onmouseover="this.style.borderColor=\'var(--orange)\';this.style.boxShadow=\'0 4px 16px rgba(0,0,0,.08)\'" onmouseout="this.style.borderColor=\'rgba(0,0,0,.08)\';this.style.boxShadow=\'none\'">\n          <div style="font-size:28px;">💍</div>\n          <div style="font-weight:700; font-size:15px; color:var(--text);">Bierzemy ślub</div>\n          <div style="font-size:13px; color:var(--muted); line-height:1.55;">Pierwszy Taniec – indywidualne przygotowanie do Waszego dnia.</div>\n          <div style="font-size:13px; font-weight:600; color:var(--orange); margin-top:auto;">Pierwszy Taniec →</div>\n        </a>\n        <a href="#" onclick="showPage(\'parafia\')" style="text-decoration:none; background:var(--white); border:1.5px solid rgba(0,0,0,.08); border-radius:var(--r-lg); padding:24px 20px; display:flex; flex-direction:column; gap:10px; transition:box-shadow .2s, border-color .2s;" onmouseover="this.style.borderColor=\'var(--orange)\';this.style.boxShadow=\'0 4px 16px rgba(0,0,0,.08)\'" onmouseout="this.style.borderColor=\'rgba(0,0,0,.08)\';this.style.boxShadow=\'none\'">\n          <div style="font-size:28px;">⛪</div>\n          <div style="font-weight:700; font-size:15px; color:var(--text);">Chcę zgłosić parafię</div>\n          <div style="font-size:13px; color:var(--muted); line-height:1.55;">Pokaż proboszczowi prezentację o Roztańczonej Parafii.</div>\n          <div style="font-size:13px; font-weight:600; color:var(--orange); margin-top:auto;">Dla parafii →</div>\n        </a>\n      </div>\n    </div>\n  </section>\n\n  <!-- OFERTA OVERVIEW -->\n  <section class="section">\n    <div class="container">\n      <span class="label">Co robimy</span>\n      <h2 class="section-title">Znajdź coś dla siebie</h2>\n      <p class="section-lead">Potrzebujesz randki z żoną, chcesz poznać mamy z okolicy, pielęgnować swoją kobiecość albo odkryć nową zajawkę z ludźmi z parafii? Znajdź swój kurs — od podstaw lub na wyższych poziomach.</p>\n      <div class="cards">\n        <div class="card" onclick="showPage(\'oferta\')">\n          <div class="card__icon">💃</div>\n          <div class="card__title">Kursy Regularne</div>\n          <div class="card__desc">Regularne zajęcia w 14 parafiach Wrocławia. Style użytkowy, bachata, latino solo — w parach i solo. Raz w tygodniu.</div>\n          <span class="card__link">Dowiedz się więcej</span>\n        </div>\n        <div class="card" onclick="showPage(\'oferta\')">\n          <div class="card__icon">🎉</div>\n          <div class="card__title">Warsztaty Weekendowe</div>\n          <div class="card__desc">Intensywne sesje w weekendy. Idealny sposób na szybki postęp lub wypróbowanie tańca bez zobowiązań.</div>\n          <span class="card__link">Dowiedz się więcej</span>\n        </div>\n        <div class="card" onclick="showPage(\'oferta\')">\n          <div class="card__icon">🎶</div>\n          <div class="card__title">Imprezy z Amen!</div>\n          <div class="card__desc">Potańcówki, wieczory tematyczne i wyjątkowe wydarzenia — taniec w radosnej, rodzinnej atmosferze.</div>\n          <span class="card__link">Dowiedz się więcej</span>\n        </div>\n        <div class="card" onclick="showPage(\'oferta\')">\n          <div class="card__icon">💍</div>\n          <div class="card__title">Pierwszy Taniec</div>\n          <div class="card__desc">Indywidualne lekcje dla par przed ślubem. Choreografia dopasowana do Waszej piosenki i możliwości.</div>\n          <span class="card__link">Dowiedz się więcej</span>\n        </div>\n        <div class="card" onclick="showPage(\'oferta\')">\n          <div class="card__icon">🎯</div>\n          <div class="card__title">Zajęcia Indywidualne</div>\n          <div class="card__desc">Prywatne lekcje z instruktorem. Maksymalny postęp w Twoim tempie, skupione na Twoich celach.</div>\n          <span class="card__link">Dowiedz się więcej</span>\n        </div>\n      </div>\n    </div>\n  </section>\n\n  <!-- SYLWESTER BANER -->\n  <section style="background:var(--orange); padding:40px 0;">\n    <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">\n      <div>\n        <div style="font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.7); margin-bottom:8px;">🎉 Sylwester z Amen!</div>\n        <div style="font-family:var(--font-head); font-size:26px; font-weight:800; color:var(--white); line-height:1.2;">Spędź Sylwestra w chrześcijańskiej atmosferze</div>\n        <div style="font-size:15px; color:rgba(255,255,255,.85); margin-top:6px;">Taniec, radość i dobra atmosfera — powitaj Nowy Rok z Amen!</div>\n      </div>\n      <a class="btn btn-white" href="#" onclick="showPage(\'sylwester\')" style="flex-shrink:0;">Dowiedz się więcej →</a>\n    </div>\n  </section>\n\n  <!-- GRAFIK PREVIEW -->\n  <section class="section section--grey">\n    <div class="container">\n      <span class="label">Gdzie i kiedy</span>\n      <h2 class="section-title">Zajęcia blisko Ciebie</h2>\n      <p class="section-lead">Prowadzimy zajęcia w 7 parafiach na terenie Wrocławia — znajdź grupę w swojej okolicy.</p>\n      <div style="display:flex; flex-direction:column; gap:0; border:1px solid rgba(0,0,0,.08); border-radius:var(--r-lg); overflow:hidden; background:var(--white);">\n        <div style="display:grid; grid-template-columns:1fr 1fr auto; align-items:center; padding:16px 24px; border-bottom:1px solid rgba(0,0,0,.06); gap:12px;">\n          <div><div style="font-weight:700; font-size:15px;">Parafia Chrystusa Króla</div><div style="font-size:13px; color:var(--muted);">ul. Młodych Techników 17</div></div>\n          <div style="font-size:13px; color:var(--muted);">PN, WT</div>\n          <a href="#" onclick="showPage(\'grafik\')" style="font-size:13px; font-weight:600; color:var(--orange); white-space:nowrap;">Zobacz →</a>\n        </div>\n        <div style="display:grid; grid-template-columns:1fr 1fr auto; align-items:center; padding:16px 24px; border-bottom:1px solid rgba(0,0,0,.06); gap:12px; background:var(--orange-xl);">\n          <div><div style="font-weight:700; font-size:15px;">Parafia NMP Bolesnej</div><div style="font-size:13px; color:var(--muted);">ul. Tatarakowa 1</div></div>\n          <div style="font-size:13px; color:var(--muted);">ŚR</div>\n          <a href="#" onclick="showPage(\'grafik\')" style="font-size:13px; font-weight:600; color:var(--orange); white-space:nowrap;">Zobacz →</a>\n        </div>\n        <div style="display:grid; grid-template-columns:1fr 1fr auto; align-items:center; padding:16px 24px; border-bottom:1px solid rgba(0,0,0,.06); gap:12px;">\n          <div><div style="font-weight:700; font-size:15px;">Parafia NMP Matki Miłosierdzia</div><div style="font-size:13px; color:var(--muted);">ul. Brucknera 20</div></div>\n          <div style="font-size:13px; color:var(--muted);">WT</div>\n          <a href="#" onclick="showPage(\'grafik\')" style="font-size:13px; font-weight:600; color:var(--orange); white-space:nowrap;">Zobacz →</a>\n        </div>\n        <div style="display:grid; grid-template-columns:1fr 1fr auto; align-items:center; padding:16px 24px; border-bottom:1px solid rgba(0,0,0,.06); gap:12px; background:var(--orange-xl);">\n          <div><div style="font-weight:700; font-size:15px;">Parafia Opieki Św. Józefa</div><div style="font-size:13px; color:var(--muted);">ul. Ołbińska 1</div></div>\n          <div style="font-size:13px; color:var(--muted);">ŚR</div>\n          <a href="#" onclick="showPage(\'grafik\')" style="font-size:13px; font-weight:600; color:var(--orange); white-space:nowrap;">Zobacz →</a>\n        </div>\n        <div style="display:grid; grid-template-columns:1fr 1fr auto; align-items:center; padding:16px 24px; border-bottom:1px solid rgba(0,0,0,.06); gap:12px;">\n          <div><div style="font-weight:700; font-size:15px;">Parafia Św. Alberta Wielkiego</div><div style="font-size:13px; color:var(--muted);">ul. Redycka 10</div></div>\n          <div style="font-size:13px; color:var(--muted);">PN</div>\n          <a href="#" onclick="showPage(\'grafik\')" style="font-size:13px; font-weight:600; color:var(--orange); white-space:nowrap;">Zobacz →</a>\n        </div>\n        <div style="display:grid; grid-template-columns:1fr 1fr auto; align-items:center; padding:16px 24px; border-bottom:1px solid rgba(0,0,0,.06); gap:12px; background:var(--orange-xl);">\n          <div><div style="font-weight:700; font-size:15px;">Parafia Św. Antoniego</div><div style="font-size:13px; color:var(--muted);">al. Kasprowicza 26</div></div>\n          <div style="font-size:13px; color:var(--muted);">PN, ŚR, CZW</div>\n          <a href="#" onclick="showPage(\'grafik\')" style="font-size:13px; font-weight:600; color:var(--orange); white-space:nowrap;">Zobacz →</a>\n        </div>\n        <div style="display:grid; grid-template-columns:1fr 1fr auto; align-items:center; padding:16px 24px; gap:12px;">\n          <div><div style="font-weight:700; font-size:15px;">Parafia Św. Anny</div><div style="font-size:13px; color:var(--muted);">ul. Sobótki 42</div></div>\n          <div style="font-size:13px; color:var(--muted);">PN</div>\n          <a href="#" onclick="showPage(\'grafik\')" style="font-size:13px; font-weight:600; color:var(--orange); white-space:nowrap;">Zobacz →</a>\n        </div>\n      </div>\n      <div style="margin-top:24px;">\n        <a class="btn btn-outline" href="#" onclick="showPage(\'grafik\')">Zobacz pełny grafik →</a>\n      </div>\n    </div>\n  </section>\n\n  <!-- CENNIK PREVIEW -->\n  <section class="section">\n    <div class="container">\n      <span class="label">Cennik</span>\n      <h2 class="section-title">Blisko i tanio</h2>\n      <p class="section-lead">Karnet miesięczny = 4 zajęcia (raz w tygodniu). Cena rośnie wraz z poziomem zaawansowania.</p>\n      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:32px;">\n        <div style="border:2px solid var(--orange-l); border-radius:var(--r-lg); padding:28px 24px; background:var(--orange-xl);">\n          <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--orange-d); margin-bottom:8px;">Podstawowy · P1–P3</div>\n          <div style="font-family:var(--font-head); font-size:36px; font-weight:800; color:var(--black);">100 zł<span style="font-size:16px; font-weight:400; color:var(--muted);">/mies.</span></div>\n          <p style="font-size:14px; color:var(--muted); margin-top:12px; line-height:1.6;">Poziomy P1, P2 i P3 — pierwsze lata nauki tańca.</p>\n        </div>\n        <div style="border:2px solid rgba(0,0,0,.1); border-radius:var(--r-lg); padding:28px 24px; background:var(--white);">\n          <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:8px;">Średniozaawansowany · S1+</div>\n          <div style="font-family:var(--font-head); font-size:36px; font-weight:800; color:var(--black);">130 zł<span style="font-size:16px; font-weight:400; color:var(--muted);">/mies.</span></div>\n          <p style="font-size:14px; color:var(--muted); margin-top:12px; line-height:1.6;">Poziomy S1, S2 i Z1 — wyższe poziomy zaawansowania.</p>\n        </div>\n      </div>\n      <div style="margin-top:28px; display:flex; gap:16px; flex-wrap:wrap;">\n        <a class="btn btn-outline" href="#" onclick="showPage(\'cennik\')">Pełny cennik z poziomami →</a>\n        <a class="btn btn-primary" href="#" onclick="showPage(\'sklep\')">Kup karnet online →</a>\n      </div>\n    </div>\n  </section>\n\n  <!-- OPINIE -->\n  <section class="section section--grey">\n    <div class="container">\n      <span class="label">Opinie</span>\n      <h2 class="section-title">Co mówią uczestnicy</h2>\n      <div class="testimonials">\n        <div class="testimonial">\n          <p class="testimonial__text">Super ludzie, super atmosfera, profesjonalnie i na luzie — polecam!</p>\n          <div class="testimonial__author">\n            <div class="testimonial__avatar">K</div>\n            <div>\n              <div class="testimonial__name">Kamil Bortka</div>\n              <div class="testimonial__meta">Facebook · luty 2022</div>\n            </div>\n          </div>\n        </div>\n        <div class="testimonial">\n          <p class="testimonial__text">Cudowni ludzie z pasją! Miałam okazję uczestniczyć w warsztatach prowadzonych przez Monikę i Mateusza — to był sztos! Mega atmosfera, profesjonalizm. Nie mogę się doczekać kolejnego spotkania. Z całego serducha polecam!</p>\n          <div class="testimonial__author">\n            <div class="testimonial__avatar">M</div>\n            <div>\n              <div class="testimonial__name">Marta</div>\n              <div class="testimonial__meta">Facebook · 2022</div>\n            </div>\n          </div>\n        </div>\n        <div class="testimonial">\n          <p class="testimonial__text">Przede wszystkim dobra, przyjazna atmosfera, a przy tym profesjonalne figury taneczne wytłumaczone tak, żeby każdy zrozumiał. Polecamy zdecydowanie — i w kwestii rozwoju tanecznego, i duchowego, i społecznego.</p>\n          <div class="testimonial__author">\n            <div class="testimonial__avatar">W</div>\n            <div>\n              <div class="testimonial__name">Wiktor Pierzak</div>\n              <div class="testimonial__meta">Facebook · luty 2022</div>\n            </div>\n          </div>\n        </div>\n        <div class="testimonial">\n          <p class="testimonial__text">Przyjemna, rodzinna atmosfera zarówno na kursach, jak i imprezach. Łatwo poczuć więź z ludźmi tu poznanymi.</p>\n          <div class="testimonial__author">\n            <div class="testimonial__avatar">D</div>\n            <div>\n              <div class="testimonial__name">Dawid Szczechla</div>\n              <div class="testimonial__meta">Facebook · maj 2019</div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n\n\n  <!-- ROZTAŃCZONA PARAFIA -->\n  <section class="section section--black">\n    <div class="container">\n      <div class="parish-split">\n        <div>\n          <span class="label">Projekt parafialny</span>\n          <h2 class="section-title">Roztańczona Parafia</h2>\n          <p style="color:rgba(255,255,255,.65); font-size:16px; line-height:1.7; margin-bottom:24px;">\n            Wierzymy, że Kościół może i powinien być centrum spotkania, radości i prawdziwych więzi. Dlatego przychodzimy do parafii — z kursami, warsztatami i potańcówkami dla całej społeczności.\n          </p>\n          <p style="color:rgba(255,255,255,.5); font-size:14px; margin-bottom:32px;">\n            Jesteś duszpasterzem, animatorem lub liderem społeczności? Porozmawiajmy o tym, jak możemy razem roztańczyć Twoją parafię.\n          </p>\n          <a class="btn btn-primary" href="#" onclick="showPage(\'parafia\')">Dowiedz się więcej →</a>\n        </div>\n        <div class="parish-split__visual">⛪</div>\n      </div>\n    </div>\n  </section>\n\n  <!-- NEWSLETTER -->\n  <section class="section section--orange">\n    <div class="container">\n      <div class="newsletter-box">\n        <span class="label">Newsletter</span>\n        <h2 class="section-title" style="color:var(--white)">Bądź na bieżąco</h2>\n        <p style="color:rgba(255,255,255,.8); font-size:16px; line-height:1.65;">\n          Nowe grupy, zapisy na warsztaty, imprezy i promocje — prosto na Twoją skrzynkę. Bez spamu.\n        </p>\n        <form class="newsletter-form" onsubmit="return false;">\n          <input type="email" placeholder="Twój adres e-mail" />\n          <button class="btn btn-white" type="submit">Zapisz się</button>\n        </form>\n        <label style="display:flex; align-items:flex-start; gap:10px; margin-top:16px; cursor:pointer; text-align:left; max-width:520px;">\n          <input type="checkbox" required style="margin-top:3px; accent-color:var(--orange); flex-shrink:0;" />\n          <span style="font-size:12px; color:rgba(255,255,255,.65); line-height:1.6;">Wyrażam zgodę na przetwarzanie moich danych osobowych (adresu e-mail) w celu otrzymywania newslettera Szkoły Tańca Amen! Zgodę mogę wycofać w każdej chwili. Więcej informacji w <a href="#" style="color:rgba(255,255,255,.85); text-decoration:underline;">Polityce prywatności</a>.</span>\n        </label>\n      </div>\n    </div>\n  </section>\n\n  <!-- KONTAKT BLOCK -->\n  <section class="section">\n    <div class="container">\n      <span class="label">Kontakt</span>\n      <h2 class="section-title" style="margin-bottom:40px">Masz pytania?</h2>\n      <div class="contact-row">\n        <div class="contact-item">\n          <div class="contact-item__icon">📞</div>\n          <div>\n            <div class="contact-item__label">Telefon</div>\n            <div class="contact-item__val">513 580 512</div>\n          </div>\n        </div>\n        <div class="contact-item">\n          <div class="contact-item__icon">✉️</div>\n          <div>\n            <div class="contact-item__label">E-mail</div>\n            <div class="contact-item__val">kontakt.amen@gmail.com</div>\n          </div>\n        </div>\n      </div>\n      <div class="social-row">\n        <a class="social-btn" href="https://www.facebook.com/szkolaamen" target="_blank">f Facebook</a>\n        <a class="social-btn" href="https://www.instagram.com/szkolaamen/" target="_blank">📸 Instagram</a>\n        <a class="social-btn" href="https://www.youtube.com/@szkolaamen" target="_blank">▶ YouTube</a>\n      </div>\n    </div>\n  </section>\n\n  <!-- FOOTER -->\n  <footer>\n    <div class="container">\n      <div class="footer-grid">\n        <div>\n          <div class="footer-brand__logo">amen<span>!</span></div>\n          <p class="footer-brand__desc">Chrześcijańska szkoła tańca z Wrocławia. Tańczymy, bo wierzymy w radość.</p>\n          <div class="footer-social">\n            <a href="https://www.facebook.com/szkolaamen" target="_blank">f</a>\n            <a href="https://www.instagram.com/szkolaamen/" target="_blank">📸</a>\n            <a href="https://www.youtube.com/@szkolaamen" target="_blank">▶</a>\n          </div>\n        </div>\n        <div>\n          <div class="footer-col__title">Oferta</div>\n          <ul class="footer-col__links">\n            <li><a href="#" onclick="showPage(\'oferta\')">Kursy Tańca</a></li>\n            <li><a href="#" onclick="showPage(\'oferta\')">Warsztaty</a></li>\n            <li><a href="#" onclick="showPage(\'oferta\')">Potańcówki</a></li>\n            <li><a href="#" onclick="showPage(\'oferta\')">Pierwszy Taniec</a></li>\n            <li><a href="#" onclick="showPage(\'oferta\')">Zajęcia Indywidualne</a></li>\n          </ul>\n        </div>\n        <div>\n          <div class="footer-col__title">Informacje</div>\n          <ul class="footer-col__links">\n            <li><a href="#" onclick="showPage(\'grafik\')">Grafik zajęć</a></li>\n            <li><a href="#" onclick="showPage(\'cennik\')">Cennik</a></li>\n            <li><a href="#" onclick="showPage(\'faq\')">FAQ</a></li>\n            <li><a href="#" onclick="showPage(\'parafia\')">Roztańczona Parafia</a></li>\n            <li><a href="#" onclick="showPage(\'regulamin\')">Regulamin kursów</a></li>\n            <li><a href="#" onclick="showPage(\'regulamin-imprez\')">Regulamin imprez</a></li>\n          </ul>\n        </div>\n        <div>\n          <div class="footer-col__title">Szkoła</div>\n          <ul class="footer-col__links">\n            <li><a href="#" onclick="showPage(\'onas\')">O Amen!</a></li>\n            <li><a href="#" onclick="showPage(\'kontakt\')">Kontakt</a></li>\n            <li><a href="#" onclick="showPage(\'sklep\')">Sklep</a></li>\n          </ul>\n        </div>\n      </div>\n      <div class="footer-bottom">\n        <span>© 2026 Szkoła Tańca Amen! Wrocław</span>\n        <span>kontakt.amen@gmail.com · 513 580 512</span>\n      </div>\n    </div>\n  </footer>\n\n</div><!-- /page-home -->\n\n\n<!-- ═══ PAGE: OFERTA ═══════════════════════════════════════ -->\n<div class="page" id="page-oferta">\n  <div class="page-offset">\n    <div class="page-hero">\n      <div class="container">\n        <span class="label">Co oferujemy</span>\n        <h1>Oferta</h1>\n        <p>Bogaty wybór usług tanecznych — niezależnie od poziomu, wieku i celu.</p>\n      </div>\n    </div>\n    <section class="section">\n      <div class="container">\n        <div class="offer-list">\n          <div class="offer-item">\n            <div class="offer-item__num">01</div>\n            <div>\n              <div class="offer-item__icon">💃</div>\n              <div class="offer-item__title">Regularne kursy tańca</div>\n              <p class="offer-item__desc">Prowadzimy zajęcia w 14 parafiach Wrocławia. Różne style — w parach i solo. Raz w tygodniu.</p>\n              <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:12px;">\n                <span style="background:var(--orange-xl); color:var(--orange); font-size:13px; font-weight:600; padding:4px 12px; border-radius:99px;">W parach: Bachata · Salsa · Użytkowy</span>\n                <span style="background:var(--orange-xl); color:var(--orange); font-size:13px; font-weight:600; padding:4px 12px; border-radius:99px;">Solo: Latino Solo <span style="font-weight:400; opacity:.75">+ wkrótce Dancehall, Reggaeton</span></span>\n                <span style="background:var(--grey); color:var(--text); font-size:13px; font-weight:600; padding:4px 12px; border-radius:99px;">👧 Amen! Kids</span>\n              </div>\n            </div>\n            <a class="btn btn-outline" href="#" onclick="showPage(\'grafik\')">Zobacz grafik</a>\n          </div>\n          <div class="offer-item">\n            <div class="offer-item__num">02</div>\n            <div>\n              <div class="offer-item__icon">🎉</div>\n              <div class="offer-item__title">Warsztaty Weekendowe</div>\n              <p class="offer-item__desc">Intensywne sesje taneczne w weekendy — idealne na szybki postęp lub żeby sprawdzić, czy taniec jest dla Ciebie, zanim zdecydujesz się na kurs. Różnorodne style i tematy — sprawdź aktualne terminy.</p>\n            </div>\n            <a class="btn btn-outline" href="#" onclick="showPage(\'warsztaty\')">Więcej →</a>\n          </div>\n          <div class="offer-item">\n            <div class="offer-item__num">04</div>\n            <div>\n              <div class="offer-item__icon">🎶</div>\n              <div class="offer-item__title">Imprezy z Amen!</div>\n              <p class="offer-item__desc">6 stref aktywności: parkiet taneczny, karaoke, planszówki, bilard, inne. Zaplanuj z nami aż 5 dat w sezonie.</p>\n            </div>\n            <a class="btn btn-outline" href="#" onclick="showPage(\'imprezy\')">Więcej →</a>\n          </div>\n          <div class="offer-item">\n            <div class="offer-item__num">05</div>\n            <a class="btn btn-outline" href="#" onclick="showPage(\'kontakt\')">Zapytaj o najbliższy termin</a>\n          </div>\n          <div class="offer-item">\n            <div class="offer-item__num">06</div>\n            <div>\n              <div class="offer-item__icon">💍</div>\n              <div class="offer-item__title">Pierwszy Taniec</div>\n              <p class="offer-item__desc">Indywidualne lekcje dla par szykujących się do ślubu. Tworzymy choreografię dopasowaną do Waszej piosenki i możliwości — tak żebyście czuli się pewnie i mogli cieszyć się tym momentem. Zaczynamy nawet kilka tygodni przed ceremonią.</p>\n            </div>\n            <a class="btn btn-primary" href="#" onclick="showPage(\'kontakt\')">Umów się</a>\n          </div>\n          <div class="offer-item">\n            <div class="offer-item__num">07</div>\n            <div>\n              <div class="offer-item__icon">🎯</div>\n              <div class="offer-item__title">Zajęcia Indywidualne</div>\n              <p class="offer-item__desc">Prywatna lekcja jeden na jeden z instruktorem. Maksymalny postęp w Twoim tempie — skupiamy się wyłącznie na Twoich celach i stylu. Idealne przy konkretnym wydarzeniu lub gdy chcesz szybko nadrobić zaległości.</p>\n            </div>\n            <a class="btn btn-primary" href="#" onclick="showPage(\'kontakt\')">Umów się</a>\n          </div>\n        </div>\n      </div>\n    </section>\n    <section class="section section--orange">\n      <div class="container" style="text-align:center">\n        <h2 style="color:var(--white); font-size:32px; margin-bottom:16px;">Nie wiesz od czego zacząć?</h2>\n        <p style="color:rgba(255,255,255,.8); margin-bottom:32px; max-width:480px; margin-left:auto; margin-right:auto;">Napisz do nas — pomożemy wybrać odpowiedni kurs i poziom.</p>\n        <a class="btn btn-white" href="#" onclick="showPage(\'kontakt\')">Napisz do nas →</a>\n      </div>\n    </section>\n  </div>\n</div>\n\n\n<!-- ═══ PAGE: GRAFIK ═══════════════════════════════════════ -->\n<div class="page" id="page-grafik">\n  <div class="page-offset">\n    <div class="page-hero">\n      <div class="container">\n        <span class="label">Terminarz</span>\n        <h1>Grafik zajęć</h1>\n        <p>Znajdź grupę blisko siebie. Dołączenie możliwe przy wolnych miejscach.</p>\n        <p style="margin-top:12px; font-size:14px; color:var(--muted);">Masz pytania? Sprawdź <a href="#" onclick="showPage(\'faq\')" style="color:var(--orange); font-weight:600;">FAQ →</a></p>\n      </div>\n    </div>\n    <section class="section">\n      <div class="container">\n        <span class="label">Legenda poziomów</span>\n        <h2 class="section-title" style="margin-bottom:24px">Poziomy zaawansowania</h2>\n        <div class="levels-row">\n          <div class="level-pill p"><strong>P0</strong> <span class="level-pill__code">2 mies.</span> Zupełny początek</div>\n          <div class="level-pill p"><strong>P1</strong> <span class="level-pill__code">4 mies.</span> Podstawowy</div>\n          <div class="level-pill p"><strong>P2</strong> <span class="level-pill__code">3 mies.</span> Podstawowy</div>\n          <div class="level-pill p"><strong>P3</strong> <span class="level-pill__code">3 mies.</span> Podstawowy</div>\n          <div class="level-pill s"><strong>S1</strong> <span class="level-pill__code">rok</span> Średniozaawansowany</div>\n          <div class="level-pill s"><strong>S2</strong> <span class="level-pill__code">rok</span> Średniozaawansowany</div>\n          <div class="level-pill z"><strong>Z1</strong> <span class="level-pill__code">rok</span> Zaawansowany</div>\n          <div class="level-pill" style="background:var(--black); color:var(--white);"><strong>OPEN</strong> <span style="font-size:11px; opacity:.6;">wszystkie poziomy</span></div>\n        </div>\n\n        <div class="divider" style="margin-bottom:48px"></div>\n\n        <span class="label">Nowy sezon</span>\n        <h2 class="section-title" style="margin-bottom:32px">Grafik zajęć — 14 parafii</h2>\n\n        <!-- 1. Chrystusa Króla (Szczepin) -->\n        <div class="parish-block">\n          <div class="parish-block__header">\n            <div class="parish-block__name">Parafia Chrystusa Króla · Szczepin</div>\n            <div class="parish-block__addr">ul. Młodych Techników 17</div>\n          </div>\n          <div class="class-row"><span class="class-row__day">PN</span><span class="class-row__name">Użytkowy</span><span class="badge" style="background:var(--black);color:var(--white);">S1</span><span class="class-row__time">20:20</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n          <div class="class-row"><span class="class-row__day">WT</span><span class="class-row__name">Salsa Rueda</span><span class="badge">P0</span><span class="class-row__time">17:00</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n          <div class="class-row"><span class="class-row__day">WT</span><span class="class-row__name">Bachata</span><span class="badge" style="background:var(--black);color:var(--white);">P3</span><span class="class-row__time">18:10</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n          <div class="class-row"><span class="class-row__day">WT</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">19:20</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n          <div class="class-row"><span class="class-row__day">WT</span><span class="class-row__name">Walc angielski i wiedeński</span><span class="badge">P0</span><span class="class-row__time">20:30</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n          <div class="class-row"><span class="class-row__day">ŚR</span><span class="class-row__name">Latino Solo</span><span class="badge">P0</span><span class="class-row__time">20:30</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n          <div class="class-row"><span class="class-row__day">CZW</span><span class="class-row__name">Step Dance</span><span class="badge">P0</span><span class="class-row__time">21:00</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n        </div>\n\n        <!-- 2. NMP Bolesnej (Różanka) -->\n        <div class="parish-block">\n          <div class="parish-block__header">\n            <div class="parish-block__name">Parafia NMP Bolesnej · Różanka</div>\n            <div class="parish-block__addr">ul. Bałkańska 4</div>\n          </div>\n          <div class="class-row"><span class="class-row__day">CZW</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">19:00</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n        </div>\n\n        <!-- 3. NMP Bolesnej (Strachocin) -->\n        <div class="parish-block">\n          <div class="parish-block__header">\n            <div class="parish-block__name">Parafia NMP Bolesnej · Strachocin</div>\n            <div class="parish-block__addr">ul. Tatarakowa 1</div>\n          </div>\n          <div class="class-row"><span class="class-row__day">ŚR</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">19:00</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n          <div class="class-row"><span class="class-row__day">ŚR</span><span class="class-row__name">Użytkowy</span><span class="badge" style="background:var(--black);color:var(--white);">P3</span><span class="class-row__time">20:15</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n        </div>\n\n        <!-- 4. NMP Matki Miłosierdzia (Kowale) -->\n        <div class="parish-block">\n          <div class="parish-block__header">\n            <div class="parish-block__name">Parafia NMP Matki Miłosierdzia · Kowale</div>\n            <div class="parish-block__addr">ul. Brücknera 20</div>\n          </div>\n          <div class="class-row"><span class="class-row__day">WT</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">19:00</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n        </div>\n\n        <!-- 5. NMP na Piasku (Ostrów Tumski) -->\n        <div class="parish-block">\n          <div class="parish-block__header">\n            <div class="parish-block__name">Parafia NMP na Piasku · Ostrów Tumski</div>\n            <div class="parish-block__addr">ul. Katedralna 4</div>\n          </div>\n          <div class="class-row"><span class="class-row__day">WT</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">19:00</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n        </div>\n\n        <!-- 6. Opieki św. Józefa (Ołbin) -->\n        <div class="parish-block">\n          <div class="parish-block__header">\n            <div class="parish-block__name">Parafia Opieki św. Józefa · Ołbin</div>\n            <div class="parish-block__addr">ul. Ołbińska 1</div>\n          </div>\n          <div class="class-row"><span class="class-row__day">CZW</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">20:30</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n        </div>\n\n        <!-- 7. św. Alberta Wielkiego (Sołtysowice) -->\n        <div class="parish-block">\n          <div class="parish-block__header">\n            <div class="parish-block__name">Parafia św. Alberta Wielkiego · Sołtysowice</div>\n            <div class="parish-block__addr">ul. Redycka 10</div>\n          </div>\n          <div class="class-row"><span class="class-row__day">PN</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">20:00</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n        </div>\n\n        <!-- 8. św. Anny (Oporów) -->\n        <div class="parish-block">\n          <div class="parish-block__header">\n            <div class="parish-block__name">Parafia św. Anny · Oporów</div>\n            <div class="parish-block__addr">ul. Sobótki 42</div>\n          </div>\n          <div class="class-row"><span class="class-row__day">PN</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">19:30</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n        </div>\n\n        <!-- 9. św. Anny (Pracze Odrzańskie) -->\n        <div class="parish-block">\n          <div class="parish-block__header">\n            <div class="parish-block__name">Parafia św. Anny · Pracze Odrzańskie</div>\n            <div class="parish-block__addr">ul. Brodzka 163</div>\n          </div>\n          <div class="class-row"><span class="class-row__day">PN</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">18:10</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n        </div>\n\n        <!-- 10. św. Antoniego (Karłowice) -->\n        <div class="parish-block">\n          <div class="parish-block__header">\n            <div class="parish-block__name">Parafia św. Antoniego · Karłowice</div>\n            <div class="parish-block__addr">al. Kasprowicza 26</div>\n          </div>\n          <div class="class-row"><span class="class-row__day">PN</span><span class="class-row__name">Latino Solo</span><span class="badge">P0/P1</span><span class="class-row__time">19:15</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n          <div class="class-row"><span class="class-row__day">PN</span><span class="class-row__name">Latino Solo</span><span class="badge" style="background:var(--black);color:var(--white);">P2</span><span class="class-row__time">20:30</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n          <div class="class-row"><span class="class-row__day">ŚR</span><span class="class-row__name">Bachata intensywna</span><span class="badge">P0</span><span class="class-row__time">18:00–20:00</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n          <div class="class-row"><span class="class-row__day">ŚR</span><span class="class-row__name">Użytkowy</span><span class="badge" style="background:var(--black);color:var(--white);">P3</span><span class="class-row__time">19:10</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n          <div class="class-row"><span class="class-row__day">ŚR</span><span class="class-row__name">Użytkowy</span><span class="badge" style="background:var(--black);color:var(--white);">P3</span><span class="class-row__time">20:15</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n          <div class="class-row"><span class="class-row__day">CZW</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">20:20</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n          <div class="class-row"><span class="class-row__day">CZW</span><span class="class-row__name">Użytkowy</span><span class="badge" style="background:var(--black);color:var(--white);">P1</span><span class="class-row__time">19:10</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n        </div>\n\n        <!-- 11. św. Augustyna (Krzyki) -->\n        <div class="parish-block">\n          <div class="parish-block__header">\n            <div class="parish-block__name">Parafia św. Augustyna · Krzyki</div>\n            <div class="parish-block__addr">ul. Sudecka 90</div>\n          </div>\n          <div class="class-row"><span class="class-row__day">ŚR</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">20:15</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n        </div>\n\n        <!-- 12. św. Bonifacego (Nadodrze) -->\n        <div class="parish-block">\n          <div class="parish-block__header">\n            <div class="parish-block__name">Parafia św. Bonifacego · Nadodrze</div>\n            <div class="parish-block__addr">pl. Staszica 4</div>\n          </div>\n          <div class="class-row"><span class="class-row__day">CZW</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">19:00</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n        </div>\n\n        <!-- 13. św. Ojca Pio (Partynice) -->\n        <div class="parish-block">\n          <div class="parish-block__header">\n            <div class="parish-block__name">Parafia św. Ojca Pio · Partynice</div>\n            <div class="parish-block__addr">ul. Ołtaszyńska 114</div>\n          </div>\n          <div class="class-row"><span class="class-row__day">CZW</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">19:15</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n        </div>\n\n        <!-- 14. św. Teresy (Osobowice) -->\n        <div class="parish-block">\n          <div class="parish-block__header">\n            <div class="parish-block__name">Parafia św. Teresy od Dzieciątka Jezus · Osobowice</div>\n            <div class="parish-block__addr">ul. Osobowicka 129</div>\n          </div>\n          <div class="class-row"><span class="class-row__day">PN</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">18:30</span><a href="https://szkolaamen.pl/grafik" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>\n        </div>\n\n        <div class="divider" style="margin:48px 0"></div>\n\n        <span class="label">Zasady uczestnictwa</span>\n        <h2 class="section-title" style="margin-bottom:16px; font-size:28px">Odrabianie zajęć</h2>\n        <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:24px; max-width:680px;">Nie musisz zgłaszać nieobecności. Jeśli Cię nie było, po prostu napisz do nas — a my znajdziemy termin, w którym możesz odrobić zajęcia.</p>\n\n        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin-bottom:48px;">\n          <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">\n            <div style="font-weight:700; font-size:15px; margin-bottom:10px;">✉️ Krok 1 — Napisz do nas</div>\n            <p style="font-size:14px; color:var(--muted); line-height:1.65;">Zgłoś chęć odrobienia na <strong>kontakt.amen@gmail.com</strong>. Masz na to <strong>2 tygodnie od powrotu na zajęcia</strong>.</p>\n          </div>\n          <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">\n            <div style="font-weight:700; font-size:15px; margin-bottom:10px;">🗓️ Krok 2 — Wybierz termin</div>\n            <p style="font-size:14px; color:var(--muted); line-height:1.65;">Wybierz inną grupę na tym samym lub sąsiednim poziomie. Odrabiać możesz w dowolnej z naszych lokalizacji.<br><br><strong>Korzystasz z Multisport, Medicover lub FitProfit?</strong> Karta pozwala na jedno wejście dziennie — odrobienie musi odbyć się w innym dniu niż Twoje regularne zajęcia.</p>\n          </div>\n          <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">\n            <div style="font-weight:700; font-size:15px; margin-bottom:10px;">✅ Krok 3 — Przyjdź</div>\n            <p style="font-size:14px; color:var(--muted); line-height:1.65;">Poinformuj instruktora na początku zajęć, że odrabiasz.</p>\n          </div>\n        </div>\n\n        <div style="background:var(--orange-xl); border-radius:var(--r-lg); padding:28px; display:flex; align-items:flex-start; gap:20px;">\n          <div style="font-size:28px">📋</div>\n          <div>\n            <div style="font-weight:700; font-size:17px; margin-bottom:6px">Nowe grupy</div>\n            <p style="font-size:14px; color:var(--muted); line-height:1.65; margin-bottom:16px">Aktualnie nie ma otwartych nowych grup od podstaw. Jeśli interesuje Cię dołączenie do którejś z istniejących grup lub chcesz być powiadomiony o nowych zapisach — zostaw swój e-mail.</p>\n            <a class="btn btn-primary" href="#" onclick="showPage(\'kontakt\')">Napisz do nas →</a>\n          </div>\n        </div>\n\n      </div>\n    </section>\n  </div>\n</div>\n\n\n<!-- ═══ PAGE: CENNIK ═══════════════════════════════════════ -->\n<div class="page" id="page-cennik">\n  <div class="page-offset">\n    <div class="page-hero">\n      <div class="container">\n        <span class="label">Cennik</span>\n        <h1>Ile to kosztuje?</h1>\n        <p>Przejrzyste ceny — bez ukrytych opłat. Karnet miesięczny = 4 zajęcia, raz w tygodniu.</p>\n      </div>\n    </div>\n    <section class="section">\n      <div class="container" style="max-width:800px">\n\n        <span class="label">Karnety miesięczne</span>\n        <h2 class="section-title" style="margin-bottom:16px">Ceny kursów</h2>\n        <div class="pricing-note" style="margin-bottom:32px">\n          Karnet jest ważny 4 tygodnie i obejmuje 4 zajęcia (jedno w tygodniu). Płatność przelewem — brak możliwości płatności gotówką na miejscu.\n          Szczegółowe zasady uczestnictwa opisuje <a href="#" onclick="showPage(\'regulamin\')" style="color:var(--orange);">Regulamin kursów</a>.\n        </div>\n\n        <table class="pricing-table" style="margin-bottom:48px">\n          <thead>\n            <tr>\n              <th>Poziom</th>\n              <th>Czas trwania</th>\n              <th>Cena / mies.</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <td><span class="level-badge beginner">P0</span></td>\n              <td>2 miesiące</td>\n              <td><span class="price-val">80 zł</span></td>\n            </tr>\n            <tr>\n              <td><span class="level-badge beginner">P1</span></td>\n              <td>4 miesiące</td>\n              <td><span class="price-val">100 zł</span></td>\n            </tr>\n            <tr>\n              <td><span class="level-badge inter">P2</span></td>\n              <td>3 miesiące</td>\n              <td><span class="price-val">100 zł</span></td>\n            </tr>\n            <tr>\n              <td><span class="level-badge inter">P3</span></td>\n              <td>3 miesiące</td>\n              <td><span class="price-val">100 zł</span></td>\n            </tr>\n            <tr>\n              <td><span class="level-badge adv">S1</span></td>\n              <td>rok</td>\n              <td><span class="price-val">130 zł</span></td>\n            </tr>\n            <tr>\n              <td><span class="level-badge adv">S2</span></td>\n              <td>rok</td>\n              <td><span class="price-val">130 zł</span></td>\n            </tr>\n            <tr>\n              <td><span class="level-badge expert">Z1</span></td>\n              <td>rok</td>\n              <td><span class="price-val">130 zł</span></td>\n            </tr>\n          </tbody>\n        </table>\n\n        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:48px; flex-wrap:wrap;">\n          <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">\n            <div style="font-weight:700; margin-bottom:8px">💳 Karty beneficjenckie</div>\n            <p style="font-size:14px; color:var(--muted); line-height:1.65">Użytkownicy kart Multisport, Medicover Sport, FitProfit i innych kart benefit otrzymają szczegółowe zasady opłat karnetowych mailowo po zapisaniu się na kurs.</p>\n          </div>\n          <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">\n            <div style="font-weight:700; margin-bottom:8px">📅 Kiedy płacić?</div>\n            <p style="font-size:14px; color:var(--muted); line-height:1.65">Rozliczenie za każdy karnet następuje <strong>po czwartych (ostatnich) zajęciach</strong> danego okresu. Opłata wyłącznie przelewem — brak możliwości płatności gotówką.</p>\n          </div>\n        </div>\n\n        <div class="divider" style="margin-bottom:48px"></div>\n\n        <span class="label">Płatność</span>\n        <h2 class="section-title" style="margin-bottom:16px; font-size:28px">Jak opłacić karnet?</h2>\n        <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:16px">Płatność odbywa się wyłącznie przelewem bankowym, po zakończeniu każdego cyklu 4 zajęć. W tytule przelewu podaj imię, nazwisko i miesiąc, za który płacisz.</p>\n        <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 20px; margin-bottom:28px; display:flex; align-items:center; gap:14px;">\n          <div style="font-size:22px; flex-shrink:0;">🛒</div>\n          <div style="font-size:14px; line-height:1.65;">Po zapisaniu się na kurs i potwierdzeniu miejsca możesz wykupić karnet w naszym <a href="#" onclick="showPage(\'sklep\')" style="color:var(--orange); font-weight:600;">sklepie internetowym →</a></div>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:28px; margin-bottom:16px;">\n          <div style="font-size:13px; color:var(--muted); margin-bottom:12px; text-transform:uppercase; font-weight:700; letter-spacing:.06em;">Dane do przelewu — Bank Erste</div>\n          <div style="font-size:18px; font-weight:700; margin-bottom:4px;">Mateusz Zapart</div>\n          <div style="font-family:monospace; font-size:15px; color:var(--text); background:var(--white); padding:10px 14px; border-radius:6px; display:inline-block; margin-bottom:12px; letter-spacing:.04em;">IBAN: PL XX XXXX XXXX XXXX XXXX XXXX XXXX</div>\n          <div style="font-size:13px; color:var(--muted); line-height:1.65;">W tytule przelewu wpisz: <strong>Imię Nazwisko, zajęcia</strong><br>np. „Jan Kowalski, Latino Solo pon. 19:15"</div>\n        </div>\n        <div style="background:var(--orange-xl); border-radius:var(--r-lg); padding:20px 24px; font-size:14px; color:var(--text); line-height:1.65; margin-bottom:48px;">\n          💳 <strong>Masz kartę Multisport, Medicover Sport lub FitProfit?</strong> Napisz do nas — rozliczamy też karty benefit. Szczegóły poniżej.\n        </div>\n\n        <span class="label">Karty sportowe</span>\n        <h2 class="section-title" style="margin-bottom:16px; font-size:28px">Akceptowane karty benefit</h2>\n        <p style="color:var(--muted); margin-bottom:24px; font-size:15px">Możesz opłacić zajęcia kartą sportową. Skontaktuj się z nami, żeby dowiedzieć się jak to działa.</p>\n        <div class="benefit-logos">\n          <div class="benefit-logo">Multisport</div>\n          <div class="benefit-logo">Multisport Light</div>\n          <div class="benefit-logo">Medicover Sport</div>\n          <div class="benefit-logo">FitProfit</div>\n        </div>\n\n        <div class="divider" style="margin:48px 0"></div>\n\n        <span class="label">Vouchery</span>\n        <h2 class="section-title" style="margin-bottom:16px; font-size:28px">Prezent, który angażuje</h2>\n        <p style="color:var(--muted); margin-bottom:24px; font-size:15px">Vouchery dostępne na: kurs miesięczny, warsztat, imprezę lub prywatną lekcję. Wartości od 30 do 100 zł. Personalizacja (imienna karta) +40 zł.</p>\n        <a class="btn btn-primary" href="#" onclick="showPage(\'sklep\')">Zaangażuj bliską osobę! →</a>\n\n      </div>\n    </section>\n  </div>\n</div>\n\n\n<!-- ═══ PAGE: O NAS ════════════════════════════════════════ -->\n<div class="page" id="page-onas">\n  <div class="page-offset">\n    <div class="page-hero">\n      <div class="container">\n        <span class="label">O szkole</span>\n        <h1>O Amen!</h1>\n        <p>Jesteśmy społecznością, która używa tańca jako narzędzia do budowania naturalnych przestrzeni spotkania w Kościele. Rozbudzamy życie towarzyskie w parafiach.</p>\n      </div>\n    </div>\n    <section class="section">\n      <div class="container" style="max-width:800px">\n        <span class="label">Nasza historia</span>\n        <h2 class="section-title" style="margin-bottom:20px">Od 2022 roku roztańczamy parafie we Wrocławiu</h2>\n        <p style="font-size:17px; line-height:1.75; color:var(--muted); margin-bottom:16px">W 2022 roku dwie wrocławskie parafie — Chrystusa Króla i św. Antoniego — otworzyły drzwi na tę inicjatywę. Od tego czasu stworzyliśmy przestrzeń do lokalnego, tanecznego spotkania dla setek ludzi. Dziś działamy w 14 parafiach Wrocławia.</p>\n        <p style="font-size:17px; line-height:1.75; color:var(--muted); margin-bottom:32px">Wierzymy, że parafie mogą i powinny być centrum spotkania, radości i prawdziwych więzi. Każda obecność ma znaczenie.</p>\n        <div style="display:flex; gap:40px; flex-wrap:wrap;">\n          <div style="text-align:center;">\n            <div style="font-family:var(--font-head); font-size:48px; font-weight:800; color:var(--orange);">14</div>\n            <div style="font-size:14px; color:var(--muted);">parafii</div>\n          </div>\n          <div style="text-align:center;">\n            <div style="font-family:var(--font-head); font-size:48px; font-weight:800; color:var(--orange);">2022</div>\n            <div style="font-size:14px; color:var(--muted);">rok założenia</div>\n          </div>\n          <div style="text-align:center;">\n            <div style="font-family:var(--font-head); font-size:48px; font-weight:800; color:var(--orange);">∞</div>\n            <div style="font-size:14px; color:var(--muted);">radości w ruchu</div>\n          </div>\n        </div>\n      </div>\n    </section>\n\n    <section class="section">\n      <div class="container" style="max-width:800px">\n        <span class="label">Roztańczone Parafie</span>\n        <h2 class="section-title" style="margin-bottom:20px">Skąd się wzięły Roztańczone Parafie?</h2>\n        <p style="font-size:17px; line-height:1.75; color:var(--muted); margin-bottom:16px">Szczęść Boże, cześć! Jesteśmy małżeństwem — Monika i Mateusz Zapart. Widząc rosnące potrzeby spotkania, rozmowy i bycia razem, a jednocześnie ogromny potencjał parafii jako naturalnego miejsca relacji, wpadliśmy na pomysł projektu <strong style="color:var(--text);">Roztańczona Parafia</strong>.</p>\n        <p style="font-size:17px; line-height:1.75; color:var(--muted); margin-bottom:16px">Zauważyliśmy, że coraz częściej brakuje prostych, zorganizowanych przestrzeni sprzyjających lokalnemu życiu towarzyskiemu — szczególnie wśród dorosłych, małżeństw i seniorów. Roztańczona Parafia jest naszym autorskim rozwiązaniem tej potrzeby — narzędziem, które w prosty sposób pomaga uruchomić spotkanie, ruch i budowanie relacji przy parafii.</p>\n        <p style="font-size:17px; line-height:1.75; color:var(--muted); margin-bottom:40px">Zapraszamy do dalszego poznania tego pomysłu i do wspólnego tworzenia przestrzeni, która może realnie służyć ludziom i parafiom.</p>\n        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-bottom:40px;">\n          <div style="background:var(--orange-xl); border-radius:var(--r-lg); padding:24px;">\n            <div style="font-size:22px; margin-bottom:10px;">👨\u200d👩\u200d👧\u200d👦</div>\n            <div style="font-weight:700; font-size:15px; margin-bottom:6px;">Dla każdego</div>\n            <p style="font-size:14px; color:var(--muted); line-height:1.65;">Od małego do starszego, solo, w parze, rodzinnie, z paczką znajomych — każdy znajdzie tu swoje miejsce i swoje tempo.</p>\n          </div>\n          <div style="background:var(--orange-xl); border-radius:var(--r-lg); padding:24px;">\n            <div style="font-size:22px; margin-bottom:10px;">📍</div>\n            <div style="font-weight:700; font-size:15px; margin-bottom:6px;">Blisko domu</div>\n            <p style="font-size:14px; color:var(--muted); line-height:1.65;">Zajęcia odbywają się w salach parafialnych — w Twojej okolicy, bez dojazdów w centrum.</p>\n          </div>\n          <div style="background:var(--orange-xl); border-radius:var(--r-lg); padding:24px;">\n            <div style="font-size:22px; margin-bottom:10px;">🤝</div>\n            <div style="font-weight:700; font-size:15px; margin-bottom:6px;">Prawdziwe relacje</div>\n            <p style="font-size:14px; color:var(--muted); line-height:1.65;">Wracamy co tydzień do tych samych ludzi. Z tego rodzą się znajomości, które wykraczają poza parkiet.</p>\n          </div>\n        </div>\n        <a class="btn btn-outline" href="#" onclick="showPage(\'parafia\')">Dowiedz się więcej o projekcie →</a>\n      </div>\n    </section>\n\n    <section class="section section--grey">\n      <div class="container">\n        <span class="label">Galeria</span>\n        <h2 class="section-title" style="margin-bottom:24px;">Zajęcia w parafiach</h2>\n        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px;">\n          <div style="aspect-ratio:4/3; background:var(--orange-l); border-radius:var(--r-lg); display:flex; align-items:center; justify-content:center; font-size:40px; color:var(--orange);">📷</div>\n          <div style="aspect-ratio:4/3; background:var(--orange-xl); border-radius:var(--r-lg); display:flex; align-items:center; justify-content:center; font-size:40px; color:var(--orange);">📷</div>\n          <div style="aspect-ratio:4/3; background:var(--orange-l); border-radius:var(--r-lg); display:flex; align-items:center; justify-content:center; font-size:40px; color:var(--orange);">📷</div>\n          <div style="aspect-ratio:4/3; background:var(--orange-xl); border-radius:var(--r-lg); display:flex; align-items:center; justify-content:center; font-size:40px; color:var(--orange);">📷</div>\n          <div style="aspect-ratio:4/3; background:var(--orange-l); border-radius:var(--r-lg); display:flex; align-items:center; justify-content:center; font-size:40px; color:var(--orange);">📷</div>\n          <div style="aspect-ratio:4/3; background:var(--orange-xl); border-radius:var(--r-lg); display:flex; align-items:center; justify-content:center; font-size:40px; color:var(--orange);">📷</div>\n        </div>\n        <p style="font-size:13px; color:var(--muted); margin-top:16px; text-align:center;">Zdjęcia do uzupełnienia przez klienta</p>\n      </div>\n    </section>\n\n    <section class="section section--grey">\n      <div class="container">\n        <span class="label">Wartości</span>\n        <h2 class="section-title" style="margin-bottom:40px">Co nas napędza</h2>\n        <div class="values-grid">\n          <div class="value-card">\n            <div class="value-card__icon">💃</div>\n            <div class="value-card__title">Taniec i relacje</div>\n            <p class="value-card__desc">Wspólna aktywność jest potrzebna do budowania więzi. Taniec pozwala zadbać o relacje z bliskimi, otwiera na nowe znajomości, pielęgnuje kobiecość i męskość, uczy szacunku do drugiego człowieka. To dlatego wokół niego budujemy Amen!</p>\n          </div>\n          <div class="value-card">\n            <div class="value-card__icon">🏘️</div>\n            <div class="value-card__title">Lokalna społeczność</div>\n            <p class="value-card__desc">Chcemy, żeby parafia była miejscem radosnych spotkań, które realnie budują lokalne relacje. Wierzymy, że życie parafialne i sąsiedzkie mogą się pięknie przenikać, a wspólne pasje najlepiej rozwija się z ludźmi, których mijamy na co dzień.</p>\n          </div>\n          <div class="value-card">\n            <div class="value-card__icon">✝️</div>\n            <div class="value-card__title">Odpowiedzialność i wiara</div>\n            <p class="value-card__desc">Z wiary wyrasta nasza troska o drugiego człowieka. Czujemy się odpowiedzialni za Kościół, dlatego tworzymy bezpieczne, wartościowe przestrzenie, które po prostu mają Wam służyć.</p>\n          </div>\n        </div>\n      </div>\n    </section>\n\n    <section class="section">\n      <div class="container">\n        <span class="label">Zespół</span>\n        <h2 class="section-title" style="margin-bottom:40px">Instruktorzy</h2>\n        <div class="team-grid">\n          <div class="team-card">\n            <div class="team-card__avatar">MZ</div>\n            <div class="team-card__name">Mateusz Zapart</div>\n            <div class="team-card__role">Założyciel & Instruktor</div>\n            <p class="team-card__bio">Pasjonat tańca i społeczności. Prowadzi szkołę od 2022 roku, specjalizuje się w tańcu użytkowym i bachacie.</p>\n          </div>\n          <div class="team-card">\n            <div class="team-card__avatar">?</div>\n            <div class="team-card__name">Instruktor</div>\n            <div class="team-card__role">Taniec Użytkowy</div>\n            <p class="team-card__bio">Treść do uzupełnienia.</p>\n          </div>\n          <div class="team-card">\n            <div class="team-card__avatar">?</div>\n            <div class="team-card__name">Instruktor</div>\n            <div class="team-card__role">Latino Solo</div>\n            <p class="team-card__bio">Treść do uzupełnienia.</p>\n          </div>\n        </div>\n      </div>\n    </section>\n  </div>\n</div>\n\n\n<!-- ═══ PAGE: KONTAKT ══════════════════════════════════════ -->\n<div class="page" id="page-kontakt">\n  <div class="page-offset">\n    <div class="page-hero">\n      <div class="container">\n        <span class="label">Napisz do nas</span>\n        <h1>Kontakt</h1>\n        <p>Odpowiadamy szybko — zwykle tego samego dnia.</p>\n      </div>\n    </div>\n    <section class="section">\n      <div class="container">\n        <div class="contact-cols">\n          <div>\n            <span class="label">Napisz do nas</span>\n            <h2 class="section-title" style="margin-bottom:32px; font-size:28px">Formularz kontaktowy</h2>\n            <form class="contact-form" onsubmit="return false;">\n              <div class="form-group">\n                <label>Imię i nazwisko</label>\n                <input type="text" placeholder="Jan Kowalski" />\n              </div>\n              <div class="form-group">\n                <label>E-mail</label>\n                <input type="email" placeholder="jan@email.pl" />\n              </div>\n              <div class="form-group">\n                <label>Temat</label>\n                <select>\n                  <option>Chcę się zapisać na kurs</option>\n                  <option>Pytanie o grafik</option>\n                  <option>Pytanie o cennik</option>\n                  <option>Pierwszy Taniec (ślub)</option>\n                  <option>Zajęcia indywidualne</option>\n                  <option>Roztańczona Parafia</option>\n                  <option>Inne</option>\n                </select>\n              </div>\n              <div class="form-group">\n                <label>Wiadomość</label>\n                <textarea placeholder="Napisz co Cię interesuje..."></textarea>\n              </div>\n              <button class="btn btn-primary" type="submit">Wyślij wiadomość →</button>\n            </form>\n          </div>\n          <div>\n            <span class="label">Dane kontaktowe</span>\n            <h2 class="section-title" style="margin-bottom:32px; font-size:28px">Bezpośredni kontakt</h2>\n            <div class="contact-row" style="flex-direction:column; gap:24px; margin-bottom:32px">\n              <div class="contact-item">\n                <div class="contact-item__icon">📞</div>\n                <div>\n                  <div class="contact-item__label">Telefon</div>\n                  <div class="contact-item__val">513 580 512</div>\n                </div>\n              </div>\n              <div class="contact-item">\n                <div class="contact-item__icon">✉️</div>\n                <div>\n                  <div class="contact-item__label">E-mail</div>\n                  <div class="contact-item__val">kontakt.amen@gmail.com</div>\n                </div>\n              </div>\n            </div>\n\n            <div class="divider" style="margin-bottom:32px"></div>\n\n            <span class="label">Lokalizacje</span>\n            <div class="location-list">\n              <div class="location-item">\n                <div class="location-item__icon">📍</div>\n                <div>\n                  <div class="location-item__name">Parafia Chrystusa Króla</div>\n                  <div class="location-item__addr">ul. Młodych Techników 17</div>\n                  <a href="https://maps.google.com/?q=ul.+Młodych+Techników+17,+Wrocław" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600;">Otwórz w Mapach →</a>\n                </div>\n              </div>\n              <div class="location-item">\n                <div class="location-item__icon">📍</div>\n                <div>\n                  <div class="location-item__name">Parafia NMP Bolesnej</div>\n                  <div class="location-item__addr">ul. Tatarakowa 1</div>\n                  <a href="https://maps.google.com/?q=ul.+Tatarakowa+1,+Wrocław" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600;">Otwórz w Mapach →</a>\n                </div>\n              </div>\n              <div class="location-item">\n                <div class="location-item__icon">📍</div>\n                <div>\n                  <div class="location-item__name">Parafia NMP Matki Miłosierdzia</div>\n                  <div class="location-item__addr">ul. Brucknera 20</div>\n                  <a href="https://maps.google.com/?q=ul.+Brucknera+20,+Wrocław" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600;">Otwórz w Mapach →</a>\n                </div>\n              </div>\n              <div class="location-item">\n                <div class="location-item__icon">📍</div>\n                <div>\n                  <div class="location-item__name">Parafia Opieki Św. Józefa</div>\n                  <div class="location-item__addr">ul. Ołbińska 1</div>\n                  <a href="https://maps.google.com/?q=ul.+Ołbińska+1,+Wrocław" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600;">Otwórz w Mapach →</a>\n                </div>\n              </div>\n              <div class="location-item">\n                <div class="location-item__icon">📍</div>\n                <div>\n                  <div class="location-item__name">Parafia Św. Alberta Wielkiego</div>\n                  <div class="location-item__addr">ul. Redycka 10</div>\n                  <a href="https://maps.google.com/?q=ul.+Redycka+10,+Wrocław" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600;">Otwórz w Mapach →</a>\n                </div>\n              </div>\n              <div class="location-item">\n                <div class="location-item__icon">📍</div>\n                <div>\n                  <div class="location-item__name">Parafia Św. Antoniego</div>\n                  <div class="location-item__addr">al. Kasprowicza 26</div>\n                  <a href="https://maps.google.com/?q=al.+Kasprowicza+26,+Wrocław" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600;">Otwórz w Mapach →</a>\n                </div>\n              </div>\n              <div class="location-item">\n                <div class="location-item__icon">📍</div>\n                <div>\n                  <div class="location-item__name">Parafia Św. Anny</div>\n                  <div class="location-item__addr">ul. Sobótki 42</div>\n                  <a href="https://maps.google.com/?q=ul.+Sobótki+42,+Wrocław" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600;">Otwórz w Mapach →</a>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n  </div>\n</div>\n\n\n<!-- ═══ PAGE: FAQ ══════════════════════════════════════════ -->\n<div class="page" id="page-faq">\n  <div class="page-offset">\n    <div class="page-hero">\n      <div class="container">\n        <span class="label">Pomoc</span>\n        <h1>FAQ</h1>\n        <p>Najczęściej zadawane pytania. Nie znajdziesz odpowiedzi? Napisz do nas.</p>\n      </div>\n    </div>\n    <section class="section">\n      <div class="container">\n        <div class="faq-list">\n\n          <div class="faq-item">\n            <div class="faq-q" onclick="toggleFaq(this)">Czy mogę zapisać się solo, bez partnera? <span class="faq-q__arrow">▼</span></div>\n            <div class="faq-a">Tak! Przyjmujemy zarówno pary, jak i osoby solo. Nie gwarantujemy jednak stałego partnera — na zajęciach robimy rotację, żeby każdy miał szansę tańczyć z różnymi osobami.</div>\n          </div>\n\n          <div class="faq-item">\n            <div class="faq-q" onclick="toggleFaq(this)">Czy jest gwarancja miejsca przy zapisie solo? <span class="faq-q__arrow">▼</span></div>\n            <div class="faq-a">Nie. Pary mają pierwszeństwo przy zapisie. Jeśli zapisy będą nierówne (np. za dużo kobiet lub mężczyzn), może dojść do kolejkowania. O aktualnej dostępności informujemy mailowo.</div>\n          </div>\n\n          <div class="faq-item">\n            <div class="faq-q" onclick="toggleFaq(this)">Co jeśli nie mogę pojawić się na zajęciach? <span class="faq-q__arrow">▼</span></div>\n            <div class="faq-a">Nie musisz zgłaszać nieobecności. Jeśli Cię nie było, napisz do nas na <strong>kontakt.amen@gmail.com</strong> z chęcią odrobienia — masz na to 2 tygodnie od powrotu na zajęcia. Odrobić możesz na innej grupie na tym samym lub sąsiednim poziomie.</div>\n          </div>\n\n          <div class="faq-item">\n            <div class="faq-q" onclick="toggleFaq(this)">Jak działa rotacja partnerów? <span class="faq-q__arrow">▼</span></div>\n            <div class="faq-a">Na zajęciach regularnie zamieniamy partnerów — dzięki temu szybciej się uczysz i budujesz pewność siebie z różnymi osobami. Nie musisz mieć stałego partnera.</div>\n          </div>\n\n          <div class="faq-item">\n            <div class="faq-q" onclick="toggleFaq(this)">Od jakiego poziomu zaczynam? <span class="faq-q__arrow">▼</span></div>\n            <div class="faq-a">Jeśli nigdy nie tańczyłeś — startujemy razem od P0. To poziom od podstaw. Nie martw się, każdy kiedyś był na P0! ;)</div>\n          </div>\n\n          <div class="faq-item">\n            <div class="faq-q" onclick="toggleFaq(this)">Co to jest "Użytkowy"? <span class="faq-q__arrow">▼</span></div>\n            <div class="faq-a">Taniec użytkowy to popularnie zwany „taniec towarzyski" — tańce, które możesz używać na parkiecie: walc angielski, tango, quickstep, foxtrot, cha-cha, samba, rumba i inne. Świetny na start, bo uczy ogólnej techniki i orientacji na parkiecie.</div>\n          </div>\n\n          <div class="faq-item">\n            <div class="faq-q" onclick="toggleFaq(this)">Jak płacić za zajęcia? <span class="faq-q__arrow">▼</span></div>\n            <div class="faq-a">Wyłącznie przelewem na konto (Bank Erste, właściciel Mateusz Zapart). Płatność gotówkowa nie jest możliwa. Karnet opłacasz po czwartych zajęciach danego okresu. Możesz też płacić kartą Multisport, Medicover Sport lub FitProfit.</div>\n          </div>\n\n          <div class="faq-item">\n            <div class="faq-q" onclick="toggleFaq(this)">Skąd wiem, że kurs jest dla mnie? <span class="faq-q__arrow">▼</span></div>\n            <div class="faq-a">Najłatwiej sprawdzić to na miejscu — napisz do nas, a pomożemy wybrać odpowiedni kurs i poziom. Możesz też przyjść na pierwsze zajęcia próbnie i zobaczyć sam.</div>\n          </div>\n\n\n          <div class="faq-item">\n            <div class="faq-q" onclick="toggleFaq(this)">Jak działają vouchery? Jak mogę je kupić? <span class="faq-q__arrow">▼</span></div>\n            <div class="faq-a">Vouchery dostępne są na: kurs miesięczny, warsztat weekendowy, imprezę lub prywatną lekcję. Wartości od 30 do 100 zł. Opcjonalnie można zamówić personalizowaną kartę (+40 zł). Vouchery kupujesz przez nasz sklep online (wkrótce) lub kontaktując się z nami bezpośrednio. Obdarowany realizuje voucher przez podanie kodu przy pierwszych zajęciach.</div>\n          </div>\n\n        </div>\n\n        <div style="margin-top:48px; text-align:center">\n          <p style="color:var(--muted); margin-bottom:20px">Nie znalazłeś odpowiedzi?</p>\n          <a class="btn btn-primary" href="#" onclick="showPage(\'kontakt\')">Napisz do nas →</a>\n        </div>\n      </div>\n    </section>\n  </div>\n</div>\n\n\n<!-- ═══ PAGE: DLA PARAFII ══════════════════════════════════ -->\n<div class="page" id="page-parafia">\n  <div class="page-offset">\n\n    <!-- HERO -->\n    <div class="page-hero">\n      <div class="container">\n        <span class="label">Projekt parafialny</span>\n        <h1>Roztańczona Parafia</h1>\n        <p>Gotowe narzędzie, które pomaga parafiom budować społeczność — przez regularne kursy tańca, bez kosztów i bez obciążenia proboszcza.</p>\n        <div style="margin-top:32px; display:flex; gap:12px; flex-wrap:wrap;">\n          <a class="btn btn-white" href="#parafia-formularz" onclick="document.getElementById(\'parafia-formularz\').scrollIntoView({behavior:\'smooth\'}); return false;">Zgłoś parafię →</a>\n          <a class="btn btn-outline" href="#parafia-jak" onclick="document.getElementById(\'parafia-jak\').scrollIntoView({behavior:\'smooth\'}); return false;" style="border-color:rgba(255,255,255,.4); color:var(--white);">Jak to działa</a>\n        </div>\n      </div>\n    </div>\n\n    <!-- SKĄD POMYSŁ -->\n    <section class="section">\n      <div class="container" style="max-width:800px">\n        <span class="label">Skąd się wzięło</span>\n        <h2 class="section-title" style="margin-bottom:20px">Zaczęło się od obserwacji</h2>\n        <p style="font-size:17px; line-height:1.8; color:var(--muted); margin-bottom:16px">Jesteśmy małżeństwem — Monika i Mateusz Zapart. Od lat prowadzimy kursy tańca we Wrocławiu i obserwujemy jedno: ludziom brakuje prostych, zorganizowanych przestrzeni do spotkania. Szczególnie dorosłym, małżeństwom i seniorom.</p>\n        <p style="font-size:17px; line-height:1.8; color:var(--muted);">Parafie mają sale, mają zasięg i mają zaufanie lokalnej społeczności. My mamy instruktorów, doświadczenie i gotowy model. W 2022 roku połączyliśmy to razem — i tak powstała <strong style="color:var(--text);">Roztańczona Parafia</strong>.</p>\n      </div>\n    </section>\n\n    <!-- PROBLEM → ROZWIĄZANIE -->\n    <section class="section section--grey">\n      <div class="container" style="max-width:860px">\n        <span class="label">Dlaczego to działa</span>\n        <h2 class="section-title" style="margin-bottom:36px">Trzy realne problemy. Jedno rozwiązanie.</h2>\n        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px;">\n          <div style="background:var(--white); border-radius:var(--r-lg); padding:28px 24px; border-top:3px solid var(--orange);">\n            <div style="font-size:13px; color:var(--muted); text-transform:uppercase; font-weight:700; letter-spacing:.06em; margin-bottom:16px;">Problem</div>\n            <div style="font-weight:700; font-size:17px; margin-bottom:8px; color:var(--text);">Samotność i izolacja</div>\n            <p style="font-size:14px; color:var(--muted); line-height:1.65; margin-bottom:20px;">Coraz więcej osób — szczególnie singli i seniorów — nie ma gdzie się regularnie spotykać z sąsiadami.</p>\n            <div style="border-top:1px solid rgba(0,0,0,.07); padding-top:16px; font-weight:700; font-size:14px; color:var(--orange);">→ Przyparafialne życie towarzyskie</div>\n          </div>\n          <div style="background:var(--white); border-radius:var(--r-lg); padding:28px 24px; border-top:3px solid var(--orange);">\n            <div style="font-size:13px; color:var(--muted); text-transform:uppercase; font-weight:700; letter-spacing:.06em; margin-bottom:16px;">Problem</div>\n            <div style="font-weight:700; font-size:17px; margin-bottom:8px; color:var(--text);">Brak społeczności</div>\n            <p style="font-size:14px; color:var(--muted); line-height:1.65; margin-bottom:20px;">Ludzie chodzą na mszę, ale nie znają się nawzajem. Parafia jako miejsce relacji — nie tylko rytuału — zanika.</p>\n            <div style="border-top:1px solid rgba(0,0,0,.07); padding-top:16px; font-weight:700; font-size:14px; color:var(--orange);">→ Stały krąg parafialnych znajomych</div>\n          </div>\n          <div style="background:var(--white); border-radius:var(--r-lg); padding:28px 24px; border-top:3px solid var(--orange);">\n            <div style="font-size:13px; color:var(--muted); text-transform:uppercase; font-weight:700; letter-spacing:.06em; margin-bottom:16px;">Problem</div>\n            <div style="font-weight:700; font-size:17px; margin-bottom:8px; color:var(--text);">Brak angażujących inicjatyw</div>\n            <p style="font-size:14px; color:var(--muted); line-height:1.65; margin-bottom:20px;">Parafie chcą robić coś dla lokalnej społeczności, ale brakuje im gotowego, sprawdzonego pomysłu.</p>\n            <div style="border-top:1px solid rgba(0,0,0,.07); padding-top:16px; font-weight:700; font-size:14px; color:var(--orange);">→ Gotowy projekt pod klucz</div>\n          </div>\n        </div>\n      </div>\n    </section>\n\n    <!-- WYNIKI EDYCJI — SLIDER -->\n    <section class="section">\n      <div class="container" style="max-width:800px">\n        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:28px; flex-wrap:wrap; gap:12px;">\n          <div>\n            <span class="label" id="edition-label">Efekty pierwszej edycji</span>\n            <h2 class="section-title" style="margin:8px 0 0" id="edition-title">W rok — 7 parafii, ponad 300 osób</h2>\n          </div>\n          <div style="display:flex; gap:8px; align-items:center;">\n            <button onclick="editionSlide(-1)" id="btn-prev" style="width:40px; height:40px; border-radius:50%; border:1px solid rgba(0,0,0,.12); background:none; font-size:18px; cursor:pointer; display:flex; align-items:center; justify-content:center; opacity:.35;" disabled>←</button>\n            <span id="edition-counter" style="font-size:13px; color:var(--muted); min-width:36px; text-align:center;">1 / 2</span>\n            <button onclick="editionSlide(1)" id="btn-next" style="width:40px; height:40px; border-radius:50%; border:1px solid rgba(0,0,0,.12); background:none; font-size:18px; cursor:pointer; display:flex; align-items:center; justify-content:center;">→</button>\n          </div>\n        </div>\n\n        <!-- Slajd 1 -->\n        <div id="edition-slide-0">\n          <p style="color:var(--muted); font-size:16px; line-height:1.7; margin-bottom:32px">Pierwsza edycja projektu w Archidiecezji Wrocławskiej pokazała, że model działa. Parafie nie rezygnują — wracają na kolejny rok.</p>\n          <div style="display:flex; gap:0; border:1px solid rgba(0,0,0,.08); border-radius:var(--r-lg); overflow:hidden;">\n            <div style="flex:1; padding:32px 24px; text-align:center; border-right:1px solid rgba(0,0,0,.08);">\n              <div style="font-family:var(--font-head); font-size:52px; font-weight:800; color:var(--orange); line-height:1;">7</div>\n              <div style="font-size:14px; color:var(--muted); margin-top:6px;">parafii w projekcie</div>\n            </div>\n            <div style="flex:1; padding:32px 24px; text-align:center; border-right:1px solid rgba(0,0,0,.08);">\n              <div style="font-family:var(--font-head); font-size:52px; font-weight:800; color:var(--orange); line-height:1;">15</div>\n              <div style="font-size:14px; color:var(--muted); margin-top:6px;">kursów równolegle</div>\n            </div>\n            <div style="flex:1; padding:32px 24px; text-align:center;">\n              <div style="font-family:var(--font-head); font-size:52px; font-weight:800; color:var(--orange); line-height:1;">313</div>\n              <div style="font-size:14px; color:var(--muted); margin-top:6px;">aktywnych uczestników</div>\n            </div>\n          </div>\n          <div style="margin-top:16px; padding:16px 20px; background:var(--orange-xl); border-radius:var(--r-lg); font-size:14px; color:var(--text); line-height:1.65;">\n            Uczestnicy to przede wszystkim: <strong>single 30+</strong>, <strong>małżeństwa</strong> i <strong>seniorzy</strong> — grupy, do których parafia rzadko trafia z inną ofertą.\n          </div>\n        </div>\n\n        <!-- Slajd 2 -->\n        <div id="edition-slide-1" style="display:none">\n          <p style="color:var(--muted); font-size:16px; line-height:1.7; margin-bottom:32px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>\n          <div style="background:var(--orange-xl); border-left:4px solid var(--orange); border-radius:0 var(--r) var(--r) 0; padding:20px 24px; font-size:15px; color:var(--text); line-height:1.7;">\n            🚀 <strong>3. edycja nadciąga wielkimi krokami</strong> — jeśli Twoja parafia chce dołączyć, zgłoś się już teraz. Miejsca są limitowane.\n          </div>\n        </div>\n      </div>\n    </section>\n    \n\n    <!-- JAK TO DZIAŁA -->\n    <section class="section section--grey" id="parafia-jak">\n      <div class="container" style="max-width:800px">\n        <span class="label">Jak to działa</span>\n        <h2 class="section-title" style="margin-bottom:12px">Całość organizacji jest po naszej stronie</h2>\n        <p style="color:var(--muted); font-size:16px; line-height:1.7; margin-bottom:40px">Projekt nie obciąża proboszcza. Wdrożenie trwa około 6 miesięcy, potem współpraca jest długoterminowa.</p>\n\n        <div class="steps" style="margin-bottom:48px">\n          <div class="step">\n            <div class="step__num">1</div>\n            <div>\n              <div class="step__title">Materiały promocyjne</div>\n              <p class="step__desc">Dostarczamy gotowe plakaty, ulotki i treści ogłoszeń. Prosimy o cztery ogłoszenia z ambony i możliwość rozdania ulotek — według naszego harmonogramu.</p>\n            </div>\n          </div>\n          <div class="step">\n            <div class="step__num">2</div>\n            <div>\n              <div class="step__title">Szkolenie instruktora parafialnego</div>\n              <p class="step__desc">Kluczowy element projektu: szkolimy osobę z samej parafii na instruktora — bezpłatnie. To ona prowadzi zajęcia na miejscu i buduje relację ze społecznością. Jeśli nikt się nie zgłosi, angażujemy instruktora z parafii okolicznych.</p>\n            </div>\n          </div>\n          <div class="step">\n            <div class="step__num">3</div>\n            <div>\n              <div class="step__title">Koordynacja zapisów i kursów</div>\n              <p class="step__desc">Prowadzimy zapisy, komunikację z uczestnikami i bieżącą koordynację. Proboszcz dostaje gotową, działającą inicjatywę.</p>\n            </div>\n          </div>\n          <div class="step">\n            <div class="step__num">4</div>\n            <div>\n              <div class="step__title">Regularne kursy i potańcówki</div>\n              <p class="step__desc">Zajęcia raz w tygodniu przez cały rok (z wyłączeniem Triduum, Środy Popielcowej i dni wolnych). Życie społeczności nabiera stałego rytmu.</p>\n            </div>\n          </div>\n        </div>\n\n        <span class="label">Co potrzebuje parafia</span>\n        <h3 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin:16px 0 24px;">Trzy zgody proboszcza — to wystarczy</h3>\n        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px;">\n          <div style="background:var(--white); border-radius:var(--r); padding:20px 18px; border:1px solid rgba(0,0,0,.08);">\n            <div style="font-size:24px; margin-bottom:10px;">🏛️</div>\n            <div style="font-weight:700; font-size:15px; margin-bottom:6px;">Salka parafialna</div>\n            <p style="font-size:13px; color:var(--muted); line-height:1.6;">Minimum raz w tygodniu, około 3 godziny. Jeśli sala wymaga ustaleń — rozwiążemy to razem.</p>\n          </div>\n          <div style="background:var(--white); border-radius:var(--r); padding:20px 18px; border:1px solid rgba(0,0,0,.08);">\n            <div style="font-size:24px; margin-bottom:10px;">📢</div>\n            <div style="font-weight:700; font-size:15px; margin-bottom:6px;">Ogłaszanie w parafii</div>\n            <p style="font-size:13px; color:var(--muted); line-height:1.6;">Plakaty, ambona, social media — materiały i gotowe treści przygotowujemy my.</p>\n          </div>\n          <div style="background:var(--white); border-radius:var(--r); padding:20px 18px; border:1px solid rgba(0,0,0,.08);">\n            <div style="font-size:24px; margin-bottom:10px;">💛</div>\n            <div style="font-weight:700; font-size:15px; margin-bottom:6px;">Darowizna 100 zł / kurs / mies.</div>\n            <p style="font-size:13px; color:var(--muted); line-height:1.6;">Wpłacana na konto parafii — pokrywa koszty użytkowania sali. Bez innych opłat po stronie parafii.</p>\n          </div>\n        </div>\n      </div>\n    </section>\n\n    <!-- PARAFIE -->\n    <section class="section">\n      <div class="container" style="max-width:800px">\n        <span class="label">Parafie w projekcie</span>\n        <h2 class="section-title" style="margin-bottom:28px">Parafie, które już są z nami</h2>\n\n        <p style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:12px;">1. edycja</p>\n        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; margin-bottom:28px;">\n          <div style="background:var(--grey); border-radius:var(--r); padding:16px 18px;">\n            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia Chrystusa Króla</div>\n            <div style="font-size:12px; color:var(--muted);">Wrocław-Stare Miasto</div>\n          </div>\n          <div style="background:var(--grey); border-radius:var(--r); padding:16px 18px;">\n            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia NMP Bolesnej</div>\n            <div style="font-size:12px; color:var(--muted);">Wrocław-Strachocin</div>\n          </div>\n          <div style="background:var(--grey); border-radius:var(--r); padding:16px 18px;">\n            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia NMP Matki Miłosierdzia</div>\n            <div style="font-size:12px; color:var(--muted);">Wrocław-Kowale</div>\n          </div>\n          <div style="background:var(--grey); border-radius:var(--r); padding:16px 18px;">\n            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia Opieki Św. Józefa</div>\n            <div style="font-size:12px; color:var(--muted);">Wrocław-Ołbin</div>\n          </div>\n          <div style="background:var(--grey); border-radius:var(--r); padding:16px 18px;">\n            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia Św. Alberta Wielkiego</div>\n            <div style="font-size:12px; color:var(--muted);">Wrocław-Sołtysowice</div>\n          </div>\n          <div style="background:var(--grey); border-radius:var(--r); padding:16px 18px;">\n            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia Św. Antoniego</div>\n            <div style="font-size:12px; color:var(--muted);">Wrocław-Karłowice</div>\n          </div>\n          <div style="background:var(--grey); border-radius:var(--r); padding:16px 18px;">\n            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia Św. Anny</div>\n            <div style="font-size:12px; color:var(--muted);">Wrocław-Oporów</div>\n          </div>\n        </div>\n\n        <p style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:12px;">2. edycja — dołączają od września 2026</p>\n        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; margin-bottom:16px;">\n          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">\n            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. św. Augustyna</div>\n            <div style="font-size:12px; color:var(--muted);">Wrocław-Krzyki</div>\n          </div>\n          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">\n            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. św. Ojca Pio z Pietrelciny</div>\n            <div style="font-size:12px; color:var(--muted);">Wrocław-Partynice</div>\n          </div>\n          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">\n            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. Wniebowzięcia NMP</div>\n            <div style="font-size:12px; color:var(--muted);">Wrocław-Ołtaszyn</div>\n          </div>\n          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">\n            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. NMP Królowej Polski</div>\n            <div style="font-size:12px; color:var(--muted);">Wrocław-Klecina</div>\n          </div>\n          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">\n            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. św. Teresy od Dzieciątka Jezus</div>\n            <div style="font-size:12px; color:var(--muted);">Wrocław-Osobowice</div>\n          </div>\n          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">\n            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. Najświętszego Serca Pana Jezusa</div>\n            <div style="font-size:12px; color:var(--muted);">Wrocław-Pawłowice</div>\n          </div>\n          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">\n            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. św. Andrzeja Boboli</div>\n            <div style="font-size:12px; color:var(--muted);">Wrocław-Kuźniki</div>\n          </div>\n          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">\n            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. NMP na Piasku</div>\n            <div style="font-size:12px; color:var(--muted);">Wrocław</div>\n          </div>\n          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">\n            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. Opatrzności Bożej</div>\n            <div style="font-size:12px; color:var(--muted);">Wrocław-Nowy Dwór</div>\n          </div>\n          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">\n            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. NMP Bolesnej</div>\n            <div style="font-size:12px; color:var(--muted);">Wrocław-Różanka</div>\n          </div>\n          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">\n            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. św. Bonifacego</div>\n            <div style="font-size:12px; color:var(--muted);">Wrocław-Nadodrze</div>\n          </div>\n          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">\n            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. św. Anny</div>\n            <div style="font-size:12px; color:var(--muted);">Wrocław-Pracze Odrzańskie</div>\n          </div>\n          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">\n            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. św. Jadwigi</div>\n            <div style="font-size:12px; color:var(--muted);">Wrocław-Świniary</div>\n          </div>\n        </div>\n      </div>\n    </section>\n\n    <!-- FORMULARZ -->\n    <section class="section section--grey" id="parafia-formularz">\n      <div class="container" style="max-width:640px">\n        <span class="label">Dołącz do projektu</span>\n        <h2 class="section-title" style="margin-bottom:8px">Zgłoś swoją parafię</h2>\n        <p style="color:var(--muted); font-size:16px; line-height:1.7; margin-bottom:32px">Formularz wypełnia proboszcz lub osoba przez niego upoważniona. Po otrzymaniu zgłoszenia skontaktujemy się w ciągu tygodnia.</p>\n        <form class="contact-form" onsubmit="return false;">\n          <div class="form-group">\n            <label>Nazwa parafii i miejscowość <span style="color:var(--orange);">*</span></label>\n            <input type="text" placeholder="np. Parafia pw. Św. Jana · Wrocław-Krzyki" required />\n          </div>\n          <div class="form-group">\n            <label>Imię i nazwisko księdza proboszcza <span style="color:var(--orange);">*</span></label>\n            <input type="text" placeholder="ks. Jan Kowalski" required />\n          </div>\n          <div class="form-group">\n            <label>Bezpośredni numer telefonu do proboszcza <span style="color:var(--orange);">*</span></label>\n            <input type="tel" placeholder="600 000 000" required />\n          </div>\n          <div class="form-group">\n            <label>Adres e-mail proboszcza <span style="color:var(--orange);">*</span></label>\n            <input type="email" placeholder="proboszcz@parafia.pl" required />\n          </div>\n          <div class="form-group">\n            <label>Czy parafia dysponuje salą do tańca?</label>\n            <select>\n              <option>Tak, mamy odpowiednie miejsce</option>\n              <option>Tak, ale wymaga to ustaleń</option>\n              <option>Nie — potrzebujemy wsparcia</option>\n            </select>\n          </div>\n          <div class="form-group">\n            <label>Dodatkowe uwagi lub pytania</label>\n            <textarea placeholder="Opcjonalnie — napisz cokolwiek, co pomoże nam lepiej przygotować się do rozmowy."></textarea>\n          </div>\n          <label style="display:flex; align-items:flex-start; gap:10px; margin-bottom:24px; cursor:pointer;">\n            <input type="checkbox" required style="margin-top:3px; accent-color:var(--orange); flex-shrink:0;" />\n            <span style="font-size:13px; color:var(--muted); line-height:1.6;">Jako proboszcz zapoznałem się z ideą projektu i wyrażam chęć jego realizacji w mojej parafii. Wyrażam zgodę na przetwarzanie danych osobowych przez Szkołę Tańca Amen! (Mateusz Zapart, Wrocław) w celu organizacji projektu Roztańczona Parafia.</span>\n          </label>\n          <button class="btn btn-primary" type="submit" style="font-size:16px; padding:16px 32px; width:100%;">Wyślij zgłoszenie →</button>\n        </form>\n      </div>\n    </section>\n\n  </div>\n</div>\n\n\n<!-- ═══ PAGE: SKLEP ════════════════════════════════════════ -->\n<div class="page" id="page-sklep">\n  <div class="page-offset">\n    <div class="page-hero">\n      <div class="container">\n        <span class="label">Sklep</span>\n        <h1>Kup karnet online</h1>\n        <p>Opłać zajęcia bez wychodzenia z domu.</p>\n      </div>\n    </div>\n    <section class="section">\n      <div class="container">\n        <div class="coming-soon">\n          <div class="coming-soon__icon">🛒</div>\n          <span class="coming-badge">Wkrótce</span>\n          <h2>Sklep w przygotowaniu</h2>\n          <p>Pracujemy nad możliwością zakupu karnetów i voucherów online. Na razie skontaktuj się z nami bezpośrednio.</p>\n          <div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-top:8px">\n            <a class="btn btn-primary" href="#" onclick="showPage(\'kontakt\')">Skontaktuj się →</a>\n            <a class="btn btn-outline" href="#" onclick="showPage(\'cennik\')">Zobacz cennik</a>\n          </div>\n        </div>\n      </div>\n    </section>\n  </div>\n</div>\n\n\n<!-- ═══ PAGE: INSTRUKTOR ═══════════════════════════════════ -->\n<div class="page" id="page-instruktor">\n  <div class="page-offset">\n    <div class="page-hero">\n      <div class="container">\n        <span class="label">Szkolenie instruktorskie</span>\n        <h1>Zostań instruktorem tańca<br>w Roztańczonej Parafii</h1>\n        <p>Weź udział w darmowym szkoleniu i zacznij prowadzić kursy tańca w parafiach.</p>\n      </div>\n    </div>\n    <section class="section">\n      <div class="container" style="max-width:800px">\n\n        <h2 class="section-title" style="margin-bottom:16px">Cześć i czołem!</h2>\n        <p style="font-size:17px; line-height:1.75; color:var(--muted); margin-bottom:16px">Cieszymy się, że tu jesteś — to oznacza, że myślisz poważnie o prowadzeniu kursów tańca w parafiach. Dobrze trafiłeś. Nasze szkolenie instruktorskie jest <strong>bezpłatne</strong> i daje Ci pełne przygotowanie do prowadzenia zajęć w ramach projektu Roztańczona Parafia.</p>\n        <p style="font-size:17px; line-height:1.75; color:var(--muted); margin-bottom:40px">Rozwiniesz swoje umiejętności taneczne i instruktorskie, dołączysz do społeczności, która buduje relacje przez taniec, i zaczniesz zarabiać na tym, co kochasz.</p>\n\n        <div class="divider" style="margin-bottom:48px"></div>\n\n        <span class="label">Etap 0 — zanim się spotkamy</span>\n        <h2 class="section-title" style="margin-bottom:12px; font-size:28px">Jak zacząć?</h2>\n        <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:28px">Zanim dołączysz do szkolenia stacjonarnego, przejdź Etap 0. Składa się z trzech kroków:</p>\n        <div class="steps" style="margin-bottom:32px">\n          <div class="step">\n            <div class="step__num">1</div>\n            <div>\n              <div class="step__title">Wypełnij formularz weryfikacyjny</div>\n              <p class="step__desc">Krótki formularz podsumowujący materiały. Wypełnienie go to deklaracja zaangażowania — traktuj to poważnie.</p>\n            </div>\n          </div>\n          <div class="step">\n            <div class="step__num">2</div>\n            <div>\n              <div class="step__title">Spotkanie online — podsumowanie</div>\n              <p class="step__desc">Po Etapie 0 spotykamy się online. Odpowiadamy na pytania i przygotowujemy Cię do szkolenia stacjonarnego.</p>\n            </div>\n          </div>\n        </div>\n\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:20px 24px; margin-bottom:48px;">\n          <div style="font-weight:700; font-size:15px; margin-bottom:10px;">📋 Wymaganie wstępne</div>\n          <p style="font-size:14px; color:var(--muted); line-height:1.65; margin:0;">Znajomość podstaw tańca użytkowego w Amen! — wystarczy udział w warsztatach lub miesiąc w kursie regularnym.</p>\n        </div>\n\n        <div class="divider" style="margin-bottom:48px"></div>\n\n        <span class="label">Co znajdziesz w nagraniach</span>\n        <h2 class="section-title" style="margin-bottom:24px; font-size:28px">Co obejrzysz w Etapie 0?</h2>\n        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-bottom:48px;">\n          <div style="background:var(--orange-xl); border-radius:var(--r); padding:18px 20px;">\n            <div style="font-size:20px; margin-bottom:8px;">▶️</div>\n            <div style="font-weight:700; font-size:14px; margin-bottom:4px;">Czym jest Roztańczona Parafia</div>\n            <p style="font-size:13px; color:var(--muted); margin:0; line-height:1.55;"><em>[Film zostanie dodany wkrótce]</em></p>\n          </div>\n          <div style="background:var(--orange-xl); border-radius:var(--r); padding:18px 20px;">\n            <div style="font-size:20px; margin-bottom:8px;">▶️</div>\n            <div style="font-weight:700; font-size:14px; margin-bottom:4px;">Jak wygląda szkolenie i dla kogo jest</div>\n            <p style="font-size:13px; color:var(--muted); margin:0; line-height:1.55;"><em>[Film zostanie dodany wkrótce]</em></p>\n          </div>\n          <div style="background:var(--orange-xl); border-radius:var(--r); padding:18px 20px;">\n            <div style="font-size:20px; margin-bottom:8px;">▶️</div>\n            <div style="font-weight:700; font-size:14px; margin-bottom:4px;">Jak wygląda życie instruktora</div>\n            <p style="font-size:13px; color:var(--muted); margin:0; line-height:1.55;"><em>[Film zostanie dodany wkrótce]</em></p>\n          </div>\n          <div style="background:var(--orange-xl); border-radius:var(--r); padding:18px 20px;">\n            <div style="font-size:20px; margin-bottom:8px;">▶️</div>\n            <div style="font-weight:700; font-size:14px; margin-bottom:4px;">Stawki i ścieżka rozwoju</div>\n            <p style="font-size:13px; color:var(--muted); margin:0; line-height:1.55;"><em>[Film zostanie dodany wkrótce]</em></p>\n          </div>\n          <div style="background:var(--orange-xl); border-radius:var(--r); padding:18px 20px;">\n            <div style="font-size:20px; margin-bottom:8px;">▶️</div>\n            <div style="font-weight:700; font-size:14px; margin-bottom:4px;">Jak wygląda współpraca z nami</div>\n            <p style="font-size:13px; color:var(--muted); margin:0; line-height:1.55;"><em>[Film zostanie dodany wkrótce]</em></p>\n          </div>\n          <div style="background:var(--orange-xl); border-radius:var(--r); padding:18px 20px;">\n            <div style="font-size:20px; margin-bottom:8px;">▶️</div>\n            <div style="font-weight:700; font-size:14px; margin-bottom:4px;">Zasady uczestnictwa</div>\n            <p style="font-size:13px; color:var(--muted); margin:0; line-height:1.55;"><em>[Film zostanie dodany wkrótce]</em></p>\n          </div>\n        </div>\n\n        <div class="divider" style="margin-bottom:48px"></div>\n\n        <span class="label">3. edycja szkolenia</span>\n        <h2 class="section-title" style="margin-bottom:16px; font-size:28px">Terminy szkoleń</h2>\n        <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:32px;">\n          <div style="display:flex; align-items:center; gap:20px; background:var(--orange-xl); border-radius:var(--r); padding:16px 20px;">\n            <div style="font-size:22px; min-width:32px;">✍️</div>\n            <div><strong>Zgłoszenia</strong> — do 30 września</div>\n          </div>\n          <div style="display:flex; align-items:center; gap:20px; background:var(--orange-xl); border-radius:var(--r); padding:16px 20px;">\n            <div style="font-size:22px; min-width:32px;">💻</div>\n            <div><strong>Spotkanie online organizacyjne</strong> — 1 października, godz. 18:00</div>\n          </div>\n          <div style="display:flex; align-items:center; gap:20px; background:var(--orange-xl); border-radius:var(--r); padding:16px 20px;">\n            <div style="font-size:22px; min-width:32px;">🎓</div>\n            <div><strong>Dostęp do szkolenia online</strong> — od 2 października</div>\n          </div>\n        </div>\n        <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:16px">Szkolenie stacjonarne dzielimy na trzy sekcje:</p>\n        <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:48px;">\n          <div style="display:flex; align-items:center; gap:20px; background:var(--grey); border-radius:var(--r); padding:16px 20px;">\n            <div style="font-size:22px; min-width:32px;">📅</div>\n            <div><strong>Weekend 1</strong> — 24–25 października</div>\n          </div>\n          <div style="display:flex; align-items:center; gap:20px; background:var(--grey); border-radius:var(--r); padding:16px 20px;">\n            <div style="font-size:22px; min-width:32px;">📅</div>\n            <div><strong>Weekend 2</strong> — 7–8 listopada</div>\n          </div>\n          <div style="display:flex; align-items:center; gap:20px; background:var(--grey); border-radius:var(--r); padding:16px 20px;">\n            <div style="font-size:22px; min-width:32px;">📅</div>\n            <div><strong>Weekend 3</strong> — 14–15 listopada</div>\n          </div>\n        </div>\n\n        <div class="divider" style="margin-bottom:48px"></div>\n\n        <div class="divider" style="margin-bottom:48px"></div>\n\n        <span class="label">Oni już zostali instruktorami</span>\n        <h2 class="section-title" style="margin-bottom:12px; font-size:28px">Dołącz do nich!</h2>\n        <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:24px">Instruktorzy z pierwszej i drugiej edycji prowadzą dziś zajęcia w parafiach Wrocławia.</p>\n        <!-- Przewijana galeria — zdjęcia 768×432 zostaną dodane -->\n        <div style="display:flex; gap:16px; overflow-x:auto; padding-bottom:12px; margin-bottom:48px; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch;">\n          <div style="flex:0 0 320px; scroll-snap-align:start; border-radius:var(--r-lg); overflow:hidden; background:var(--grey); aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px; color:var(--muted); font-size:14px;">\n            <div style="font-size:28px;">🖼️</div>\n            <div>Zdjęcie — zostanie dodane</div>\n          </div>\n          <div style="flex:0 0 320px; scroll-snap-align:start; border-radius:var(--r-lg); overflow:hidden; background:var(--grey); aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px; color:var(--muted); font-size:14px;">\n            <div style="font-size:28px;">🖼️</div>\n            <div>Zdjęcie — zostanie dodane</div>\n          </div>\n          <div style="flex:0 0 320px; scroll-snap-align:start; border-radius:var(--r-lg); overflow:hidden; background:var(--grey); aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px; color:var(--muted); font-size:14px;">\n            <div style="font-size:28px;">🖼️</div>\n            <div>Zdjęcie — zostanie dodane</div>\n          </div>\n          <div style="flex:0 0 320px; scroll-snap-align:start; border-radius:var(--r-lg); overflow:hidden; background:var(--grey); aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px; color:var(--muted); font-size:14px;">\n            <div style="font-size:28px;">🖼️</div>\n            <div>Zdjęcie — zostanie dodane</div>\n          </div>\n          <div style="flex:0 0 320px; scroll-snap-align:start; border-radius:var(--r-lg); overflow:hidden; background:var(--grey); aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px; color:var(--muted); font-size:14px;">\n            <div style="font-size:28px;">🖼️</div>\n            <div>Zdjęcie — zostanie dodane</div>\n          </div>\n        </div>\n\n        <div class="divider" style="margin-bottom:48px"></div>\n\n        <div style="background:var(--orange-xl); border:2px solid var(--orange); border-radius:var(--r-lg); padding:28px 32px; margin-bottom:40px; display:flex; flex-wrap:wrap; align-items:center; gap:16px;">\n          <div style="flex:1; min-width:200px;">\n            <div style="font-weight:800; font-size:18px; margin-bottom:6px;">Chcesz zacząć od razu?</div>\n            <p style="color:var(--muted); font-size:15px; margin:0; line-height:1.6;">Napisz do nas bezpośrednio — odpiszemy w ciągu 24 godzin.</p>\n          </div>\n          <a href="mailto:kontakt.amen@gmail.com?subject=współpraca instruktorska" class="btn btn-primary" style="white-space:nowrap; text-decoration:none;">✉️ kontakt.amen@gmail.com</a>\n        </div>\n\n        <span class="label">Zgłoś się</span>\n        <h2 class="section-title" style="margin-bottom:12px; font-size:28px">Formularz zgłoszeniowy</h2>\n        <p style="color:var(--muted); font-size:16px; line-height:1.7; margin-bottom:32px">Skontaktujemy się w ciągu tygodnia i omówimy szczegóły.</p>\n        <a href="https://docs.google.com/forms/d/e/1FAIpQLScFyBqQhhWuJtxsxXcqqHc6ZRcF3ZgPjYFot79IsWJyta7ZOw/viewform" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:16px; padding:16px 32px; display:inline-block; text-decoration:none;">Wyślij zgłoszenie →</a>\n\n      </div>\n    </section>\n  </div>\n</div>\n\n\n<!-- ═══ SCRIPTS ════════════════════════════════════════════ -->\n<!-- ═══ PAGE: IMPREZY ══════════════════════════════════════ -->\n<div class="page" id="page-imprezy">\n  <div style="background:var(--black); padding:80px 0 60px; margin-bottom:0;">\n    <div class="container">\n      <span class="label" style="color:var(--orange);">Wydarzenia</span>\n      <h1 style="color:var(--white); font-size:clamp(32px,5vw,56px); font-weight:800; line-height:1.1; margin-bottom:16px;">Imprezy z Amen!</h1>\n      <p style="color:rgba(255,255,255,.7); font-size:17px; max-width:640px; line-height:1.7;">Jesteśmy dla ludzi! Tworzymy przestrzeń, w której chcemy organizować cykliczne wydarzenia kulturalne dla chrześcijan. Wszystko po to, by się integrować, poznawać i budować relacje — przy okazji dbając o kulturę chrześcijańską.</p>\n      <p style="color:rgba(255,255,255,.4); font-size:14px; font-style:italic; margin-top:16px;">"Aby wszyscy byli jedno, jak Ty, Ojcze, we Mnie…" (J 17, 21)</p>\n    </div>\n  </div>\n\n  <section class="section">\n    <div class="container">\n\n      <span class="label">Terminarz</span>\n      <h2 class="section-title" style="margin-bottom:24px">Sezon 2025/2026</h2>\n      <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:48px;">\n        <div style="display:flex; align-items:center; gap:16px; padding:14px 20px; background:var(--grey); border-radius:var(--r); opacity:.5;">\n          <div style="font-size:20px;">📅</div><div><strong>27.09.2025</strong> — odbyła się</div>\n        </div>\n        <div style="display:flex; align-items:center; gap:16px; padding:14px 20px; background:var(--grey); border-radius:var(--r); opacity:.5;">\n          <div style="font-size:20px;">📅</div><div><strong>29.11.2025</strong> — odbyła się</div>\n        </div>\n        <div style="display:flex; align-items:center; gap:16px; padding:14px 20px; background:var(--grey); border-radius:var(--r); opacity:.5;">\n          <div style="font-size:20px;">📅</div><div><strong>Sylwester</strong> — odbyła się</div>\n        </div>\n        <div style="display:flex; align-items:center; gap:16px; padding:14px 20px; background:var(--grey); border-radius:var(--r); opacity:.5;">\n          <div style="font-size:20px;">📅</div><div><strong>14.02.2026</strong> — odbyła się</div>\n        </div>\n        <div style="display:flex; align-items:center; gap:16px; padding:14px 20px; background:var(--grey); border-radius:var(--r); opacity:.5;">\n          <div style="font-size:20px;">📅</div><div><strong>11.04.2026</strong> — odbyła się</div>\n        </div>\n        <div style="display:flex; align-items:center; gap:16px; padding:14px 20px; background:var(--grey); border-radius:var(--r); opacity:.5;">\n          <div style="font-size:20px;">📅</div><div><strong>13.06.2026</strong> — odwołana</div>\n        </div>\n      </div>\n\n      <div class="divider" style="margin-bottom:48px;"></div>\n\n      <span class="label">Atrakcje</span>\n      <h2 class="section-title" style="margin-bottom:24px">Co na nas czeka?</h2>\n      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-bottom:48px;">\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">\n          <div style="font-size:28px; margin-bottom:10px;">💃</div>\n          <div style="font-weight:700; margin-bottom:6px;">Parkiet taneczny</div>\n          <p style="font-size:14px; color:var(--muted); line-height:1.6;">Najlepsze hity na parkiecie — niezależnie od tego, czy jesteś mistrzem tańca, czy dopiero zaczynasz.</p>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">\n          <div style="font-size:28px; margin-bottom:10px;">🕺</div>\n          <div style="font-weight:700; margin-bottom:6px;">Mini lekcja tańca</div>\n          <p style="font-size:14px; color:var(--muted); line-height:1.6;">Poczuj się pewniej na parkiecie — nowe kroki w grupie, bez presji, z dobrą energią.</p>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">\n          <div style="font-size:28px; margin-bottom:10px;">🎤</div>\n          <div style="font-weight:700; margin-bottom:6px;">Karaoke na wesoło</div>\n          <p style="font-size:14px; color:var(--muted); line-height:1.6;">Śpiewaj ulubione piosenki z przyjaciółmi — liczy się radość, nie głos.</p>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">\n          <div style="font-size:28px; margin-bottom:10px;">🎲</div>\n          <div style="font-weight:700; margin-bottom:6px;">Pokój planszówkowy</div>\n          <p style="font-size:14px; color:var(--muted); line-height:1.6;">Prawo Dżungli, Ryzyk Fizyk, Na końcu języka, 5 sekund i inne gry — mnóstwo integracji i śmiechu.</p>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">\n          <div style="font-size:28px; margin-bottom:10px;">🎱</div>\n          <div style="font-weight:700; margin-bottom:6px;">Strefa gier</div>\n          <p style="font-size:14px; color:var(--muted); line-height:1.6;">Bilard, piłkarzyki, ping-pong — dla tych, którzy lubią rywalizację i dobre emocje.</p>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">\n          <div style="font-size:28px; margin-bottom:10px;">🌹</div>\n          <div style="font-weight:700; margin-bottom:6px;">Pokój rozmów</div>\n          <p style="font-size:14px; color:var(--muted); line-height:1.6;">Kameralny klimat sprzyjający randkowym rozmowom, pogadankom i kawiarnianiu bez pośpiechu.</p>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">\n          <div style="font-size:28px; margin-bottom:10px;">🍰</div>\n          <div style="font-weight:700; margin-bottom:6px;">Pyszności na wspólnym stole</div>\n          <p style="font-size:14px; color:var(--muted); line-height:1.6;">Domowe wypieki i przekąski przyniesione przez uczestników — każdy wnosi coś od siebie.</p>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">\n          <div style="font-size:28px; margin-bottom:10px;">🍽</div>\n          <div style="font-weight:700; margin-bottom:6px;">Stół Szwedzki</div>\n          <p style="font-size:14px; color:var(--muted); line-height:1.6;">Bufet ze szwedzkim stołem — jedzenie przez cały wieczór, bez kolejkowania.</p>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">\n          <div style="font-size:28px; margin-bottom:10px;">📸</div>\n          <div style="font-weight:700; margin-bottom:6px;">Fotościanka</div>\n          <p style="font-size:14px; color:var(--muted); line-height:1.6;">Pamiątkowe zdjęcia na specjalnie przygotowanym tle — zostaje po dobrej zabawie.</p>\n        </div>\n      </div>\n\n      <div class="divider" style="margin-bottom:48px;"></div>\n\n      <span class="label">Cennik</span>\n      <h2 class="section-title" style="margin-bottom:8px">Ile kosztuje wejście?</h2>\n      <p style="color:var(--muted); font-size:15px; margin-bottom:8px;">Cena biletu wynosi od 60 do 80 zł — im wcześniej się zapiszesz, tym taniej!</p>\n      <p style="color:var(--muted); font-size:14px; margin-bottom:24px; font-style:italic;">Bilet to nie tylko kwota. To też wybrana forma zaangażowania — właśnie dzięki temu impreza działa tak fajnie!</p>\n      <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:16px;">\n        <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r);">\n          <span>Zapis z wyprzedzeniem (Early bird)</span><strong>60 zł</strong>\n        </div>\n        <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; background:var(--grey); border-radius:var(--r);">\n          <span>Zapis standardowy</span><strong>70 zł</strong>\n        </div>\n        <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; background:var(--grey); border-radius:var(--r);">\n          <span>Zapis w ostatniej chwili</span><strong>80 zł</strong>\n        </div>\n      </div>\n      <p style="font-size:13px; color:var(--muted); margin-bottom:16px;">Do każdego biletu dochodzi coś na wspólny stół — domowy wypiek lub inna przekąska.</p>\n      <p style="font-size:13px; color:var(--muted); margin-bottom:32px;">Płatność przelewem bankowym do terminu określonego przy każdym wydarzeniu. Rezygnacja zwrotna do 21 dni przed imprezą.</p>\n      <a class="btn btn-outline" href="#" onclick="showPage(\'cennik\')">Zobacz pełny cennik →</a>\n\n      <div class="divider" style="margin:48px 0;"></div>\n\n      <span class="label">Wolontariat</span>\n      <h2 class="section-title" style="margin-bottom:12px">Pomóż i wejdź za darmo</h2>\n      <p style="color:var(--muted); font-size:15px; line-height:1.7; max-width:640px; margin-bottom:16px;">Szukamy wolontariuszy, którzy chcą aktywnie uczestniczyć w wydarzeniu i jednocześnie cieszyć się darmowym wstępem. Wolontariusze pomagają przed, w trakcie lub po imprezie — zdobywają doświadczenie, poznają nowych ludzi i współtworzą niezapomnianą atmosferę.</p>\n      <p style="color:var(--muted); font-size:14px; margin-bottom:24px;">Zgłoszenia: fanpage na Facebooku lub e-mail <strong>impreza.amen@gmail.com</strong></p>\n\n      <div class="divider" style="margin:48px 0;"></div>\n\n      <span class="label">Zaangażowanie</span>\n      <h2 class="section-title" style="margin-bottom:16px">Impreza działa, bo każdy wnosi coś od siebie</h2>\n      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-bottom:48px;">\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">\n          <div style="font-size:24px; margin-bottom:8px;">💪</div>\n          <div style="font-weight:700; margin-bottom:6px;">Pomoc przy imprezie</div>\n          <p style="font-size:14px; color:var(--muted); line-height:1.6;">Pomoc przed, w trakcie lub po imprezie — jako jedna z form zaangażowania wliczona w bilet.</p>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">\n          <div style="font-size:24px; margin-bottom:8px;">🥗</div>\n          <div style="font-weight:700; margin-bottom:6px;">Coś na wspólny stół</div>\n          <p style="font-size:14px; color:var(--muted); line-height:1.6;">Domowy wypiek lub przekąska — każdy uczestnik przynosi coś od siebie. To nasza wspólna tradycja.</p>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">\n          <div style="font-size:24px; margin-bottom:8px;">🧱</div>\n          <div style="font-weight:700; margin-bottom:6px;">Symboliczna cegiełka</div>\n          <p style="font-size:14px; color:var(--muted); line-height:1.6;">Symboliczne wsparcie finansowe na rozwój kolejnych wydarzeń — dla tych, którzy chcą pomóc inaczej.</p>\n        </div>\n      </div>\n\n      <div class="divider" style="margin-bottom:48px;"></div>\n\n      <span class="label">Regulamin</span>\n      <h2 class="section-title" style="margin-bottom:12px">Kilka ważnych zasad</h2>\n      <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:32px;">\n        <div style="background:var(--grey); border-radius:var(--r); padding:16px 20px; font-size:14px; color:var(--muted); line-height:1.6;">\n          <strong style="color:var(--white);">Dorośli</strong> — udział dla pełnoletnich. Dzieci wyłącznie za zgodą organizatora.\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r); padding:16px 20px; font-size:14px; color:var(--muted); line-height:1.6;">\n          <strong style="color:var(--white);">Zero alkoholu i substancji</strong> — całkowity zakaz alkoholu, narkotyków i innych substancji psychoaktywnych.\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r); padding:16px 20px; font-size:14px; color:var(--muted); line-height:1.6;">\n          <strong style="color:var(--white);">Szacunek</strong> — wymagamy poszanowania innych uczestników. Agresja i wulgarność są niedopuszczalne.\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r); padding:16px 20px; font-size:14px; color:var(--muted); line-height:1.6;">\n          <strong style="color:var(--white);">Rezygnacja</strong> — zwrot biletu możliwy do 21 dni przed imprezą. Przy odwołaniu przez organizatora — pełny zwrot (bez kosztów dojazdu).\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r); padding:16px 20px; font-size:14px; color:var(--muted); line-height:1.6;">\n          <strong style="color:var(--white);">Zdjęcia i video</strong> — uczestnik wyraża zgodę na nagrywanie i fotografowanie w celach promocyjnych.\n        </div>\n      </div>\n      <p style="font-size:13px; color:var(--muted); margin-bottom:32px;">Pełny regulamin dostępny na: <strong>chrzescijanskaszkolatanca.pl/regulamin-imprez/</strong></p>\n\n      <div class="divider" style="margin-bottom:48px;"></div>\n\n      <h2 class="section-title" style="margin-bottom:12px">Kontakt w sprawie imprez</h2>\n      <p style="color:var(--muted); font-size:15px; margin-bottom:8px;">📧 <strong>impreza.amen@gmail.com</strong></p>\n      <p style="color:var(--muted); font-size:15px; margin-bottom:24px;">📞 <strong>513-580-512</strong></p>\n      <a class="btn btn-primary" href="#" onclick="showPage(\'kontakt\')">Napisz do nas →</a>\n\n    </div>\n  </section>\n</div>\n\n<!-- ═══ PAGE: WARSZTATY ════════════════════════════════════ -->\n<div class="page" id="page-warsztaty">\n  <div style="background:var(--black); padding:80px 0 60px; margin-bottom:0;">\n    <div class="container">\n      <span class="label" style="color:var(--orange);">Nauka</span>\n      <h1 style="color:var(--white); font-size:clamp(32px,5vw,56px); font-weight:800; line-height:1.1; margin-bottom:16px;">Warsztaty Taneczne</h1>\n      <p style="color:rgba(255,255,255,.7); font-size:17px; max-width:640px; line-height:1.7;">Warsztaty to jednorazowa dawka tanecznej wiedzy. W krótkim czasie uczysz się konkretnych umiejętności — bez zapisywania się na cały kurs. Możesz przyjść raz, a może zostaniesz z nami na dłużej.</p>\n    </div>\n  </div>\n\n  <section class="section">\n    <div class="container">\n\n      <span class="label">Dla kogo</span>\n      <h2 class="section-title" style="margin-bottom:16px">Kto może wziąć udział?</h2>\n      <p style="color:var(--muted); font-size:15px; line-height:1.7; max-width:680px; margin-bottom:48px;">Warsztaty są otwarte dla każdego — nie musisz mieć żadnego doświadczenia. Każde zajęcia mają określony poziom: dla kompletnych początkujących lub dla osób, które już trochę tańczą. Wystarczy wybrać odpowiedni dla siebie.</p>\n\n      <div class="divider" style="margin-bottom:48px;"></div>\n\n      <span class="label">Rodzaje</span>\n      <h2 class="section-title" style="margin-bottom:24px">Dwa typy warsztatów</h2>\n      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin-bottom:48px;">\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:28px;">\n          <div style="font-size:28px; margin-bottom:10px;">🌱</div>\n          <div style="font-weight:700; font-size:18px; margin-bottom:8px;">Wprowadzające</div>\n          <p style="font-size:14px; color:var(--muted); line-height:1.65;">Wprowadzają w podstawy danego stylu — od zera. Po takim warsztacie możesz zdecydować, czy chcesz kontynuować naukę na kursie dla początkujących. To świetny pierwszy krok bez żadnego zobowiązania.</p>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:28px;">\n          <div style="font-size:28px; margin-bottom:10px;">🚀</div>\n          <div style="font-weight:700; font-size:18px; margin-bottom:8px;">Doskonalące</div>\n          <p style="font-size:14px; color:var(--muted); line-height:1.65;">Skupiają się na rozwijaniu konkretnych umiejętności, techniki i zasad tańca. Dla osób, które już tańczą i chcą wejść na wyższy poziom — pogłębić to, co już znają.</p>\n        </div>\n      </div>\n\n      <div class="divider" style="margin-bottom:48px;"></div>\n\n      <span class="label">Format</span>\n      <h2 class="section-title" style="margin-bottom:16px">Jak wyglądają zajęcia?</h2>\n      <p style="color:var(--muted); font-size:15px; line-height:1.7; max-width:680px; margin-bottom:32px;">Warsztaty odbywają się w weekendy i trwają od 2 do kilku godzin — zależnie od tematu. Każde są jednorazowe, więc nie musisz się martwić, że coś „przegapiłeś". Zapisy odbywają się przez formularz online — link do zapisu pojawia się przy każdym ogłoszeniu.</p>\n\n      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; margin-bottom:48px;">\n        <div style="background:var(--grey); border-radius:var(--r); padding:20px 24px; display:flex; align-items:flex-start; gap:14px;">\n          <span style="font-size:22px;">📅</span>\n          <div>\n            <div style="font-weight:700; font-size:14px; margin-bottom:4px;">Weekendy</div>\n            <p style="font-size:13px; color:var(--muted); margin:0;">Warsztaty odbywają się w soboty lub niedziele.</p>\n          </div>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r); padding:20px 24px; display:flex; align-items:flex-start; gap:14px;">\n          <span style="font-size:22px;">⏱</span>\n          <div>\n            <div style="font-weight:700; font-size:14px; margin-bottom:4px;">2–5 godzin</div>\n            <p style="font-size:13px; color:var(--muted); margin:0;">Intensywne zajęcia — konkretna wiedza w krótkim czasie.</p>\n          </div>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r); padding:20px 24px; display:flex; align-items:flex-start; gap:14px;">\n          <span style="font-size:22px;">📋</span>\n          <div>\n            <div style="font-weight:700; font-size:14px; margin-bottom:4px;">Zapisy online</div>\n            <p style="font-size:13px; color:var(--muted); margin:0;">Każdy warsztat ma swój formularz zapisu — link pojawia się przy ogłoszeniu.</p>\n          </div>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r); padding:20px 24px; display:flex; align-items:flex-start; gap:14px;">\n          <span style="font-size:22px;">📍</span>\n          <div>\n            <div style="font-weight:700; font-size:14px; margin-bottom:4px;">Wrocław</div>\n            <p style="font-size:13px; color:var(--muted); margin:0;">al. Jana Kasprowicza 28 (Fundacja Tobiaszki)</p>\n          </div>\n        </div>\n      </div>\n\n      <div class="divider" style="margin-bottom:48px;"></div>\n\n      <span class="label">Przykłady</span>\n      <h2 class="section-title" style="margin-bottom:24px">Co organizowaliśmy</h2>\n      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:48px;">\n        <div style="background:var(--grey); border-radius:var(--r); padding:20px 24px;">\n          <div style="font-weight:700; margin-bottom:4px;">Użytkowy od Podstaw</div>\n          <p style="font-size:14px; color:var(--muted);">Krok podstawowy, który sprawdzi się w 90% piosenek. Format 2,5h — wprowadzający.</p>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r); padding:20px 24px;">\n          <div style="font-weight:700; margin-bottom:4px;">Triki Taneczne na Sylwestra</div>\n          <p style="font-size:14px; color:var(--muted);">Efektowne figury i triki na imprezę — dla osób pełnoletnich (18+).</p>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r); padding:20px 24px;">\n          <div style="font-weight:700; margin-bottom:4px;">Krav Maga — Samoobrona</div>\n          <p style="font-size:14px; color:var(--muted);">Warsztaty samoobrony w formule taneczno-sportowej.</p>\n        </div>\n      </div>\n\n      <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r-lg); padding:24px; margin-bottom:48px;">\n        <div style="font-weight:700; margin-bottom:6px;">📅 Aktualnie brak zaplanowanych warsztatów</div>\n        <p style="font-size:14px; color:var(--muted);">Zapisz się do newslettera albo obserwuj nas na social mediach, żeby nie przegapić kolejnych terminów.</p>\n      </div>\n\n      <div class="divider" style="margin-bottom:48px;"></div>\n\n      <span class="label">Cennik</span>\n      <h2 class="section-title" style="margin-bottom:8px">Ile kosztuje warsztat?</h2>\n      <p style="color:var(--muted); font-size:15px; margin-bottom:24px;">Cena zależy od długości i rodzaju warsztatu.</p>\n      <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:16px;">\n        <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; background:var(--grey); border-radius:var(--r);">\n          <span>Warsztat 2–3h (wprowadzający)</span><strong>ok. 90 zł</strong>\n        </div>\n        <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; background:var(--grey); border-radius:var(--r);">\n          <span>Warsztat całodniowy / specjalny</span><strong>ok. 100 zł</strong>\n        </div>\n      </div>\n      <a class="btn btn-outline" href="#" onclick="showPage(\'cennik\')" style="margin-bottom:32px; display:inline-block;">Zobacz pełny cennik →</a>\n\n      <div class="divider" style="margin-bottom:48px;"></div>\n\n      <h2 class="section-title" style="margin-bottom:12px">Masz pytania?</h2>\n      <p style="color:var(--muted); font-size:15px; margin-bottom:24px;">Napisz do nas — odpowiemy na pytania o terminy, poziomy i zapisy.</p>\n      <a class="btn btn-primary" href="#" onclick="showPage(\'kontakt\')">Napisz do nas →</a>\n\n    </div>\n  </section>\n</div>\n\n<!-- ═══ PAGE: SYLWESTER ════════════════════════════════════ -->\n<div class="page" id="page-sylwester">\n  <div style="background:var(--black); padding:80px 0 60px; margin-bottom:0;">\n    <div class="container">\n      <span class="label" style="color:var(--orange);">31 Grudnia 2026</span>\n      <h1 style="color:var(--white); font-size:clamp(32px,5vw,56px); font-weight:800; line-height:1.1; margin-bottom:16px;">Sylwester z Amen!</h1>\n      <p style="color:rgba(255,255,255,.7); font-size:17px; max-width:640px; line-height:1.7;">8 godzin muzyki, tańca, rozmów, karaoke, planszówek i wspólnego świętowania. Przyjdź solo albo w parze i powitaj z nami 2027 rok.</p>\n      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:32px;">\n        <a class="btn btn-primary" href="https://szkolaamen.pl/sylwester" target="_blank" style="text-decoration:none;">Zapisuję się →</a>\n        <a class="btn btn-outline" href="#" onclick="showPage(\'regulamin-imprez\')">Regulamin imprezy</a>\n      </div>\n    </div>\n  </div>\n  <section class="section">\n    <div class="container" style="max-width:800px">\n      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:16px; margin-bottom:48px;">\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:20px 24px;">\n          <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--orange); margin-bottom:6px;">Data</div>\n          <div style="font-weight:700; font-size:16px;">31.12.2026 · godz. 20:00</div>\n          <div style="font-size:13px; color:var(--muted); margin-top:4px;">Koniec: 1 stycznia, godz. 4:00</div>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:20px 24px;">\n          <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--orange); margin-bottom:6px;">Miejsce</div>\n          <div style="font-weight:700; font-size:16px;">Parafia św. Antoniego</div>\n          <div style="font-size:13px; color:var(--muted); margin-top:4px;">al. Kasprowicza 26, Wrocław</div>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:20px 24px;">\n          <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--orange); margin-bottom:6px;">Dla kogo</div>\n          <div style="font-weight:700; font-size:16px;">18+</div>\n          <div style="font-size:13px; color:var(--muted); margin-top:4px;">Solo lub w parze · maks. 220 osób</div>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:20px 24px;">\n          <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--orange); margin-bottom:6px;">Wejście</div>\n          <div style="font-weight:700; font-size:16px;">Bramki 19:30–21:30</div>\n          <div style="font-size:13px; color:var(--muted); margin-top:4px;">Bez alkoholu · opieka dla dzieci 2–6 lat w cenie</div>\n        </div>\n      </div>\n      <div class="divider" style="margin-bottom:48px;"></div>\n      <span class="label">Jak wygląda ten Sylwester?</span>\n      <h2 class="section-title" style="margin-bottom:16px">Spotkanie, nie bal</h2>\n      <p style="color:var(--muted); font-size:15px; line-height:1.7; max-width:680px; margin-bottom:24px;">To nie jest klasyczny bal przy stolikach. Chcemy, żeby ta noc była przede wszystkim okazją do spotkań, rozmów, tańca i poznawania nowych ludzi. Nie ma przypisanych stołów — każdy sam wybiera, jak spędza wieczór.</p>\n      <p style="color:var(--muted); font-size:15px; line-height:1.7; max-width:680px; margin-bottom:48px;">Jedzenie będzie dostępne na wspólnym szwedzkim stole. O północy możesz przynieść własną podpisaną butelkę bezalkoholowego szampana 0,0% i kieliszki do wspólnego toastu.</p>\n      <div class="divider" style="margin-bottom:48px;"></div>\n      <span class="label">Atrakcje</span>\n      <h2 class="section-title" style="margin-bottom:24px">8 godzin razem</h2>\n      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-bottom:48px;">\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">\n          <div style="font-size:24px; margin-bottom:10px;">💃</div>\n          <div style="font-weight:700; margin-bottom:6px;">Parkiet główny</div>\n          <p style="font-size:13px; color:var(--muted); line-height:1.6;">Muzyka DJ LoveDrum, prowadzenie Mateusza Zaparta, mini lekcje tańca i wspólna modlitwa o północy.</p>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">\n          <div style="font-size:24px; margin-bottom:10px;">🎲</div>\n          <div style="font-weight:700; margin-bottom:6px;">Planszówki i rozmowy</div>\n          <p style="font-size:13px; color:var(--muted); line-height:1.6;">Kilkanaście gier i pytania na stolikach pomagające rozpocząć rozmowę.</p>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">\n          <div style="font-size:24px; margin-bottom:10px;">🎤</div>\n          <div style="font-weight:700; margin-bottom:6px;">Karaoke</div>\n          <p style="font-size:13px; color:var(--muted); line-height:1.6;">Solo albo razem z grupą — osobna przestrzeń dla miłośników mikrofonu.</p>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">\n          <div style="font-size:24px; margin-bottom:10px;">🙏</div>\n          <div style="font-weight:700; margin-bottom:6px;">Namiot Spotkania</div>\n          <p style="font-size:13px; color:var(--muted); line-height:1.6;">Spokojna przestrzeń modlitwy i kontemplacji z Biblią.</p>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">\n          <div style="font-size:24px; margin-bottom:10px;">🍰</div>\n          <div style="font-weight:700; margin-bottom:6px;">Wspólny Stół</div>\n          <p style="font-size:13px; color:var(--muted); line-height:1.6;">Domowe ciasta, sałatki, przekąski i napoje współtworzone przez uczestników.</p>\n        </div>\n      </div>\n      <div class="divider" style="margin-bottom:48px;"></div>\n      <span class="label">Cennik</span>\n      <h2 class="section-title" style="margin-bottom:24px">Cena za 1 osobę</h2>\n      <p style="color:var(--muted); font-size:15px; margin-bottom:24px;">Im wcześniej opłacisz zapis, tym mniej płacisz. Możesz wybrać pełną cenę albo niższą z zaangażowaniem we Wspólny Stół.</p>\n      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-bottom:32px;">\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px; border:2px solid var(--orange);">\n          <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--orange); margin-bottom:8px;">Do 30.11.2026 · I próg</div>\n          <div style="font-size:28px; font-weight:800; margin-bottom:4px;">200 zł</div>\n          <div style="font-size:13px; color:var(--muted);">lub 150 zł ze Wspólnym Stołem</div>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">\n          <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:8px;">01.12–15.12.2026 · II próg</div>\n          <div style="font-size:28px; font-weight:800; margin-bottom:4px;">230 zł</div>\n          <div style="font-size:13px; color:var(--muted);">lub 180 zł ze Wspólnym Stołem</div>\n        </div>\n        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">\n          <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:8px;">Od 16.12.2026 · III próg</div>\n          <div style="font-size:28px; font-weight:800; margin-bottom:4px;">250 zł</div>\n          <div style="font-size:13px; color:var(--muted);">lub 200 zł ze Wspólnym Stołem</div>\n        </div>\n      </div>\n      <div style="background:var(--grey); border-radius:var(--r-lg); padding:20px 24px; margin-bottom:40px; font-size:14px; color:var(--muted); line-height:1.7;">\n        <strong style="color:var(--white);">Warto wiedzieć:</strong> Limit 220 osób · Wydarzenie bezalkoholowe · Dzieci do 6 lat mile widziane (opieka w cenie biletu 19:30–22:30) · Warsztaty taneczne przed imprezą: 31.12 godz. 18:00–19:30.\n      </div>\n      <div style="display:flex; gap:12px; flex-wrap:wrap;">\n        <a class="btn btn-primary" href="https://szkolaamen.pl/sylwester" target="_blank" style="text-decoration:none;">Przejdź do zapisów →</a>\n        <a class="btn btn-outline" href="#" onclick="showPage(\'regulamin-imprez\')">Regulamin imprezy</a>\n      </div>\n    </div>\n  </section>\n</div>\n\n<!-- ═══ PAGE: REGULAMIN ════════════════════════════════════ -->\n<style>\n  .reg-acc-item { margin-bottom:4px; }\n  .reg-acc-h { cursor:pointer; padding:16px 20px; background:var(--grey); border-radius:var(--r); font-weight:700; font-size:15px; display:flex; justify-content:space-between; align-items:center; user-select:none; }\n  .reg-acc-h:hover { background:#2a2a2a; }\n  .reg-acc-h::after { content:\'+\'; font-size:22px; font-weight:300; color:var(--orange); flex-shrink:0; margin-left:12px; }\n  .reg-acc-h.open { border-radius:var(--r) var(--r) 0 0; }\n  .reg-acc-h.open::after { content:\'−\'; }\n  .reg-acc-body { display:none; padding:20px 24px; background:#1c1c1c; border-radius:0 0 var(--r) var(--r); font-size:14px; color:var(--muted); line-height:1.8; }\n  .reg-acc-body.open { display:block; }\n  .reg-acc-body p { margin-bottom:10px; }\n  .reg-acc-body p:last-child { margin-bottom:0; }\n  .reg-acc-body ul { padding-left:20px; margin-bottom:10px; }\n  .reg-acc-body ul li { margin-bottom:4px; }\n  .reg-acc-body strong { color:var(--white); }\n  .reg-divider { border:none; border-top:1px solid #2a2a2a; margin:32px 0; }\n</style>\n<div class="page" id="page-regulamin">\n  <div class="page-offset">\n    <div class="page-hero">\n      <div class="container">\n        <span class="label">Dokumenty</span>\n        <h1>Regulamin Szkoły Tańca Amen!</h1>\n        <p>Regulamin uczestnictwa w zajęciach organizowanych przez Szkołę Tańca Amen!</p>\n      </div>\n    </div>\n    <section class="section">\n      <div class="container" style="max-width:780px">\n\n        <div style="background:var(--grey);border-radius:var(--r-lg);padding:20px 24px;margin-bottom:32px;font-size:13px;color:var(--muted);line-height:1.7;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px 24px;">\n          <div><strong style="color:var(--white);">Organizator</strong><br>SZKOŁA TAŃCA AMEN! MATEUSZ ZAPART</div>\n          <div><strong style="color:var(--white);">Adres</strong><br>ul. Lotnicza 83, 51-180 Szymanów</div>\n          <div><strong style="color:var(--white);">NIP / REGON</strong><br>8943139075 / 382770064</div>\n          <div><strong style="color:var(--white);">Telefon</strong><br>513 580 512</div>\n          <div><strong style="color:var(--white);">E-mail</strong><br>kontakt.amen@gmail.com</div>\n          <div><strong style="color:var(--white);">Obowiązuje od</strong><br>23.07.2026 · Wersja 1.1</div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§1 Organizator i zakres regulaminu</div>\n          <div class="reg-acc-body">\n            <p>Organizatorem zajęć jest SZKOŁA TAŃCA AMEN! MATEUSZ ZAPART, ul. Lotnicza 83, 51-180 Szymanów, NIP: 8943139075, REGON: 382770064, dalej: „Szkoła" lub „Organizator".</p>\n            <p>Organizator jest przedsiębiorcą wpisanym do Centralnej Ewidencji i Informacji o Działalności Gospodarczej (CEIDG).</p>\n            <p>Kontakt ze Szkołą jest możliwy:</p>\n            <ul>\n              <li>e-mailowo: kontakt.amen@gmail.com</li>\n              <li>telefonicznie: 513 580 512</li>\n              <li>przez stronę internetową: szkolaamen.pl</li>\n              <li>Facebook: facebook.com/szkolaamen</li>\n              <li>Instagram: instagram.com/szkolaamen</li>\n            </ul>\n            <p>Regulamin określa zasady korzystania z kursów, warsztatów i innych zajęć organizowanych oraz rozliczanych przez Szkołę.</p>\n            <p>Szczegółowe informacje o terminie, miejscu, cenie, poziomie, prowadzącym i programie danych zajęć znajdują się w aktualnej ofercie, cenniku lub formularzu zapisowym.</p>\n            <p>Imprezy taneczne, wyjazdy, szkolenia instruktorskie, półkolonie i inne wydarzenia specjalne mogą posiadać oddzielne regulaminy.</p>\n            <p>W sprawach dotyczących konkretnego wydarzenia regulamin szczegółowy uzupełnia niniejszy Regulamin.</p>\n            <p>Określenie „Uczestnik" oznacza każdą osobę uczestniczącą w zajęciach, niezależnie od płci. W przypadku osoby małoletniej obejmuje również jej rodzica lub opiekuna prawnego w zakresie jego obowiązków.</p>\n          </div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§2 Charakter i wartości Szkoły</div>\n          <div class="reg-acc-body">\n            <p>Szkoła Tańca Amen! jest chrześcijańską szkołą tańca oraz organizatorem projektu Roztańczona Parafia.</p>\n            <p>Celem Szkoły jest nauka tańca i ruchu oraz tworzenie przestrzeni spotkania, integracji i budowania dobrych relacji.</p>\n            <p>Taniec jest w Szkole nie tylko aktywnością fizyczną, ale również narzędziem wspierającym życie lokalnych społeczności.</p>\n            <p>Zajęcia rozpoczynają się i kończą wspólną modlitwą.</p>\n            <p>Uczestnik nie musi być osobą wierzącą, ale przyjmuje do wiadomości chrześcijański charakter Szkoły i zobowiązuje się go szanować.</p>\n            <p>Uczestnik uczestniczy w tym wspólnym punkcie zajęć poprzez obecność i uszanowanie jego charakteru. Nie ma obowiązku wypowiadania modlitwy, wykonywania gestów religijnych ani składania deklaracji wiary.</p>\n            <p>Częścią zajęć mogą być ćwiczenia integracyjne, rozmowy, przedstawianie się, zmiany partnerów i inne działania wspierające poznawanie się uczestników.</p>\n            <p>Udział w ćwiczeniu integracyjnym wymagającym kontaktu fizycznego jest dobrowolny. Uczestnik może odmówić udziału w konkretnym ćwiczeniu po poinformowaniu instruktora.</p>\n          </div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§3 Miejsca prowadzenia zajęć</div>\n          <div class="reg-acc-body">\n            <p>Zajęcia odbywają się przede wszystkim w salach przyparafialnych, domach parafialnych, oratoriach, świetlicach, salach wielofunkcyjnych oraz innych przestrzeniach lokalnych.</p>\n            <p>Organizowanie zajęć w takich miejscach jest świadomym elementem projektu Roztańczona Parafia, którego celem jest prowadzenie aktywności blisko miejsca zamieszkania uczestników.</p>\n            <p>Miejsca zajęć nie są stałą infrastrukturą Szkoły i mogą być zarządzane przez parafie, fundacje, wspólnoty, placówki oświatowe albo innych właścicieli.</p>\n            <p>Pomieszczenia nie zawsze są odpowiednikami profesjonalnych sal tanecznych.</p>\n            <p>W zależności od lokalizacji sala może nie posiadać m.in.:</p>\n            <ul>\n              <li>luster tanecznych</li>\n              <li>amortyzowanej podłogi</li>\n              <li>klimatyzacji</li>\n              <li>wygłuszenia</li>\n              <li>recepcji</li>\n              <li>osobnej przebieralni</li>\n              <li>pryszniców</li>\n              <li>rozbudowanego zaplecza sanitarnego</li>\n              <li>stałego nagłośnienia</li>\n              <li>pełnego wyposażenia profesjonalnego studia tańca.</li>\n            </ul>\n            <p>Wygląd, akustyka, temperatura, wyposażenie i rodzaj podłogi mogą różnić się pomiędzy lokalizacjami.</p>\n            <p>Brak udogodnienia typowego dla profesjonalnej sali tanecznej nie stanowi wady usługi, jeżeli nie zostało ono wyraźnie zagwarantowane w ofercie, a sala pozwala bezpiecznie przeprowadzić dane zajęcia.</p>\n            <p>Brak profesjonalnej infrastruktury nie oznacza obniżenia wymagań dotyczących bezpieczeństwa.</p>\n            <p>Szkoła i instruktor dostosowują program, obuwie, wielkość ruchu oraz wykorzystywane figury do warunków sali.</p>\n            <p>Instruktor może zrezygnować z określonych figur, podnoszeń, akrobacji lub ćwiczeń, jeżeli warunki sali nie pozwalają na ich bezpieczne wykonanie.</p>\n            <p>Uczestnik powinien niezwłocznie zgłosić instruktorowi mokrą lub uszkodzoną podłogę, przeszkodę, niesprawne wyposażenie albo inne zagrożenie.</p>\n            <p>Instruktor może przerwać zajęcia lub wyłączyć część sali z użytkowania, jeżeli wymaga tego bezpieczeństwo.</p>\n            <p>Uczestnik jest zobowiązany przestrzegać zasad gospodarza obiektu, w szczególności dotyczących wejścia, zmiany obuwia, sanitariatów, parkowania, ciszy oraz korzystania z części wspólnych.</p>\n            <p>Szkoła może zmienić salę z powodu wydarzenia parafialnego, remontu, awarii albo czasowej niedostępności obiektu.</p>\n            <p>O zmianie uczestnicy zostaną poinformowani możliwie szybko.</p>\n            <p>Jeśli zmiana lokalizacji jest trwała i istotnie utrudnia uczestnikowi kontynuowanie kursu, może on zrezygnować i otrzymać zwrot za niewykorzystane zajęcia.</p>\n          </div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§4 Rodzaje zajęć</div>\n          <div class="reg-acc-body">\n            <p>Szkoła organizuje w szczególności:</p>\n            <ul>\n              <li>kursy regularne</li>\n              <li>kursy krótkoterminowe i wakacyjne</li>\n              <li>zajęcia taneczne solo</li>\n              <li>zajęcia taneczne w parach</li>\n              <li>zajęcia dla dzieci i młodzieży</li>\n              <li>zajęcia dla dorosłych i seniorów</li>\n              <li>zajęcia rodziców z dziećmi</li>\n              <li>zajęcia fitness, mobility i rozciągające</li>\n              <li>samoobrona</li>\n              <li>zajęcia zawierające triki, podnoszenia lub elementy akrobatyczne</li>\n              <li>warsztaty</li>\n              <li>wejścia pojedyncze.</li>\n            </ul>\n            <p>Zasady odrabiania dotyczą kursów regularnych. Nie dotyczą automatycznie warsztatów, wydarzeń, imprez ani zajęć jednorazowych.</p>\n            <p>Kurs regularny opiera się na stopniowo rozwijanym programie i odbywa się najczęściej raz w tygodniu.</p>\n            <p>Kurs krótkoterminowy obejmuje z góry określoną liczbę spotkań lub okres. Szczegółowe zasady są wskazane w jego ofercie.</p>\n            <p>Warsztat jest jednorazowym spotkaniem albo krótkim cyklem dotyczącym określonego tematu.</p>\n            <p>Wejście pojedyncze uprawnia do udziału w jednych, wcześniej uzgodnionych zajęciach i nie gwarantuje stałego miejsca w grupie.</p>\n            <p>Zajęcia ruchowe, samoobrona, akrobacje i podnoszenia mogą podlegać dodatkowym zasadom bezpieczeństwa.</p>\n            <p>Program, poziom i czas trwania zajęć są określone w ofercie. Szkoła nie gwarantuje osiągnięcia określonego poziomu w konkretnym czasie, ponieważ postępy zależą m.in. od obecności, zaangażowania i indywidualnych możliwości uczestnika.</p>\n          </div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§5 Zapisy</div>\n          <div class="reg-acc-body">\n            <p>Zapis następuje przez:</p>\n            <ul>\n              <li>przesłanie formularza zapisowego</li>\n              <li>zgłoszenie zaakceptowane przez Szkołę w innej formie</li>\n              <li>wniesienie wymaganej opłaty</li>\n              <li>prawidłowe zgłoszenie korzystania z karty sportowej.</li>\n            </ul>\n            <p>Przesłanie formularza nie zawsze oznacza automatyczne przyjęcie do grupy.</p>\n            <p>Przyjęcie może zależeć od:</p>\n            <ul>\n              <li>liczby wolnych miejsc</li>\n              <li>wieku uczestnika</li>\n              <li>poziomu zaawansowania</li>\n              <li>charakteru kursu</li>\n              <li>liczby osób w poszczególnych rolach tanecznych</li>\n              <li>innych warunków wskazanych w ofercie.</li>\n            </ul>\n            <p>O utworzeniu grupy lub przyjęciu do trwającego kursu Szkoła informuje e-mailem, telefonicznie albo przez wskazany kanał komunikacji.</p>\n            <p>Uczestnik zobowiązuje się podawać prawdziwe i aktualne dane.</p>\n            <p>Dołączenie do kursu na wyższym poziomie może wymagać zgody instruktora.</p>\n            <p>Szkoła może zaproponować inną grupę, jeżeli poziom, wiek albo warunki organizacyjne nie pozwalają na udział w wybranych zajęciach.</p>\n            <p>Nie należy przychodzić do grupy, na wejście pojedyncze ani na odrabianie bez wcześniejszego potwierdzenia miejsca.</p>\n          </div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§6 Osoby małoletnie</div>\n          <div class="reg-acc-body">\n            <p>Zapisu dziecka dokonuje rodzic lub opiekun prawny.</p>\n            <p>Osoba małoletnia uczestniczy w grupie przeznaczonej dla jej wieku, chyba że Szkoła i opiekun uzgodnią inaczej.</p>\n            <p>Osoba w wieku 16–17 lat może uczestniczyć w wybranych zajęciach dla dorosłych, jeżeli:</p>\n            <ul>\n              <li>pozwala na to oferta</li>\n              <li>Szkoła wyrazi zgodę</li>\n              <li>rodzic lub opiekun prawny udzieli pisemnej zgody.</li>\n            </ul>\n            <p>Rodzic przekazuje informacje potrzebne do bezpiecznego udziału oraz wskazuje osoby upoważnione do odbioru dziecka.</p>\n            <p>Odpowiedzialność Szkoły za dziecko podczas samodzielnych zajęć dziecięcych rozpoczyna się z chwilą przekazania dziecka instruktorowi i kończy po zakończeniu zajęć oraz przekazaniu go upoważnionej osobie.</p>\n            <p>Podczas zajęć rodzica z dzieckiem dziecko pozostaje pod opieką rodzica. Szkoła nie zapewnia indywidualnej opieki nad dzieckiem.</p>\n            <p>Rodzic może przerwać ćwiczenie, aby nakarmić, przewinąć, przytulić lub uspokoić dziecko.</p>\n            <p>Naturalne zachowania dzieci są akceptowaną częścią zajęć rodzinnych, o ile nie zagrażają bezpieczeństwu.</p>\n            <p>Szczegółowe zasady pracy z osobami małoletnimi określają Standardy Ochrony Małoletnich Szkoły.</p>\n          </div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§7 Kursy regularne i karnety</div>\n          <div class="reg-acc-body">\n            <p>Kurs regularny może być prowadzony bez określonej z góry daty zakończenia, dopóki:</p>\n            <ul>\n              <li>istnieją możliwości organizacyjne</li>\n              <li>grupa posiada wystarczającą liczbę uczestników</li>\n              <li>uczestnicy chcą kontynuować naukę.</li>\n            </ul>\n            <p>Uczestnik nie podpisuje ze Szkołą odrębnej pisemnej umowy uczestnictwa. Podstawą udziału są zapis na zajęcia, akceptacja Regulaminu oraz zakup karnetu.</p>\n            <p>Podstawowy karnet obejmuje cztery kolejne zajęcia danej grupy.</p>\n            <p>Każdy uczestnik posiada własny, indywidualny okres rozliczeniowy.</p>\n            <p>Okres rozliczeniowy rozpoczyna się w dniu pierwszych zajęć uczestnika. Po każdych czterech spotkaniach uczestnik, który chce kontynuować kurs, kupuje kolejny karnet.</p>\n            <p>Zakup kolejnego karnetu nie następuje automatycznie, a Szkoła nie pobiera automatycznie opłaty za następne cztery zajęcia.</p>\n            <p>Osoba dołączająca do trwającego kursu opłaca pełny karnet czterech zajęć, liczony indywidualnie od dnia dołączenia.</p>\n            <p>Nie stosuje się proporcjonalnego obniżenia ceny karnetu z powodu dołączenia w trakcie cyklu grupy.</p>\n            <p>Karnet jest przypisany do konkretnej osoby i grupy. Nie można przekazać go innej osobie bez zgody Szkoły.</p>\n            <p>Karnet kończy się po czterech przeprowadzonych terminach zajęć, niezależnie od obecności uczestnika.</p>\n            <p>Zajęcia odwołane przez Szkołę nie są wliczane do karnetu.</p>\n            <p>Uczestnik może zakończyć udział po wykorzystaniu karnetu, nie kupując kolejnego. Nie obowiązuje miesięczny okres wypowiedzenia.</p>\n            <p>Uczestnik, który nie zamierza kupić kolejnego karnetu, ma obowiązek poinformować o tym Szkołę możliwie szybko, najpóźniej przed pierwszymi zajęciami objętymi kolejnym karnetem. Informacja pozwala Szkole zadbać o liczebność grupy i równowagę ról tanecznych.</p>\n            <p>Brak tej informacji nie powoduje automatycznego zakupu kolejnego karnetu ani obowiązku zapłaty za niego.</p>\n            <p>Uczestnictwo nie oznacza zobowiązania do ukończenia całego poziomu ani roku.</p>\n          </div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§8 Płatności</div>\n          <div class="reg-acc-body">\n            <p>Aktualne ceny są podawane w cenniku, formularzu albo ofercie danych zajęć.</p>\n            <p>W przypadku rozbieżności obowiązuje cena wskazana przy konkretnych zajęciach w chwili zapisu.</p>\n            <p>Płatności dokonuje się z góry, przed rozpoczęciem karnetu.</p>\n            <p>Płatność odbywa się przelewem na rachunek wskazany przez Szkołę. Płatność gotówką jest możliwa tylko wtedy, gdy Szkoła wyraźnie ją dopuści.</p>\n            <p>W tytule przelewu należy podać dane pozwalające przypisać płatność, w szczególności imię i nazwisko oraz nazwę grupy.</p>\n            <p>Szkoła może poprosić o okazanie potwierdzenia przelewu.</p>\n            <p>Brak płatności może skutkować niedopuszczeniem do udziału albo wstrzymaniem miejsca w grupie.</p>\n            <p>Ceny mogą różnić się zależnie od poziomu, czasu trwania, rodzaju i lokalizacji zajęć.</p>\n            <p>Szkoła może zmienić ceny przyszłych karnetów. Zmiana nie wpływa na już opłacony karnet.</p>\n            <p>Promocje nie łączą się, chyba że ich zasady stanowią inaczej.</p>\n            <p>Jeżeli uczestnik z góry wie, że opuści większą liczbę zajęć w kolejnym pakiecie, może napisać na kontakt.amen@gmail.com z prośbą o indywidualny sposób rozliczenia.</p>\n            <p>Prośbę należy wysłać przed rozpoczęciem nowego karnetu i przed płatnością.</p>\n            <p>Indywidualne rozliczenie obowiązuje dopiero po otrzymaniu potwierdzenia Szkoły.</p>\n            <p>Nieobecności zgłoszone po rozpoczęciu i opłaceniu karnetu nie powodują automatycznego przeliczenia jego ceny.</p>\n          </div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§9 Wejścia pojedyncze</div>\n          <div class="reg-acc-body">\n            <p>Wejście pojedyncze jest możliwe po uzyskaniu wcześniejszej zgody Szkoły.</p>\n            <p>Szkoła może odmówić wejścia pojedynczego, jeżeli:</p>\n            <ul>\n              <li>grupa jest pełna</li>\n              <li>poziom uczestnika jest niedopasowany</li>\n              <li>realizowany materiał wymaga wcześniejszego przygotowania</li>\n              <li>dodatkowa osoba zaburzyłaby pracę grupy.</li>\n            </ul>\n            <p>Cena wejścia pojedynczego wynosi jedną czwartą aktualnej ceny karnetu czterech zajęć dla danej grupy.</p>\n            <p>Wejście pojedyncze nie gwarantuje miejsca na kolejnych zajęciach.</p>\n            <p>Uczestnik korzystający z wejścia pojedynczego podlega wszystkim zasadom bezpieczeństwa, zachowania, wizerunku i ochrony danych.</p>\n          </div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§10 Karty sportowe</div>\n          <div class="reg-acc-body">\n            <p>Szkoła akceptuje obecnie:</p>\n            <ul>\n              <li>MultiSport</li>\n              <li>Medicover Sport</li>\n              <li>FitProfit</li>\n              <li>FitSport.</li>\n            </ul>\n            <p>Dostępność kart może zależeć od lokalizacji i aktualnych umów z operatorami. Aktualna lista jest podawana w cenniku lub ofercie.</p>\n            <p>Rozliczenie wejść kartą sportową jest prowadzone indywidualnie dla każdego uczestnika i każdego kursu w cyklach obejmujących cztery kolejne zajęcia.</p>\n            <p>Opłata klubowa wynosi 50 zł i jest pobierana raz w każdym miesiącu kalendarzowym, w którym uczestnik korzysta z karty sportowej na zajęciach Szkoły.</p>\n            <p>Opłata klubowa jest pobierana w pełnej wysokości niezależnie od dnia pierwszych zajęć uczestnika w danym miesiącu.</p>\n            <p>Jedna opłata klubowa obejmuje wszystkie regularne kursy, na które uczestnik uczęszcza w tym samym miesiącu kalendarzowym. Nie płaci osobnej opłaty klubowej za każdy kurs.</p>\n            <p>Za każdy karnet czterech zajęć uczestnik ma obowiązek zarejestrować cztery wejścia kartą.</p>\n            <p>Jeżeli uczestnik uczęszcza na kilka kursów, obowiązek czterech wejść dotyczy osobno każdego kursu.</p>\n            <p>Kartę można zarejestrować tylko raz dziennie. Jedno odbicie odpowiada jednym zajęciom.</p>\n            <p>Kartę należy zarejestrować przed zajęciami zgodnie z zasadami operatora.</p>\n            <p>Karta musi należeć do osoby, która z niej korzysta.</p>\n            <p>Uczestnik nie może zarejestrować wejścia bez faktycznego udziału w zajęciach.</p>\n            <p>Jeżeli uczestnik jest nieobecny, powinien odrobić zajęcia na innym kursie i podczas odrabiania zarejestrować kartę.</p>\n            <p>Jeżeli uczestnik nie odrobi nieobecności i nie uzupełni wymaganego odbicia, uiszcza dopłatę uzupełniającą w wysokości 15 zł za każde brakujące wejście.</p>\n            <p>Dopłatę należy uiścić przed rozpoczęciem kolejnego karnetu.</p>\n            <p>Ze względu na możliwość jednego odbicia dziennie odrabianie kartą powinno odbywać się w innym dniu niż regularne zajęcia uczestnika.</p>\n            <p>Jeżeli uczestnik chce odrobić zajęcia tego samego dnia, w którym wykorzystał już kartę, może to zrobić po uzyskaniu zgody Szkoły i dopłacie 15 zł.</p>\n            <p>Dopłata zastępuje drugie odbicie, którego operator nie pozwala wykonać tego samego dnia.</p>\n            <p>Zajęcia odwołane przez Szkołę nie wymagają odbicia. Obowiązek przesuwa się razem z karnetem.</p>\n            <p>Jeżeli odbicie jest niemożliwe z przyczyn technicznych niezależnych od uczestnika, należy niezwłocznie poinformować instruktora. Sytuacja zostanie wyjaśniona indywidualnie.</p>\n          </div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§11 Karnety i ewidencja obecności</div>\n          <div class="reg-acc-body">\n            <p>Obecności i okresy rozliczeniowe mogą być ewidencjonowane za pomocą:</p>\n            <ul>\n              <li>papierowego karnetu</li>\n              <li>listy obecności</li>\n              <li>dokumentacji prowadzonej przez instruktora</li>\n              <li>innego systemu przyjętego przez Szkołę.</li>\n            </ul>\n            <p>O sposobie ewidencji decyduje Szkoła lub instruktor danej grupy.</p>\n            <p>Jeżeli grupa korzysta z papierowych karnetów, uczestnik powinien przynosić karnet na każde zajęcia.</p>\n            <p>Brak karnetu nie powoduje automatycznej utraty prawa do udziału, jeżeli płatność można potwierdzić w inny sposób.</p>\n            <p>Zgubienie karnetu należy zgłosić instruktorowi. Dane mogą zostać odtworzone na podstawie list obecności i potwierdzeń płatności.</p>\n          </div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§12 Nieobecności i odrabianie</div>\n          <div class="reg-acc-body">\n            <p>Uczestnik nie ma obowiązku zgłaszania nieobecności przed swoimi regularnymi zajęciami.</p>\n            <p>Nieobecność nie wstrzymuje i nie przedłuża automatycznie karnetu.</p>\n            <p>Nieobecność nie powoduje zwrotu ani obniżenia kolejnej płatności.</p>\n            <p>Uczestnik może odrobić nieobecność w terminie 30 dni kalendarzowych od dnia opuszczonych zajęć.</p>\n            <p>Po upływie 30 dni możliwość odrobienia wygasa, chyba że Szkoła indywidualnie postanowi inaczej.</p>\n            <p>Uczestnik zgłasza nie samą nieobecność, ale chęć przyjścia na konkretne zajęcia w ramach odrabiania.</p>\n            <p>Zgłoszenie powinno zawierać:</p>\n            <ul>\n              <li>imię i nazwisko</li>\n              <li>nazwę własnej grupy</li>\n              <li>datę nieobecności</li>\n              <li>proponowaną grupę i termin odrabiania.</li>\n            </ul>\n            <p>Przed przyjściem należy otrzymać potwierdzenie Szkoły. Brak odpowiedzi nie oznacza zgody.</p>\n            <p>Odrabianie jest możliwe, jeżeli:</p>\n            <ul>\n              <li>są wolne miejsca</li>\n              <li>poziom i charakter grupy są odpowiednie</li>\n              <li>udział dodatkowej osoby nie zakłóci zajęć</li>\n              <li>instruktor lub Szkoła wyrażą zgodę.</li>\n            </ul>\n            <p>Jedną nieobecność można odrobić jeden raz.</p>\n            <p>Nie można odrabiać na zajęciach grupy, do której jest się już regularnie zapisanym.</p>\n            <p>Odróbka nie przedłuża karnetu, nie zastępuje kolejnej płatności i nie może zostać wymieniona na pieniądze.</p>\n            <p>Szkoła nie gwarantuje dostępności identycznego stylu ani poziomu.</p>\n            <p>Odrabianie może być niemożliwe na formacjach, choreografiach, salsie rueda, zajęciach zaawansowanych lub innych zajęciach wymagających konkretnych umiejętności.</p>\n            <p>Sposób odrabiania zajęć w parach zależy od grupy, liczby uczestników i decyzji instruktora.</p>\n            <p>Szkoła może:</p>\n            <ul>\n              <li>pozwolić przyjść samodzielnie</li>\n              <li>poprosić o przyjście z partnerem</li>\n              <li>połączyć osoby odrabiające</li>\n              <li>dopuścić lub ograniczyć rotację</li>\n              <li>zaproponować inny termin.</li>\n            </ul>\n            <p>Szkoła nie gwarantuje znalezienia partnera.</p>\n            <p>System odrabiania nie dotyczy automatycznie warsztatów, imprez, wydarzeń ani wejść pojedynczych.</p>\n            <p>Dłuższe nieobecności wynikające z wyjątkowych sytuacji można zgłosić na kontakt.amen@gmail.com. Każdy przypadek jest rozpatrywany indywidualnie.</p>\n          </div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§13 Warsztaty</div>\n          <div class="reg-acc-body">\n            <p>Miejsce na warsztacie jest potwierdzone po dokonaniu wymaganego zapisu i płatności.</p>\n            <p>Uczestnik może zrezygnować i otrzymać pełny zwrot, jeżeli zgłosi rezygnację najpóźniej 7 dni kalendarzowych przed warsztatem.</p>\n            <p>Przy rezygnacji później niż 7 dni przed warsztatem opłata nie podlega zwrotowi, z zastrzeżeniem ustawowych praw konsumenta.</p>\n            <p>Uczestnik może przekazać miejsce innej osobie po wcześniejszym poinformowaniu Szkoły i podaniu danych nowego uczestnika.</p>\n            <p>Nowa osoba musi spełniać wymagania dotyczące wieku, poziomu, partnera lub innych warunków udziału.</p>\n            <p>Osoby przekazujące miejsce samodzielnie ustalają wzajemne rozliczenie. Szkoła nie pośredniczy w przekazaniu pieniędzy i nie odpowiada za to rozliczenie.</p>\n            <p>Warsztaty nie podlegają systemowi odrabiania kursów regularnych.</p>\n            <p>Jeżeli warsztat zostanie odwołany przez Szkołę, uczestnik otrzyma pełny zwrot albo — za swoją zgodą — możliwość przeniesienia płatności.</p>\n          </div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§14 Vouchery</div>\n          <div class="reg-acc-body">\n            <p>Voucher jest ważny przez 12 miesięcy od daty zakupu, chyba że wskazano na nim inny termin.</p>\n            <p>Voucher jest imienny i może zostać wykorzystany wyłącznie przez osobę na nim wskazaną.</p>\n            <p>Vouchera nie można przekazać, odsprzedać ani przepisać na inną osobę.</p>\n            <p>Realizacja zależy od dostępności miejsc, terminów i spełnienia warunków dotyczących poziomu, wieku lub rodzaju zajęć.</p>\n            <p>Niewykorzystanie vouchera w okresie ważności nie powoduje automatycznego zwrotu ani przedłużenia, z zastrzeżeniem ustawowych praw konsumenta.</p>\n            <p>Voucher nie podlega wymianie na gotówkę.</p>\n            <p>Jeżeli Szkoła trwale zaprzestanie oferowania usługi objętej voucherem, zaproponuje usługę zastępczą albo zwrot niewykorzystanej wartości.</p>\n          </div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§15 Zajęcia w parach, rotacja i kontakt fizyczny</div>\n          <div class="reg-acc-body">\n            <p>Taniec w parach wiąże się z kontaktem fizycznym wynikającym z techniki.</p>\n            <p>Uczestnik ma prawo odmówić wykonania figury, chwytu, podnoszenia, ćwiczenia albo zmiany partnera, jeśli przekracza to jego granice lub budzi obawy o bezpieczeństwo.</p>\n            <p>Uczestnik powinien poinformować instruktora, jeżeli chce ćwiczyć wyłącznie ze swoim partnerem.</p>\n            <p>Szkoła rozróżnia:</p>\n            <ul>\n              <li>rotację podczas nauki techniki</li>\n              <li>ćwiczenia integracyjne i zapoznawcze</li>\n              <li>formaty, w których rotacja jest częścią programu.</li>\n            </ul>\n            <p>Udział w integracyjnej zmianie partnerów jest dobrowolny.</p>\n            <p>Szkoła w miarę możliwości umożliwia ćwiczenie w stałej parze.</p>\n            <p>W niektórych formatach, w szczególności w salsie rueda, rotacja jest podstawowym elementem zajęć.</p>\n            <p>Brak udziału w rotacji na kursie opartym na rotacji może uniemożliwić pełne uczestnictwo. Szkoła może zaproponować inną grupę.</p>\n            <p>Każdy uczestnik ma obowiązek respektować granice i komunikaty partnera.</p>\n            <p>Niedopuszczalny jest dotyk niezwiązany z programem, naruszający intymność, granice albo bezpieczeństwo.</p>\n            <p>Niektóre ćwiczenia integracyjne mogą obejmować podanie dłoni, wspólny krąg lub grupowy uścisk. Uczestnik może odmówić bez konieczności uzasadniania.</p>\n          </div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§16 Spóźnienia</div>\n          <div class="reg-acc-body">\n            <p>Spóźniony uczestnik może dołączyć, jeśli instruktor uzna, że jest to możliwe bez zakłócenia zajęć i zagrożenia bezpieczeństwa.</p>\n            <p>Instruktor może odmówić dołączenia albo ograniczyć udział, jeżeli uczestnik ominął:</p>\n            <ul>\n              <li>rozgrzewkę</li>\n              <li>instruktaż bezpieczeństwa</li>\n              <li>główną część nauki figury</li>\n              <li>wyjaśnienie choreografii lub sekwencji.</li>\n            </ul>\n            <p>Decyzja zależy od stopnia spóźnienia, rodzaju zajęć i możliwości bezpiecznego włączenia uczestnika.</p>\n            <p>Spóźnienie i wynikające z niego ograniczenie udziału nie stanowią podstawy zwrotu ani dodatkowej odróbki.</p>\n          </div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§17 Bezpieczeństwo i zdrowie</div>\n          <div class="reg-acc-body">\n            <p>Uczestnik bierze udział z uwzględnieniem swojego zdrowia i możliwości.</p>\n            <p>Zajęcia taneczne i ruchowe wiążą się z naturalnym wysiłkiem i ryzykiem typowym dla aktywności fizycznej.</p>\n            <p>W razie przeciwwskazań, ciąży, niedawnego porodu, urazu, zabiegu lub wątpliwości uczestnik powinien skonsultować udział z lekarzem albo fizjoterapeutą.</p>\n            <p>Uczestnik powinien poinformować instruktora o ograniczeniach istotnych dla bezpieczeństwa, bez konieczności ujawniania pełnej diagnozy.</p>\n            <p>Uczestnik ma obowiązek:</p>\n            <ul>\n              <li>stosować się do poleceń instruktora</li>\n              <li>korzystać ze sprzętu zgodnie z przeznaczeniem</li>\n              <li>nie wykonywać elementu, którego nie potrafi bezpiecznie wykonać</li>\n              <li>przerwać ćwiczenie w razie bólu, duszności, zawrotów głowy albo innych niepokojących objawów</li>\n              <li>zgłosić uraz lub zauważone zagrożenie.</li>\n            </ul>\n            <p>Instruktor może odmówić dopuszczenia do określonego ćwiczenia ze względów bezpieczeństwa.</p>\n            <p>Zabroniony jest udział pod wpływem alkoholu, narkotyków lub innych substancji ograniczających bezpieczne uczestnictwo.</p>\n            <p>Szkoła może odmówić udziału osobie, której stan lub zachowanie stwarzają zagrożenie.</p>\n            <p>Zajęcia fitness, mobility, zdrowy kręgosłup i podobne aktywności nie są świadczeniem medycznym, rehabilitacją ani fizjoterapią.</p>\n            <p>Regulamin nie wyłącza odpowiedzialności Szkoły w zakresie, w którym nie można jej wyłączyć zgodnie z prawem.</p>\n          </div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§18 Zachowanie i rzeczy osobiste</div>\n          <div class="reg-acc-body">\n            <p>Uczestnicy są zobowiązani do szacunku wobec instruktorów, innych uczestników, dzieci i gospodarzy obiektów.</p>\n            <p>Niedopuszczalne są przemoc, agresja, molestowanie, dyskryminacja, ośmieszanie, naruszanie granic i celowe zakłócanie zajęć.</p>\n            <p>Uczestnik powinien dbać o higienę i strój odpowiedni do zajęć.</p>\n            <p>Szkoła może poprosić o opuszczenie zajęć osobę rażąco naruszającą zasady bezpieczeństwa lub prawa innych osób.</p>\n            <p>Powtarzające się albo poważne naruszenia mogą skutkować zakończeniem uczestnictwa.</p>\n            <p>Uczestnik odpowiada za szkody wyrządzone z jego winy na zasadach wynikających z prawa.</p>\n            <p>Szkoła nie odpowiada za rzeczy pozostawione bez nadzoru, z wyjątkiem przypadków, w których odpowiedzialność wynika z przepisów.</p>\n            <p>Znalezione rzeczy są przechowywane przez rozsądny czas, a następnie mogą zostać przekazane zarządcy obiektu.</p>\n          </div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§19 Odwołanie i zmiana zajęć</div>\n          <div class="reg-acc-body">\n            <p>Szkoła może odwołać zajęcia lub zmienić termin, instruktora albo salę z ważnych przyczyn, w szczególności choroby, awarii, niedostępności obiektu, wydarzenia parafialnego, zagrożenia bezpieczeństwa albo siły wyższej.</p>\n            <p>Informacja zostanie przekazana możliwie szybko.</p>\n            <p>Zajęcia nieodbyte z decyzji Szkoły, w tym z powodu święta lub planowanej przerwy w grafiku, nie są zaliczane do karnetu.</p>\n            <p>Termin kolejnej płatności i zakończenia karnetu przesuwa się odpowiednio.</p>\n            <p>Jeżeli zajęć nie można przeprowadzić w innym terminie, Szkoła zaproponuje przeniesienie opłaty albo proporcjonalny zwrot.</p>\n            <p>Zastępstwo instruktora posiadającego odpowiednie kwalifikacje nie stanowi samo w sobie podstawy zwrotu.</p>\n            <p>Szkoła może zakończyć prowadzenie grupy z powodu zbyt małej liczby uczestników. Niewykorzystane zajęcia zostaną przeniesione na inną grupę za zgodą uczestnika albo zwrócone.</p>\n            <p>Jeżeli nastąpi istotna i trwała zmiana terminu, miejsca lub charakteru zajęć, uczestnik może zrezygnować i otrzymać zwrot za niewykorzystaną część karnetu.</p>\n          </div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§20 Zakończenie uczestnictwa i zwroty</div>\n          <div class="reg-acc-body">\n            <p>Uczestnik może zakończyć udział po wykorzystaniu bieżącego karnetu, nie kupując kolejnego.</p>\n            <p>Nie obowiązuje miesięczny okres wypowiedzenia.</p>\n            <p>Uczestnik informuje Szkołę o zakończeniu udziału zgodnie z §7. Do zgłoszenia wystarczy wiadomość e-mail, SMS albo wiadomość przesłana uzgodnionym kanałem komunikacji. Szkoła nie wymaga składania wniosku ani podpisywania formularza rezygnacji.</p>\n            <p>Zakończenie udziału z przyczyn leżących po stronie uczestnika w trakcie rozpoczętego karnetu nie powoduje automatycznego zwrotu za niewykorzystane zajęcia.</p>\n            <p>Poważna choroba, hospitalizacja, długotrwały uraz lub inna wyjątkowa sytuacja mogą zostać rozpatrzone indywidualnie.</p>\n            <p>Zwrot przysługuje za zajęcia odwołane przez Szkołę, jeżeli nie zostaną przeprowadzone ani rozliczone w inny uzgodniony sposób.</p>\n            <p>Regulamin nie ogranicza ustawowych praw konsumenta.</p>\n            <p>Karnet obejmuje zajęcia odbywające się w konkretnych terminach zgodnie z grafikiem. W przypadku zakupu na odległość prawo odstąpienia może być wyłączone w zakresie przewidzianym przez obowiązujące przepisy dla usług związanych z wypoczynkiem, sportem lub wydarzeniami, jeżeli wskazano dzień albo okres ich świadczenia. Informacja właściwa dla danego zakupu jest przekazywana uczestnikowi przed dokonaniem płatności.</p>\n          </div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§21 Lekcje indywidualne i pierwszy taniec</div>\n          <div class="reg-acc-body">\n            <p>Szkoła może udostępniać dane kontaktowe instruktorów prowadzących lekcje indywidualne lub przygotowanie pierwszego tańca.</p>\n            <p>Jeśli instruktor świadczy i rozlicza usługę we własnym imieniu, Szkoła pełni wyłącznie funkcję informacyjną i nie jest stroną umowy pomiędzy uczestnikiem a instruktorem.</p>\n            <p>Termin, miejsce, program, cena, płatność, przełożenie, rezygnacja, zwrot i reklamacja są ustalane bezpośrednio z instruktorem.</p>\n            <p>Szkoła nie odpowiada za rozliczenia uczestnika z instruktorem ani wykonanie usługi świadczonej przez instruktora we własnym imieniu.</p>\n            <p>Powyższe nie ma zastosowania, jeżeli konkretna oferta wyraźnie wskazuje Szkołę jako organizatora albo podmiot przyjmujący płatność.</p>\n          </div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§22 Zdjęcia i nagrania</div>\n          <div class="reg-acc-body">\n            <p>Podczas zajęć może być obecna upoważniona osoba wykonująca zdjęcia lub nagrania.</p>\n            <p>Nagrywanie może odbywać się niezależnie od tego, czy wszystkie osoby wyraziły zgodę na wykorzystanie wizerunku.</p>\n            <p>Sam fakt nagrywania nie oznacza automatycznej zgody na publikowanie rozpoznawalnego wizerunku.</p>\n            <p>Uczestnicy zostaną poinformowani, że podczas danych zajęć są wykonywane materiały.</p>\n            <p>Brak zgody na wykorzystanie wizerunku nie wpływa na możliwość udziału.</p>\n            <p>W przypadku osób bez odpowiedniej zgody Szkoła zastosuje rozwiązania chroniące ich wizerunek, w szczególności:</p>\n            <ul>\n              <li>ustawienie poza kadrem</li>\n              <li>wyznaczenie części sali nieobejmowanej nagraniem</li>\n              <li>odpowiednie kadrowanie</li>\n              <li>usunięcie, zakrycie albo rozmycie przypadkowo utrwalonego wizerunku.</li>\n            </ul>\n            <p>Rozpoznawalny wizerunek uczestnika może być publikowany tylko na podstawie odpowiedniej zgody lub innej podstawy przewidzianej prawem.</p>\n            <p>Wizerunek dziecka wymaga oddzielnej zgody rodzica lub opiekuna prawnego.</p>\n            <p>Materiał zawierający przypadkowo utrwalony rozpoznawalny wizerunek osoby bez zgody nie zostanie opublikowany w tej postaci.</p>\n            <p>Surowe materiały są przechowywane przez czas potrzebny do selekcji i obróbki, co do zasady nie dłużej niż 30 dni, chyba że zostały zgodnie z prawem wybrane do publikacji albo są potrzebne do wyjaśnienia zgłoszenia.</p>\n            <p>Uczestnicy nie mogą publikować rozpoznawalnego wizerunku innych uczestników ani dzieci bez odpowiedniego zezwolenia.</p>\n            <p>Nagrywanie programu zajęć, instruktażu lub choreografii przez uczestników wymaga zgody instruktora.</p>\n            <p>Zgodę wizerunkową można wycofać, pisząc na kontakt.amen@gmail.com. Wycofanie nie wpływa na zgodność z prawem wykorzystania dokonanego wcześniej.</p>\n          </div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§23 Dane osobowe</div>\n          <div class="reg-acc-body">\n            <p>Administratorem danych osobowych jest SZKOŁA TAŃCA AMEN! MATEUSZ ZAPART, ul. Lotnicza 83, 51-180 Szymanów, NIP: 8943139075, REGON: 382770064.</p>\n            <p>Kontakt w sprawach dotyczących danych: kontakt.amen@gmail.com.</p>\n            <p>Dane są przetwarzane w celu przyjęcia zapisu, organizacji zajęć, rozliczeń, kontaktu organizacyjnego, realizacji obowiązków prawnych oraz dochodzenia lub obrony roszczeń.</p>\n            <p>Wiadomości niezbędne do obsługi zapisu i zajęć nie są newsletterem i nie wymagają zgody marketingowej.</p>\n            <p>Zgody na newsletter, marketing i publikowanie wizerunku są dobrowolne.</p>\n            <p>Brak zgody marketingowej lub wizerunkowej nie wpływa na możliwość uczestnictwa.</p>\n            <p>Szczegółowe informacje o podstawach przetwarzania, odbiorcach, czasie przechowywania i prawach uczestników znajdują się w Polityce prywatności i klauzuli informacyjnej RODO.</p>\n          </div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§24 Reklamacje</div>\n          <div class="reg-acc-body">\n            <p>Reklamacje można przesyłać e-mailem na kontakt.amen@gmail.com albo listownie na adres: SZKOŁA TAŃCA AMEN! MATEUSZ ZAPART, ul. Lotnicza 83, 51-180 Szymanów.</p>\n            <p>Reklamacja powinna zawierać dane uczestnika, opis sytuacji, datę i nazwę zajęć oraz oczekiwany sposób rozwiązania.</p>\n            <p>Szkoła odpowie w terminie 14 dni od otrzymania reklamacji.</p>\n            <p>Problem wymagający szybkiej reakcji można zgłosić również instruktorowi lub koordynatorowi.</p>\n            <p>Regulamin nie ogranicza ustawowych praw konsumenta.</p>\n          </div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§25 Zmiany Regulaminu</div>\n          <div class="reg-acc-body">\n            <p>Szkoła może zmienić Regulamin z ważnych przyczyn prawnych, organizacyjnych lub technicznych.</p>\n            <p>Zmiany nie naruszają warunków już opłaconego karnetu, chyba że wynikają z obowiązujących przepisów albo zostaną zaakceptowane przez uczestnika.</p>\n            <p>O istotnych zmianach uczestnicy zostaną poinformowani przed ich wejściem w życie.</p>\n            <p>Nowa wersja Regulaminu jest stosowana do zakupów i karnetów rozpoczętych po jej wejściu w życie.</p>\n          </div>\n        </div>\n\n        <div class="reg-acc-item">\n          <div class="reg-acc-h" onclick="toggleReg(this)">§26 Postanowienia końcowe</div>\n          <div class="reg-acc-body">\n            <p>Regulamin jest dostępny na stronie szkolaamen.pl i w formularzach zapisowych.</p>\n            <p>Akceptacja następuje przez zaznaczenie odpowiedniego pola podczas zapisu albo w inny jednoznaczny sposób.</p>\n            <p>W sprawach nieuregulowanych stosuje się obowiązujące przepisy prawa polskiego.</p>\n            <p>Spory będą w pierwszej kolejności rozwiązywane polubownie.</p>\n            <p>Jeżeli rozwiązanie polubowne nie będzie możliwe, spór rozstrzyga sąd właściwy zgodnie z obowiązującymi przepisami.</p>\n            <p>Regulamin wchodzi w życie w dniu wskazanym na jego początku.</p>\n            <p style="margin-top:16px;font-size:12px;color:#666;">REGULAMIN SZKOŁY TAŃCA AMEN! · SZKOŁA TAŃCA AMEN! MATEUSZ ZAPART · wersja 1.1 · obowiązuje od 23.07.2026</p>\n          </div>\n        </div>\n\n      </div>\n    </section>\n  </div>\n</div>\n\n<!-- ═══ PAGE: REGULAMIN IMPREZ ════════════════════════════════════ -->\n<div class="page" id="page-regulamin-imprez">\n  <div class="page-offset">\n    <div class="page-hero">\n      <div class="container">\n        <span class="label">Dokumenty</span>\n        <h1>Regulamin Imprez z Amen!</h1>\n        <p>Zasady uczestnictwa w imprezach tanecznych organizowanych przez Szkołę Tańca Amen!</p>\n      </div>\n    </div>\n    <section class="section">\n      <div class="container" style="max-width:780px">\n        <div class="reg-s"><h3>§1 Organizator</h3><p>SZKOŁA TAŃCA AMEN! MATEUSZ ZAPART, ul. Lotnicza 83, 51-180 Szymanów, NIP: 8943139075. Kontakt: kontakt.amen@gmail.com · 513 580 512.</p></div>\n        <div class="reg-s"><h3>§2 Zakres regulaminu</h3><p>Regulamin dotyczy imprez tanecznych i rekreacyjnych, w tym potańcówek, wieczorków tanecznych, Sylwestra i innych wydarzeń. W sprawach nieuregulowanych stosuje się Regulamin Szkoły Tańca Amen!.</p></div>\n        <div class="reg-s"><h3>§3 Uczestnictwo i bilety</h3><p>Uczestnictwo wymaga zakupu biletu. Sam formularz zgłoszeniowy nie rezerwuje miejsca — gwarancję daje opłacony bilet. Organizator może odmówić wstępu lub nakazać opuszczenie imprezy osobom naruszającym regulamin bez prawa do zwrotu.</p></div>\n        <div class="reg-s"><h3>§4 Wiek uczestników</h3><p>Imprezy przeznaczone dla osób pełnoletnich (18+), chyba że oferta danego wydarzenia stanowi inaczej. Małoletni mogą uczestniczyć wyłącznie za zgodą i w towarzystwie opiekuna.</p></div>\n        <div class="reg-s"><h3>§5 Bezpieczeństwo i zachowanie</h3><p>Uczestnik zobowiązuje się do szacunku wobec wszystkich. Zabroniona jest przemoc, agresja i molestowanie. Organizator może usunąć osoby naruszające zasady bez prawa do zwrotu biletu.</p></div>\n        <div class="reg-s"><h3>§6 Zakaz alkoholu i substancji</h3><p>Całkowity zakaz alkoholu, narkotyków i substancji psychoaktywnych. Wnoszenie i spożywanie alkoholu zabronione. Osoby pod wpływem substancji nie będą wpuszczane na imprezę.</p></div>\n        <div class="reg-s"><h3>§7 Kontakt fizyczny i taniec</h3><p>Uczestnik ma prawo odmówić tańca lub kontaktu fizycznego w każdym momencie. Niedopuszczalny jest dotyk naruszający intymność lub granice. Organizator może usunąć osoby naruszające granice innych uczestników.</p></div>\n        <div class="reg-s"><h3>§8 Zdjęcia i nagrania</h3><p>Na imprezie może być obecna osoba wykonująca materiały dokumentacyjne. Uczestnik kupując bilet wyraża zgodę na utrwalanie wizerunku w celach promocyjnych. Rozpoznawalny wizerunek publikowany za zgodą lub na podstawie przepisów. Zgodę można wycofać na kontakt.amen@gmail.com.</p></div>\n        <div class="reg-s"><h3>§9 Płatności i zwroty</h3><p>Warunki zwrotów podawane w ofercie konkretnej imprezy. Zwrot przysługuje przy rezygnacji z odpowiednim wyprzedzeniem. Przy odwołaniu przez Organizatora — pełny zwrot wpłaconej kwoty.</p></div>\n        <div class="reg-s"><h3>§10 Odwołanie i zmiany imprezy</h3><p>Organizator może odwołać lub zmienić termin z ważnych przyczyn. Przy odwołaniu uczestnicy zostaną niezwłocznie poinformowani i otrzymają pełny zwrot środków.</p></div>\n        <div class="reg-s"><h3>§11 Mienie uczestników</h3><p>Organizator nie odpowiada za rzeczy pozostawione bez nadzoru. Znalezione rzeczy przechowywane przez rozsądny czas.</p></div>\n        <div class="reg-s"><h3>§12 Dane osobowe</h3><p>Administrator: SZKOŁA TAŃCA AMEN! MATEUSZ ZAPART. Dane przetwarzane w celu organizacji imprezy i rozliczeń. Szczegóły w Polityce Prywatności na szkolaamen.pl.</p></div>\n        <div class="reg-s"><h3>§13 Reklamacje</h3><p>Reklamacje na kontakt.amen@gmail.com. Powinna zawierać dane uczestnika, opis sytuacji i oczekiwany sposób rozwiązania. Odpowiedź w terminie 14 dni.</p></div>\n        <div class="reg-s"><h3>§14 Obiekty zewnętrzne</h3><p>Imprezy odbywają się w obiektach zewnętrznych. Uczestnik zobowiązany przestrzegać zasad gospodarza obiektu — parkowania, korzystania z sanitariatów i części wspólnych.</p></div>\n        <div class="reg-s"><h3>§15 Zmiany Regulaminu</h3><p>Organizator może zmieniać regulamin z ważnych przyczyn. Aktualna wersja dostępna na szkolaamen.pl. Kupno biletu po zmianie oznacza akceptację nowej wersji.</p></div>\n        <div class="reg-s"><h3>§16 Postanowienia końcowe</h3><p>W sprawach nieuregulowanych stosuje się prawo polskie i Regulamin Szkoły Tańca Amen!. Spory rozwiązywane polubownie. Akceptacja następuje przez zakup biletu.</p></div>\n        <div style="background:var(--grey);border-radius:var(--r-lg);padding:16px 20px;margin-top:8px;font-size:13px;color:var(--muted);">\n          Pełna wersja: <a href="https://chrzescijanskaszkolatanca.pl/regulamin-imprez/" target="_blank" style="color:var(--orange);">chrzescijanskaszkolatanca.pl/regulamin-imprez/</a>\n        </div>\n        <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">\n          <a href="#" onclick="showPage(\'regulamin\')" class="btn btn-outline" style="font-size:14px;">Regulamin kursów</a>\n          <a href="#" onclick="showPage(\'imprezy\')" class="btn btn-outline" style="font-size:14px;">Imprezy z Amen!</a>\n        </div>\n      </div>\n    </section>\n  </div>\n</div>\n\n\n\n';
+export const htmlContent = `
+
+<!-- ═══ NAV ═══════════════════════════════════════════════ -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="#" onclick="showPage('home')">
+      amen<span>!</span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="#" onclick="showPage('home')" id="nav-home">Start</a></li>
+      <li><a href="#" onclick="showPage('oferta')" id="nav-oferta">Oferta</a></li>
+      <li><a href="#" onclick="showPage('grafik')" id="nav-grafik">Grafik</a></li>
+      <li><a href="#" onclick="showPage('cennik')" id="nav-cennik">Cennik</a></li>
+      <li><a href="#" onclick="showPage('instruktor')" id="nav-instruktor">Zostań instruktorem</a></li>
+      <li><a href="#" onclick="showPage('onas')" id="nav-onas">O Amen!</a></li>
+      <li><a href="#" onclick="showPage('kontakt')" id="nav-kontakt">Kontakt</a></li>
+    </ul>
+    <div style="display:flex; gap:8px; align-items:center; margin-left:12px;">
+      <a class="btn btn-outline nav__cta" href="#" onclick="showPage('instruktor')" style="padding:10px 16px; font-size:13px;">🎓 Zostań instruktorem</a>
+      <a class="btn btn-outline nav__cta" href="#" onclick="showPage('parafia')" id="nav-parafia" style="padding:10px 16px; font-size:13px;">⛪ Dla parafii</a>
+      <a class="btn btn-primary nav__cta" href="#" onclick="showPage('sklep')">Kup karnet →</a>
+    </div>
+    <div class="nav__hamburger" onclick="toggleMobile()" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- mobile menu -->
+<div class="nav__mobile" id="mobileMenu">
+  <a href="#" onclick="showPage('home');closeMobile()">Start</a>
+  <a href="#" onclick="showPage('oferta');closeMobile()">Oferta</a>
+  <a href="#" onclick="showPage('grafik');closeMobile()">Grafik</a>
+  <a href="#" onclick="showPage('cennik');closeMobile()">Cennik</a>
+  <a href="#" onclick="showPage('instruktor');closeMobile()">Zostań instruktorem</a>
+  <a href="#" onclick="showPage('onas');closeMobile()">O Amen!</a>
+  <a href="#" onclick="showPage('kontakt');closeMobile()">Kontakt</a>
+  <a href="#" onclick="showPage('parafia');closeMobile()" style="color:var(--orange); font-weight:600;">Dla parafii</a>
+  <a class="btn btn-primary" href="#" onclick="showPage('sklep');closeMobile()">Kup karnet →</a>
+</div>
+
+
+<!-- ═══ PAGE: HOME ═════════════════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__inner">
+        <span class="hero__eyebrow">Wrocław · Est. 2022</span>
+        <h1 class="hero__title">
+          Roztańczamy<br><em>Parafie</em><br>w Polsce.
+        </h1>
+        <p class="hero__sub">
+          Uczymy tańca, ale Amen! to coś więcej niż kroki na parkiecie. Taniec jest dla nas narzędziem — celem są relacje. Tworzymy w Kościele lokalne miejsca, w których ludzie mogą regularnie się spotykać, poznawać i budować więzi. Dołącz do społeczności, która łączy radość, ruch i chrześcijańskie wartości. Zaczynamy od Wrocławia i kończymy na Polsce!<br><br>
+          Zaczynamy od Wrocławia — i idziemy w całą Polskę.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn-primary" href="#" onclick="showPage('oferta')">Sprawdź ofertę →</a>
+          <a class="btn btn-outline-white" href="#" onclick="showPage('grafik')">Zobacz grafik</a>
+          <a class="btn btn-outline-white" href="#" onclick="showPage('onas')">O projekcie</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll">Przewiń</div>
+  </section>
+
+  <!-- NAWIGACJA OD POTRZEB -->
+  <section class="section section--grey">
+    <div class="container">
+      <span class="label">Dla Ciebie</span>
+      <h2 class="section-title">Od czego chcesz zacząć?</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; margin-top:32px;">
+        <a href="#" onclick="showPage('grafik')" style="text-decoration:none; background:var(--white); border:1.5px solid rgba(0,0,0,.08); border-radius:var(--r-lg); padding:24px 20px; display:flex; flex-direction:column; gap:10px; transition:box-shadow .2s, border-color .2s;" onmouseover="this.style.borderColor='var(--orange)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='rgba(0,0,0,.08)';this.style.boxShadow='none'">
+          <div style="font-size:28px;">💃</div>
+          <div style="font-weight:700; font-size:15px; color:var(--text);">Chcę nauczyć się tańczyć</div>
+          <div style="font-size:13px; color:var(--muted); line-height:1.55;">Kursy tańca od zupełnych podstaw. Znajdź grupę blisko domu.</div>
+          <div style="font-size:13px; font-weight:600; color:var(--orange); margin-top:auto;">Kursy regularne →</div>
+        </a>
+        <a href="#" onclick="showPage('imprezy')" style="text-decoration:none; background:var(--white); border:1.5px solid rgba(0,0,0,.08); border-radius:var(--r-lg); padding:24px 20px; display:flex; flex-direction:column; gap:10px; transition:box-shadow .2s, border-color .2s;" onmouseover="this.style.borderColor='var(--orange)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='rgba(0,0,0,.08)';this.style.boxShadow='none'">
+          <div style="font-size:28px;">🎉</div>
+          <div style="font-weight:700; font-size:15px; color:var(--text);">Chcę wyjść do ludzi</div>
+          <div style="font-size:13px; color:var(--muted); line-height:1.55;">Imprezy z Amen! – potańcówki, rozmowy, integracja i nowi znajomi.</div>
+          <div style="font-size:13px; font-weight:600; color:var(--orange); margin-top:auto;">Imprezy z Amen! →</div>
+        </a>
+        <a href="#" onclick="showPage('instruktor')" style="text-decoration:none; background:var(--white); border:1.5px solid rgba(0,0,0,.08); border-radius:var(--r-lg); padding:24px 20px; display:flex; flex-direction:column; gap:10px; transition:box-shadow .2s, border-color .2s;" onmouseover="this.style.borderColor='var(--orange)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='rgba(0,0,0,.08)';this.style.boxShadow='none'">
+          <div style="font-size:28px;">🎯</div>
+          <div style="font-weight:700; font-size:15px; color:var(--text);">Chcę zostać instruktorem</div>
+          <div style="font-size:13px; color:var(--muted); line-height:1.55;">Szkolenie Instruktorskie – zdobądź nowe umiejętności i poprowadź grupę.</div>
+          <div style="font-size:13px; font-weight:600; color:var(--orange); margin-top:auto;">Szkolenie instruktorskie →</div>
+        </a>
+        <a href="#" onclick="showPage('oferta')" style="text-decoration:none; background:var(--white); border:1.5px solid rgba(0,0,0,.08); border-radius:var(--r-lg); padding:24px 20px; display:flex; flex-direction:column; gap:10px; transition:box-shadow .2s, border-color .2s;" onmouseover="this.style.borderColor='var(--orange)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='rgba(0,0,0,.08)';this.style.boxShadow='none'">
+          <div style="font-size:28px;">💍</div>
+          <div style="font-weight:700; font-size:15px; color:var(--text);">Bierzemy ślub</div>
+          <div style="font-size:13px; color:var(--muted); line-height:1.55;">Pierwszy Taniec – indywidualne przygotowanie do Waszego dnia.</div>
+          <div style="font-size:13px; font-weight:600; color:var(--orange); margin-top:auto;">Pierwszy Taniec →</div>
+        </a>
+        <a href="#" onclick="showPage('parafia')" style="text-decoration:none; background:var(--white); border:1.5px solid rgba(0,0,0,.08); border-radius:var(--r-lg); padding:24px 20px; display:flex; flex-direction:column; gap:10px; transition:box-shadow .2s, border-color .2s;" onmouseover="this.style.borderColor='var(--orange)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='rgba(0,0,0,.08)';this.style.boxShadow='none'">
+          <div style="font-size:28px;">⛪</div>
+          <div style="font-weight:700; font-size:15px; color:var(--text);">Chcę zgłosić parafię</div>
+          <div style="font-size:13px; color:var(--muted); line-height:1.55;">Pokaż proboszczowi prezentację o Roztańczonej Parafii.</div>
+          <div style="font-size:13px; font-weight:600; color:var(--orange); margin-top:auto;">Dla parafii →</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFERTA OVERVIEW -->
+  <section class="section">
+    <div class="container">
+      <span class="label">Co robimy</span>
+      <h2 class="section-title">Znajdź coś dla siebie</h2>
+      <p class="section-lead">Potrzebujesz randki z żoną, chcesz poznać mamy z okolicy, pielęgnować swoją kobiecość albo odkryć nową zajawkę z ludźmi z parafii? Znajdź swój kurs — od podstaw lub na wyższych poziomach.</p>
+      <div class="cards">
+        <div class="card" onclick="showPage('oferta')">
+          <div class="card__icon">💃</div>
+          <div class="card__title">Kursy Regularne</div>
+          <div class="card__desc">Regularne zajęcia w 14 parafiach Wrocławia. Style użytkowy, bachata, latino solo — w parach i solo. Raz w tygodniu.</div>
+          <span class="card__link">Dowiedz się więcej</span>
+        </div>
+        <div class="card" onclick="showPage('oferta')">
+          <div class="card__icon">🎉</div>
+          <div class="card__title">Warsztaty Weekendowe</div>
+          <div class="card__desc">Intensywne sesje w weekendy. Idealny sposób na szybki postęp lub wypróbowanie tańca bez zobowiązań.</div>
+          <span class="card__link">Dowiedz się więcej</span>
+        </div>
+        <div class="card" onclick="showPage('oferta')">
+          <div class="card__icon">🎶</div>
+          <div class="card__title">Imprezy z Amen!</div>
+          <div class="card__desc">Potańcówki, wieczory tematyczne i wyjątkowe wydarzenia — taniec w radosnej, rodzinnej atmosferze.</div>
+          <span class="card__link">Dowiedz się więcej</span>
+        </div>
+        <div class="card" onclick="showPage('oferta')">
+          <div class="card__icon">💍</div>
+          <div class="card__title">Pierwszy Taniec</div>
+          <div class="card__desc">Indywidualne lekcje dla par przed ślubem. Choreografia dopasowana do Waszej piosenki i możliwości.</div>
+          <span class="card__link">Dowiedz się więcej</span>
+        </div>
+        <div class="card" onclick="showPage('oferta')">
+          <div class="card__icon">🎯</div>
+          <div class="card__title">Zajęcia Indywidualne</div>
+          <div class="card__desc">Prywatne lekcje z instruktorem. Maksymalny postęp w Twoim tempie, skupione na Twoich celach.</div>
+          <span class="card__link">Dowiedz się więcej</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SYLWESTER BANER -->
+  <section style="background:var(--orange); padding:40px 0;">
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">
+      <div>
+        <div style="font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.7); margin-bottom:8px;">🎉 Sylwester z Amen!</div>
+        <div style="font-family:var(--font-head); font-size:26px; font-weight:800; color:var(--white); line-height:1.2;">Spędź Sylwestra w chrześcijańskiej atmosferze</div>
+        <div style="font-size:15px; color:rgba(255,255,255,.85); margin-top:6px;">Taniec, radość i dobra atmosfera — powitaj Nowy Rok z Amen!</div>
+      </div>
+      <a class="btn btn-white" href="#" onclick="showPage('sylwester')" style="flex-shrink:0;">Dowiedz się więcej →</a>
+    </div>
+  </section>
+
+  <!-- GRAFIK PREVIEW -->
+  <section class="section section--grey">
+    <div class="container">
+      <span class="label">Gdzie i kiedy</span>
+      <h2 class="section-title">Zajęcia blisko Ciebie</h2>
+      <p class="section-lead">Prowadzimy zajęcia w 7 parafiach na terenie Wrocławia — znajdź grupę w swojej okolicy.</p>
+      <div style="display:flex; flex-direction:column; gap:0; border:1px solid rgba(0,0,0,.08); border-radius:var(--r-lg); overflow:hidden; background:var(--white);">
+        <div style="display:grid; grid-template-columns:1fr 1fr auto; align-items:center; padding:16px 24px; border-bottom:1px solid rgba(0,0,0,.06); gap:12px;">
+          <div><div style="font-weight:700; font-size:15px;">Parafia Chrystusa Króla</div><div style="font-size:13px; color:var(--muted);">ul. Młodych Techników 17</div></div>
+          <div style="font-size:13px; color:var(--muted);">PN, WT</div>
+          <a href="#" onclick="showPage('grafik')" style="font-size:13px; font-weight:600; color:var(--orange); white-space:nowrap;">Zobacz →</a>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr auto; align-items:center; padding:16px 24px; border-bottom:1px solid rgba(0,0,0,.06); gap:12px; background:var(--orange-xl);">
+          <div><div style="font-weight:700; font-size:15px;">Parafia NMP Bolesnej</div><div style="font-size:13px; color:var(--muted);">ul. Tatarakowa 1</div></div>
+          <div style="font-size:13px; color:var(--muted);">ŚR</div>
+          <a href="#" onclick="showPage('grafik')" style="font-size:13px; font-weight:600; color:var(--orange); white-space:nowrap;">Zobacz →</a>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr auto; align-items:center; padding:16px 24px; border-bottom:1px solid rgba(0,0,0,.06); gap:12px;">
+          <div><div style="font-weight:700; font-size:15px;">Parafia NMP Matki Miłosierdzia</div><div style="font-size:13px; color:var(--muted);">ul. Brucknera 20</div></div>
+          <div style="font-size:13px; color:var(--muted);">WT</div>
+          <a href="#" onclick="showPage('grafik')" style="font-size:13px; font-weight:600; color:var(--orange); white-space:nowrap;">Zobacz →</a>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr auto; align-items:center; padding:16px 24px; border-bottom:1px solid rgba(0,0,0,.06); gap:12px; background:var(--orange-xl);">
+          <div><div style="font-weight:700; font-size:15px;">Parafia Opieki Św. Józefa</div><div style="font-size:13px; color:var(--muted);">ul. Ołbińska 1</div></div>
+          <div style="font-size:13px; color:var(--muted);">ŚR</div>
+          <a href="#" onclick="showPage('grafik')" style="font-size:13px; font-weight:600; color:var(--orange); white-space:nowrap;">Zobacz →</a>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr auto; align-items:center; padding:16px 24px; border-bottom:1px solid rgba(0,0,0,.06); gap:12px;">
+          <div><div style="font-weight:700; font-size:15px;">Parafia Św. Alberta Wielkiego</div><div style="font-size:13px; color:var(--muted);">ul. Redycka 10</div></div>
+          <div style="font-size:13px; color:var(--muted);">PN</div>
+          <a href="#" onclick="showPage('grafik')" style="font-size:13px; font-weight:600; color:var(--orange); white-space:nowrap;">Zobacz →</a>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr auto; align-items:center; padding:16px 24px; border-bottom:1px solid rgba(0,0,0,.06); gap:12px; background:var(--orange-xl);">
+          <div><div style="font-weight:700; font-size:15px;">Parafia Św. Antoniego</div><div style="font-size:13px; color:var(--muted);">al. Kasprowicza 26</div></div>
+          <div style="font-size:13px; color:var(--muted);">PN, ŚR, CZW</div>
+          <a href="#" onclick="showPage('grafik')" style="font-size:13px; font-weight:600; color:var(--orange); white-space:nowrap;">Zobacz →</a>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr auto; align-items:center; padding:16px 24px; gap:12px;">
+          <div><div style="font-weight:700; font-size:15px;">Parafia Św. Anny</div><div style="font-size:13px; color:var(--muted);">ul. Sobótki 42</div></div>
+          <div style="font-size:13px; color:var(--muted);">PN</div>
+          <a href="#" onclick="showPage('grafik')" style="font-size:13px; font-weight:600; color:var(--orange); white-space:nowrap;">Zobacz →</a>
+        </div>
+      </div>
+      <div style="margin-top:24px;">
+        <a class="btn btn-outline" href="#" onclick="showPage('grafik')">Zobacz pełny grafik →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CENNIK PREVIEW -->
+  <section class="section">
+    <div class="container">
+      <span class="label">Cennik</span>
+      <h2 class="section-title">Blisko i tanio</h2>
+      <p class="section-lead">Karnet miesięczny = 4 zajęcia (raz w tygodniu). Cena rośnie wraz z poziomem zaawansowania.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:32px;">
+        <div style="border:2px solid var(--orange-l); border-radius:var(--r-lg); padding:28px 24px; background:var(--orange-xl);">
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--orange-d); margin-bottom:8px;">Podstawowy · P1–P3</div>
+          <div style="font-family:var(--font-head); font-size:36px; font-weight:800; color:var(--black);">100 zł<span style="font-size:16px; font-weight:400; color:var(--muted);">/mies.</span></div>
+          <p style="font-size:14px; color:var(--muted); margin-top:12px; line-height:1.6;">Poziomy P1, P2 i P3 — pierwsze lata nauki tańca.</p>
+        </div>
+        <div style="border:2px solid rgba(0,0,0,.1); border-radius:var(--r-lg); padding:28px 24px; background:var(--white);">
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:8px;">Średniozaawansowany · S1+</div>
+          <div style="font-family:var(--font-head); font-size:36px; font-weight:800; color:var(--black);">130 zł<span style="font-size:16px; font-weight:400; color:var(--muted);">/mies.</span></div>
+          <p style="font-size:14px; color:var(--muted); margin-top:12px; line-height:1.6;">Poziomy S1, S2 i Z1 — wyższe poziomy zaawansowania.</p>
+        </div>
+      </div>
+      <div style="margin-top:28px; display:flex; gap:16px; flex-wrap:wrap;">
+        <a class="btn btn-outline" href="#" onclick="showPage('cennik')">Pełny cennik z poziomami →</a>
+        <a class="btn btn-primary" href="#" onclick="showPage('sklep')">Kup karnet online →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPINIE -->
+  <section class="section section--grey">
+    <div class="container">
+      <span class="label">Opinie</span>
+      <h2 class="section-title">Co mówią uczestnicy</h2>
+      <div class="testimonials">
+        <div class="testimonial">
+          <p class="testimonial__text">Super ludzie, super atmosfera, profesjonalnie i na luzie — polecam!</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">K</div>
+            <div>
+              <div class="testimonial__name">Kamil Bortka</div>
+              <div class="testimonial__meta">Facebook · luty 2022</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial__text">Cudowni ludzie z pasją! Miałam okazję uczestniczyć w warsztatach prowadzonych przez Monikę i Mateusza — to był sztos! Mega atmosfera, profesjonalizm. Nie mogę się doczekać kolejnego spotkania. Z całego serducha polecam!</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">M</div>
+            <div>
+              <div class="testimonial__name">Marta</div>
+              <div class="testimonial__meta">Facebook · 2022</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial__text">Przede wszystkim dobra, przyjazna atmosfera, a przy tym profesjonalne figury taneczne wytłumaczone tak, żeby każdy zrozumiał. Polecamy zdecydowanie — i w kwestii rozwoju tanecznego, i duchowego, i społecznego.</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">W</div>
+            <div>
+              <div class="testimonial__name">Wiktor Pierzak</div>
+              <div class="testimonial__meta">Facebook · luty 2022</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial__text">Przyjemna, rodzinna atmosfera zarówno na kursach, jak i imprezach. Łatwo poczuć więź z ludźmi tu poznanymi.</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">D</div>
+            <div>
+              <div class="testimonial__name">Dawid Szczechla</div>
+              <div class="testimonial__meta">Facebook · maj 2019</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ROZTAŃCZONA PARAFIA -->
+  <section class="section section--black">
+    <div class="container">
+      <div class="parish-split">
+        <div>
+          <span class="label">Projekt parafialny</span>
+          <h2 class="section-title">Roztańczona Parafia</h2>
+          <p style="color:rgba(255,255,255,.65); font-size:16px; line-height:1.7; margin-bottom:24px;">
+            Wierzymy, że Kościół może i powinien być centrum spotkania, radości i prawdziwych więzi. Dlatego przychodzimy do parafii — z kursami, warsztatami i potańcówkami dla całej społeczności.
+          </p>
+          <p style="color:rgba(255,255,255,.5); font-size:14px; margin-bottom:32px;">
+            Jesteś duszpasterzem, animatorem lub liderem społeczności? Porozmawiajmy o tym, jak możemy razem roztańczyć Twoją parafię.
+          </p>
+          <a class="btn btn-primary" href="#" onclick="showPage('parafia')">Dowiedz się więcej →</a>
+        </div>
+        <div class="parish-split__visual">⛪</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="section section--orange">
+    <div class="container">
+      <div class="newsletter-box">
+        <span class="label">Newsletter</span>
+        <h2 class="section-title" style="color:var(--white)">Bądź na bieżąco</h2>
+        <p style="color:rgba(255,255,255,.8); font-size:16px; line-height:1.65;">
+          Nowe grupy, zapisy na warsztaty, imprezy i promocje — prosto na Twoją skrzynkę. Bez spamu.
+        </p>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="Twój adres e-mail" />
+          <button class="btn btn-white" type="submit">Zapisz się</button>
+        </form>
+        <label style="display:flex; align-items:flex-start; gap:10px; margin-top:16px; cursor:pointer; text-align:left; max-width:520px;">
+          <input type="checkbox" required style="margin-top:3px; accent-color:var(--orange); flex-shrink:0;" />
+          <span style="font-size:12px; color:rgba(255,255,255,.65); line-height:1.6;">Wyrażam zgodę na przetwarzanie moich danych osobowych (adresu e-mail) w celu otrzymywania newslettera Szkoły Tańca Amen! Zgodę mogę wycofać w każdej chwili. Więcej informacji w <a href="#" onclick="showPage('polityka')" style="color:rgba(255,255,255,.85); text-decoration:underline;">Polityce prywatności</a>.</span>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT BLOCK -->
+  <section class="section">
+    <div class="container">
+      <span class="label">Kontakt</span>
+      <h2 class="section-title" style="margin-bottom:40px">Masz pytania?</h2>
+      <div class="contact-row">
+        <div class="contact-item">
+          <div class="contact-item__icon">📞</div>
+          <div>
+            <div class="contact-item__label">Telefon</div>
+            <div class="contact-item__val">513 580 512</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item__icon">✉️</div>
+          <div>
+            <div class="contact-item__label">E-mail</div>
+            <div class="contact-item__val">kontakt.amen@gmail.com</div>
+          </div>
+        </div>
+      </div>
+      <div class="social-row">
+        <a class="social-btn" href="https://www.facebook.com/szkolaamen" target="_blank">f Facebook</a>
+        <a class="social-btn" href="https://www.instagram.com/szkolaamen/" target="_blank">📸 Instagram</a>
+        <a class="social-btn" href="https://www.youtube.com/@szkolaamen" target="_blank">▶ YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand__logo">amen<span>!</span></div>
+          <p class="footer-brand__desc">Chrześcijańska szkoła tańca z Wrocławia. Tańczymy, bo wierzymy w radość.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/szkolaamen" target="_blank">f</a>
+            <a href="https://www.instagram.com/szkolaamen/" target="_blank">📸</a>
+            <a href="https://www.youtube.com/@szkolaamen" target="_blank">▶</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col__title">Oferta</div>
+          <ul class="footer-col__links">
+            <li><a href="#" onclick="showPage('oferta')">Kursy Tańca</a></li>
+            <li><a href="#" onclick="showPage('oferta')">Warsztaty</a></li>
+            <li><a href="#" onclick="showPage('oferta')">Potańcówki</a></li>
+            <li><a href="#" onclick="showPage('oferta')">Pierwszy Taniec</a></li>
+            <li><a href="#" onclick="showPage('oferta')">Zajęcia Indywidualne</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col__title">Informacje</div>
+          <ul class="footer-col__links">
+            <li><a href="#" onclick="showPage('grafik')">Grafik zajęć</a></li>
+            <li><a href="#" onclick="showPage('cennik')">Cennik</a></li>
+            <li><a href="#" onclick="showPage('faq')">FAQ</a></li>
+            <li><a href="#" onclick="showPage('parafia')">Roztańczona Parafia</a></li>
+            <li><a href="#" onclick="showPage('regulamin')">Regulamin kursów</a></li>
+            <li><a href="#" onclick="showPage('regulamin-imprez')">Regulamin imprez</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col__title">Szkoła</div>
+          <ul class="footer-col__links">
+            <li><a href="#" onclick="showPage('onas')">O Amen!</a></li>
+            <li><a href="#" onclick="showPage('kontakt')">Kontakt</a></li>
+            <li><a href="#" onclick="showPage('sklep')">Sklep</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Szkoła Tańca Amen! Wrocław</span>
+        <span>kontakt.amen@gmail.com · 513 580 512</span>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /page-home -->
+
+
+<!-- ═══ PAGE: OFERTA ═══════════════════════════════════════ -->
+<div class="page" id="page-oferta">
+  <div class="page-offset">
+    <div class="page-hero">
+      <div class="container">
+        <span class="label">Co oferujemy</span>
+        <h1>Oferta</h1>
+        <p>Bogaty wybór usług tanecznych — niezależnie od poziomu, wieku i celu.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container">
+        <div class="offer-list">
+          <div class="offer-item">
+            <div class="offer-item__num">01</div>
+            <div>
+              <div class="offer-item__icon">💃</div>
+              <div class="offer-item__title">Regularne kursy tańca</div>
+              <p class="offer-item__desc">Prowadzimy zajęcia w 14 parafiach Wrocławia. Różne style — w parach i solo. Raz w tygodniu.</p>
+              <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:12px;">
+                <span style="background:var(--orange-xl); color:var(--orange); font-size:13px; font-weight:600; padding:4px 12px; border-radius:99px;">W parach: Bachata · Salsa · Użytkowy</span>
+                <span style="background:var(--orange-xl); color:var(--orange); font-size:13px; font-weight:600; padding:4px 12px; border-radius:99px;">Solo: Latino Solo <span style="font-weight:400; opacity:.75">+ wkrótce Dancehall, Reggaeton</span></span>
+                <span style="background:var(--grey); color:var(--text); font-size:13px; font-weight:600; padding:4px 12px; border-radius:99px;">👧 Amen! Kids</span>
+              </div>
+            </div>
+            <a class="btn btn-outline" href="#" onclick="showPage('grafik')">Zobacz grafik</a>
+          </div>
+          <div class="offer-item">
+            <div class="offer-item__num">02</div>
+            <div>
+              <div class="offer-item__icon">🎉</div>
+              <div class="offer-item__title">Warsztaty Weekendowe</div>
+              <p class="offer-item__desc">Intensywne sesje taneczne w weekendy — idealne na szybki postęp lub żeby sprawdzić, czy taniec jest dla Ciebie, zanim zdecydujesz się na kurs. Różnorodne style i tematy — sprawdź aktualne terminy.</p>
+            </div>
+            <a class="btn btn-outline" href="#" onclick="showPage('warsztaty')">Więcej →</a>
+          </div>
+          <div class="offer-item">
+            <div class="offer-item__num">04</div>
+            <div>
+              <div class="offer-item__icon">🎶</div>
+              <div class="offer-item__title">Imprezy z Amen!</div>
+              <p class="offer-item__desc">6 stref aktywności: parkiet taneczny, karaoke, planszówki, bilard, inne. Zaplanuj z nami aż 5 dat w sezonie.</p>
+            </div>
+            <a class="btn btn-outline" href="#" onclick="showPage('imprezy')">Więcej →</a>
+          </div>
+          <div class="offer-item">
+            <div class="offer-item__num">05</div>
+            <a class="btn btn-outline" href="#" onclick="showPage('kontakt')">Zapytaj o najbliższy termin</a>
+          </div>
+          <div class="offer-item">
+            <div class="offer-item__num">06</div>
+            <div>
+              <div class="offer-item__icon">💍</div>
+              <div class="offer-item__title">Pierwszy Taniec</div>
+              <p class="offer-item__desc">Indywidualne lekcje dla par szykujących się do ślubu. Tworzymy choreografię dopasowaną do Waszej piosenki i możliwości — tak żebyście czuli się pewnie i mogli cieszyć się tym momentem. Zaczynamy nawet kilka tygodni przed ceremonią.</p>
+            </div>
+            <a class="btn btn-primary" href="#" onclick="showPage('kontakt')">Umów się</a>
+          </div>
+          <div class="offer-item">
+            <div class="offer-item__num">07</div>
+            <div>
+              <div class="offer-item__icon">🎯</div>
+              <div class="offer-item__title">Zajęcia Indywidualne</div>
+              <p class="offer-item__desc">Prywatna lekcja jeden na jeden z instruktorem. Maksymalny postęp w Twoim tempie — skupiamy się wyłącznie na Twoich celach i stylu. Idealne przy konkretnym wydarzeniu lub gdy chcesz szybko nadrobić zaległości.</p>
+            </div>
+            <a class="btn btn-primary" href="#" onclick="showPage('kontakt')">Umów się</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section--orange">
+      <div class="container" style="text-align:center">
+        <h2 style="color:var(--white); font-size:32px; margin-bottom:16px;">Nie wiesz od czego zacząć?</h2>
+        <p style="color:rgba(255,255,255,.8); margin-bottom:32px; max-width:480px; margin-left:auto; margin-right:auto;">Napisz do nas — pomożemy wybrać odpowiedni kurs i poziom.</p>
+        <a class="btn btn-white" href="#" onclick="showPage('kontakt')">Napisz do nas →</a>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<!-- ═══ PAGE: GRAFIK ═══════════════════════════════════════ -->
+<div class="page" id="page-grafik">
+  <div class="page-offset">
+    <div class="page-hero">
+      <div class="container">
+        <span class="label">Terminarz</span>
+        <h1>Grafik zajęć</h1>
+        <p>Znajdź grupę blisko siebie. Dołączenie możliwe przy wolnych miejscach.</p>
+        <p style="margin-top:12px; font-size:14px; color:var(--muted);">Masz pytania? Sprawdź <a href="#" onclick="showPage('faq')" style="color:var(--orange); font-weight:600;">FAQ →</a></p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container">
+        <span class="label">Legenda poziomów</span>
+        <h2 class="section-title" style="margin-bottom:24px">Poziomy zaawansowania</h2>
+        <div class="levels-row">
+          <div class="level-pill p"><strong>P0</strong> <span class="level-pill__code">2 mies.</span> Zupełny początek</div>
+          <div class="level-pill p"><strong>P1</strong> <span class="level-pill__code">4 mies.</span> Podstawowy</div>
+          <div class="level-pill p"><strong>P2</strong> <span class="level-pill__code">3 mies.</span> Podstawowy</div>
+          <div class="level-pill p"><strong>P3</strong> <span class="level-pill__code">3 mies.</span> Podstawowy</div>
+          <div class="level-pill s"><strong>S1</strong> <span class="level-pill__code">rok</span> Średniozaawansowany</div>
+          <div class="level-pill s"><strong>S2</strong> <span class="level-pill__code">rok</span> Średniozaawansowany</div>
+          <div class="level-pill z"><strong>Z1</strong> <span class="level-pill__code">rok</span> Zaawansowany</div>
+          <div class="level-pill" style="background:var(--black); color:var(--white);"><strong>OPEN</strong> <span style="font-size:11px; opacity:.6;">wszystkie poziomy</span></div>
+        </div>
+
+        <div class="divider" style="margin-bottom:48px"></div>
+
+        <span class="label">Nowy sezon</span>
+        <h2 class="section-title" style="margin-bottom:32px">Grafik zajęć — 14 parafii</h2>
+
+        <!-- 1. Chrystusa Króla (Szczepin) -->
+        <div class="parish-block">
+          <div class="parish-block__header">
+            <div class="parish-block__name">Parafia Chrystusa Króla · Szczepin</div>
+            <div class="parish-block__addr">ul. Młodych Techników 17</div>
+          </div>
+          <div class="class-row"><span class="class-row__day">PN</span><span class="class-row__name">Użytkowy</span><span class="badge" style="background:var(--black);color:var(--white);">S1</span><span class="class-row__time">20:20</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+          <div class="class-row"><span class="class-row__day">WT</span><span class="class-row__name">Salsa Rueda</span><span class="badge">P0</span><span class="class-row__time">17:00</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+          <div class="class-row"><span class="class-row__day">WT</span><span class="class-row__name">Bachata</span><span class="badge" style="background:var(--black);color:var(--white);">P3</span><span class="class-row__time">18:10</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+          <div class="class-row"><span class="class-row__day">WT</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">19:20</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+          <div class="class-row"><span class="class-row__day">WT</span><span class="class-row__name">Walc angielski i wiedeński</span><span class="badge">P0</span><span class="class-row__time">20:30</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+          <div class="class-row"><span class="class-row__day">ŚR</span><span class="class-row__name">Latino Solo</span><span class="badge">P0</span><span class="class-row__time">20:30</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+          <div class="class-row"><span class="class-row__day">CZW</span><span class="class-row__name">Step Dance</span><span class="badge">P0</span><span class="class-row__time">21:00</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+        </div>
+
+        <!-- 2. NMP Bolesnej (Różanka) -->
+        <div class="parish-block">
+          <div class="parish-block__header">
+            <div class="parish-block__name">Parafia NMP Bolesnej · Różanka</div>
+            <div class="parish-block__addr">ul. Bałkańska 4</div>
+          </div>
+          <div class="class-row"><span class="class-row__day">CZW</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">19:00</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+        </div>
+
+        <!-- 3. NMP Bolesnej (Strachocin) -->
+        <div class="parish-block">
+          <div class="parish-block__header">
+            <div class="parish-block__name">Parafia NMP Bolesnej · Strachocin</div>
+            <div class="parish-block__addr">ul. Tatarakowa 1</div>
+          </div>
+          <div class="class-row"><span class="class-row__day">ŚR</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">19:00</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+          <div class="class-row"><span class="class-row__day">ŚR</span><span class="class-row__name">Użytkowy</span><span class="badge" style="background:var(--black);color:var(--white);">P3</span><span class="class-row__time">20:15</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+        </div>
+
+        <!-- 4. NMP Matki Miłosierdzia (Kowale) -->
+        <div class="parish-block">
+          <div class="parish-block__header">
+            <div class="parish-block__name">Parafia NMP Matki Miłosierdzia · Kowale</div>
+            <div class="parish-block__addr">ul. Brücknera 20</div>
+          </div>
+          <div class="class-row"><span class="class-row__day">WT</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">19:00</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+        </div>
+
+        <!-- 5. NMP na Piasku (Ostrów Tumski) -->
+        <div class="parish-block">
+          <div class="parish-block__header">
+            <div class="parish-block__name">Parafia NMP na Piasku · Ostrów Tumski</div>
+            <div class="parish-block__addr">ul. Katedralna 4</div>
+          </div>
+          <div class="class-row"><span class="class-row__day">WT</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">19:00</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+        </div>
+
+        <!-- 6. Opieki św. Józefa (Ołbin) -->
+        <div class="parish-block">
+          <div class="parish-block__header">
+            <div class="parish-block__name">Parafia Opieki św. Józefa · Ołbin</div>
+            <div class="parish-block__addr">ul. Ołbińska 1</div>
+          </div>
+          <div class="class-row"><span class="class-row__day">CZW</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">20:30</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+        </div>
+
+        <!-- 7. św. Alberta Wielkiego (Sołtysowice) -->
+        <div class="parish-block">
+          <div class="parish-block__header">
+            <div class="parish-block__name">Parafia św. Alberta Wielkiego · Sołtysowice</div>
+            <div class="parish-block__addr">ul. Redycka 10</div>
+          </div>
+          <div class="class-row"><span class="class-row__day">PN</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">20:00</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+        </div>
+
+        <!-- 8. św. Anny (Oporów) -->
+        <div class="parish-block">
+          <div class="parish-block__header">
+            <div class="parish-block__name">Parafia św. Anny · Oporów</div>
+            <div class="parish-block__addr">ul. Sobótki 42</div>
+          </div>
+          <div class="class-row"><span class="class-row__day">PN</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">19:30</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+        </div>
+
+        <!-- 9. św. Anny (Pracze Odrzańskie) -->
+        <div class="parish-block">
+          <div class="parish-block__header">
+            <div class="parish-block__name">Parafia św. Anny · Pracze Odrzańskie</div>
+            <div class="parish-block__addr">ul. Brodzka 163</div>
+          </div>
+          <div class="class-row"><span class="class-row__day">PN</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">18:10</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+        </div>
+
+        <!-- 10. św. Antoniego (Karłowice) -->
+        <div class="parish-block">
+          <div class="parish-block__header">
+            <div class="parish-block__name">Parafia św. Antoniego · Karłowice</div>
+            <div class="parish-block__addr">al. Kasprowicza 26</div>
+          </div>
+          <div class="class-row"><span class="class-row__day">PN</span><span class="class-row__name">Latino Solo</span><span class="badge">P0/P1</span><span class="class-row__time">19:15</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+          <div class="class-row"><span class="class-row__day">PN</span><span class="class-row__name">Latino Solo</span><span class="badge" style="background:var(--black);color:var(--white);">P2</span><span class="class-row__time">20:30</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+          <div class="class-row"><span class="class-row__day">ŚR</span><span class="class-row__name">Bachata intensywna</span><span class="badge">P0</span><span class="class-row__time">18:00–20:00</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+          <div class="class-row"><span class="class-row__day">ŚR</span><span class="class-row__name">Użytkowy</span><span class="badge" style="background:var(--black);color:var(--white);">P3</span><span class="class-row__time">19:10</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+          <div class="class-row"><span class="class-row__day">ŚR</span><span class="class-row__name">Użytkowy</span><span class="badge" style="background:var(--black);color:var(--white);">P3</span><span class="class-row__time">20:15</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+          <div class="class-row"><span class="class-row__day">CZW</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">20:20</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+          <div class="class-row"><span class="class-row__day">CZW</span><span class="class-row__name">Użytkowy</span><span class="badge" style="background:var(--black);color:var(--white);">P1</span><span class="class-row__time">19:10</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+        </div>
+
+        <!-- 11. św. Augustyna (Krzyki) -->
+        <div class="parish-block">
+          <div class="parish-block__header">
+            <div class="parish-block__name">Parafia św. Augustyna · Krzyki</div>
+            <div class="parish-block__addr">ul. Sudecka 90</div>
+          </div>
+          <div class="class-row"><span class="class-row__day">ŚR</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">20:15</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+        </div>
+
+        <!-- 12. św. Bonifacego (Nadodrze) -->
+        <div class="parish-block">
+          <div class="parish-block__header">
+            <div class="parish-block__name">Parafia św. Bonifacego · Nadodrze</div>
+            <div class="parish-block__addr">pl. Staszica 4</div>
+          </div>
+          <div class="class-row"><span class="class-row__day">CZW</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">19:00</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+        </div>
+
+        <!-- 13. św. Ojca Pio (Partynice) -->
+        <div class="parish-block">
+          <div class="parish-block__header">
+            <div class="parish-block__name">Parafia św. Ojca Pio · Partynice</div>
+            <div class="parish-block__addr">ul. Ołtaszyńska 114</div>
+          </div>
+          <div class="class-row"><span class="class-row__day">CZW</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">19:15</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+        </div>
+
+        <!-- 14. św. Teresy (Osobowice) -->
+        <div class="parish-block">
+          <div class="parish-block__header">
+            <div class="parish-block__name">Parafia św. Teresy od Dzieciątka Jezus · Osobowice</div>
+            <div class="parish-block__addr">ul. Osobowicka 129</div>
+          </div>
+          <div class="class-row"><span class="class-row__day">PN</span><span class="class-row__name">Użytkowy</span><span class="badge">P0</span><span class="class-row__time">18:30</span><a href="#" onclick="showPage('grafik')" style="font-size:12px; color:var(--orange); font-weight:600; white-space:nowrap; margin-left:auto;">Zapisz się →</a></div>
+        </div>
+
+        <div class="divider" style="margin:48px 0"></div>
+
+        <span class="label">Zasady uczestnictwa</span>
+        <h2 class="section-title" style="margin-bottom:16px; font-size:28px">Odrabianie zajęć</h2>
+        <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:24px; max-width:680px;">Nie musisz zgłaszać nieobecności. Jeśli Cię nie było, po prostu napisz do nas — a my znajdziemy termin, w którym możesz odrobić zajęcia.</p>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin-bottom:48px;">
+          <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+            <div style="font-weight:700; font-size:15px; margin-bottom:10px;">✉️ Krok 1 — Napisz do nas</div>
+            <p style="font-size:14px; color:var(--muted); line-height:1.65;">Zgłoś chęć odrobienia na <strong>kontakt.amen@gmail.com</strong>. Masz na to <strong>2 tygodnie od powrotu na zajęcia</strong>.</p>
+          </div>
+          <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+            <div style="font-weight:700; font-size:15px; margin-bottom:10px;">🗓️ Krok 2 — Wybierz termin</div>
+            <p style="font-size:14px; color:var(--muted); line-height:1.65;">Wybierz inną grupę na tym samym lub sąsiednim poziomie. Odrabiać możesz w dowolnej z naszych lokalizacji.<br><br><strong>Korzystasz z Multisport, Medicover lub FitProfit?</strong> Karta pozwala na jedno wejście dziennie — odrobienie musi odbyć się w innym dniu niż Twoje regularne zajęcia.</p>
+          </div>
+          <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+            <div style="font-weight:700; font-size:15px; margin-bottom:10px;">✅ Krok 3 — Przyjdź</div>
+            <p style="font-size:14px; color:var(--muted); line-height:1.65;">Poinformuj instruktora na początku zajęć, że odrabiasz.</p>
+          </div>
+        </div>
+
+        <div style="background:var(--orange-xl); border-radius:var(--r-lg); padding:28px; display:flex; align-items:flex-start; gap:20px;">
+          <div style="font-size:28px">📋</div>
+          <div>
+            <div style="font-weight:700; font-size:17px; margin-bottom:6px">Nowe grupy</div>
+            <p style="font-size:14px; color:var(--muted); line-height:1.65; margin-bottom:16px">Aktualnie nie ma otwartych nowych grup od podstaw. Jeśli interesuje Cię dołączenie do którejś z istniejących grup lub chcesz być powiadomiony o nowych zapisach — zostaw swój e-mail.</p>
+            <a class="btn btn-primary" href="#" onclick="showPage('kontakt')">Napisz do nas →</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<!-- ═══ PAGE: CENNIK ═══════════════════════════════════════ -->
+<div class="page" id="page-cennik">
+  <div class="page-offset">
+    <div class="page-hero">
+      <div class="container">
+        <span class="label">Cennik</span>
+        <h1>Ile to kosztuje?</h1>
+        <p>Przejrzyste ceny — bez ukrytych opłat. Karnet miesięczny = 4 zajęcia, raz w tygodniu.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container" style="max-width:800px">
+
+        <span class="label">Karnety miesięczne</span>
+        <h2 class="section-title" style="margin-bottom:16px">Ceny kursów</h2>
+        <div class="pricing-note" style="margin-bottom:32px">
+          Karnet jest ważny 4 tygodnie i obejmuje 4 zajęcia (jedno w tygodniu). Płatność przelewem — brak możliwości płatności gotówką na miejscu.
+          Szczegółowe zasady uczestnictwa opisuje <a href="#" onclick="showPage('regulamin')" style="color:var(--orange);">Regulamin kursów</a>.
+        </div>
+
+        <table class="pricing-table" style="margin-bottom:48px">
+          <thead>
+            <tr>
+              <th>Poziom</th>
+              <th>Czas trwania</th>
+              <th>Cena / mies.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="level-badge beginner">P0</span></td>
+              <td>2 miesiące</td>
+              <td><span class="price-val">80 zł</span></td>
+            </tr>
+            <tr>
+              <td><span class="level-badge beginner">P1</span></td>
+              <td>4 miesiące</td>
+              <td><span class="price-val">100 zł</span></td>
+            </tr>
+            <tr>
+              <td><span class="level-badge inter">P2</span></td>
+              <td>3 miesiące</td>
+              <td><span class="price-val">100 zł</span></td>
+            </tr>
+            <tr>
+              <td><span class="level-badge inter">P3</span></td>
+              <td>3 miesiące</td>
+              <td><span class="price-val">100 zł</span></td>
+            </tr>
+            <tr>
+              <td><span class="level-badge adv">S1</span></td>
+              <td>rok</td>
+              <td><span class="price-val">130 zł</span></td>
+            </tr>
+            <tr>
+              <td><span class="level-badge adv">S2</span></td>
+              <td>rok</td>
+              <td><span class="price-val">130 zł</span></td>
+            </tr>
+            <tr>
+              <td><span class="level-badge expert">Z1</span></td>
+              <td>rok</td>
+              <td><span class="price-val">130 zł</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:48px; flex-wrap:wrap;">
+          <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+            <div style="font-weight:700; margin-bottom:8px">💳 Karty beneficjenckie</div>
+            <p style="font-size:14px; color:var(--muted); line-height:1.65">Użytkownicy kart Multisport, Medicover Sport, FitProfit i innych kart benefit otrzymają szczegółowe zasady opłat karnetowych mailowo po zapisaniu się na kurs.</p>
+          </div>
+          <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+            <div style="font-weight:700; margin-bottom:8px">📅 Kiedy płacić?</div>
+            <p style="font-size:14px; color:var(--muted); line-height:1.65">Rozliczenie za każdy karnet następuje <strong>po czwartych (ostatnich) zajęciach</strong> danego okresu. Opłata wyłącznie przelewem — brak możliwości płatności gotówką.</p>
+          </div>
+        </div>
+
+        <div class="divider" style="margin-bottom:48px"></div>
+
+        <span class="label">Płatność</span>
+        <h2 class="section-title" style="margin-bottom:16px; font-size:28px">Jak opłacić karnet?</h2>
+        <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:16px">Płatność odbywa się wyłącznie przelewem bankowym, po zakończeniu każdego cyklu 4 zajęć. W tytule przelewu podaj imię, nazwisko i miesiąc, za który płacisz.</p>
+        <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 20px; margin-bottom:28px; display:flex; align-items:center; gap:14px;">
+          <div style="font-size:22px; flex-shrink:0;">🛒</div>
+          <div style="font-size:14px; line-height:1.65;">Po zapisaniu się na kurs i potwierdzeniu miejsca możesz wykupić karnet w naszym <a href="#" onclick="showPage('sklep')" style="color:var(--orange); font-weight:600;">sklepie internetowym →</a></div>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:28px; margin-bottom:16px;">
+          <div style="font-size:13px; color:var(--muted); margin-bottom:12px; text-transform:uppercase; font-weight:700; letter-spacing:.06em;">Dane do przelewu — Bank Erste</div>
+          <div style="font-size:18px; font-weight:700; margin-bottom:4px;">Mateusz Zapart</div>
+          <div style="font-family:monospace; font-size:15px; color:var(--text); background:var(--white); padding:10px 14px; border-radius:6px; display:inline-block; margin-bottom:12px; letter-spacing:.04em;">IBAN: PL XX XXXX XXXX XXXX XXXX XXXX XXXX</div>
+          <div style="font-size:13px; color:var(--muted); line-height:1.65;">W tytule przelewu wpisz: <strong>Imię Nazwisko, zajęcia</strong><br>np. „Jan Kowalski, Latino Solo pon. 19:15"</div>
+        </div>
+        <div style="background:var(--orange-xl); border-radius:var(--r-lg); padding:20px 24px; font-size:14px; color:var(--text); line-height:1.65; margin-bottom:48px;">
+          💳 <strong>Masz kartę Multisport, Medicover Sport lub FitProfit?</strong> Napisz do nas — rozliczamy też karty benefit. Szczegóły poniżej.
+        </div>
+
+        <span class="label">Karty sportowe</span>
+        <h2 class="section-title" style="margin-bottom:16px; font-size:28px">Akceptowane karty benefit</h2>
+        <p style="color:var(--muted); margin-bottom:24px; font-size:15px">Możesz opłacić zajęcia kartą sportową. Skontaktuj się z nami, żeby dowiedzieć się jak to działa.</p>
+        <div class="benefit-logos">
+          <div class="benefit-logo">Multisport</div>
+          <div class="benefit-logo">Multisport Light</div>
+          <div class="benefit-logo">Medicover Sport</div>
+          <div class="benefit-logo">FitProfit</div>
+        </div>
+
+        <div class="divider" style="margin:48px 0"></div>
+
+        <span class="label">Vouchery</span>
+        <h2 class="section-title" style="margin-bottom:16px; font-size:28px">Prezent, który angażuje</h2>
+        <p style="color:var(--muted); margin-bottom:24px; font-size:15px">Vouchery dostępne na: kurs miesięczny, warsztat, imprezę lub prywatną lekcję. Wartości od 30 do 100 zł. Personalizacja (imienna karta) +40 zł.</p>
+        <a class="btn btn-primary" href="#" onclick="showPage('sklep')">Zaangażuj bliską osobę! →</a>
+
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<!-- ═══ PAGE: O NAS ════════════════════════════════════════ -->
+<div class="page" id="page-onas">
+  <div class="page-offset">
+    <div class="page-hero">
+      <div class="container">
+        <span class="label">O szkole</span>
+        <h1>O Amen!</h1>
+        <p>Jesteśmy społecznością, która używa tańca jako narzędzia do budowania naturalnych przestrzeni spotkania w Kościele. Rozbudzamy życie towarzyskie w parafiach.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container" style="max-width:800px">
+        <span class="label">Nasza historia</span>
+        <h2 class="section-title" style="margin-bottom:20px">Od 2022 roku roztańczamy parafie we Wrocławiu</h2>
+        <p style="font-size:17px; line-height:1.75; color:var(--muted); margin-bottom:16px">W 2022 roku dwie wrocławskie parafie — Chrystusa Króla i św. Antoniego — otworzyły drzwi na tę inicjatywę. Od tego czasu stworzyliśmy przestrzeń do lokalnego, tanecznego spotkania dla setek ludzi. Dziś działamy w 14 parafiach Wrocławia.</p>
+        <p style="font-size:17px; line-height:1.75; color:var(--muted); margin-bottom:32px">Wierzymy, że parafie mogą i powinny być centrum spotkania, radości i prawdziwych więzi. Każda obecność ma znaczenie.</p>
+        <div style="display:flex; gap:40px; flex-wrap:wrap;">
+          <div style="text-align:center;">
+            <div style="font-family:var(--font-head); font-size:48px; font-weight:800; color:var(--orange);">14</div>
+            <div style="font-size:14px; color:var(--muted);">parafii</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-family:var(--font-head); font-size:48px; font-weight:800; color:var(--orange);">2022</div>
+            <div style="font-size:14px; color:var(--muted);">rok założenia</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-family:var(--font-head); font-size:48px; font-weight:800; color:var(--orange);">∞</div>
+            <div style="font-size:14px; color:var(--muted);">radości w ruchu</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width:800px">
+        <span class="label">Roztańczone Parafie</span>
+        <h2 class="section-title" style="margin-bottom:20px">Skąd się wzięły Roztańczone Parafie?</h2>
+        <p style="font-size:17px; line-height:1.75; color:var(--muted); margin-bottom:16px">Szczęść Boże, cześć! Jesteśmy małżeństwem — Monika i Mateusz Zapart. Widząc rosnące potrzeby spotkania, rozmowy i bycia razem, a jednocześnie ogromny potencjał parafii jako naturalnego miejsca relacji, wpadliśmy na pomysł projektu <strong style="color:var(--text);">Roztańczona Parafia</strong>.</p>
+        <p style="font-size:17px; line-height:1.75; color:var(--muted); margin-bottom:16px">Zauważyliśmy, że coraz częściej brakuje prostych, zorganizowanych przestrzeni sprzyjających lokalnemu życiu towarzyskiemu — szczególnie wśród dorosłych, małżeństw i seniorów. Roztańczona Parafia jest naszym autorskim rozwiązaniem tej potrzeby — narzędziem, które w prosty sposób pomaga uruchomić spotkanie, ruch i budowanie relacji przy parafii.</p>
+        <p style="font-size:17px; line-height:1.75; color:var(--muted); margin-bottom:40px">Zapraszamy do dalszego poznania tego pomysłu i do wspólnego tworzenia przestrzeni, która może realnie służyć ludziom i parafiom.</p>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-bottom:40px;">
+          <div style="background:var(--orange-xl); border-radius:var(--r-lg); padding:24px;">
+            <div style="font-size:22px; margin-bottom:10px;">👨‍👩‍👧‍👦</div>
+            <div style="font-weight:700; font-size:15px; margin-bottom:6px;">Dla każdego</div>
+            <p style="font-size:14px; color:var(--muted); line-height:1.65;">Od małego do starszego, solo, w parze, rodzinnie, z paczką znajomych — każdy znajdzie tu swoje miejsce i swoje tempo.</p>
+          </div>
+          <div style="background:var(--orange-xl); border-radius:var(--r-lg); padding:24px;">
+            <div style="font-size:22px; margin-bottom:10px;">📍</div>
+            <div style="font-weight:700; font-size:15px; margin-bottom:6px;">Blisko domu</div>
+            <p style="font-size:14px; color:var(--muted); line-height:1.65;">Zajęcia odbywają się w salach parafialnych — w Twojej okolicy, bez dojazdów w centrum.</p>
+          </div>
+          <div style="background:var(--orange-xl); border-radius:var(--r-lg); padding:24px;">
+            <div style="font-size:22px; margin-bottom:10px;">🤝</div>
+            <div style="font-weight:700; font-size:15px; margin-bottom:6px;">Prawdziwe relacje</div>
+            <p style="font-size:14px; color:var(--muted); line-height:1.65;">Wracamy co tydzień do tych samych ludzi. Z tego rodzą się znajomości, które wykraczają poza parkiet.</p>
+          </div>
+        </div>
+        <a class="btn btn-outline" href="#" onclick="showPage('parafia')">Dowiedz się więcej o projekcie →</a>
+      </div>
+    </section>
+
+    <section class="section section--grey">
+      <div class="container">
+        <span class="label">Galeria</span>
+        <h2 class="section-title" style="margin-bottom:24px;">Zajęcia w parafiach</h2>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px;">
+          <div style="aspect-ratio:4/3; background:var(--orange-l); border-radius:var(--r-lg); display:flex; align-items:center; justify-content:center; font-size:40px; color:var(--orange);">📷</div>
+          <div style="aspect-ratio:4/3; background:var(--orange-xl); border-radius:var(--r-lg); display:flex; align-items:center; justify-content:center; font-size:40px; color:var(--orange);">📷</div>
+          <div style="aspect-ratio:4/3; background:var(--orange-l); border-radius:var(--r-lg); display:flex; align-items:center; justify-content:center; font-size:40px; color:var(--orange);">📷</div>
+          <div style="aspect-ratio:4/3; background:var(--orange-xl); border-radius:var(--r-lg); display:flex; align-items:center; justify-content:center; font-size:40px; color:var(--orange);">📷</div>
+          <div style="aspect-ratio:4/3; background:var(--orange-l); border-radius:var(--r-lg); display:flex; align-items:center; justify-content:center; font-size:40px; color:var(--orange);">📷</div>
+          <div style="aspect-ratio:4/3; background:var(--orange-xl); border-radius:var(--r-lg); display:flex; align-items:center; justify-content:center; font-size:40px; color:var(--orange);">📷</div>
+        </div>
+        <p style="font-size:13px; color:var(--muted); margin-top:16px; text-align:center;">Zdjęcia do uzupełnienia przez klienta</p>
+      </div>
+    </section>
+
+    <section class="section section--grey">
+      <div class="container">
+        <span class="label">Wartości</span>
+        <h2 class="section-title" style="margin-bottom:40px">Co nas napędza</h2>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-card__icon">💃</div>
+            <div class="value-card__title">Taniec i relacje</div>
+            <p class="value-card__desc">Wspólna aktywność jest potrzebna do budowania więzi. Taniec pozwala zadbać o relacje z bliskimi, otwiera na nowe znajomości, pielęgnuje kobiecość i męskość, uczy szacunku do drugiego człowieka. To dlatego wokół niego budujemy Amen!</p>
+          </div>
+          <div class="value-card">
+            <div class="value-card__icon">🏘️</div>
+            <div class="value-card__title">Lokalna społeczność</div>
+            <p class="value-card__desc">Chcemy, żeby parafia była miejscem radosnych spotkań, które realnie budują lokalne relacje. Wierzymy, że życie parafialne i sąsiedzkie mogą się pięknie przenikać, a wspólne pasje najlepiej rozwija się z ludźmi, których mijamy na co dzień.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-card__icon">✝️</div>
+            <div class="value-card__title">Odpowiedzialność i wiara</div>
+            <p class="value-card__desc">Z wiary wyrasta nasza troska o drugiego człowieka. Czujemy się odpowiedzialni za Kościół, dlatego tworzymy bezpieczne, wartościowe przestrzenie, które po prostu mają Wam służyć.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <span class="label">Zespół</span>
+        <h2 class="section-title" style="margin-bottom:40px">Instruktorzy</h2>
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-card__avatar">MZ</div>
+            <div class="team-card__name">Mateusz Zapart</div>
+            <div class="team-card__role">Założyciel & Instruktor</div>
+            <p class="team-card__bio">Pasjonat tańca i społeczności. Prowadzi szkołę od 2022 roku, specjalizuje się w tańcu użytkowym i bachacie.</p>
+          </div>
+          <div class="team-card">
+            <div class="team-card__avatar">?</div>
+            <div class="team-card__name">Instruktor</div>
+            <div class="team-card__role">Taniec Użytkowy</div>
+            <p class="team-card__bio">Treść do uzupełnienia.</p>
+          </div>
+          <div class="team-card">
+            <div class="team-card__avatar">?</div>
+            <div class="team-card__name">Instruktor</div>
+            <div class="team-card__role">Latino Solo</div>
+            <p class="team-card__bio">Treść do uzupełnienia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<!-- ═══ PAGE: KONTAKT ══════════════════════════════════════ -->
+<div class="page" id="page-kontakt">
+  <div class="page-offset">
+    <div class="page-hero">
+      <div class="container">
+        <span class="label">Napisz do nas</span>
+        <h1>Kontakt</h1>
+        <p>Odpowiadamy szybko — zwykle tego samego dnia.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container">
+        <div class="contact-cols">
+          <div>
+            <span class="label">Napisz do nas</span>
+            <h2 class="section-title" style="margin-bottom:32px; font-size:28px">Formularz kontaktowy</h2>
+            <form class="contact-form" onsubmit="return false;">
+              <div class="form-group">
+                <label>Imię i nazwisko</label>
+                <input type="text" placeholder="Jan Kowalski" />
+              </div>
+              <div class="form-group">
+                <label>E-mail</label>
+                <input type="email" placeholder="jan@email.pl" />
+              </div>
+              <div class="form-group">
+                <label>Temat</label>
+                <select>
+                  <option>Chcę się zapisać na kurs</option>
+                  <option>Pytanie o grafik</option>
+                  <option>Pytanie o cennik</option>
+                  <option>Pierwszy Taniec (ślub)</option>
+                  <option>Zajęcia indywidualne</option>
+                  <option>Roztańczona Parafia</option>
+                  <option>Inne</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Wiadomość</label>
+                <textarea placeholder="Napisz co Cię interesuje..."></textarea>
+              </div>
+              <button class="btn btn-primary" type="submit">Wyślij wiadomość →</button>
+            </form>
+          </div>
+          <div>
+            <span class="label">Dane kontaktowe</span>
+            <h2 class="section-title" style="margin-bottom:32px; font-size:28px">Bezpośredni kontakt</h2>
+            <div class="contact-row" style="flex-direction:column; gap:24px; margin-bottom:32px">
+              <div class="contact-item">
+                <div class="contact-item__icon">📞</div>
+                <div>
+                  <div class="contact-item__label">Telefon</div>
+                  <div class="contact-item__val">513 580 512</div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item__icon">✉️</div>
+                <div>
+                  <div class="contact-item__label">E-mail</div>
+                  <div class="contact-item__val">kontakt.amen@gmail.com</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="divider" style="margin-bottom:32px"></div>
+
+            <span class="label">Lokalizacje</span>
+            <div class="location-list">
+              <div class="location-item">
+                <div class="location-item__icon">📍</div>
+                <div>
+                  <div class="location-item__name">Parafia Chrystusa Króla</div>
+                  <div class="location-item__addr">ul. Młodych Techników 17</div>
+                  <a href="https://maps.google.com/?q=ul.+Młodych+Techników+17,+Wrocław" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600;">Otwórz w Mapach →</a>
+                </div>
+              </div>
+              <div class="location-item">
+                <div class="location-item__icon">📍</div>
+                <div>
+                  <div class="location-item__name">Parafia NMP Bolesnej</div>
+                  <div class="location-item__addr">ul. Tatarakowa 1</div>
+                  <a href="https://maps.google.com/?q=ul.+Tatarakowa+1,+Wrocław" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600;">Otwórz w Mapach →</a>
+                </div>
+              </div>
+              <div class="location-item">
+                <div class="location-item__icon">📍</div>
+                <div>
+                  <div class="location-item__name">Parafia NMP Matki Miłosierdzia</div>
+                  <div class="location-item__addr">ul. Brucknera 20</div>
+                  <a href="https://maps.google.com/?q=ul.+Brucknera+20,+Wrocław" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600;">Otwórz w Mapach →</a>
+                </div>
+              </div>
+              <div class="location-item">
+                <div class="location-item__icon">📍</div>
+                <div>
+                  <div class="location-item__name">Parafia Opieki Św. Józefa</div>
+                  <div class="location-item__addr">ul. Ołbińska 1</div>
+                  <a href="https://maps.google.com/?q=ul.+Ołbińska+1,+Wrocław" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600;">Otwórz w Mapach →</a>
+                </div>
+              </div>
+              <div class="location-item">
+                <div class="location-item__icon">📍</div>
+                <div>
+                  <div class="location-item__name">Parafia Św. Alberta Wielkiego</div>
+                  <div class="location-item__addr">ul. Redycka 10</div>
+                  <a href="https://maps.google.com/?q=ul.+Redycka+10,+Wrocław" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600;">Otwórz w Mapach →</a>
+                </div>
+              </div>
+              <div class="location-item">
+                <div class="location-item__icon">📍</div>
+                <div>
+                  <div class="location-item__name">Parafia Św. Antoniego</div>
+                  <div class="location-item__addr">al. Kasprowicza 26</div>
+                  <a href="https://maps.google.com/?q=al.+Kasprowicza+26,+Wrocław" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600;">Otwórz w Mapach →</a>
+                </div>
+              </div>
+              <div class="location-item">
+                <div class="location-item__icon">📍</div>
+                <div>
+                  <div class="location-item__name">Parafia Św. Anny</div>
+                  <div class="location-item__addr">ul. Sobótki 42</div>
+                  <a href="https://maps.google.com/?q=ul.+Sobótki+42,+Wrocław" target="_blank" style="font-size:12px; color:var(--orange); font-weight:600;">Otwórz w Mapach →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<!-- ═══ PAGE: FAQ ══════════════════════════════════════════ -->
+<div class="page" id="page-faq">
+  <div class="page-offset">
+    <div class="page-hero">
+      <div class="container">
+        <span class="label">Pomoc</span>
+        <h1>FAQ</h1>
+        <p>Najczęściej zadawane pytania. Nie znajdziesz odpowiedzi? Napisz do nas.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container">
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Czy mogę zapisać się solo, bez partnera? <span class="faq-q__arrow">▼</span></div>
+            <div class="faq-a">Tak! Przyjmujemy zarówno pary, jak i osoby solo. Nie gwarantujemy jednak stałego partnera — na zajęciach robimy rotację, żeby każdy miał szansę tańczyć z różnymi osobami.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Czy jest gwarancja miejsca przy zapisie solo? <span class="faq-q__arrow">▼</span></div>
+            <div class="faq-a">Nie. Pary mają pierwszeństwo przy zapisie. Jeśli zapisy będą nierówne (np. za dużo kobiet lub mężczyzn), może dojść do kolejkowania. O aktualnej dostępności informujemy mailowo.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Co jeśli nie mogę pojawić się na zajęciach? <span class="faq-q__arrow">▼</span></div>
+            <div class="faq-a">Nie musisz zgłaszać nieobecności. Jeśli Cię nie było, napisz do nas na <strong>kontakt.amen@gmail.com</strong> z chęcią odrobienia — masz na to 2 tygodnie od powrotu na zajęcia. Odrobić możesz na innej grupie na tym samym lub sąsiednim poziomie.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Jak działa rotacja partnerów? <span class="faq-q__arrow">▼</span></div>
+            <div class="faq-a">Na zajęciach regularnie zamieniamy partnerów — dzięki temu szybciej się uczysz i budujesz pewność siebie z różnymi osobami. Nie musisz mieć stałego partnera.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Od jakiego poziomu zaczynam? <span class="faq-q__arrow">▼</span></div>
+            <div class="faq-a">Jeśli nigdy nie tańczyłeś — startujemy razem od P0. To poziom od podstaw. Nie martw się, każdy kiedyś był na P0! ;)</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Co to jest "Użytkowy"? <span class="faq-q__arrow">▼</span></div>
+            <div class="faq-a">Taniec użytkowy to popularnie zwany „taniec towarzyski" — tańce, które możesz używać na parkiecie: walc angielski, tango, quickstep, foxtrot, cha-cha, samba, rumba i inne. Świetny na start, bo uczy ogólnej techniki i orientacji na parkiecie.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Jak płacić za zajęcia? <span class="faq-q__arrow">▼</span></div>
+            <div class="faq-a">Wyłącznie przelewem na konto (Bank Erste, właściciel Mateusz Zapart). Płatność gotówkowa nie jest możliwa. Karnet opłacasz po czwartych zajęciach danego okresu. Możesz też płacić kartą Multisport, Medicover Sport lub FitProfit.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Skąd wiem, że kurs jest dla mnie? <span class="faq-q__arrow">▼</span></div>
+            <div class="faq-a">Najłatwiej sprawdzić to na miejscu — napisz do nas, a pomożemy wybrać odpowiedni kurs i poziom. Możesz też przyjść na pierwsze zajęcia próbnie i zobaczyć sam.</div>
+          </div>
+
+
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Jak działają vouchery? Jak mogę je kupić? <span class="faq-q__arrow">▼</span></div>
+            <div class="faq-a">Vouchery dostępne są na: kurs miesięczny, warsztat weekendowy, imprezę lub prywatną lekcję. Wartości od 30 do 100 zł. Opcjonalnie można zamówić personalizowaną kartę (+40 zł). Vouchery kupujesz przez nasz sklep online (wkrótce) lub kontaktując się z nami bezpośrednio. Obdarowany realizuje voucher przez podanie kodu przy pierwszych zajęciach.</div>
+          </div>
+
+        </div>
+
+        <div style="margin-top:48px; text-align:center">
+          <p style="color:var(--muted); margin-bottom:20px">Nie znalazłeś odpowiedzi?</p>
+          <a class="btn btn-primary" href="#" onclick="showPage('kontakt')">Napisz do nas →</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<!-- ═══ PAGE: DLA PARAFII ══════════════════════════════════ -->
+<div class="page" id="page-parafia">
+  <div class="page-offset">
+
+    <!-- HERO -->
+    <div class="page-hero">
+      <div class="container">
+        <span class="label">Projekt parafialny</span>
+        <h1>Roztańczona Parafia</h1>
+        <p>Gotowe narzędzie, które pomaga parafiom budować społeczność — przez regularne kursy tańca, bez kosztów i bez obciążenia proboszcza.</p>
+        <div style="margin-top:32px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn btn-white" href="#parafia-formularz" onclick="document.getElementById('parafia-formularz').scrollIntoView({behavior:'smooth'}); return false;">Zgłoś parafię →</a>
+          <a class="btn btn-outline" href="#parafia-jak" onclick="document.getElementById('parafia-jak').scrollIntoView({behavior:'smooth'}); return false;" style="border-color:rgba(255,255,255,.4); color:var(--white);">Jak to działa</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SKĄD POMYSŁ -->
+    <section class="section">
+      <div class="container" style="max-width:800px">
+        <span class="label">Skąd się wzięło</span>
+        <h2 class="section-title" style="margin-bottom:20px">Zaczęło się od obserwacji</h2>
+        <p style="font-size:17px; line-height:1.8; color:var(--muted); margin-bottom:16px">Jesteśmy małżeństwem — Monika i Mateusz Zapart. Od lat prowadzimy kursy tańca we Wrocławiu i obserwujemy jedno: ludziom brakuje prostych, zorganizowanych przestrzeni do spotkania. Szczególnie dorosłym, małżeństwom i seniorom.</p>
+        <p style="font-size:17px; line-height:1.8; color:var(--muted);">Parafie mają sale, mają zasięg i mają zaufanie lokalnej społeczności. My mamy instruktorów, doświadczenie i gotowy model. W 2022 roku połączyliśmy to razem — i tak powstała <strong style="color:var(--text);">Roztańczona Parafia</strong>.</p>
+      </div>
+    </section>
+
+    <!-- PROBLEM → ROZWIĄZANIE -->
+    <section class="section section--grey">
+      <div class="container" style="max-width:860px">
+        <span class="label">Dlaczego to działa</span>
+        <h2 class="section-title" style="margin-bottom:36px">Trzy realne problemy. Jedno rozwiązanie.</h2>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px;">
+          <div style="background:var(--white); border-radius:var(--r-lg); padding:28px 24px; border-top:3px solid var(--orange);">
+            <div style="font-size:13px; color:var(--muted); text-transform:uppercase; font-weight:700; letter-spacing:.06em; margin-bottom:16px;">Problem</div>
+            <div style="font-weight:700; font-size:17px; margin-bottom:8px; color:var(--text);">Samotność i izolacja</div>
+            <p style="font-size:14px; color:var(--muted); line-height:1.65; margin-bottom:20px;">Coraz więcej osób — szczególnie singli i seniorów — nie ma gdzie się regularnie spotykać z sąsiadami.</p>
+            <div style="border-top:1px solid rgba(0,0,0,.07); padding-top:16px; font-weight:700; font-size:14px; color:var(--orange);">→ Przyparafialne życie towarzyskie</div>
+          </div>
+          <div style="background:var(--white); border-radius:var(--r-lg); padding:28px 24px; border-top:3px solid var(--orange);">
+            <div style="font-size:13px; color:var(--muted); text-transform:uppercase; font-weight:700; letter-spacing:.06em; margin-bottom:16px;">Problem</div>
+            <div style="font-weight:700; font-size:17px; margin-bottom:8px; color:var(--text);">Brak społeczności</div>
+            <p style="font-size:14px; color:var(--muted); line-height:1.65; margin-bottom:20px;">Ludzie chodzą na mszę, ale nie znają się nawzajem. Parafia jako miejsce relacji — nie tylko rytuału — zanika.</p>
+            <div style="border-top:1px solid rgba(0,0,0,.07); padding-top:16px; font-weight:700; font-size:14px; color:var(--orange);">→ Stały krąg parafialnych znajomych</div>
+          </div>
+          <div style="background:var(--white); border-radius:var(--r-lg); padding:28px 24px; border-top:3px solid var(--orange);">
+            <div style="font-size:13px; color:var(--muted); text-transform:uppercase; font-weight:700; letter-spacing:.06em; margin-bottom:16px;">Problem</div>
+            <div style="font-weight:700; font-size:17px; margin-bottom:8px; color:var(--text);">Brak angażujących inicjatyw</div>
+            <p style="font-size:14px; color:var(--muted); line-height:1.65; margin-bottom:20px;">Parafie chcą robić coś dla lokalnej społeczności, ale brakuje im gotowego, sprawdzonego pomysłu.</p>
+            <div style="border-top:1px solid rgba(0,0,0,.07); padding-top:16px; font-weight:700; font-size:14px; color:var(--orange);">→ Gotowy projekt pod klucz</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WYNIKI EDYCJI — SLIDER -->
+    <section class="section">
+      <div class="container" style="max-width:800px">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:28px; flex-wrap:wrap; gap:12px;">
+          <div>
+            <span class="label" id="edition-label">Efekty pierwszej edycji</span>
+            <h2 class="section-title" style="margin:8px 0 0" id="edition-title">W rok — 7 parafii, ponad 300 osób</h2>
+          </div>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <button onclick="editionSlide(-1)" id="btn-prev" style="width:40px; height:40px; border-radius:50%; border:1px solid rgba(0,0,0,.12); background:none; font-size:18px; cursor:pointer; display:flex; align-items:center; justify-content:center; opacity:.35;" disabled>←</button>
+            <span id="edition-counter" style="font-size:13px; color:var(--muted); min-width:36px; text-align:center;">1 / 2</span>
+            <button onclick="editionSlide(1)" id="btn-next" style="width:40px; height:40px; border-radius:50%; border:1px solid rgba(0,0,0,.12); background:none; font-size:18px; cursor:pointer; display:flex; align-items:center; justify-content:center;">→</button>
+          </div>
+        </div>
+
+        <!-- Slajd 1 -->
+        <div id="edition-slide-0">
+          <p style="color:var(--muted); font-size:16px; line-height:1.7; margin-bottom:32px">Pierwsza edycja projektu w Archidiecezji Wrocławskiej pokazała, że model działa. Parafie nie rezygnują — wracają na kolejny rok.</p>
+          <div style="display:flex; gap:0; border:1px solid rgba(0,0,0,.08); border-radius:var(--r-lg); overflow:hidden;">
+            <div style="flex:1; padding:32px 24px; text-align:center; border-right:1px solid rgba(0,0,0,.08);">
+              <div style="font-family:var(--font-head); font-size:52px; font-weight:800; color:var(--orange); line-height:1;">7</div>
+              <div style="font-size:14px; color:var(--muted); margin-top:6px;">parafii w projekcie</div>
+            </div>
+            <div style="flex:1; padding:32px 24px; text-align:center; border-right:1px solid rgba(0,0,0,.08);">
+              <div style="font-family:var(--font-head); font-size:52px; font-weight:800; color:var(--orange); line-height:1;">15</div>
+              <div style="font-size:14px; color:var(--muted); margin-top:6px;">kursów równolegle</div>
+            </div>
+            <div style="flex:1; padding:32px 24px; text-align:center;">
+              <div style="font-family:var(--font-head); font-size:52px; font-weight:800; color:var(--orange); line-height:1;">313</div>
+              <div style="font-size:14px; color:var(--muted); margin-top:6px;">aktywnych uczestników</div>
+            </div>
+          </div>
+          <div style="margin-top:16px; padding:16px 20px; background:var(--orange-xl); border-radius:var(--r-lg); font-size:14px; color:var(--text); line-height:1.65;">
+            Uczestnicy to przede wszystkim: <strong>single 30+</strong>, <strong>małżeństwa</strong> i <strong>seniorzy</strong> — grupy, do których parafia rzadko trafia z inną ofertą.
+          </div>
+        </div>
+
+        <!-- Slajd 2 -->
+        <div id="edition-slide-1" style="display:none">
+          <p style="color:var(--muted); font-size:16px; line-height:1.7; margin-bottom:32px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <div style="background:var(--orange-xl); border-left:4px solid var(--orange); border-radius:0 var(--r) var(--r) 0; padding:20px 24px; font-size:15px; color:var(--text); line-height:1.7;">
+            🚀 <strong>3. edycja nadciąga wielkimi krokami</strong> — jeśli Twoja parafia chce dołączyć, zgłoś się już teraz. Miejsca są limitowane.
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- JAK TO DZIAŁA -->
+    <section class="section section--grey" id="parafia-jak">
+      <div class="container" style="max-width:800px">
+        <span class="label">Jak to działa</span>
+        <h2 class="section-title" style="margin-bottom:12px">Całość organizacji jest po naszej stronie</h2>
+        <p style="color:var(--muted); font-size:16px; line-height:1.7; margin-bottom:40px">Projekt nie obciąża proboszcza. Wdrożenie trwa około 6 miesięcy, potem współpraca jest długoterminowa.</p>
+
+        <div class="steps" style="margin-bottom:48px">
+          <div class="step">
+            <div class="step__num">1</div>
+            <div>
+              <div class="step__title">Materiały promocyjne</div>
+              <p class="step__desc">Dostarczamy gotowe plakaty, ulotki i treści ogłoszeń. Prosimy o cztery ogłoszenia z ambony i możliwość rozdania ulotek — według naszego harmonogramu.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__num">2</div>
+            <div>
+              <div class="step__title">Szkolenie instruktora parafialnego</div>
+              <p class="step__desc">Kluczowy element projektu: szkolimy osobę z samej parafii na instruktora — bezpłatnie. To ona prowadzi zajęcia na miejscu i buduje relację ze społecznością. Jeśli nikt się nie zgłosi, angażujemy instruktora z parafii okolicznych.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__num">3</div>
+            <div>
+              <div class="step__title">Koordynacja zapisów i kursów</div>
+              <p class="step__desc">Prowadzimy zapisy, komunikację z uczestnikami i bieżącą koordynację. Proboszcz dostaje gotową, działającą inicjatywę.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__num">4</div>
+            <div>
+              <div class="step__title">Regularne kursy i potańcówki</div>
+              <p class="step__desc">Zajęcia raz w tygodniu przez cały rok (z wyłączeniem Triduum, Środy Popielcowej i dni wolnych). Życie społeczności nabiera stałego rytmu.</p>
+            </div>
+          </div>
+        </div>
+
+        <span class="label">Co potrzebuje parafia</span>
+        <h3 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin:16px 0 24px;">Trzy zgody proboszcza — to wystarczy</h3>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px;">
+          <div style="background:var(--white); border-radius:var(--r); padding:20px 18px; border:1px solid rgba(0,0,0,.08);">
+            <div style="font-size:24px; margin-bottom:10px;">🏛️</div>
+            <div style="font-weight:700; font-size:15px; margin-bottom:6px;">Salka parafialna</div>
+            <p style="font-size:13px; color:var(--muted); line-height:1.6;">Minimum raz w tygodniu, około 3 godziny. Jeśli sala wymaga ustaleń — rozwiążemy to razem.</p>
+          </div>
+          <div style="background:var(--white); border-radius:var(--r); padding:20px 18px; border:1px solid rgba(0,0,0,.08);">
+            <div style="font-size:24px; margin-bottom:10px;">📢</div>
+            <div style="font-weight:700; font-size:15px; margin-bottom:6px;">Ogłaszanie w parafii</div>
+            <p style="font-size:13px; color:var(--muted); line-height:1.6;">Plakaty, ambona, social media — materiały i gotowe treści przygotowujemy my.</p>
+          </div>
+          <div style="background:var(--white); border-radius:var(--r); padding:20px 18px; border:1px solid rgba(0,0,0,.08);">
+            <div style="font-size:24px; margin-bottom:10px;">💛</div>
+            <div style="font-weight:700; font-size:15px; margin-bottom:6px;">Darowizna 100 zł / kurs / mies.</div>
+            <p style="font-size:13px; color:var(--muted); line-height:1.6;">Wpłacana na konto parafii — pokrywa koszty użytkowania sali. Bez innych opłat po stronie parafii.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARAFIE -->
+    <section class="section">
+      <div class="container" style="max-width:800px">
+        <span class="label">Parafie w projekcie</span>
+        <h2 class="section-title" style="margin-bottom:28px">Parafie, które już są z nami</h2>
+
+        <p style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:12px;">1. edycja</p>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; margin-bottom:28px;">
+          <div style="background:var(--grey); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia Chrystusa Króla</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Stare Miasto</div>
+          </div>
+          <div style="background:var(--grey); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia NMP Bolesnej</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Strachocin</div>
+          </div>
+          <div style="background:var(--grey); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia NMP Matki Miłosierdzia</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Kowale</div>
+          </div>
+          <div style="background:var(--grey); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia Opieki Św. Józefa</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Ołbin</div>
+          </div>
+          <div style="background:var(--grey); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia Św. Alberta Wielkiego</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Sołtysowice</div>
+          </div>
+          <div style="background:var(--grey); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia Św. Antoniego</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Karłowice</div>
+          </div>
+          <div style="background:var(--grey); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia Św. Anny</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Oporów</div>
+          </div>
+        </div>
+
+        <p style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:12px;">2. edycja — dołączają od września 2026</p>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; margin-bottom:16px;">
+          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. św. Augustyna</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Krzyki</div>
+          </div>
+          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. św. Ojca Pio z Pietrelciny</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Partynice</div>
+          </div>
+          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. Wniebowzięcia NMP</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Ołtaszyn</div>
+          </div>
+          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. NMP Królowej Polski</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Klecina</div>
+          </div>
+          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. św. Teresy od Dzieciątka Jezus</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Osobowice</div>
+          </div>
+          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. Najświętszego Serca Pana Jezusa</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Pawłowice</div>
+          </div>
+          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. św. Andrzeja Boboli</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Kuźniki</div>
+          </div>
+          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. NMP na Piasku</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław</div>
+          </div>
+          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. Opatrzności Bożej</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Nowy Dwór</div>
+          </div>
+          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. NMP Bolesnej</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Różanka</div>
+          </div>
+          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. św. Bonifacego</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Nadodrze</div>
+          </div>
+          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. św. Anny</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Pracze Odrzańskie</div>
+          </div>
+          <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r); padding:16px 18px;">
+            <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Parafia pw. św. Jadwigi</div>
+            <div style="font-size:12px; color:var(--muted);">Wrocław-Świniary</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULARZ -->
+    <section class="section section--grey" id="parafia-formularz">
+      <div class="container" style="max-width:640px">
+        <span class="label">Dołącz do projektu</span>
+        <h2 class="section-title" style="margin-bottom:8px">Zgłoś swoją parafię</h2>
+        <p style="color:var(--muted); font-size:16px; line-height:1.7; margin-bottom:32px">Formularz wypełnia proboszcz lub osoba przez niego upoważniona. Po otrzymaniu zgłoszenia skontaktujemy się w ciągu tygodnia.</p>
+        <form class="contact-form" onsubmit="return false;">
+          <div class="form-group">
+            <label>Nazwa parafii i miejscowość <span style="color:var(--orange);">*</span></label>
+            <input type="text" placeholder="np. Parafia pw. Św. Jana · Wrocław-Krzyki" required />
+          </div>
+          <div class="form-group">
+            <label>Imię i nazwisko księdza proboszcza <span style="color:var(--orange);">*</span></label>
+            <input type="text" placeholder="ks. Jan Kowalski" required />
+          </div>
+          <div class="form-group">
+            <label>Bezpośredni numer telefonu do proboszcza <span style="color:var(--orange);">*</span></label>
+            <input type="tel" placeholder="600 000 000" required />
+          </div>
+          <div class="form-group">
+            <label>Adres e-mail proboszcza <span style="color:var(--orange);">*</span></label>
+            <input type="email" placeholder="proboszcz@parafia.pl" required />
+          </div>
+          <div class="form-group">
+            <label>Czy parafia dysponuje salą do tańca?</label>
+            <select>
+              <option>Tak, mamy odpowiednie miejsce</option>
+              <option>Tak, ale wymaga to ustaleń</option>
+              <option>Nie — potrzebujemy wsparcia</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Dodatkowe uwagi lub pytania</label>
+            <textarea placeholder="Opcjonalnie — napisz cokolwiek, co pomoże nam lepiej przygotować się do rozmowy."></textarea>
+          </div>
+          <label style="display:flex; align-items:flex-start; gap:10px; margin-bottom:24px; cursor:pointer;">
+            <input type="checkbox" required style="margin-top:3px; accent-color:var(--orange); flex-shrink:0;" />
+            <span style="font-size:13px; color:var(--muted); line-height:1.6;">Jako proboszcz zapoznałem się z ideą projektu i wyrażam chęć jego realizacji w mojej parafii. Wyrażam zgodę na przetwarzanie danych osobowych przez Szkołę Tańca Amen! (Mateusz Zapart, Wrocław) w celu organizacji projektu Roztańczona Parafia.</span>
+          </label>
+          <button class="btn btn-primary" type="submit" style="font-size:16px; padding:16px 32px; width:100%;">Wyślij zgłoszenie →</button>
+        </form>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+
+<!-- ═══ PAGE: SKLEP ════════════════════════════════════════ -->
+<div class="page" id="page-sklep">
+  <div class="page-offset">
+    <div class="page-hero">
+      <div class="container">
+        <span class="label">Sklep</span>
+        <h1>Kup karnet online</h1>
+        <p>Opłać zajęcia bez wychodzenia z domu.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container">
+        <div class="coming-soon">
+          <div class="coming-soon__icon">🛒</div>
+          <span class="coming-badge">Wkrótce</span>
+          <h2>Sklep w przygotowaniu</h2>
+          <p>Pracujemy nad możliwością zakupu karnetów i voucherów online. Na razie skontaktuj się z nami bezpośrednio.</p>
+          <div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-top:8px">
+            <a class="btn btn-primary" href="#" onclick="showPage('kontakt')">Skontaktuj się →</a>
+            <a class="btn btn-outline" href="#" onclick="showPage('cennik')">Zobacz cennik</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<!-- ═══ PAGE: INSTRUKTOR ═══════════════════════════════════ -->
+<div class="page" id="page-instruktor">
+  <div class="page-offset">
+    <div class="page-hero">
+      <div class="container">
+        <span class="label">Szkolenie instruktorskie</span>
+        <h1>Zostań instruktorem tańca<br>w Roztańczonej Parafii</h1>
+        <p>Weź udział w darmowym szkoleniu i zacznij prowadzić kursy tańca w parafiach.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container" style="max-width:800px">
+
+        <h2 class="section-title" style="margin-bottom:16px">Cześć i czołem!</h2>
+        <p style="font-size:17px; line-height:1.75; color:var(--muted); margin-bottom:16px">Cieszymy się, że tu jesteś — to oznacza, że myślisz poważnie o prowadzeniu kursów tańca w parafiach. Dobrze trafiłeś. Nasze szkolenie instruktorskie jest <strong>bezpłatne</strong> i daje Ci pełne przygotowanie do prowadzenia zajęć w ramach projektu Roztańczona Parafia.</p>
+        <p style="font-size:17px; line-height:1.75; color:var(--muted); margin-bottom:40px">Rozwiniesz swoje umiejętności taneczne i instruktorskie, dołączysz do społeczności, która buduje relacje przez taniec, i zaczniesz zarabiać na tym, co kochasz.</p>
+
+        <div class="divider" style="margin-bottom:48px"></div>
+
+        <span class="label">Etap 0 — zanim się spotkamy</span>
+        <h2 class="section-title" style="margin-bottom:12px; font-size:28px">Jak zacząć?</h2>
+        <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:28px">Zanim dołączysz do szkolenia stacjonarnego, przejdź Etap 0. Składa się z trzech kroków:</p>
+        <div class="steps" style="margin-bottom:32px">
+          <div class="step">
+            <div class="step__num">1</div>
+            <div>
+              <div class="step__title">Wypełnij formularz weryfikacyjny</div>
+              <p class="step__desc">Krótki formularz podsumowujący materiały. Wypełnienie go to deklaracja zaangażowania — traktuj to poważnie.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__num">2</div>
+            <div>
+              <div class="step__title">Spotkanie online — podsumowanie</div>
+              <p class="step__desc">Po Etapie 0 spotykamy się online. Odpowiadamy na pytania i przygotowujemy Cię do szkolenia stacjonarnego.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:20px 24px; margin-bottom:48px;">
+          <div style="font-weight:700; font-size:15px; margin-bottom:10px;">📋 Wymaganie wstępne</div>
+          <p style="font-size:14px; color:var(--muted); line-height:1.65; margin:0;">Znajomość podstaw tańca użytkowego w Amen! — wystarczy udział w warsztatach lub miesiąc w kursie regularnym.</p>
+        </div>
+
+        <div class="divider" style="margin-bottom:48px"></div>
+
+        <span class="label">Co znajdziesz w nagraniach</span>
+        <h2 class="section-title" style="margin-bottom:24px; font-size:28px">Co obejrzysz w Etapie 0?</h2>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-bottom:48px;">
+          <div style="background:var(--orange-xl); border-radius:var(--r); padding:18px 20px;">
+            <div style="font-size:20px; margin-bottom:8px;">▶️</div>
+            <div style="font-weight:700; font-size:14px; margin-bottom:4px;">Czym jest Roztańczona Parafia</div>
+            <p style="font-size:13px; color:var(--muted); margin:0; line-height:1.55;"><em>[Film zostanie dodany wkrótce]</em></p>
+          </div>
+          <div style="background:var(--orange-xl); border-radius:var(--r); padding:18px 20px;">
+            <div style="font-size:20px; margin-bottom:8px;">▶️</div>
+            <div style="font-weight:700; font-size:14px; margin-bottom:4px;">Jak wygląda szkolenie i dla kogo jest</div>
+            <p style="font-size:13px; color:var(--muted); margin:0; line-height:1.55;"><em>[Film zostanie dodany wkrótce]</em></p>
+          </div>
+          <div style="background:var(--orange-xl); border-radius:var(--r); padding:18px 20px;">
+            <div style="font-size:20px; margin-bottom:8px;">▶️</div>
+            <div style="font-weight:700; font-size:14px; margin-bottom:4px;">Jak wygląda życie instruktora</div>
+            <p style="font-size:13px; color:var(--muted); margin:0; line-height:1.55;"><em>[Film zostanie dodany wkrótce]</em></p>
+          </div>
+          <div style="background:var(--orange-xl); border-radius:var(--r); padding:18px 20px;">
+            <div style="font-size:20px; margin-bottom:8px;">▶️</div>
+            <div style="font-weight:700; font-size:14px; margin-bottom:4px;">Stawki i ścieżka rozwoju</div>
+            <p style="font-size:13px; color:var(--muted); margin:0; line-height:1.55;"><em>[Film zostanie dodany wkrótce]</em></p>
+          </div>
+          <div style="background:var(--orange-xl); border-radius:var(--r); padding:18px 20px;">
+            <div style="font-size:20px; margin-bottom:8px;">▶️</div>
+            <div style="font-weight:700; font-size:14px; margin-bottom:4px;">Jak wygląda współpraca z nami</div>
+            <p style="font-size:13px; color:var(--muted); margin:0; line-height:1.55;"><em>[Film zostanie dodany wkrótce]</em></p>
+          </div>
+          <div style="background:var(--orange-xl); border-radius:var(--r); padding:18px 20px;">
+            <div style="font-size:20px; margin-bottom:8px;">▶️</div>
+            <div style="font-weight:700; font-size:14px; margin-bottom:4px;">Zasady uczestnictwa</div>
+            <p style="font-size:13px; color:var(--muted); margin:0; line-height:1.55;"><em>[Film zostanie dodany wkrótce]</em></p>
+          </div>
+        </div>
+
+        <div class="divider" style="margin-bottom:48px"></div>
+
+        <span class="label">3. edycja szkolenia</span>
+        <h2 class="section-title" style="margin-bottom:16px; font-size:28px">Terminy szkoleń</h2>
+        <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:32px;">
+          <div style="display:flex; align-items:center; gap:20px; background:var(--orange-xl); border-radius:var(--r); padding:16px 20px;">
+            <div style="font-size:22px; min-width:32px;">✍️</div>
+            <div><strong>Zgłoszenia</strong> — do 30 września</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:20px; background:var(--orange-xl); border-radius:var(--r); padding:16px 20px;">
+            <div style="font-size:22px; min-width:32px;">💻</div>
+            <div><strong>Spotkanie online organizacyjne</strong> — 1 października, godz. 18:00</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:20px; background:var(--orange-xl); border-radius:var(--r); padding:16px 20px;">
+            <div style="font-size:22px; min-width:32px;">🎓</div>
+            <div><strong>Dostęp do szkolenia online</strong> — od 2 października</div>
+          </div>
+        </div>
+        <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:16px">Szkolenie stacjonarne dzielimy na trzy sekcje:</p>
+        <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:48px;">
+          <div style="display:flex; align-items:center; gap:20px; background:var(--grey); border-radius:var(--r); padding:16px 20px;">
+            <div style="font-size:22px; min-width:32px;">📅</div>
+            <div><strong>Weekend 1</strong> — 24–25 października</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:20px; background:var(--grey); border-radius:var(--r); padding:16px 20px;">
+            <div style="font-size:22px; min-width:32px;">📅</div>
+            <div><strong>Weekend 2</strong> — 7–8 listopada</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:20px; background:var(--grey); border-radius:var(--r); padding:16px 20px;">
+            <div style="font-size:22px; min-width:32px;">📅</div>
+            <div><strong>Weekend 3</strong> — 14–15 listopada</div>
+          </div>
+        </div>
+
+        <div class="divider" style="margin-bottom:48px"></div>
+
+        <div class="divider" style="margin-bottom:48px"></div>
+
+        <span class="label">Oni już zostali instruktorami</span>
+        <h2 class="section-title" style="margin-bottom:12px; font-size:28px">Dołącz do nich!</h2>
+        <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:24px">Instruktorzy z pierwszej i drugiej edycji prowadzą dziś zajęcia w parafiach Wrocławia.</p>
+        <!-- Przewijana galeria — zdjęcia 768×432 zostaną dodane -->
+        <div style="display:flex; gap:16px; overflow-x:auto; padding-bottom:12px; margin-bottom:48px; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch;">
+          <div style="flex:0 0 320px; scroll-snap-align:start; border-radius:var(--r-lg); overflow:hidden; background:var(--grey); aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px; color:var(--muted); font-size:14px;">
+            <div style="font-size:28px;">🖼️</div>
+            <div>Zdjęcie — zostanie dodane</div>
+          </div>
+          <div style="flex:0 0 320px; scroll-snap-align:start; border-radius:var(--r-lg); overflow:hidden; background:var(--grey); aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px; color:var(--muted); font-size:14px;">
+            <div style="font-size:28px;">🖼️</div>
+            <div>Zdjęcie — zostanie dodane</div>
+          </div>
+          <div style="flex:0 0 320px; scroll-snap-align:start; border-radius:var(--r-lg); overflow:hidden; background:var(--grey); aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px; color:var(--muted); font-size:14px;">
+            <div style="font-size:28px;">🖼️</div>
+            <div>Zdjęcie — zostanie dodane</div>
+          </div>
+          <div style="flex:0 0 320px; scroll-snap-align:start; border-radius:var(--r-lg); overflow:hidden; background:var(--grey); aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px; color:var(--muted); font-size:14px;">
+            <div style="font-size:28px;">🖼️</div>
+            <div>Zdjęcie — zostanie dodane</div>
+          </div>
+          <div style="flex:0 0 320px; scroll-snap-align:start; border-radius:var(--r-lg); overflow:hidden; background:var(--grey); aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px; color:var(--muted); font-size:14px;">
+            <div style="font-size:28px;">🖼️</div>
+            <div>Zdjęcie — zostanie dodane</div>
+          </div>
+        </div>
+
+        <div class="divider" style="margin-bottom:48px"></div>
+
+        <div style="background:var(--orange-xl); border:2px solid var(--orange); border-radius:var(--r-lg); padding:28px 32px; margin-bottom:40px; display:flex; flex-wrap:wrap; align-items:center; gap:16px;">
+          <div style="flex:1; min-width:200px;">
+            <div style="font-weight:800; font-size:18px; margin-bottom:6px;">Chcesz zacząć od razu?</div>
+            <p style="color:var(--muted); font-size:15px; margin:0; line-height:1.6;">Napisz do nas bezpośrednio — odpiszemy w ciągu 24 godzin.</p>
+          </div>
+          <a href="mailto:kontakt.amen@gmail.com?subject=współpraca instruktorska" class="btn btn-primary" style="white-space:nowrap; text-decoration:none;">✉️ kontakt.amen@gmail.com</a>
+        </div>
+
+        <span class="label">Zgłoś się</span>
+        <h2 class="section-title" style="margin-bottom:12px; font-size:28px">Formularz zgłoszeniowy</h2>
+        <p style="color:var(--muted); font-size:16px; line-height:1.7; margin-bottom:32px">Skontaktujemy się w ciągu tygodnia i omówimy szczegóły.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScFyBqQhhWuJtxsxXcqqHc6ZRcF3ZgPjYFot79IsWJyta7ZOw/viewform" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:16px; padding:16px 32px; display:inline-block; text-decoration:none;">Wyślij zgłoszenie →</a>
+
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<!-- ═══ SCRIPTS ════════════════════════════════════════════ -->
+<!-- ═══ PAGE: IMPREZY ══════════════════════════════════════ -->
+<div class="page" id="page-imprezy">
+  <div style="background:var(--black); padding:80px 0 60px; margin-bottom:0;">
+    <div class="container">
+      <span class="label" style="color:var(--orange);">Wydarzenia</span>
+      <h1 style="color:var(--white); font-size:clamp(32px,5vw,56px); font-weight:800; line-height:1.1; margin-bottom:16px;">Imprezy z Amen!</h1>
+      <p style="color:rgba(255,255,255,.7); font-size:17px; max-width:640px; line-height:1.7;">Jesteśmy dla ludzi! Tworzymy przestrzeń, w której chcemy organizować cykliczne wydarzenia kulturalne dla chrześcijan. Wszystko po to, by się integrować, poznawać i budować relacje — przy okazji dbając o kulturę chrześcijańską.</p>
+      <p style="color:rgba(255,255,255,.4); font-size:14px; font-style:italic; margin-top:16px;">"Aby wszyscy byli jedno, jak Ty, Ojcze, we Mnie…" (J 17, 21)</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <span class="label">Terminarz</span>
+      <h2 class="section-title" style="margin-bottom:24px">Sezon 2025/2026</h2>
+      <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:48px;">
+        <div style="display:flex; align-items:center; gap:16px; padding:14px 20px; background:var(--grey); border-radius:var(--r); opacity:.5;">
+          <div style="font-size:20px;">📅</div><div><strong>27.09.2025</strong> — odbyła się</div>
+        </div>
+        <div style="display:flex; align-items:center; gap:16px; padding:14px 20px; background:var(--grey); border-radius:var(--r); opacity:.5;">
+          <div style="font-size:20px;">📅</div><div><strong>29.11.2025</strong> — odbyła się</div>
+        </div>
+        <div style="display:flex; align-items:center; gap:16px; padding:14px 20px; background:var(--grey); border-radius:var(--r); opacity:.5;">
+          <div style="font-size:20px;">📅</div><div><strong>Sylwester</strong> — odbyła się</div>
+        </div>
+        <div style="display:flex; align-items:center; gap:16px; padding:14px 20px; background:var(--grey); border-radius:var(--r); opacity:.5;">
+          <div style="font-size:20px;">📅</div><div><strong>14.02.2026</strong> — odbyła się</div>
+        </div>
+        <div style="display:flex; align-items:center; gap:16px; padding:14px 20px; background:var(--grey); border-radius:var(--r); opacity:.5;">
+          <div style="font-size:20px;">📅</div><div><strong>11.04.2026</strong> — odbyła się</div>
+        </div>
+        <div style="display:flex; align-items:center; gap:16px; padding:14px 20px; background:var(--grey); border-radius:var(--r); opacity:.5;">
+          <div style="font-size:20px;">📅</div><div><strong>13.06.2026</strong> — odwołana</div>
+        </div>
+      </div>
+
+      <div class="divider" style="margin-bottom:48px;"></div>
+
+      <span class="label">Atrakcje</span>
+      <h2 class="section-title" style="margin-bottom:24px">Co na nas czeka?</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-bottom:48px;">
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+          <div style="font-size:28px; margin-bottom:10px;">💃</div>
+          <div style="font-weight:700; margin-bottom:6px;">Parkiet taneczny</div>
+          <p style="font-size:14px; color:var(--muted); line-height:1.6;">Najlepsze hity na parkiecie — niezależnie od tego, czy jesteś mistrzem tańca, czy dopiero zaczynasz.</p>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+          <div style="font-size:28px; margin-bottom:10px;">🕺</div>
+          <div style="font-weight:700; margin-bottom:6px;">Mini lekcja tańca</div>
+          <p style="font-size:14px; color:var(--muted); line-height:1.6;">Poczuj się pewniej na parkiecie — nowe kroki w grupie, bez presji, z dobrą energią.</p>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+          <div style="font-size:28px; margin-bottom:10px;">🎤</div>
+          <div style="font-weight:700; margin-bottom:6px;">Karaoke na wesoło</div>
+          <p style="font-size:14px; color:var(--muted); line-height:1.6;">Śpiewaj ulubione piosenki z przyjaciółmi — liczy się radość, nie głos.</p>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+          <div style="font-size:28px; margin-bottom:10px;">🎲</div>
+          <div style="font-weight:700; margin-bottom:6px;">Pokój planszówkowy</div>
+          <p style="font-size:14px; color:var(--muted); line-height:1.6;">Prawo Dżungli, Ryzyk Fizyk, Na końcu języka, 5 sekund i inne gry — mnóstwo integracji i śmiechu.</p>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+          <div style="font-size:28px; margin-bottom:10px;">🎱</div>
+          <div style="font-weight:700; margin-bottom:6px;">Strefa gier</div>
+          <p style="font-size:14px; color:var(--muted); line-height:1.6;">Bilard, piłkarzyki, ping-pong — dla tych, którzy lubią rywalizację i dobre emocje.</p>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+          <div style="font-size:28px; margin-bottom:10px;">🌹</div>
+          <div style="font-weight:700; margin-bottom:6px;">Pokój rozmów</div>
+          <p style="font-size:14px; color:var(--muted); line-height:1.6;">Kameralny klimat sprzyjający randkowym rozmowom, pogadankom i kawiarnianiu bez pośpiechu.</p>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+          <div style="font-size:28px; margin-bottom:10px;">🍰</div>
+          <div style="font-weight:700; margin-bottom:6px;">Pyszności na wspólnym stole</div>
+          <p style="font-size:14px; color:var(--muted); line-height:1.6;">Domowe wypieki i przekąski przyniesione przez uczestników — każdy wnosi coś od siebie.</p>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+          <div style="font-size:28px; margin-bottom:10px;">🍽</div>
+          <div style="font-weight:700; margin-bottom:6px;">Stół Szwedzki</div>
+          <p style="font-size:14px; color:var(--muted); line-height:1.6;">Bufet ze szwedzkim stołem — jedzenie przez cały wieczór, bez kolejkowania.</p>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+          <div style="font-size:28px; margin-bottom:10px;">📸</div>
+          <div style="font-weight:700; margin-bottom:6px;">Fotościanka</div>
+          <p style="font-size:14px; color:var(--muted); line-height:1.6;">Pamiątkowe zdjęcia na specjalnie przygotowanym tle — zostaje po dobrej zabawie.</p>
+        </div>
+      </div>
+
+      <div class="divider" style="margin-bottom:48px;"></div>
+
+      <span class="label">Cennik</span>
+      <h2 class="section-title" style="margin-bottom:8px">Ile kosztuje wejście?</h2>
+      <p style="color:var(--muted); font-size:15px; margin-bottom:8px;">Cena biletu wynosi od 60 do 80 zł — im wcześniej się zapiszesz, tym taniej!</p>
+      <p style="color:var(--muted); font-size:14px; margin-bottom:24px; font-style:italic;">Bilet to nie tylko kwota. To też wybrana forma zaangażowania — właśnie dzięki temu impreza działa tak fajnie!</p>
+      <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:16px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r);">
+          <span>Zapis z wyprzedzeniem (Early bird)</span><strong>60 zł</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; background:var(--grey); border-radius:var(--r);">
+          <span>Zapis standardowy</span><strong>70 zł</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; background:var(--grey); border-radius:var(--r);">
+          <span>Zapis w ostatniej chwili</span><strong>80 zł</strong>
+        </div>
+      </div>
+      <p style="font-size:13px; color:var(--muted); margin-bottom:16px;">Do każdego biletu dochodzi coś na wspólny stół — domowy wypiek lub inna przekąska.</p>
+      <p style="font-size:13px; color:var(--muted); margin-bottom:32px;">Płatność przelewem bankowym do terminu określonego przy każdym wydarzeniu. Rezygnacja zwrotna do 21 dni przed imprezą.</p>
+      <a class="btn btn-outline" href="#" onclick="showPage('cennik')">Zobacz pełny cennik →</a>
+
+      <div class="divider" style="margin:48px 0;"></div>
+
+      <span class="label">Wolontariat</span>
+      <h2 class="section-title" style="margin-bottom:12px">Pomóż i wejdź za darmo</h2>
+      <p style="color:var(--muted); font-size:15px; line-height:1.7; max-width:640px; margin-bottom:16px;">Szukamy wolontariuszy, którzy chcą aktywnie uczestniczyć w wydarzeniu i jednocześnie cieszyć się darmowym wstępem. Wolontariusze pomagają przed, w trakcie lub po imprezie — zdobywają doświadczenie, poznają nowych ludzi i współtworzą niezapomnianą atmosferę.</p>
+      <p style="color:var(--muted); font-size:14px; margin-bottom:24px;">Zgłoszenia: fanpage na Facebooku lub e-mail <strong>impreza.amen@gmail.com</strong></p>
+
+      <div class="divider" style="margin:48px 0;"></div>
+
+      <span class="label">Zaangażowanie</span>
+      <h2 class="section-title" style="margin-bottom:16px">Impreza działa, bo każdy wnosi coś od siebie</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-bottom:48px;">
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+          <div style="font-size:24px; margin-bottom:8px;">💪</div>
+          <div style="font-weight:700; margin-bottom:6px;">Pomoc przy imprezie</div>
+          <p style="font-size:14px; color:var(--muted); line-height:1.6;">Pomoc przed, w trakcie lub po imprezie — jako jedna z form zaangażowania wliczona w bilet.</p>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+          <div style="font-size:24px; margin-bottom:8px;">🥗</div>
+          <div style="font-weight:700; margin-bottom:6px;">Coś na wspólny stół</div>
+          <p style="font-size:14px; color:var(--muted); line-height:1.6;">Domowy wypiek lub przekąska — każdy uczestnik przynosi coś od siebie. To nasza wspólna tradycja.</p>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+          <div style="font-size:24px; margin-bottom:8px;">🧱</div>
+          <div style="font-weight:700; margin-bottom:6px;">Symboliczna cegiełka</div>
+          <p style="font-size:14px; color:var(--muted); line-height:1.6;">Symboliczne wsparcie finansowe na rozwój kolejnych wydarzeń — dla tych, którzy chcą pomóc inaczej.</p>
+        </div>
+      </div>
+
+      <div class="divider" style="margin-bottom:48px;"></div>
+
+      <span class="label">Regulamin</span>
+      <h2 class="section-title" style="margin-bottom:12px">Kilka ważnych zasad</h2>
+      <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:32px;">
+        <div style="background:var(--grey); border-radius:var(--r); padding:16px 20px; font-size:14px; color:var(--muted); line-height:1.6;">
+          <strong style="color:var(--white);">Dorośli</strong> — udział dla pełnoletnich. Dzieci wyłącznie za zgodą organizatora.
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r); padding:16px 20px; font-size:14px; color:var(--muted); line-height:1.6;">
+          <strong style="color:var(--white);">Zero alkoholu i substancji</strong> — całkowity zakaz alkoholu, narkotyków i innych substancji psychoaktywnych.
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r); padding:16px 20px; font-size:14px; color:var(--muted); line-height:1.6;">
+          <strong style="color:var(--white);">Szacunek</strong> — wymagamy poszanowania innych uczestników. Agresja i wulgarność są niedopuszczalne.
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r); padding:16px 20px; font-size:14px; color:var(--muted); line-height:1.6;">
+          <strong style="color:var(--white);">Rezygnacja</strong> — zwrot biletu możliwy do 21 dni przed imprezą. Przy odwołaniu przez organizatora — pełny zwrot (bez kosztów dojazdu).
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r); padding:16px 20px; font-size:14px; color:var(--muted); line-height:1.6;">
+          <strong style="color:var(--white);">Zdjęcia i video</strong> — uczestnik wyraża zgodę na nagrywanie i fotografowanie w celach promocyjnych.
+        </div>
+      </div>
+      <p style="font-size:13px; color:var(--muted); margin-bottom:32px;">Pełny regulamin dostępny na: <strong>chrzescijanskaszkolatanca.pl/regulamin-imprez/</strong></p>
+
+      <div class="divider" style="margin-bottom:48px;"></div>
+
+      <h2 class="section-title" style="margin-bottom:12px">Kontakt w sprawie imprez</h2>
+      <p style="color:var(--muted); font-size:15px; margin-bottom:8px;">📧 <strong>impreza.amen@gmail.com</strong></p>
+      <p style="color:var(--muted); font-size:15px; margin-bottom:24px;">📞 <strong>513-580-512</strong></p>
+      <a class="btn btn-primary" href="#" onclick="showPage('kontakt')">Napisz do nas →</a>
+
+    </div>
+  </section>
+</div>
+
+<!-- ═══ PAGE: WARSZTATY ════════════════════════════════════ -->
+<div class="page" id="page-warsztaty">
+  <div style="background:var(--black); padding:80px 0 60px; margin-bottom:0;">
+    <div class="container">
+      <span class="label" style="color:var(--orange);">Nauka</span>
+      <h1 style="color:var(--white); font-size:clamp(32px,5vw,56px); font-weight:800; line-height:1.1; margin-bottom:16px;">Warsztaty Taneczne</h1>
+      <p style="color:rgba(255,255,255,.7); font-size:17px; max-width:640px; line-height:1.7;">Warsztaty to jednorazowa dawka tanecznej wiedzy. W krótkim czasie uczysz się konkretnych umiejętności — bez zapisywania się na cały kurs. Możesz przyjść raz, a może zostaniesz z nami na dłużej.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <span class="label">Dla kogo</span>
+      <h2 class="section-title" style="margin-bottom:16px">Kto może wziąć udział?</h2>
+      <p style="color:var(--muted); font-size:15px; line-height:1.7; max-width:680px; margin-bottom:48px;">Warsztaty są otwarte dla każdego — nie musisz mieć żadnego doświadczenia. Każde zajęcia mają określony poziom: dla kompletnych początkujących lub dla osób, które już trochę tańczą. Wystarczy wybrać odpowiedni dla siebie.</p>
+
+      <div class="divider" style="margin-bottom:48px;"></div>
+
+      <span class="label">Rodzaje</span>
+      <h2 class="section-title" style="margin-bottom:24px">Dwa typy warsztatów</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin-bottom:48px;">
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:28px;">
+          <div style="font-size:28px; margin-bottom:10px;">🌱</div>
+          <div style="font-weight:700; font-size:18px; margin-bottom:8px;">Wprowadzające</div>
+          <p style="font-size:14px; color:var(--muted); line-height:1.65;">Wprowadzają w podstawy danego stylu — od zera. Po takim warsztacie możesz zdecydować, czy chcesz kontynuować naukę na kursie dla początkujących. To świetny pierwszy krok bez żadnego zobowiązania.</p>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:28px;">
+          <div style="font-size:28px; margin-bottom:10px;">🚀</div>
+          <div style="font-weight:700; font-size:18px; margin-bottom:8px;">Doskonalące</div>
+          <p style="font-size:14px; color:var(--muted); line-height:1.65;">Skupiają się na rozwijaniu konkretnych umiejętności, techniki i zasad tańca. Dla osób, które już tańczą i chcą wejść na wyższy poziom — pogłębić to, co już znają.</p>
+        </div>
+      </div>
+
+      <div class="divider" style="margin-bottom:48px;"></div>
+
+      <span class="label">Format</span>
+      <h2 class="section-title" style="margin-bottom:16px">Jak wyglądają zajęcia?</h2>
+      <p style="color:var(--muted); font-size:15px; line-height:1.7; max-width:680px; margin-bottom:32px;">Warsztaty odbywają się w weekendy i trwają od 2 do kilku godzin — zależnie od tematu. Każde są jednorazowe, więc nie musisz się martwić, że coś „przegapiłeś". Zapisy odbywają się przez formularz online — link do zapisu pojawia się przy każdym ogłoszeniu.</p>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; margin-bottom:48px;">
+        <div style="background:var(--grey); border-radius:var(--r); padding:20px 24px; display:flex; align-items:flex-start; gap:14px;">
+          <span style="font-size:22px;">📅</span>
+          <div>
+            <div style="font-weight:700; font-size:14px; margin-bottom:4px;">Weekendy</div>
+            <p style="font-size:13px; color:var(--muted); margin:0;">Warsztaty odbywają się w soboty lub niedziele.</p>
+          </div>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r); padding:20px 24px; display:flex; align-items:flex-start; gap:14px;">
+          <span style="font-size:22px;">⏱</span>
+          <div>
+            <div style="font-weight:700; font-size:14px; margin-bottom:4px;">2–5 godzin</div>
+            <p style="font-size:13px; color:var(--muted); margin:0;">Intensywne zajęcia — konkretna wiedza w krótkim czasie.</p>
+          </div>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r); padding:20px 24px; display:flex; align-items:flex-start; gap:14px;">
+          <span style="font-size:22px;">📋</span>
+          <div>
+            <div style="font-weight:700; font-size:14px; margin-bottom:4px;">Zapisy online</div>
+            <p style="font-size:13px; color:var(--muted); margin:0;">Każdy warsztat ma swój formularz zapisu — link pojawia się przy ogłoszeniu.</p>
+          </div>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r); padding:20px 24px; display:flex; align-items:flex-start; gap:14px;">
+          <span style="font-size:22px;">📍</span>
+          <div>
+            <div style="font-weight:700; font-size:14px; margin-bottom:4px;">Wrocław</div>
+            <p style="font-size:13px; color:var(--muted); margin:0;">al. Jana Kasprowicza 28 (Fundacja Tobiaszki)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider" style="margin-bottom:48px;"></div>
+
+      <span class="label">Przykłady</span>
+      <h2 class="section-title" style="margin-bottom:24px">Co organizowaliśmy</h2>
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:48px;">
+        <div style="background:var(--grey); border-radius:var(--r); padding:20px 24px;">
+          <div style="font-weight:700; margin-bottom:4px;">Użytkowy od Podstaw</div>
+          <p style="font-size:14px; color:var(--muted);">Krok podstawowy, który sprawdzi się w 90% piosenek. Format 2,5h — wprowadzający.</p>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r); padding:20px 24px;">
+          <div style="font-weight:700; margin-bottom:4px;">Triki Taneczne na Sylwestra</div>
+          <p style="font-size:14px; color:var(--muted);">Efektowne figury i triki na imprezę — dla osób pełnoletnich (18+).</p>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r); padding:20px 24px;">
+          <div style="font-weight:700; margin-bottom:4px;">Krav Maga — Samoobrona</div>
+          <p style="font-size:14px; color:var(--muted);">Warsztaty samoobrony w formule taneczno-sportowej.</p>
+        </div>
+      </div>
+
+      <div style="background:var(--orange-xl); border:1px solid var(--orange-l); border-radius:var(--r-lg); padding:24px; margin-bottom:48px;">
+        <div style="font-weight:700; margin-bottom:6px;">📅 Aktualnie brak zaplanowanych warsztatów</div>
+        <p style="font-size:14px; color:var(--muted);">Zapisz się do newslettera albo obserwuj nas na social mediach, żeby nie przegapić kolejnych terminów.</p>
+      </div>
+
+      <div class="divider" style="margin-bottom:48px;"></div>
+
+      <span class="label">Cennik</span>
+      <h2 class="section-title" style="margin-bottom:8px">Ile kosztuje warsztat?</h2>
+      <p style="color:var(--muted); font-size:15px; margin-bottom:24px;">Cena zależy od długości i rodzaju warsztatu.</p>
+      <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:16px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; background:var(--grey); border-radius:var(--r);">
+          <span>Warsztat 2–3h (wprowadzający)</span><strong>ok. 90 zł</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; background:var(--grey); border-radius:var(--r);">
+          <span>Warsztat całodniowy / specjalny</span><strong>ok. 100 zł</strong>
+        </div>
+      </div>
+      <a class="btn btn-outline" href="#" onclick="showPage('cennik')" style="margin-bottom:32px; display:inline-block;">Zobacz pełny cennik →</a>
+
+      <div class="divider" style="margin-bottom:48px;"></div>
+
+      <h2 class="section-title" style="margin-bottom:12px">Masz pytania?</h2>
+      <p style="color:var(--muted); font-size:15px; margin-bottom:24px;">Napisz do nas — odpowiemy na pytania o terminy, poziomy i zapisy.</p>
+      <a class="btn btn-primary" href="#" onclick="showPage('kontakt')">Napisz do nas →</a>
+
+    </div>
+  </section>
+</div>
+
+<!-- ═══ PAGE: SYLWESTER ════════════════════════════════════ -->
+<div class="page" id="page-sylwester">
+  <div style="background:var(--black); padding:80px 0 60px; margin-bottom:0;">
+    <div class="container">
+      <span class="label" style="color:var(--orange);">31 Grudnia 2026</span>
+      <h1 style="color:var(--white); font-size:clamp(32px,5vw,56px); font-weight:800; line-height:1.1; margin-bottom:16px;">Sylwester z Amen!</h1>
+      <p style="color:rgba(255,255,255,.7); font-size:17px; max-width:640px; line-height:1.7;">8 godzin muzyki, tańca, rozmów, karaoke, planszówek i wspólnego świętowania. Przyjdź solo albo w parze i powitaj z nami 2027 rok.</p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:32px;">
+        <a class="btn btn-primary" href="https://szkolaamen.pl/sylwester" target="_blank" style="text-decoration:none;">Zapisuję się →</a>
+        <a class="btn btn-outline" href="#" onclick="showPage('regulamin-imprez')">Regulamin imprezy</a>
+      </div>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container" style="max-width:800px">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:16px; margin-bottom:48px;">
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:20px 24px;">
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--orange); margin-bottom:6px;">Data</div>
+          <div style="font-weight:700; font-size:16px;">31.12.2026 · godz. 20:00</div>
+          <div style="font-size:13px; color:var(--muted); margin-top:4px;">Koniec: 1 stycznia, godz. 4:00</div>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:20px 24px;">
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--orange); margin-bottom:6px;">Miejsce</div>
+          <div style="font-weight:700; font-size:16px;">Parafia św. Antoniego</div>
+          <div style="font-size:13px; color:var(--muted); margin-top:4px;">al. Kasprowicza 26, Wrocław</div>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:20px 24px;">
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--orange); margin-bottom:6px;">Dla kogo</div>
+          <div style="font-weight:700; font-size:16px;">18+</div>
+          <div style="font-size:13px; color:var(--muted); margin-top:4px;">Solo lub w parze · maks. 220 osób</div>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:20px 24px;">
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--orange); margin-bottom:6px;">Wejście</div>
+          <div style="font-weight:700; font-size:16px;">Bramki 19:30–21:30</div>
+          <div style="font-size:13px; color:var(--muted); margin-top:4px;">Bez alkoholu · opieka dla dzieci 2–6 lat w cenie</div>
+        </div>
+      </div>
+      <div class="divider" style="margin-bottom:48px;"></div>
+      <span class="label">Jak wygląda ten Sylwester?</span>
+      <h2 class="section-title" style="margin-bottom:16px">Spotkanie, nie bal</h2>
+      <p style="color:var(--muted); font-size:15px; line-height:1.7; max-width:680px; margin-bottom:24px;">To nie jest klasyczny bal przy stolikach. Chcemy, żeby ta noc była przede wszystkim okazją do spotkań, rozmów, tańca i poznawania nowych ludzi. Nie ma przypisanych stołów — każdy sam wybiera, jak spędza wieczór.</p>
+      <p style="color:var(--muted); font-size:15px; line-height:1.7; max-width:680px; margin-bottom:48px;">Jedzenie będzie dostępne na wspólnym szwedzkim stole. O północy możesz przynieść własną podpisaną butelkę bezalkoholowego szampana 0,0% i kieliszki do wspólnego toastu.</p>
+      <div class="divider" style="margin-bottom:48px;"></div>
+      <span class="label">Atrakcje</span>
+      <h2 class="section-title" style="margin-bottom:24px">8 godzin razem</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-bottom:48px;">
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+          <div style="font-size:24px; margin-bottom:10px;">💃</div>
+          <div style="font-weight:700; margin-bottom:6px;">Parkiet główny</div>
+          <p style="font-size:13px; color:var(--muted); line-height:1.6;">Muzyka DJ LoveDrum, prowadzenie Mateusza Zaparta, mini lekcje tańca i wspólna modlitwa o północy.</p>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+          <div style="font-size:24px; margin-bottom:10px;">🎲</div>
+          <div style="font-weight:700; margin-bottom:6px;">Planszówki i rozmowy</div>
+          <p style="font-size:13px; color:var(--muted); line-height:1.6;">Kilkanaście gier i pytania na stolikach pomagające rozpocząć rozmowę.</p>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+          <div style="font-size:24px; margin-bottom:10px;">🎤</div>
+          <div style="font-weight:700; margin-bottom:6px;">Karaoke</div>
+          <p style="font-size:13px; color:var(--muted); line-height:1.6;">Solo albo razem z grupą — osobna przestrzeń dla miłośników mikrofonu.</p>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+          <div style="font-size:24px; margin-bottom:10px;">🙏</div>
+          <div style="font-weight:700; margin-bottom:6px;">Namiot Spotkania</div>
+          <p style="font-size:13px; color:var(--muted); line-height:1.6;">Spokojna przestrzeń modlitwy i kontemplacji z Biblią.</p>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+          <div style="font-size:24px; margin-bottom:10px;">🍰</div>
+          <div style="font-weight:700; margin-bottom:6px;">Wspólny Stół</div>
+          <p style="font-size:13px; color:var(--muted); line-height:1.6;">Domowe ciasta, sałatki, przekąski i napoje współtworzone przez uczestników.</p>
+        </div>
+      </div>
+      <div class="divider" style="margin-bottom:48px;"></div>
+      <span class="label">Cennik</span>
+      <h2 class="section-title" style="margin-bottom:24px">Cena za 1 osobę</h2>
+      <p style="color:var(--muted); font-size:15px; margin-bottom:24px;">Im wcześniej opłacisz zapis, tym mniej płacisz. Możesz wybrać pełną cenę albo niższą z zaangażowaniem we Wspólny Stół.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-bottom:32px;">
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px; border:2px solid var(--orange);">
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--orange); margin-bottom:8px;">Do 30.11.2026 · I próg</div>
+          <div style="font-size:28px; font-weight:800; margin-bottom:4px;">200 zł</div>
+          <div style="font-size:13px; color:var(--muted);">lub 150 zł ze Wspólnym Stołem</div>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:8px;">01.12–15.12.2026 · II próg</div>
+          <div style="font-size:28px; font-weight:800; margin-bottom:4px;">230 zł</div>
+          <div style="font-size:13px; color:var(--muted);">lub 180 zł ze Wspólnym Stołem</div>
+        </div>
+        <div style="background:var(--grey); border-radius:var(--r-lg); padding:24px;">
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:8px;">Od 16.12.2026 · III próg</div>
+          <div style="font-size:28px; font-weight:800; margin-bottom:4px;">250 zł</div>
+          <div style="font-size:13px; color:var(--muted);">lub 200 zł ze Wspólnym Stołem</div>
+        </div>
+      </div>
+      <div style="background:var(--grey); border-radius:var(--r-lg); padding:20px 24px; margin-bottom:40px; font-size:14px; color:var(--muted); line-height:1.7;">
+        <strong style="color:var(--white);">Warto wiedzieć:</strong> Limit 220 osób · Wydarzenie bezalkoholowe · Dzieci do 6 lat mile widziane (opieka w cenie biletu 19:30–22:30) · Warsztaty taneczne przed imprezą: 31.12 godz. 18:00–19:30.
+      </div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="btn btn-primary" href="https://szkolaamen.pl/sylwester" target="_blank" style="text-decoration:none;">Przejdź do zapisów →</a>
+        <a class="btn btn-outline" href="#" onclick="showPage('regulamin-imprez')">Regulamin imprezy</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══ PAGE: REGULAMIN ════════════════════════════════════ -->
+<style>
+  .reg-acc-item { margin-bottom:4px; }
+  .reg-acc-h { cursor:pointer; padding:16px 20px; background:var(--grey); border-radius:var(--r); font-weight:700; font-size:15px; display:flex; justify-content:space-between; align-items:center; user-select:none; }
+  .reg-acc-h:hover { background:#2a2a2a; }
+  .reg-acc-h::after { content:'+'; font-size:22px; font-weight:300; color:var(--orange); flex-shrink:0; margin-left:12px; }
+  .reg-acc-h.open { border-radius:var(--r) var(--r) 0 0; }
+  .reg-acc-h.open::after { content:'−'; }
+  .reg-acc-body { display:none; padding:20px 24px; background:#1c1c1c; border-radius:0 0 var(--r) var(--r); font-size:14px; color:var(--muted); line-height:1.8; }
+  .reg-acc-body.open { display:block; }
+  .reg-acc-body p { margin-bottom:10px; }
+  .reg-acc-body p:last-child { margin-bottom:0; }
+  .reg-acc-body ul { padding-left:20px; margin-bottom:10px; }
+  .reg-acc-body ul li { margin-bottom:4px; }
+  .reg-acc-body strong { color:var(--white); }
+  .reg-divider { border:none; border-top:1px solid #2a2a2a; margin:32px 0; }
+</style>
+<div class="page" id="page-regulamin">
+  <div class="page-offset">
+    <div class="page-hero">
+      <div class="container">
+        <span class="label">Dokumenty</span>
+        <h1>Regulamin Szkoły Tańca Amen!</h1>
+        <p>Regulamin uczestnictwa w zajęciach organizowanych przez Szkołę Tańca Amen!</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container" style="max-width:780px">
+
+        <div style="background:var(--grey);border-radius:var(--r-lg);padding:20px 24px;margin-bottom:32px;font-size:13px;color:var(--muted);line-height:1.7;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px 24px;">
+          <div><strong style="color:var(--white);">Organizator</strong><br>SZKOŁA TAŃCA AMEN! MATEUSZ ZAPART</div>
+          <div><strong style="color:var(--white);">Adres</strong><br>ul. Lotnicza 83, 51-180 Szymanów</div>
+          <div><strong style="color:var(--white);">NIP / REGON</strong><br>8943139075 / 382770064</div>
+          <div><strong style="color:var(--white);">Telefon</strong><br>513 580 512</div>
+          <div><strong style="color:var(--white);">E-mail</strong><br>kontakt.amen@gmail.com</div>
+          <div><strong style="color:var(--white);">Obowiązuje od</strong><br>23.07.2026 · Wersja 1.1</div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§1 Organizator i zakres regulaminu</div>
+          <div class="reg-acc-body">
+            <p>Organizatorem zajęć jest SZKOŁA TAŃCA AMEN! MATEUSZ ZAPART, ul. Lotnicza 83, 51-180 Szymanów, NIP: 8943139075, REGON: 382770064, dalej: „Szkoła" lub „Organizator".</p>
+            <p>Organizator jest przedsiębiorcą wpisanym do Centralnej Ewidencji i Informacji o Działalności Gospodarczej (CEIDG).</p>
+            <p>Kontakt ze Szkołą jest możliwy:</p>
+            <ul>
+              <li>e-mailowo: kontakt.amen@gmail.com</li>
+              <li>telefonicznie: 513 580 512</li>
+              <li>przez stronę internetową: szkolaamen.pl</li>
+              <li>Facebook: facebook.com/szkolaamen</li>
+              <li>Instagram: instagram.com/szkolaamen</li>
+            </ul>
+            <p>Regulamin określa zasady korzystania z kursów, warsztatów i innych zajęć organizowanych oraz rozliczanych przez Szkołę.</p>
+            <p>Szczegółowe informacje o terminie, miejscu, cenie, poziomie, prowadzącym i programie danych zajęć znajdują się w aktualnej ofercie, cenniku lub formularzu zapisowym.</p>
+            <p>Imprezy taneczne, wyjazdy, szkolenia instruktorskie, półkolonie i inne wydarzenia specjalne mogą posiadać oddzielne regulaminy.</p>
+            <p>W sprawach dotyczących konkretnego wydarzenia regulamin szczegółowy uzupełnia niniejszy Regulamin.</p>
+            <p>Określenie „Uczestnik" oznacza każdą osobę uczestniczącą w zajęciach, niezależnie od płci. W przypadku osoby małoletniej obejmuje również jej rodzica lub opiekuna prawnego w zakresie jego obowiązków.</p>
+          </div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§2 Charakter i wartości Szkoły</div>
+          <div class="reg-acc-body">
+            <p>Szkoła Tańca Amen! jest chrześcijańską szkołą tańca oraz organizatorem projektu Roztańczona Parafia.</p>
+            <p>Celem Szkoły jest nauka tańca i ruchu oraz tworzenie przestrzeni spotkania, integracji i budowania dobrych relacji.</p>
+            <p>Taniec jest w Szkole nie tylko aktywnością fizyczną, ale również narzędziem wspierającym życie lokalnych społeczności.</p>
+            <p>Zajęcia rozpoczynają się i kończą wspólną modlitwą.</p>
+            <p>Uczestnik nie musi być osobą wierzącą, ale przyjmuje do wiadomości chrześcijański charakter Szkoły i zobowiązuje się go szanować.</p>
+            <p>Uczestnik uczestniczy w tym wspólnym punkcie zajęć poprzez obecność i uszanowanie jego charakteru. Nie ma obowiązku wypowiadania modlitwy, wykonywania gestów religijnych ani składania deklaracji wiary.</p>
+            <p>Częścią zajęć mogą być ćwiczenia integracyjne, rozmowy, przedstawianie się, zmiany partnerów i inne działania wspierające poznawanie się uczestników.</p>
+            <p>Udział w ćwiczeniu integracyjnym wymagającym kontaktu fizycznego jest dobrowolny. Uczestnik może odmówić udziału w konkretnym ćwiczeniu po poinformowaniu instruktora.</p>
+          </div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§3 Miejsca prowadzenia zajęć</div>
+          <div class="reg-acc-body">
+            <p>Zajęcia odbywają się przede wszystkim w salach przyparafialnych, domach parafialnych, oratoriach, świetlicach, salach wielofunkcyjnych oraz innych przestrzeniach lokalnych.</p>
+            <p>Organizowanie zajęć w takich miejscach jest świadomym elementem projektu Roztańczona Parafia, którego celem jest prowadzenie aktywności blisko miejsca zamieszkania uczestników.</p>
+            <p>Miejsca zajęć nie są stałą infrastrukturą Szkoły i mogą być zarządzane przez parafie, fundacje, wspólnoty, placówki oświatowe albo innych właścicieli.</p>
+            <p>Pomieszczenia nie zawsze są odpowiednikami profesjonalnych sal tanecznych.</p>
+            <p>W zależności od lokalizacji sala może nie posiadać m.in.:</p>
+            <ul>
+              <li>luster tanecznych</li>
+              <li>amortyzowanej podłogi</li>
+              <li>klimatyzacji</li>
+              <li>wygłuszenia</li>
+              <li>recepcji</li>
+              <li>osobnej przebieralni</li>
+              <li>pryszniców</li>
+              <li>rozbudowanego zaplecza sanitarnego</li>
+              <li>stałego nagłośnienia</li>
+              <li>pełnego wyposażenia profesjonalnego studia tańca.</li>
+            </ul>
+            <p>Wygląd, akustyka, temperatura, wyposażenie i rodzaj podłogi mogą różnić się pomiędzy lokalizacjami.</p>
+            <p>Brak udogodnienia typowego dla profesjonalnej sali tanecznej nie stanowi wady usługi, jeżeli nie zostało ono wyraźnie zagwarantowane w ofercie, a sala pozwala bezpiecznie przeprowadzić dane zajęcia.</p>
+            <p>Brak profesjonalnej infrastruktury nie oznacza obniżenia wymagań dotyczących bezpieczeństwa.</p>
+            <p>Szkoła i instruktor dostosowują program, obuwie, wielkość ruchu oraz wykorzystywane figury do warunków sali.</p>
+            <p>Instruktor może zrezygnować z określonych figur, podnoszeń, akrobacji lub ćwiczeń, jeżeli warunki sali nie pozwalają na ich bezpieczne wykonanie.</p>
+            <p>Uczestnik powinien niezwłocznie zgłosić instruktorowi mokrą lub uszkodzoną podłogę, przeszkodę, niesprawne wyposażenie albo inne zagrożenie.</p>
+            <p>Instruktor może przerwać zajęcia lub wyłączyć część sali z użytkowania, jeżeli wymaga tego bezpieczeństwo.</p>
+            <p>Uczestnik jest zobowiązany przestrzegać zasad gospodarza obiektu, w szczególności dotyczących wejścia, zmiany obuwia, sanitariatów, parkowania, ciszy oraz korzystania z części wspólnych.</p>
+            <p>Szkoła może zmienić salę z powodu wydarzenia parafialnego, remontu, awarii albo czasowej niedostępności obiektu.</p>
+            <p>O zmianie uczestnicy zostaną poinformowani możliwie szybko.</p>
+            <p>Jeśli zmiana lokalizacji jest trwała i istotnie utrudnia uczestnikowi kontynuowanie kursu, może on zrezygnować i otrzymać zwrot za niewykorzystane zajęcia.</p>
+          </div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§4 Rodzaje zajęć</div>
+          <div class="reg-acc-body">
+            <p>Szkoła organizuje w szczególności:</p>
+            <ul>
+              <li>kursy regularne</li>
+              <li>kursy krótkoterminowe i wakacyjne</li>
+              <li>zajęcia taneczne solo</li>
+              <li>zajęcia taneczne w parach</li>
+              <li>zajęcia dla dzieci i młodzieży</li>
+              <li>zajęcia dla dorosłych i seniorów</li>
+              <li>zajęcia rodziców z dziećmi</li>
+              <li>zajęcia fitness, mobility i rozciągające</li>
+              <li>samoobrona</li>
+              <li>zajęcia zawierające triki, podnoszenia lub elementy akrobatyczne</li>
+              <li>warsztaty</li>
+              <li>wejścia pojedyncze.</li>
+            </ul>
+            <p>Zasady odrabiania dotyczą kursów regularnych. Nie dotyczą automatycznie warsztatów, wydarzeń, imprez ani zajęć jednorazowych.</p>
+            <p>Kurs regularny opiera się na stopniowo rozwijanym programie i odbywa się najczęściej raz w tygodniu.</p>
+            <p>Kurs krótkoterminowy obejmuje z góry określoną liczbę spotkań lub okres. Szczegółowe zasady są wskazane w jego ofercie.</p>
+            <p>Warsztat jest jednorazowym spotkaniem albo krótkim cyklem dotyczącym określonego tematu.</p>
+            <p>Wejście pojedyncze uprawnia do udziału w jednych, wcześniej uzgodnionych zajęciach i nie gwarantuje stałego miejsca w grupie.</p>
+            <p>Zajęcia ruchowe, samoobrona, akrobacje i podnoszenia mogą podlegać dodatkowym zasadom bezpieczeństwa.</p>
+            <p>Program, poziom i czas trwania zajęć są określone w ofercie. Szkoła nie gwarantuje osiągnięcia określonego poziomu w konkretnym czasie, ponieważ postępy zależą m.in. od obecności, zaangażowania i indywidualnych możliwości uczestnika.</p>
+          </div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§5 Zapisy</div>
+          <div class="reg-acc-body">
+            <p>Zapis następuje przez:</p>
+            <ul>
+              <li>przesłanie formularza zapisowego</li>
+              <li>zgłoszenie zaakceptowane przez Szkołę w innej formie</li>
+              <li>wniesienie wymaganej opłaty</li>
+              <li>prawidłowe zgłoszenie korzystania z karty sportowej.</li>
+            </ul>
+            <p>Przesłanie formularza nie zawsze oznacza automatyczne przyjęcie do grupy.</p>
+            <p>Przyjęcie może zależeć od:</p>
+            <ul>
+              <li>liczby wolnych miejsc</li>
+              <li>wieku uczestnika</li>
+              <li>poziomu zaawansowania</li>
+              <li>charakteru kursu</li>
+              <li>liczby osób w poszczególnych rolach tanecznych</li>
+              <li>innych warunków wskazanych w ofercie.</li>
+            </ul>
+            <p>O utworzeniu grupy lub przyjęciu do trwającego kursu Szkoła informuje e-mailem, telefonicznie albo przez wskazany kanał komunikacji.</p>
+            <p>Uczestnik zobowiązuje się podawać prawdziwe i aktualne dane.</p>
+            <p>Dołączenie do kursu na wyższym poziomie może wymagać zgody instruktora.</p>
+            <p>Szkoła może zaproponować inną grupę, jeżeli poziom, wiek albo warunki organizacyjne nie pozwalają na udział w wybranych zajęciach.</p>
+            <p>Nie należy przychodzić do grupy, na wejście pojedyncze ani na odrabianie bez wcześniejszego potwierdzenia miejsca.</p>
+          </div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§6 Osoby małoletnie</div>
+          <div class="reg-acc-body">
+            <p>Zapisu dziecka dokonuje rodzic lub opiekun prawny.</p>
+            <p>Osoba małoletnia uczestniczy w grupie przeznaczonej dla jej wieku, chyba że Szkoła i opiekun uzgodnią inaczej.</p>
+            <p>Osoba w wieku 16–17 lat może uczestniczyć w wybranych zajęciach dla dorosłych, jeżeli:</p>
+            <ul>
+              <li>pozwala na to oferta</li>
+              <li>Szkoła wyrazi zgodę</li>
+              <li>rodzic lub opiekun prawny udzieli pisemnej zgody.</li>
+            </ul>
+            <p>Rodzic przekazuje informacje potrzebne do bezpiecznego udziału oraz wskazuje osoby upoważnione do odbioru dziecka.</p>
+            <p>Odpowiedzialność Szkoły za dziecko podczas samodzielnych zajęć dziecięcych rozpoczyna się z chwilą przekazania dziecka instruktorowi i kończy po zakończeniu zajęć oraz przekazaniu go upoważnionej osobie.</p>
+            <p>Podczas zajęć rodzica z dzieckiem dziecko pozostaje pod opieką rodzica. Szkoła nie zapewnia indywidualnej opieki nad dzieckiem.</p>
+            <p>Rodzic może przerwać ćwiczenie, aby nakarmić, przewinąć, przytulić lub uspokoić dziecko.</p>
+            <p>Naturalne zachowania dzieci są akceptowaną częścią zajęć rodzinnych, o ile nie zagrażają bezpieczeństwu.</p>
+            <p>Szczegółowe zasady pracy z osobami małoletnimi określają Standardy Ochrony Małoletnich Szkoły.</p>
+          </div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§7 Kursy regularne i karnety</div>
+          <div class="reg-acc-body">
+            <p>Kurs regularny może być prowadzony bez określonej z góry daty zakończenia, dopóki:</p>
+            <ul>
+              <li>istnieją możliwości organizacyjne</li>
+              <li>grupa posiada wystarczającą liczbę uczestników</li>
+              <li>uczestnicy chcą kontynuować naukę.</li>
+            </ul>
+            <p>Uczestnik nie podpisuje ze Szkołą odrębnej pisemnej umowy uczestnictwa. Podstawą udziału są zapis na zajęcia, akceptacja Regulaminu oraz zakup karnetu.</p>
+            <p>Podstawowy karnet obejmuje cztery kolejne zajęcia danej grupy.</p>
+            <p>Każdy uczestnik posiada własny, indywidualny okres rozliczeniowy.</p>
+            <p>Okres rozliczeniowy rozpoczyna się w dniu pierwszych zajęć uczestnika. Po każdych czterech spotkaniach uczestnik, który chce kontynuować kurs, kupuje kolejny karnet.</p>
+            <p>Zakup kolejnego karnetu nie następuje automatycznie, a Szkoła nie pobiera automatycznie opłaty za następne cztery zajęcia.</p>
+            <p>Osoba dołączająca do trwającego kursu opłaca pełny karnet czterech zajęć, liczony indywidualnie od dnia dołączenia.</p>
+            <p>Nie stosuje się proporcjonalnego obniżenia ceny karnetu z powodu dołączenia w trakcie cyklu grupy.</p>
+            <p>Karnet jest przypisany do konkretnej osoby i grupy. Nie można przekazać go innej osobie bez zgody Szkoły.</p>
+            <p>Karnet kończy się po czterech przeprowadzonych terminach zajęć, niezależnie od obecności uczestnika.</p>
+            <p>Zajęcia odwołane przez Szkołę nie są wliczane do karnetu.</p>
+            <p>Uczestnik może zakończyć udział po wykorzystaniu karnetu, nie kupując kolejnego. Nie obowiązuje miesięczny okres wypowiedzenia.</p>
+            <p>Uczestnik, który nie zamierza kupić kolejnego karnetu, ma obowiązek poinformować o tym Szkołę możliwie szybko, najpóźniej przed pierwszymi zajęciami objętymi kolejnym karnetem. Informacja pozwala Szkole zadbać o liczebność grupy i równowagę ról tanecznych.</p>
+            <p>Brak tej informacji nie powoduje automatycznego zakupu kolejnego karnetu ani obowiązku zapłaty za niego.</p>
+            <p>Uczestnictwo nie oznacza zobowiązania do ukończenia całego poziomu ani roku.</p>
+          </div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§8 Płatności</div>
+          <div class="reg-acc-body">
+            <p>Aktualne ceny są podawane w cenniku, formularzu albo ofercie danych zajęć.</p>
+            <p>W przypadku rozbieżności obowiązuje cena wskazana przy konkretnych zajęciach w chwili zapisu.</p>
+            <p>Płatności dokonuje się z góry, przed rozpoczęciem karnetu.</p>
+            <p>Płatność odbywa się przelewem na rachunek wskazany przez Szkołę. Płatność gotówką jest możliwa tylko wtedy, gdy Szkoła wyraźnie ją dopuści.</p>
+            <p>W tytule przelewu należy podać dane pozwalające przypisać płatność, w szczególności imię i nazwisko oraz nazwę grupy.</p>
+            <p>Szkoła może poprosić o okazanie potwierdzenia przelewu.</p>
+            <p>Brak płatności może skutkować niedopuszczeniem do udziału albo wstrzymaniem miejsca w grupie.</p>
+            <p>Ceny mogą różnić się zależnie od poziomu, czasu trwania, rodzaju i lokalizacji zajęć.</p>
+            <p>Szkoła może zmienić ceny przyszłych karnetów. Zmiana nie wpływa na już opłacony karnet.</p>
+            <p>Promocje nie łączą się, chyba że ich zasady stanowią inaczej.</p>
+            <p>Jeżeli uczestnik z góry wie, że opuści większą liczbę zajęć w kolejnym pakiecie, może napisać na kontakt.amen@gmail.com z prośbą o indywidualny sposób rozliczenia.</p>
+            <p>Prośbę należy wysłać przed rozpoczęciem nowego karnetu i przed płatnością.</p>
+            <p>Indywidualne rozliczenie obowiązuje dopiero po otrzymaniu potwierdzenia Szkoły.</p>
+            <p>Nieobecności zgłoszone po rozpoczęciu i opłaceniu karnetu nie powodują automatycznego przeliczenia jego ceny.</p>
+          </div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§9 Wejścia pojedyncze</div>
+          <div class="reg-acc-body">
+            <p>Wejście pojedyncze jest możliwe po uzyskaniu wcześniejszej zgody Szkoły.</p>
+            <p>Szkoła może odmówić wejścia pojedynczego, jeżeli:</p>
+            <ul>
+              <li>grupa jest pełna</li>
+              <li>poziom uczestnika jest niedopasowany</li>
+              <li>realizowany materiał wymaga wcześniejszego przygotowania</li>
+              <li>dodatkowa osoba zaburzyłaby pracę grupy.</li>
+            </ul>
+            <p>Cena wejścia pojedynczego wynosi jedną czwartą aktualnej ceny karnetu czterech zajęć dla danej grupy.</p>
+            <p>Wejście pojedyncze nie gwarantuje miejsca na kolejnych zajęciach.</p>
+            <p>Uczestnik korzystający z wejścia pojedynczego podlega wszystkim zasadom bezpieczeństwa, zachowania, wizerunku i ochrony danych.</p>
+          </div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§10 Karty sportowe</div>
+          <div class="reg-acc-body">
+            <p>Szkoła akceptuje obecnie:</p>
+            <ul>
+              <li>MultiSport</li>
+              <li>Medicover Sport</li>
+              <li>FitProfit</li>
+              <li>FitSport.</li>
+            </ul>
+            <p>Dostępność kart może zależeć od lokalizacji i aktualnych umów z operatorami. Aktualna lista jest podawana w cenniku lub ofercie.</p>
+            <p>Rozliczenie wejść kartą sportową jest prowadzone indywidualnie dla każdego uczestnika i każdego kursu w cyklach obejmujących cztery kolejne zajęcia.</p>
+            <p>Opłata klubowa wynosi 50 zł i jest pobierana raz w każdym miesiącu kalendarzowym, w którym uczestnik korzysta z karty sportowej na zajęciach Szkoły.</p>
+            <p>Opłata klubowa jest pobierana w pełnej wysokości niezależnie od dnia pierwszych zajęć uczestnika w danym miesiącu.</p>
+            <p>Jedna opłata klubowa obejmuje wszystkie regularne kursy, na które uczestnik uczęszcza w tym samym miesiącu kalendarzowym. Nie płaci osobnej opłaty klubowej za każdy kurs.</p>
+            <p>Za każdy karnet czterech zajęć uczestnik ma obowiązek zarejestrować cztery wejścia kartą.</p>
+            <p>Jeżeli uczestnik uczęszcza na kilka kursów, obowiązek czterech wejść dotyczy osobno każdego kursu.</p>
+            <p>Kartę można zarejestrować tylko raz dziennie. Jedno odbicie odpowiada jednym zajęciom.</p>
+            <p>Kartę należy zarejestrować przed zajęciami zgodnie z zasadami operatora.</p>
+            <p>Karta musi należeć do osoby, która z niej korzysta.</p>
+            <p>Uczestnik nie może zarejestrować wejścia bez faktycznego udziału w zajęciach.</p>
+            <p>Jeżeli uczestnik jest nieobecny, powinien odrobić zajęcia na innym kursie i podczas odrabiania zarejestrować kartę.</p>
+            <p>Jeżeli uczestnik nie odrobi nieobecności i nie uzupełni wymaganego odbicia, uiszcza dopłatę uzupełniającą w wysokości 15 zł za każde brakujące wejście.</p>
+            <p>Dopłatę należy uiścić przed rozpoczęciem kolejnego karnetu.</p>
+            <p>Ze względu na możliwość jednego odbicia dziennie odrabianie kartą powinno odbywać się w innym dniu niż regularne zajęcia uczestnika.</p>
+            <p>Jeżeli uczestnik chce odrobić zajęcia tego samego dnia, w którym wykorzystał już kartę, może to zrobić po uzyskaniu zgody Szkoły i dopłacie 15 zł.</p>
+            <p>Dopłata zastępuje drugie odbicie, którego operator nie pozwala wykonać tego samego dnia.</p>
+            <p>Zajęcia odwołane przez Szkołę nie wymagają odbicia. Obowiązek przesuwa się razem z karnetem.</p>
+            <p>Jeżeli odbicie jest niemożliwe z przyczyn technicznych niezależnych od uczestnika, należy niezwłocznie poinformować instruktora. Sytuacja zostanie wyjaśniona indywidualnie.</p>
+          </div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§11 Karnety i ewidencja obecności</div>
+          <div class="reg-acc-body">
+            <p>Obecności i okresy rozliczeniowe mogą być ewidencjonowane za pomocą:</p>
+            <ul>
+              <li>papierowego karnetu</li>
+              <li>listy obecności</li>
+              <li>dokumentacji prowadzonej przez instruktora</li>
+              <li>innego systemu przyjętego przez Szkołę.</li>
+            </ul>
+            <p>O sposobie ewidencji decyduje Szkoła lub instruktor danej grupy.</p>
+            <p>Jeżeli grupa korzysta z papierowych karnetów, uczestnik powinien przynosić karnet na każde zajęcia.</p>
+            <p>Brak karnetu nie powoduje automatycznej utraty prawa do udziału, jeżeli płatność można potwierdzić w inny sposób.</p>
+            <p>Zgubienie karnetu należy zgłosić instruktorowi. Dane mogą zostać odtworzone na podstawie list obecności i potwierdzeń płatności.</p>
+          </div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§12 Nieobecności i odrabianie</div>
+          <div class="reg-acc-body">
+            <p>Uczestnik nie ma obowiązku zgłaszania nieobecności przed swoimi regularnymi zajęciami.</p>
+            <p>Nieobecność nie wstrzymuje i nie przedłuża automatycznie karnetu.</p>
+            <p>Nieobecność nie powoduje zwrotu ani obniżenia kolejnej płatności.</p>
+            <p>Uczestnik może odrobić nieobecność w terminie 30 dni kalendarzowych od dnia opuszczonych zajęć.</p>
+            <p>Po upływie 30 dni możliwość odrobienia wygasa, chyba że Szkoła indywidualnie postanowi inaczej.</p>
+            <p>Uczestnik zgłasza nie samą nieobecność, ale chęć przyjścia na konkretne zajęcia w ramach odrabiania.</p>
+            <p>Zgłoszenie powinno zawierać:</p>
+            <ul>
+              <li>imię i nazwisko</li>
+              <li>nazwę własnej grupy</li>
+              <li>datę nieobecności</li>
+              <li>proponowaną grupę i termin odrabiania.</li>
+            </ul>
+            <p>Przed przyjściem należy otrzymać potwierdzenie Szkoły. Brak odpowiedzi nie oznacza zgody.</p>
+            <p>Odrabianie jest możliwe, jeżeli:</p>
+            <ul>
+              <li>są wolne miejsca</li>
+              <li>poziom i charakter grupy są odpowiednie</li>
+              <li>udział dodatkowej osoby nie zakłóci zajęć</li>
+              <li>instruktor lub Szkoła wyrażą zgodę.</li>
+            </ul>
+            <p>Jedną nieobecność można odrobić jeden raz.</p>
+            <p>Nie można odrabiać na zajęciach grupy, do której jest się już regularnie zapisanym.</p>
+            <p>Odróbka nie przedłuża karnetu, nie zastępuje kolejnej płatności i nie może zostać wymieniona na pieniądze.</p>
+            <p>Szkoła nie gwarantuje dostępności identycznego stylu ani poziomu.</p>
+            <p>Odrabianie może być niemożliwe na formacjach, choreografiach, salsie rueda, zajęciach zaawansowanych lub innych zajęciach wymagających konkretnych umiejętności.</p>
+            <p>Sposób odrabiania zajęć w parach zależy od grupy, liczby uczestników i decyzji instruktora.</p>
+            <p>Szkoła może:</p>
+            <ul>
+              <li>pozwolić przyjść samodzielnie</li>
+              <li>poprosić o przyjście z partnerem</li>
+              <li>połączyć osoby odrabiające</li>
+              <li>dopuścić lub ograniczyć rotację</li>
+              <li>zaproponować inny termin.</li>
+            </ul>
+            <p>Szkoła nie gwarantuje znalezienia partnera.</p>
+            <p>System odrabiania nie dotyczy automatycznie warsztatów, imprez, wydarzeń ani wejść pojedynczych.</p>
+            <p>Dłuższe nieobecności wynikające z wyjątkowych sytuacji można zgłosić na kontakt.amen@gmail.com. Każdy przypadek jest rozpatrywany indywidualnie.</p>
+          </div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§13 Warsztaty</div>
+          <div class="reg-acc-body">
+            <p>Miejsce na warsztacie jest potwierdzone po dokonaniu wymaganego zapisu i płatności.</p>
+            <p>Uczestnik może zrezygnować i otrzymać pełny zwrot, jeżeli zgłosi rezygnację najpóźniej 7 dni kalendarzowych przed warsztatem.</p>
+            <p>Przy rezygnacji później niż 7 dni przed warsztatem opłata nie podlega zwrotowi, z zastrzeżeniem ustawowych praw konsumenta.</p>
+            <p>Uczestnik może przekazać miejsce innej osobie po wcześniejszym poinformowaniu Szkoły i podaniu danych nowego uczestnika.</p>
+            <p>Nowa osoba musi spełniać wymagania dotyczące wieku, poziomu, partnera lub innych warunków udziału.</p>
+            <p>Osoby przekazujące miejsce samodzielnie ustalają wzajemne rozliczenie. Szkoła nie pośredniczy w przekazaniu pieniędzy i nie odpowiada za to rozliczenie.</p>
+            <p>Warsztaty nie podlegają systemowi odrabiania kursów regularnych.</p>
+            <p>Jeżeli warsztat zostanie odwołany przez Szkołę, uczestnik otrzyma pełny zwrot albo — za swoją zgodą — możliwość przeniesienia płatności.</p>
+          </div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§14 Vouchery</div>
+          <div class="reg-acc-body">
+            <p>Voucher jest ważny przez 12 miesięcy od daty zakupu, chyba że wskazano na nim inny termin.</p>
+            <p>Voucher jest imienny i może zostać wykorzystany wyłącznie przez osobę na nim wskazaną.</p>
+            <p>Vouchera nie można przekazać, odsprzedać ani przepisać na inną osobę.</p>
+            <p>Realizacja zależy od dostępności miejsc, terminów i spełnienia warunków dotyczących poziomu, wieku lub rodzaju zajęć.</p>
+            <p>Niewykorzystanie vouchera w okresie ważności nie powoduje automatycznego zwrotu ani przedłużenia, z zastrzeżeniem ustawowych praw konsumenta.</p>
+            <p>Voucher nie podlega wymianie na gotówkę.</p>
+            <p>Jeżeli Szkoła trwale zaprzestanie oferowania usługi objętej voucherem, zaproponuje usługę zastępczą albo zwrot niewykorzystanej wartości.</p>
+          </div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§15 Zajęcia w parach, rotacja i kontakt fizyczny</div>
+          <div class="reg-acc-body">
+            <p>Taniec w parach wiąże się z kontaktem fizycznym wynikającym z techniki.</p>
+            <p>Uczestnik ma prawo odmówić wykonania figury, chwytu, podnoszenia, ćwiczenia albo zmiany partnera, jeśli przekracza to jego granice lub budzi obawy o bezpieczeństwo.</p>
+            <p>Uczestnik powinien poinformować instruktora, jeżeli chce ćwiczyć wyłącznie ze swoim partnerem.</p>
+            <p>Szkoła rozróżnia:</p>
+            <ul>
+              <li>rotację podczas nauki techniki</li>
+              <li>ćwiczenia integracyjne i zapoznawcze</li>
+              <li>formaty, w których rotacja jest częścią programu.</li>
+            </ul>
+            <p>Udział w integracyjnej zmianie partnerów jest dobrowolny.</p>
+            <p>Szkoła w miarę możliwości umożliwia ćwiczenie w stałej parze.</p>
+            <p>W niektórych formatach, w szczególności w salsie rueda, rotacja jest podstawowym elementem zajęć.</p>
+            <p>Brak udziału w rotacji na kursie opartym na rotacji może uniemożliwić pełne uczestnictwo. Szkoła może zaproponować inną grupę.</p>
+            <p>Każdy uczestnik ma obowiązek respektować granice i komunikaty partnera.</p>
+            <p>Niedopuszczalny jest dotyk niezwiązany z programem, naruszający intymność, granice albo bezpieczeństwo.</p>
+            <p>Niektóre ćwiczenia integracyjne mogą obejmować podanie dłoni, wspólny krąg lub grupowy uścisk. Uczestnik może odmówić bez konieczności uzasadniania.</p>
+          </div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§16 Spóźnienia</div>
+          <div class="reg-acc-body">
+            <p>Spóźniony uczestnik może dołączyć, jeśli instruktor uzna, że jest to możliwe bez zakłócenia zajęć i zagrożenia bezpieczeństwa.</p>
+            <p>Instruktor może odmówić dołączenia albo ograniczyć udział, jeżeli uczestnik ominął:</p>
+            <ul>
+              <li>rozgrzewkę</li>
+              <li>instruktaż bezpieczeństwa</li>
+              <li>główną część nauki figury</li>
+              <li>wyjaśnienie choreografii lub sekwencji.</li>
+            </ul>
+            <p>Decyzja zależy od stopnia spóźnienia, rodzaju zajęć i możliwości bezpiecznego włączenia uczestnika.</p>
+            <p>Spóźnienie i wynikające z niego ograniczenie udziału nie stanowią podstawy zwrotu ani dodatkowej odróbki.</p>
+          </div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§17 Bezpieczeństwo i zdrowie</div>
+          <div class="reg-acc-body">
+            <p>Uczestnik bierze udział z uwzględnieniem swojego zdrowia i możliwości.</p>
+            <p>Zajęcia taneczne i ruchowe wiążą się z naturalnym wysiłkiem i ryzykiem typowym dla aktywności fizycznej.</p>
+            <p>W razie przeciwwskazań, ciąży, niedawnego porodu, urazu, zabiegu lub wątpliwości uczestnik powinien skonsultować udział z lekarzem albo fizjoterapeutą.</p>
+            <p>Uczestnik powinien poinformować instruktora o ograniczeniach istotnych dla bezpieczeństwa, bez konieczności ujawniania pełnej diagnozy.</p>
+            <p>Uczestnik ma obowiązek:</p>
+            <ul>
+              <li>stosować się do poleceń instruktora</li>
+              <li>korzystać ze sprzętu zgodnie z przeznaczeniem</li>
+              <li>nie wykonywać elementu, którego nie potrafi bezpiecznie wykonać</li>
+              <li>przerwać ćwiczenie w razie bólu, duszności, zawrotów głowy albo innych niepokojących objawów</li>
+              <li>zgłosić uraz lub zauważone zagrożenie.</li>
+            </ul>
+            <p>Instruktor może odmówić dopuszczenia do określonego ćwiczenia ze względów bezpieczeństwa.</p>
+            <p>Zabroniony jest udział pod wpływem alkoholu, narkotyków lub innych substancji ograniczających bezpieczne uczestnictwo.</p>
+            <p>Szkoła może odmówić udziału osobie, której stan lub zachowanie stwarzają zagrożenie.</p>
+            <p>Zajęcia fitness, mobility, zdrowy kręgosłup i podobne aktywności nie są świadczeniem medycznym, rehabilitacją ani fizjoterapią.</p>
+            <p>Regulamin nie wyłącza odpowiedzialności Szkoły w zakresie, w którym nie można jej wyłączyć zgodnie z prawem.</p>
+          </div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§18 Zachowanie i rzeczy osobiste</div>
+          <div class="reg-acc-body">
+            <p>Uczestnicy są zobowiązani do szacunku wobec instruktorów, innych uczestników, dzieci i gospodarzy obiektów.</p>
+            <p>Niedopuszczalne są przemoc, agresja, molestowanie, dyskryminacja, ośmieszanie, naruszanie granic i celowe zakłócanie zajęć.</p>
+            <p>Uczestnik powinien dbać o higienę i strój odpowiedni do zajęć.</p>
+            <p>Szkoła może poprosić o opuszczenie zajęć osobę rażąco naruszającą zasady bezpieczeństwa lub prawa innych osób.</p>
+            <p>Powtarzające się albo poważne naruszenia mogą skutkować zakończeniem uczestnictwa.</p>
+            <p>Uczestnik odpowiada za szkody wyrządzone z jego winy na zasadach wynikających z prawa.</p>
+            <p>Szkoła nie odpowiada za rzeczy pozostawione bez nadzoru, z wyjątkiem przypadków, w których odpowiedzialność wynika z przepisów.</p>
+            <p>Znalezione rzeczy są przechowywane przez rozsądny czas, a następnie mogą zostać przekazane zarządcy obiektu.</p>
+          </div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§19 Odwołanie i zmiana zajęć</div>
+          <div class="reg-acc-body">
+            <p>Szkoła może odwołać zajęcia lub zmienić termin, instruktora albo salę z ważnych przyczyn, w szczególności choroby, awarii, niedostępności obiektu, wydarzenia parafialnego, zagrożenia bezpieczeństwa albo siły wyższej.</p>
+            <p>Informacja zostanie przekazana możliwie szybko.</p>
+            <p>Zajęcia nieodbyte z decyzji Szkoły, w tym z powodu święta lub planowanej przerwy w grafiku, nie są zaliczane do karnetu.</p>
+            <p>Termin kolejnej płatności i zakończenia karnetu przesuwa się odpowiednio.</p>
+            <p>Jeżeli zajęć nie można przeprowadzić w innym terminie, Szkoła zaproponuje przeniesienie opłaty albo proporcjonalny zwrot.</p>
+            <p>Zastępstwo instruktora posiadającego odpowiednie kwalifikacje nie stanowi samo w sobie podstawy zwrotu.</p>
+            <p>Szkoła może zakończyć prowadzenie grupy z powodu zbyt małej liczby uczestników. Niewykorzystane zajęcia zostaną przeniesione na inną grupę za zgodą uczestnika albo zwrócone.</p>
+            <p>Jeżeli nastąpi istotna i trwała zmiana terminu, miejsca lub charakteru zajęć, uczestnik może zrezygnować i otrzymać zwrot za niewykorzystaną część karnetu.</p>
+          </div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§20 Zakończenie uczestnictwa i zwroty</div>
+          <div class="reg-acc-body">
+            <p>Uczestnik może zakończyć udział po wykorzystaniu bieżącego karnetu, nie kupując kolejnego.</p>
+            <p>Nie obowiązuje miesięczny okres wypowiedzenia.</p>
+            <p>Uczestnik informuje Szkołę o zakończeniu udziału zgodnie z §7. Do zgłoszenia wystarczy wiadomość e-mail, SMS albo wiadomość przesłana uzgodnionym kanałem komunikacji. Szkoła nie wymaga składania wniosku ani podpisywania formularza rezygnacji.</p>
+            <p>Zakończenie udziału z przyczyn leżących po stronie uczestnika w trakcie rozpoczętego karnetu nie powoduje automatycznego zwrotu za niewykorzystane zajęcia.</p>
+            <p>Poważna choroba, hospitalizacja, długotrwały uraz lub inna wyjątkowa sytuacja mogą zostać rozpatrzone indywidualnie.</p>
+            <p>Zwrot przysługuje za zajęcia odwołane przez Szkołę, jeżeli nie zostaną przeprowadzone ani rozliczone w inny uzgodniony sposób.</p>
+            <p>Regulamin nie ogranicza ustawowych praw konsumenta.</p>
+            <p>Karnet obejmuje zajęcia odbywające się w konkretnych terminach zgodnie z grafikiem. W przypadku zakupu na odległość prawo odstąpienia może być wyłączone w zakresie przewidzianym przez obowiązujące przepisy dla usług związanych z wypoczynkiem, sportem lub wydarzeniami, jeżeli wskazano dzień albo okres ich świadczenia. Informacja właściwa dla danego zakupu jest przekazywana uczestnikowi przed dokonaniem płatności.</p>
+          </div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§21 Lekcje indywidualne i pierwszy taniec</div>
+          <div class="reg-acc-body">
+            <p>Szkoła może udostępniać dane kontaktowe instruktorów prowadzących lekcje indywidualne lub przygotowanie pierwszego tańca.</p>
+            <p>Jeśli instruktor świadczy i rozlicza usługę we własnym imieniu, Szkoła pełni wyłącznie funkcję informacyjną i nie jest stroną umowy pomiędzy uczestnikiem a instruktorem.</p>
+            <p>Termin, miejsce, program, cena, płatność, przełożenie, rezygnacja, zwrot i reklamacja są ustalane bezpośrednio z instruktorem.</p>
+            <p>Szkoła nie odpowiada za rozliczenia uczestnika z instruktorem ani wykonanie usługi świadczonej przez instruktora we własnym imieniu.</p>
+            <p>Powyższe nie ma zastosowania, jeżeli konkretna oferta wyraźnie wskazuje Szkołę jako organizatora albo podmiot przyjmujący płatność.</p>
+          </div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§22 Zdjęcia i nagrania</div>
+          <div class="reg-acc-body">
+            <p>Podczas zajęć może być obecna upoważniona osoba wykonująca zdjęcia lub nagrania.</p>
+            <p>Nagrywanie może odbywać się niezależnie od tego, czy wszystkie osoby wyraziły zgodę na wykorzystanie wizerunku.</p>
+            <p>Sam fakt nagrywania nie oznacza automatycznej zgody na publikowanie rozpoznawalnego wizerunku.</p>
+            <p>Uczestnicy zostaną poinformowani, że podczas danych zajęć są wykonywane materiały.</p>
+            <p>Brak zgody na wykorzystanie wizerunku nie wpływa na możliwość udziału.</p>
+            <p>W przypadku osób bez odpowiedniej zgody Szkoła zastosuje rozwiązania chroniące ich wizerunek, w szczególności:</p>
+            <ul>
+              <li>ustawienie poza kadrem</li>
+              <li>wyznaczenie części sali nieobejmowanej nagraniem</li>
+              <li>odpowiednie kadrowanie</li>
+              <li>usunięcie, zakrycie albo rozmycie przypadkowo utrwalonego wizerunku.</li>
+            </ul>
+            <p>Rozpoznawalny wizerunek uczestnika może być publikowany tylko na podstawie odpowiedniej zgody lub innej podstawy przewidzianej prawem.</p>
+            <p>Wizerunek dziecka wymaga oddzielnej zgody rodzica lub opiekuna prawnego.</p>
+            <p>Materiał zawierający przypadkowo utrwalony rozpoznawalny wizerunek osoby bez zgody nie zostanie opublikowany w tej postaci.</p>
+            <p>Surowe materiały są przechowywane przez czas potrzebny do selekcji i obróbki, co do zasady nie dłużej niż 30 dni, chyba że zostały zgodnie z prawem wybrane do publikacji albo są potrzebne do wyjaśnienia zgłoszenia.</p>
+            <p>Uczestnicy nie mogą publikować rozpoznawalnego wizerunku innych uczestników ani dzieci bez odpowiedniego zezwolenia.</p>
+            <p>Nagrywanie programu zajęć, instruktażu lub choreografii przez uczestników wymaga zgody instruktora.</p>
+            <p>Zgodę wizerunkową można wycofać, pisząc na kontakt.amen@gmail.com. Wycofanie nie wpływa na zgodność z prawem wykorzystania dokonanego wcześniej.</p>
+          </div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§23 Dane osobowe</div>
+          <div class="reg-acc-body">
+            <p>Administratorem danych osobowych jest SZKOŁA TAŃCA AMEN! MATEUSZ ZAPART, ul. Lotnicza 83, 51-180 Szymanów, NIP: 8943139075, REGON: 382770064.</p>
+            <p>Kontakt w sprawach dotyczących danych: kontakt.amen@gmail.com.</p>
+            <p>Dane są przetwarzane w celu przyjęcia zapisu, organizacji zajęć, rozliczeń, kontaktu organizacyjnego, realizacji obowiązków prawnych oraz dochodzenia lub obrony roszczeń.</p>
+            <p>Wiadomości niezbędne do obsługi zapisu i zajęć nie są newsletterem i nie wymagają zgody marketingowej.</p>
+            <p>Zgody na newsletter, marketing i publikowanie wizerunku są dobrowolne.</p>
+            <p>Brak zgody marketingowej lub wizerunkowej nie wpływa na możliwość uczestnictwa.</p>
+            <p>Szczegółowe informacje o podstawach przetwarzania, odbiorcach, czasie przechowywania i prawach uczestników znajdują się w Polityce prywatności i klauzuli informacyjnej RODO.</p>
+          </div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§24 Reklamacje</div>
+          <div class="reg-acc-body">
+            <p>Reklamacje można przesyłać e-mailem na kontakt.amen@gmail.com albo listownie na adres: SZKOŁA TAŃCA AMEN! MATEUSZ ZAPART, ul. Lotnicza 83, 51-180 Szymanów.</p>
+            <p>Reklamacja powinna zawierać dane uczestnika, opis sytuacji, datę i nazwę zajęć oraz oczekiwany sposób rozwiązania.</p>
+            <p>Szkoła odpowie w terminie 14 dni od otrzymania reklamacji.</p>
+            <p>Problem wymagający szybkiej reakcji można zgłosić również instruktorowi lub koordynatorowi.</p>
+            <p>Regulamin nie ogranicza ustawowych praw konsumenta.</p>
+          </div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§25 Zmiany Regulaminu</div>
+          <div class="reg-acc-body">
+            <p>Szkoła może zmienić Regulamin z ważnych przyczyn prawnych, organizacyjnych lub technicznych.</p>
+            <p>Zmiany nie naruszają warunków już opłaconego karnetu, chyba że wynikają z obowiązujących przepisów albo zostaną zaakceptowane przez uczestnika.</p>
+            <p>O istotnych zmianach uczestnicy zostaną poinformowani przed ich wejściem w życie.</p>
+            <p>Nowa wersja Regulaminu jest stosowana do zakupów i karnetów rozpoczętych po jej wejściu w życie.</p>
+          </div>
+        </div>
+
+        <div class="reg-acc-item">
+          <div class="reg-acc-h" onclick="toggleReg(this)">§26 Postanowienia końcowe</div>
+          <div class="reg-acc-body">
+            <p>Regulamin jest dostępny na stronie szkolaamen.pl i w formularzach zapisowych.</p>
+            <p>Akceptacja następuje przez zaznaczenie odpowiedniego pola podczas zapisu albo w inny jednoznaczny sposób.</p>
+            <p>W sprawach nieuregulowanych stosuje się obowiązujące przepisy prawa polskiego.</p>
+            <p>Spory będą w pierwszej kolejności rozwiązywane polubownie.</p>
+            <p>Jeżeli rozwiązanie polubowne nie będzie możliwe, spór rozstrzyga sąd właściwy zgodnie z obowiązującymi przepisami.</p>
+            <p>Regulamin wchodzi w życie w dniu wskazanym na jego początku.</p>
+            <p style="margin-top:16px;font-size:12px;color:#666;">REGULAMIN SZKOŁY TAŃCA AMEN! · SZKOŁA TAŃCA AMEN! MATEUSZ ZAPART · wersja 1.1 · obowiązuje od 23.07.2026</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ═══ PAGE: REGULAMIN IMPREZ ════════════════════════════════════ -->
+<div class="page" id="page-regulamin-imprez">
+  <div class="page-offset">
+    <div class="page-hero">
+      <div class="container">
+        <span class="label">Dokumenty</span>
+        <h1>Regulamin Imprez z Amen!</h1>
+        <p>Zasady uczestnictwa w imprezach tanecznych organizowanych przez Szkołę Tańca Amen!</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container" style="max-width:780px">
+        <div class="reg-s"><h3>§1 Organizator</h3><p>SZKOŁA TAŃCA AMEN! MATEUSZ ZAPART, ul. Lotnicza 83, 51-180 Szymanów, NIP: 8943139075. Kontakt: kontakt.amen@gmail.com · 513 580 512.</p></div>
+        <div class="reg-s"><h3>§2 Zakres regulaminu</h3><p>Regulamin dotyczy imprez tanecznych i rekreacyjnych, w tym potańcówek, wieczorków tanecznych, Sylwestra i innych wydarzeń. W sprawach nieuregulowanych stosuje się Regulamin Szkoły Tańca Amen!.</p></div>
+        <div class="reg-s"><h3>§3 Uczestnictwo i bilety</h3><p>Uczestnictwo wymaga zakupu biletu. Sam formularz zgłoszeniowy nie rezerwuje miejsca — gwarancję daje opłacony bilet. Organizator może odmówić wstępu lub nakazać opuszczenie imprezy osobom naruszającym regulamin bez prawa do zwrotu.</p></div>
+        <div class="reg-s"><h3>§4 Wiek uczestników</h3><p>Imprezy przeznaczone dla osób pełnoletnich (18+), chyba że oferta danego wydarzenia stanowi inaczej. Małoletni mogą uczestniczyć wyłącznie za zgodą i w towarzystwie opiekuna.</p></div>
+        <div class="reg-s"><h3>§5 Bezpieczeństwo i zachowanie</h3><p>Uczestnik zobowiązuje się do szacunku wobec wszystkich. Zabroniona jest przemoc, agresja i molestowanie. Organizator może usunąć osoby naruszające zasady bez prawa do zwrotu biletu.</p></div>
+        <div class="reg-s"><h3>§6 Zakaz alkoholu i substancji</h3><p>Całkowity zakaz alkoholu, narkotyków i substancji psychoaktywnych. Wnoszenie i spożywanie alkoholu zabronione. Osoby pod wpływem substancji nie będą wpuszczane na imprezę.</p></div>
+        <div class="reg-s"><h3>§7 Kontakt fizyczny i taniec</h3><p>Uczestnik ma prawo odmówić tańca lub kontaktu fizycznego w każdym momencie. Niedopuszczalny jest dotyk naruszający intymność lub granice. Organizator może usunąć osoby naruszające granice innych uczestników.</p></div>
+        <div class="reg-s"><h3>§8 Zdjęcia i nagrania</h3><p>Na imprezie może być obecna osoba wykonująca materiały dokumentacyjne. Uczestnik kupując bilet wyraża zgodę na utrwalanie wizerunku w celach promocyjnych. Rozpoznawalny wizerunek publikowany za zgodą lub na podstawie przepisów. Zgodę można wycofać na kontakt.amen@gmail.com.</p></div>
+        <div class="reg-s"><h3>§9 Płatności i zwroty</h3><p>Warunki zwrotów podawane w ofercie konkretnej imprezy. Zwrot przysługuje przy rezygnacji z odpowiednim wyprzedzeniem. Przy odwołaniu przez Organizatora — pełny zwrot wpłaconej kwoty.</p></div>
+        <div class="reg-s"><h3>§10 Odwołanie i zmiany imprezy</h3><p>Organizator może odwołać lub zmienić termin z ważnych przyczyn. Przy odwołaniu uczestnicy zostaną niezwłocznie poinformowani i otrzymają pełny zwrot środków.</p></div>
+        <div class="reg-s"><h3>§11 Mienie uczestników</h3><p>Organizator nie odpowiada za rzeczy pozostawione bez nadzoru. Znalezione rzeczy przechowywane przez rozsądny czas.</p></div>
+        <div class="reg-s"><h3>§12 Dane osobowe</h3><p>Administrator: SZKOŁA TAŃCA AMEN! MATEUSZ ZAPART. Dane przetwarzane w celu organizacji imprezy i rozliczeń. Szczegóły w Polityce Prywatności na szkolaamen.pl.</p></div>
+        <div class="reg-s"><h3>§13 Reklamacje</h3><p>Reklamacje na kontakt.amen@gmail.com. Powinna zawierać dane uczestnika, opis sytuacji i oczekiwany sposób rozwiązania. Odpowiedź w terminie 14 dni.</p></div>
+        <div class="reg-s"><h3>§14 Obiekty zewnętrzne</h3><p>Imprezy odbywają się w obiektach zewnętrznych. Uczestnik zobowiązany przestrzegać zasad gospodarza obiektu — parkowania, korzystania z sanitariatów i części wspólnych.</p></div>
+        <div class="reg-s"><h3>§15 Zmiany Regulaminu</h3><p>Organizator może zmieniać regulamin z ważnych przyczyn. Aktualna wersja dostępna na szkolaamen.pl. Kupno biletu po zmianie oznacza akceptację nowej wersji.</p></div>
+        <div class="reg-s"><h3>§16 Postanowienia końcowe</h3><p>W sprawach nieuregulowanych stosuje się prawo polskie i Regulamin Szkoły Tańca Amen!. Spory rozwiązywane polubownie. Akceptacja następuje przez zakup biletu.</p></div>
+        <div style="background:var(--grey);border-radius:var(--r-lg);padding:16px 20px;margin-top:8px;font-size:13px;color:var(--muted);">
+          Pełna wersja: <a href="https://chrzescijanskaszkolatanca.pl/regulamin-imprez/" target="_blank" style="color:var(--orange);">chrzescijanskaszkolatanca.pl/regulamin-imprez/</a>
+        </div>
+        <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="#" onclick="showPage('regulamin')" class="btn btn-outline" style="font-size:14px;">Regulamin kursów</a>
+          <a href="#" onclick="showPage('imprezy')" class="btn btn-outline" style="font-size:14px;">Imprezy z Amen!</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ═══ PAGE: POLITYKA PRYWATNOŚCI ════════════════════════════════ -->
+<div class="page" id="page-polityka">
+  <div class="page-offset">
+    <div class="page-hero" style="padding:60px 20px 40px;">
+      <div class="container">
+        <h1 style="font-size:clamp(28px,5vw,48px); font-weight:800; color:var(--white); margin:0 0 12px;">Polityka prywatności</h1>
+        <p style="color:rgba(255,255,255,.75); font-size:16px;">Szkoła Tańca Amen! — obowiązuje od 1 września 2024 r.</p>
+      </div>
+    </div>
+    <div class="container" style="padding:40px 20px 80px; max-width:800px;">
+
+      <h2 style="font-size:22px; font-weight:700; margin:32px 0 12px;">1. Administrator danych</h2>
+      <p>Administratorem Twoich danych osobowych jest Szkoła Tańca Amen! z siedzibą we Wrocławiu, e-mail: <a href="mailto:kontakt.amen@gmail.com" style="color:var(--orange);">kontakt.amen@gmail.com</a>.</p>
+
+      <h2 style="font-size:22px; font-weight:700; margin:32px 0 12px;">2. Cel i podstawa przetwarzania</h2>
+      <p>Twoje dane przetwarzamy wyłącznie w następujących celach:</p>
+      <ul style="margin:12px 0 12px 24px; line-height:1.9;">
+        <li><strong>Obsługa zapisów na kursy i zajęcia</strong> — podstawa: niezbędność do wykonania umowy (art. 6 ust. 1 lit. b RODO).</li>
+        <li><strong>Newsletter / komunikacja marketingowa</strong> — podstawa: zgoda (art. 6 ust. 1 lit. a RODO). Zgodę możesz wycofać w każdej chwili.</li>
+        <li><strong>Kontakt w sprawach organizacyjnych</strong> — podstawa: prawnie uzasadniony interes administratora (art. 6 ust. 1 lit. f RODO).</li>
+        <li><strong>Rozliczenia i rachunkowość</strong> — podstawa: obowiązek prawny (art. 6 ust. 1 lit. c RODO).</li>
+      </ul>
+
+      <h2 style="font-size:22px; font-weight:700; margin:32px 0 12px;">3. Zakres zbieranych danych</h2>
+      <p>Zbieramy dane podane dobrowolnie przez Ciebie: imię i nazwisko, adres e-mail, numer telefonu. Nie zbieramy danych wrażliwych.</p>
+
+      <h2 style="font-size:22px; font-weight:700; margin:32px 0 12px;">4. Odbiorcy danych</h2>
+      <p>Twoje dane mogą być udostępniane podmiotom świadczącym usługi techniczne (np. dostawcy poczty elektronicznej, systemów płatności), wyłącznie w zakresie niezbędnym do realizacji usługi. Nie sprzedajemy danych osobowych.</p>
+
+      <h2 style="font-size:22px; font-weight:700; margin:32px 0 12px;">5. Okres przechowywania</h2>
+      <p>Dane przetwarzane na podstawie zgody — do jej wycofania. Dane związane z umową — przez okres jej trwania oraz wymagany przez przepisy prawa (do 5 lat od zakończenia roku podatkowego). Dane do celów marketingowych — do wycofania zgody lub zgłoszenia sprzeciwu.</p>
+
+      <h2 style="font-size:22px; font-weight:700; margin:32px 0 12px;">6. Twoje prawa</h2>
+      <p>Przysługuje Ci prawo do:</p>
+      <ul style="margin:12px 0 12px 24px; line-height:1.9;">
+        <li>dostępu do swoich danych i uzyskania ich kopii,</li>
+        <li>sprostowania (poprawienia) danych,</li>
+        <li>usunięcia danych („prawo do bycia zapomnianym"),</li>
+        <li>ograniczenia przetwarzania,</li>
+        <li>przenoszenia danych,</li>
+        <li>wniesienia sprzeciwu wobec przetwarzania,</li>
+        <li>wycofania zgody w dowolnym momencie (bez wpływu na zgodność z prawem przetwarzania dokonanego przed wycofaniem),</li>
+        <li>wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (ul. Stawki 2, 00-193 Warszawa).</li>
+      </ul>
+      <p>Aby skorzystać z praw, napisz na: <a href="mailto:kontakt.amen@gmail.com" style="color:var(--orange);">kontakt.amen@gmail.com</a>.</p>
+
+      <h2 style="font-size:22px; font-weight:700; margin:32px 0 12px;">7. Pliki cookies</h2>
+      <p>Strona może używać sesyjnych plików cookies niezbędnych do jej działania. Nie stosujemy cookies śledzących ani reklamowych.</p>
+
+      <h2 style="font-size:22px; font-weight:700; margin:32px 0 12px;">8. Zmiany polityki</h2>
+      <p>Zastrzegamy sobie prawo do zmiany niniejszej polityki. O istotnych zmianach poinformujemy poprzez aktualizację daty na górze strony.</p>
+
+      <div style="margin-top:48px;">
+        <a href="#" onclick="showPage('kontakt')" style="display:inline-block; background:var(--orange); color:var(--white); font-weight:700; padding:14px 28px; border-radius:8px; text-decoration:none;">Kontakt w sprawie danych →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+`;
