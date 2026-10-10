@@ -1,5 +1,6 @@
-node_modules/
-cloude/node_modules/
-*.log
-.DS_Store
-Thumbs.db
+node_modules
+.next
+.env
+.env.local
+.env*.local
+*.backup
