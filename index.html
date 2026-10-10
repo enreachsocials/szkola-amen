@@ -3680,6 +3680,11 @@
 <script>
   const pages = ['home','oferta','grafik','cennik','onas','kontakt','faq','parafia','sklep','instruktor','imprezy','warsztaty','sylwester','regulamin','regulamin-imprez'];
 
+  function toggleReg(el) {
+    el.classList.toggle('open');
+    el.nextElementSibling.classList.toggle('open');
+  }
+
   function showPage(id) {
     pages.forEach(p => {
       const el = document.getElementById('page-' + p);
